@@ -33,7 +33,7 @@ if not args.no_enrich:
     enrich(db, run, DB, log=log, limit=args.enrich_limit)
 out = export_csvs(db, run, args.out)
 xlsx = Path(args.out) / "ANTEPARO_call_sheet.xlsx"
-counts = export_xlsx(db, run, str(xlsx))
+counts = export_xlsx(db, run, str(xlsx), old_csv=str(ROOT / "data/seeds/old_sheet_targets.csv"))
 log(f"xlsx: {counts} → {xlsx}")
 
 # ---- diff vs the old Drive sheet (by CNPJ root × case) ----

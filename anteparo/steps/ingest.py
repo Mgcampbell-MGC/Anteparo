@@ -2,8 +2,16 @@
 from __future__ import annotations
 
 import json
+import os
 import re
+import subprocess
+import sys
 from collections import Counter
+from pathlib import Path
+
+ROOT = str(Path(__file__).resolve().parents[2])
+DOC_TIMEOUT = int(os.environ.get("ANTEPARO_DOC_TIMEOUT", "240"))
+DOC_MEM = int(os.environ.get("ANTEPARO_DOC_MEM", str(2 * 1024 ** 3)))
 
 from ..db import now
 from ..extract.engine import extract_document
@@ -40,22 +48,26 @@ def first_pages_text(path: str, n: int = 3) -> str:
 
 
 def extract_for_ingest(args):
-    """Worker: pure extraction, no DB. Returns everything ingest_document needs to write."""
+    """Run the extractor for one document in a separate process (memory-capped, time-boxed)."""
     sha1, path, url, page_cases, page_title, domain = args
+    base = {"sha1": sha1, "path": path, "url": url, "page_cases": page_cases, "page_title": page_title, "domain": domain}
+    cmd = [sys.executable, "-m", "anteparo.steps.worker", path, str(DOC_MEM)]
     try:
-        head = first_pages_text(path)
-        doc = extract_document(path)
-        rec = reconcile(doc)
-        if doc.has_text_layer and not [r for r in doc.rows if r.value_brl is not None]:
-            rec["status"] = "NO_ROWS"
-        return {"ok": True, "sha1": sha1, "path": path, "url": url, "page_cases": page_cases, "page_title": page_title,
-                "domain": domain, "head": head, "doc": doc, "rec": rec}
-    except Exception as e:  # noqa: BLE001
-        return {"ok": False, "sha1": sha1, "path": path, "url": url, "domain": domain, "error": f"{type(e).__name__}: {str(e)[:300]}"}
+        p = subprocess.run(cmd, capture_output=True, timeout=DOC_TIMEOUT, cwd=ROOT)
+    except subprocess.TimeoutExpired:
+        return {**base, "ok": False, "error": f"TIMEOUT: extraction exceeded {DOC_TIMEOUT}s"}
+    if p.returncode != 0:
+        tail = p.stderr.decode("utf-8", "replace").strip().splitlines()[-1:] or [""]
+        return {**base, "ok": False, "error": f"WORKER_EXIT_{p.returncode}: {tail[0][:250]}"}
+    try:
+        w = json.loads(p.stdout.decode("utf-8"))
+    except ValueError as e:
+        return {**base, "ok": False, "error": f"BAD_WORKER_OUTPUT: {e}"}
+    return {**base, "ok": True, **w}
 
 
 def write_ingested(db, run_id, w, by="ingest"):
-    head, doc, rec = w["head"], w["doc"], w["rec"]
+    head, rec = w["head"], w["rec"]
     sha1, path, url, page_cases, page_title, domain = w["sha1"], w["path"], w["url"], w["page_cases"], w["page_title"], w["domain"]
     cnj = Counter(CNJ_RE.findall(head))
     case_number = cnj.most_common(1)[0][0] if cnj else ((page_cases or "").split(",")[0] or None)
@@ -65,7 +77,7 @@ def write_ingested(db, run_id, w, by="ingest"):
     dtype = doc_type_from_text(head)
     dh = DEBTOR_RE.search(head.replace("\n", " "))
     debtor_hint = re.sub(r"\s+", " ", dh.group(1)).strip(" ,.") if dh else (page_title or None)
-    return _write(db, run_id, sha1, path, url, case_number, case_flag, pub, dtype, debtor_hint, domain, doc, rec, by)
+    return _write(db, run_id, sha1, path, url, case_number, case_flag, pub, dtype, debtor_hint, domain, w, rec, by)
 
 
 def ingest_document(db, run_id: str, sha1: str, path: str, url: str, page_cases: str, page_title: str, domain: str, by="ingest"):
@@ -75,27 +87,26 @@ def ingest_document(db, run_id: str, sha1: str, path: str, url: str, page_cases:
     return write_ingested(db, run_id, w, by)
 
 
-def _write(db, run_id, sha1, path, url, case_number, case_flag, pub, dtype, debtor_hint, domain, doc, rec, by):
+def _write(db, run_id, sha1, path, url, case_number, case_flag, pub, dtype, debtor_hint, domain, w, rec, by):
     db.execute("UPDATE documents SET superseded_by=? WHERE doc_id=? AND superseded_by IS NULL", (run_id, sha1))
     db.execute("UPDATE claims SET superseded_by=? WHERE doc_id=? AND superseded_by IS NULL", (run_id, sha1))
+    status = rec["status"] if w["has_text_layer"] else "NO_TEXT_LAYER"
     db.execute("""INSERT OR REPLACE INTO documents VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-               (sha1, run_id, case_number, dtype, pub, url, path, doc.pages, doc.strategy, doc.layout_id,
-                json.dumps([{"class": t.klass, "currency": t.currency, "total": str(t.total) if t.total is not None else None,
-                             "count": t.count, "page": t.page, "section": t.section} for t in doc.printed_totals], ensure_ascii=False),
-                rec["status"] if doc.has_text_layer else "NO_TEXT_LAYER",
+               (sha1, run_id, case_number, dtype, pub, url, path, w["pages"], w["strategy"], w["layout_id"],
+                json.dumps(w["printed_totals"], ensure_ascii=False), status,
                 json.dumps(rec, default=str, ensure_ascii=False),
-                "; ".join(doc.notes + ([case_flag] if case_flag else []) + ["classIII=" + rec.get("per_class", {}).get("III/BRL", "NO_ROWS")]),
+                "; ".join(w["notes"] + ([case_flag] if case_flag else []) + ["classIII=" + rec.get("per_class", {}).get("III/BRL", "NO_ROWS")]),
                 debtor_hint, domain, now(), by, None))
-    rows = [(sha1, run_id, case_number, r.page, r.row_index, r.seq_as_printed, r.creditor_name_as_printed,
-             r.document_as_printed, r.document_number, r.document_type, "|".join(r.all_documents), r.klass, r.class_set_by,
-             r.value_as_printed, str(r.value_brl) if r.value_brl is not None else None, r.currency, r.debtor_as_printed,
-             r.section_heading, "|".join(r.flags), r.strategy, now(), by, None) for r in doc.rows]
+    rows = [(sha1, run_id, case_number, r["page"], r["row_index"], r["seq_as_printed"], r["creditor_name_as_printed"],
+             r["document_as_printed"], r["document_number"], r["document_type"], r["all_documents"], r["klass"], r["class_set_by"],
+             r["value_as_printed"], r["value_brl"] or None, r["currency"], r["debtor_as_printed"],
+             r["section_heading"], r["flags"], r["strategy"], now(), by, None) for r in w["rows"]]
     db.executemany("""INSERT INTO claims(doc_id,run_id,case_number,page,row_index,seq_as_printed,creditor_name_as_printed,
         document_as_printed,document_number,document_type,all_documents,class,class_set_by,value_as_printed,value_brl,currency,
         debtor_as_printed,section_heading,flags,strategy,extracted_at,extracted_by,superseded_by) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""", rows)
     db.commit()
-    return {"doc_id": sha1, "case_number": case_number, "doc_type": dtype, "status": rec["status"] if doc.has_text_layer else "NO_TEXT_LAYER",
-            "rows": len(doc.rows), "strategy": doc.strategy, "layout": doc.layout_id, "pages": doc.pages}
+    return {"doc_id": sha1, "case_number": case_number, "doc_type": dtype, "status": status,
+            "rows": len(w["rows"]), "strategy": w["strategy"], "layout": w["layout_id"], "pages": w["pages"]}
 
 
 def ingest_all(db, run_id: str, log=print, kinds=("LIST", "PLAN", "HOMOLOG"), limit=None, workers: int = 1):
@@ -120,9 +131,9 @@ def ingest_all(db, run_id: str, log=print, kinds=("LIST", "PLAN", "HOMOLOG"), li
         log(f"  [{i}/{len(q)}] {w['domain']} {r['doc_type']:<11} {r['status']:<13} rows={r['rows']:<4} {r['strategy']}/{r['layout']} case={r['case_number']} p={r['pages']}")
 
     if workers > 1:
-        from concurrent.futures import ProcessPoolExecutor
-        with ProcessPoolExecutor(workers) as ex:
-            for i, w in enumerate(ex.map(extract_for_ingest, q, chunksize=2), 1):
+        from concurrent.futures import ThreadPoolExecutor      # threads only wait on the per-document subprocesses
+        with ThreadPoolExecutor(workers) as ex:
+            for i, w in enumerate(ex.map(extract_for_ingest, q), 1):
                 handle(i, w)
     else:
         for i, args in enumerate(q, 1):

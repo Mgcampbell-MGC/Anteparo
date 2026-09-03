@@ -71,7 +71,7 @@ def _lead_rows(db, run_id, band):
     for r in q:
         (root, case, doc_id, face, ests, ncl, name_printed, debtor, stage, flags, razao, phone, phone2, email, uf, city, cnae, porte, sit,
          is_bank, is_public, is_inactive, rfb_src, url, dtype, pub, dstatus, adm, court, filed) = r
-        if is_bank or is_public or is_inactive:
+        if is_bank or is_public or is_inactive or "LIKELY_FINANCIAL_BY_NAME" in (flags or "") or "LIKELY_PUBLIC_BY_NAME" in (flags or ""):
             continue   # excluded by step G; kept in targets.csv with flags
         dm = db.execute("SELECT person_name, role FROM contacts WHERE cnpj_basico=? ORDER BY CASE role_code WHEN 49 THEN 0 WHEN 5 THEN 1 WHEN 16 THEN 2 WHEN 10 THEN 3 ELSE 9 END LIMIT 1", (root,)).fetchone()
         claims = db.execute("SELECT page, row_index, value_as_printed FROM claims WHERE doc_id=? AND run_id=? AND document_number IN (%s) AND class='III' AND currency='BRL' ORDER BY page, row_index"
@@ -103,7 +103,7 @@ def _write_lead_sheet(ws, leads, title):
             i - 1, "NEW", "", 0, "", "", "", "",
             L["razao"] or "", L["name_printed"], L["root"], (L["ests"] or "").replace("|", ", "),
             float(L["face"]), L["n"],
-            L["plan_status"], L["stage"], L["filed"] or "",
+            L["plan_status"], L["stage"], (date.fromisoformat(L["filed"]) if L["filed"] and len(L["filed"]) == 10 else ""),
             f'=IF(Q{row}="","",ROUND((TODAY()-Q{row})/365.25,1))',
             f"=VLOOKUP({ps},Assumptions!$A$7:$E$10,2,FALSE)",
             f'=MAX(0.5,VLOOKUP({ps},Assumptions!$A$7:$E$10,3,FALSE)+VLOOKUP({ps},Assumptions!$A$7:$E$10,4,FALSE)/2-IF({ysf}="",0,{ysf}))',
@@ -132,6 +132,7 @@ def _write_lead_sheet(ws, leads, title):
             ws.cell(row=row, column=col).number_format = '#,##0'
         ws.cell(row=row, column=19).number_format = '0%'
         ws.cell(row=row, column=20).number_format = '0.0'
+        ws.cell(row=row, column=17).number_format = 'yyyy-mm-dd'
         if L["url"]:
             c = ws.cell(row=row, column=39); c.hyperlink = L["url"]; c.font = Font(color="0563C1", underline="single")
         dv.add(f"B{row}")
@@ -252,7 +253,61 @@ def _needs_cnpj(ws, db, run_id):
     return i - 2
 
 
-def export_xlsx(db, run_id, path: str):
+def _diff_tab(ws, db, run_id, old_csv):
+    """Old Drive sheet vs this run, by CNPJ root × case: every changed number, side by side."""
+    import csv
+    from pathlib import Path
+    ws.title = "Diff vs Drive sheet"
+    hdr = ["Creditor (old sheet)", "CNPJ (old)", "Case", "OLD amount (R$)", "NEW class III face, root sum (R$)", "Delta (R$)", "Verdict", "Old status", "Why"]
+    for j, h in enumerate(hdr, 1):
+        c = ws.cell(row=1, column=j, value=h); c.font = Font(bold=True, color="FFFFFF"); c.fill = HEAD_FILL
+    for j, w in enumerate([44, 16, 26, 18, 22, 18, 16, 12, 60], 1):
+        ws.column_dimensions[get_column_letter(j)].width = w
+    if not Path(old_csv).exists():
+        ws.cell(row=2, column=1, value="old sheet not available")
+        return 0
+    new = {}
+    for root, case, face, name, ests, n, flags in db.execute("SELECT cnpj_basico, case_number, class_iii_face_sum, creditor_name_as_printed, establishment_cnpjs, claim_count, flags FROM targets WHERE run_id=?", (run_id,)):
+        new[(root, case or "")] = (Decimal(face), name, ests, n, flags)
+    i = 2
+    with open(old_csv, encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            key = (r["cnpj"][:8], r["case_number"])
+            try:
+                old_amt = Decimal(r["amount_old"]) if r["amount_old"] else None
+            except Exception:  # noqa: BLE001
+                old_amt = None
+            if key in new:
+                new_amt, nm, ests, n, flags = new[key]
+                delta = (new_amt - old_amt) if old_amt is not None else None
+                if delta is None:
+                    verdict, why = "NEW_ONLY", "old sheet had no amount"
+                elif abs(delta) < 1:
+                    verdict, why = "SAME", ""
+                else:
+                    verdict = "CHANGED"
+                    why = []
+                    if n and n > 1:
+                        why.append(f"{n} claims summed on the 8-digit root ({(ests or '').count('|') + 1} establishments)")
+                    if old_amt and new_amt and new_amt / old_amt > Decimal(5):
+                        why.append("likely dropped leading digit in old parse")
+                    why = "; ".join(why) or "value re-read from the document's own row"
+                vals = [r["creditor_name"], r["cnpj"], r["case_number"], float(old_amt) if old_amt is not None else "", float(new_amt), float(delta) if delta is not None else "", verdict, r["status_old"], why]
+            else:
+                vals = [r["creditor_name"], r["cnpj"], r["case_number"], float(old_amt) if old_amt is not None else "", "", "", "NOT_IN_NEW_RUN", r["status_old"], "case/document not harvested or below floor in this run"]
+            for j, v in enumerate(vals, 1):
+                c = ws.cell(row=i, column=j, value=v)
+                if j in (4, 5, 6) and isinstance(v, float):
+                    c.number_format = '#,##0.00'
+            if vals[6] == "CHANGED":
+                for j in range(1, 10):
+                    ws.cell(row=i, column=j).fill = PatternFill("solid", fgColor="FCE4D6")
+            i += 1
+    ws.freeze_panes = "A2"; ws.auto_filter.ref = f"A1:I{max(2, i - 1)}"
+    return i - 2
+
+
+def export_xlsx(db, run_id, path: str, old_csv: str | None = None):
     wb = Workbook()
     floor = _lead_rows(db, run_id, "FLOOR")
     pool = _lead_rows(db, run_id, "POOL")
@@ -265,5 +320,7 @@ def export_xlsx(db, run_id, path: str):
     _write_lead_sheet(wb.create_sheet(), pool, "Pooling (100-200k)")
     counts["needs_cnpj"] = _needs_cnpj(wb.create_sheet(), db, run_id)
     _sources(wb.create_sheet(), db, run_id)
+    if old_csv:
+        counts["diff_rows"] = _diff_tab(wb.create_sheet(), db, run_id, old_csv)
     wb.save(path)
     return counts

@@ -9,6 +9,11 @@ from ..cnpj import is_valid_cnpj, matriz, root as cnpj_root
 from ..db import now
 from ..sources.rfb import RFB, normalise
 
+import re
+FINANCIAL_NAME_RE = re.compile(r"\bBANCO\b|\bBCO\b|\bFIDC\b|FUNDO DE INVESTIMENTO|DIREITOS CREDIT[ÓO]RIOS|COOPERATIVA DE CR[ÉE]DITO|\bSICOOB\b|\bSICREDI\b|\bUNICRED\b|\bCRESOL\b|"
+                               r"FINANCEIRA\b|SECURITIZADORA|\bFACTORING\b|FOMENTO MERCANTIL|FOMENTO COMERCIAL|\bCAIXA ECON|\bBNDES\b|\bBRDE\b|\bBANRISUL\b|\bBRADESCO\b|\bITA[ÚU]\b|\bSANTANDER\b|"
+                               r"ARRENDAMENTO MERCANTIL|\bLEASING\b|\bCONSÓRCIO\b|\bCONSORCIO\b|SEGURADORA|\bSEGUROS\b|CART[ÃA]O DE CR[ÉE]DITO", re.I)
+PUBLIC_NAME_RE = re.compile(r"\bFAZENDA\b|\bUNI[ÃA]O\b|\bINSS\b|\bMUNIC[ÍI]PIO\b|\bPREFEITURA\b|\bESTADO D[EAO]\b|\bPROCURADORIA\b|\bRECEITA FEDERAL\b|\bFGTS\b|\bSECRETARIA D[EA]\b", re.I)
 FLOOR = Decimal(200000)
 POOL_MIN = Decimal(100000)
 TYPE_RANK = {"QGC": 4, "AJ_LIST": 3, "DEBTOR_LIST": 2, "UNKNOWN": 1, "HOMOLOG": 0, "PLAN": 0}
@@ -85,6 +90,11 @@ def build_targets(db, run_id, log=print):
                 fl.add("PARTIAL_DOC_CLASS_III_RECONCILED")
             if case_key.startswith("UNKNOWN:"):
                 fl.add("CASE_NUMBER_MISSING")
+            nm = max(a["names"], key=len)
+            if FINANCIAL_NAME_RE.search(nm):
+                fl.add("LIKELY_FINANCIAL_BY_NAME")
+            if PUBLIC_NAME_RE.search(nm):
+                fl.add("LIKELY_PUBLIC_BY_NAME")
             case_number = None if case_key.startswith("UNKNOWN:") else case_key
             db.execute("""INSERT INTO targets(run_id,cnpj_basico,case_number,doc_id,class_iii_face_sum,establishment_cnpjs,claim_count,
                           creditor_name_as_printed,debtor_name,stage,is_related_party,above_floor,band,flags,extracted_at,extracted_by)
@@ -100,7 +110,8 @@ def build_targets(db, run_id, log=print):
 def enrich(db, run_id, db_path, log=print, limit=None):
     rfb = RFB(db_path)
     roots = [r[0] for r in db.execute("""SELECT DISTINCT cnpj_basico FROM targets WHERE run_id=? AND cnpj_basico NOT IN
-                                         (SELECT cnpj_basico FROM companies) ORDER BY CAST(class_iii_face_sum AS REAL) DESC""", (run_id,)).fetchall()]
+                                         (SELECT cnpj_basico FROM companies) AND flags NOT LIKE '%LIKELY_FINANCIAL_BY_NAME%'
+                                         AND flags NOT LIKE '%LIKELY_PUBLIC_BY_NAME%' ORDER BY CAST(class_iii_face_sum AS REAL) DESC""", (run_id,)).fetchall()]
     if limit:
         roots = roots[:limit]
     log(f"enrich: {len(roots)} companies to look up (throttled)")
