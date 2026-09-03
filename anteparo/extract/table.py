@@ -25,6 +25,9 @@ DOC_TOKEN_RE = re.compile(r"^\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}$|^\d{3}\.\d{3}\.\d{
 DOC_IN_RE = re.compile(r"\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}-?\d{2}")
 DOCISH_RE = re.compile(r"^[\d./-]{8,}$")
 SEQ_RE = re.compile(r"^\d{1,5}$")
+COMPANY_HINT_RE = re.compile(r"\b(LTDA|S\.?A\.?|S/A|EIRELI|EPP|ME|CIA|LTDA\.|SOCIEDADE|COMERCIO|COM[ÉE]RCIO|INDUSTRIA|IND[ÚU]STRIA|SERVI[ÇC]OS|DISTRIBUIDORA|TRANSPORTES|FUNDO|BANCO|COOPERATIVA)\b", re.I)
+ADDRESS_HINT_RE = re.compile(r"\b(RUA|AVENIDA|AV\.|ALAMEDA|RODOVIA|ROD\.|ESTRADA|TRAVESSA|PRA[ÇC]A|N[º°]|CEP|BAIRRO|CENTRO|SALA|ANDAR|KM)\b", re.I)
+NOTES_HINT_RE = re.compile(r"\b(OBS|OBSERVA|MOTIVO|DOCUMENTO|ANALISAD|HABILITA|DIVERG|SEM ALTERA|CERTID|PROCESSO|MANTIDO|INCLU|EXCLU)\b", re.I)
 SUMMARY_ROW_RE = re.compile(r"CLASSIFICA[ÇC][ÃA]O|QUANTIDADE|\bTOTAL\b|\bSOMA\b|SUBTOTAL|\bCLASSE\s+(?:I|II|III|IV)\b\s*[-–:]?\s*$", re.I)
 CUR_RE = re.compile(r"^R\$?$")
 CLASS_CELL_RE = re.compile(r"^(IV|III|II|I)$", re.I)
@@ -174,6 +177,10 @@ def _learn_roles(grid):
                     roles[j] = "class"
                 elif "CREDOR" in t or "NOME" in t or "RAZ" in t:
                     roles[j] = "name"
+                elif "ENDERE" in t or "MUNIC" in t or "CIDADE" in t or "UF" == t.strip():
+                    roles[j] = "address"
+                elif "OBS" in t or "MOTIVO" in t or "NATUREZA" in t or "ORIGEM" in t or "GARANTIA" in t:
+                    roles[j] = "notes"
                 elif t.startswith("N") and len(t) <= 4 or "ITEM" in t or "SEQ" in t or "ORD" in t:
                     roles[j] = "seq"
                 elif "MOEDA" in t:
@@ -214,13 +221,21 @@ def _learn_roles(grid):
     text_cols = [j for j in range(ncol) if j not in roles]
     vh = roles.pop("__value_header__", None)
     roles["__vh__"] = vh
-    if text_cols:
+    if text_cols and "name" not in roles.values():
         stats = []
         for j in text_cols:
             cells = [(r[j] or "").strip() for r in data if j < len(r) and (r[j] or "").strip()]
-            stats.append((j, sum(len(c) for c in cells) / max(1, len(cells)), len(set(cells)), len(cells)))
-        name_col = max(stats, key=lambda s: s[1])[0]
-        roles[name_col] = "name"
+            if not cells:
+                continue
+            company = sum(1 for c in cells if COMPANY_HINT_RE.search(c)) / len(cells)
+            address = sum(1 for c in cells if ADDRESS_HINT_RE.search(c)) / len(cells)
+            notes = sum(1 for c in cells if NOTES_HINT_RE.search(c)) / len(cells)
+            avg = sum(len(c) for c in cells) / len(cells)
+            score = company * 3 - address * 3 - notes * 2 + min(avg, 40) / 40
+            stats.append((j, score, len(set(cells)), len(cells)))
+        if stats:
+            name_col = max(stats, key=lambda s: s[1])[0]
+            roles[name_col] = "name"
         for j, avg, distinct, cnt in stats:
             if j != name_col and cnt >= 3 and distinct / cnt <= 0.34 and "debtor" not in roles.values():
                 roles[j] = "debtor"

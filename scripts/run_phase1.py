@@ -19,6 +19,7 @@ ap.add_argument("--out", default=str(ROOT / "data" / "out"))
 ap.add_argument("--workers", type=int, default=4)
 ap.add_argument("--limit", type=int, default=None, help="ingest at most N documents (smoke test)")
 ap.add_argument("--reingest", default=None, help="'all' or a comma list of statuses (e.g. QUARANTINED,ERROR,NO_ROWS): drop those documents from this run and extract them again")
+ap.add_argument("--reingest-before", default=None, help="ISO time: also re-extract documents of this run extracted before that moment (older extractor code)")
 args = ap.parse_args()
 
 DB = str(ROOT / "data" / "anteparo.sqlite")
@@ -27,12 +28,16 @@ run = new_run(db, "phase1") if args.run == "new" else args.run
 log = lambda m: print(time.strftime("%H:%M:%S"), m, flush=True)
 log(f"run {run}")
 
-if args.reingest and args.run != "new":
+if (args.reingest or args.reingest_before) and args.run != "new":
+    ids = set()
     if args.reingest == "all":
-        ids = [r[0] for r in db.execute("SELECT doc_id FROM documents WHERE run_id=?", (run,))]
-    else:
+        ids |= {r[0] for r in db.execute("SELECT doc_id FROM documents WHERE run_id=?", (run,))}
+    elif args.reingest:
         sts = [x.strip() for x in args.reingest.split(",")]
-        ids = [r[0] for r in db.execute(f"SELECT doc_id FROM documents WHERE run_id=? AND status IN ({','.join('?'*len(sts))})", (run, *sts))]
+        ids |= {r[0] for r in db.execute(f"SELECT doc_id FROM documents WHERE run_id=? AND status IN ({','.join('?'*len(sts))})", (run, *sts))}
+    if args.reingest_before:
+        ids |= {r[0] for r in db.execute("SELECT doc_id FROM documents WHERE run_id=? AND extracted_at < ?", (run, args.reingest_before))}
+    ids = sorted(ids)
     for i in range(0, len(ids), 500):
         chunk = ids[i:i + 500]
         db.execute(f"DELETE FROM claims WHERE run_id=? AND doc_id IN ({','.join('?'*len(chunk))})", (run, *chunk))
