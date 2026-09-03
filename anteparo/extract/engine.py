@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 
+from .classes import is_summary_row
 from .models import DocResult
 from .pdfio import open_pdf, page_text, has_text_layer
 from .prose import parse_prose
@@ -37,4 +38,7 @@ def extract_document(path: str) -> DocResult:
                 if len([r for r in r2 if r.value_brl is not None]) > len(rows):
                     rows, totals, strategy, layout = r2, t2, "PROSE", "PROSE"
                     notes.append("fell back to PROSE")
+        for r in rows:
+            if is_summary_row(r.creditor_name_as_printed, bool(r.document_number)) and "NOT_A_CLAIM" not in r.flags:
+                r.flags += ["NOT_A_CLAIM", "SUMMARY_ROW"]
         return DocResult(path, n, True, strategy, rows, totals, layout_id=layout, notes=notes)

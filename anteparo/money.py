@@ -36,7 +36,7 @@ def parse_brl(s: str | None) -> Decimal | None:
         return None
 
 
-def merge_fragments(tokens: list[dict], max_gap: float = 2.5) -> str | None:
+def merge_fragments(tokens: list[dict], max_gap: float = 2.5, right_edge: float | None = None) -> str | None:
     """Join word tokens (pdfplumber dicts with text/x0/x1) that sit contiguously.
 
     tokens: candidate value-column words, left→right. Currency tokens are dropped.
@@ -51,17 +51,22 @@ def merge_fragments(tokens: list[dict], max_gap: float = 2.5) -> str | None:
     if not toks:
         return None
     toks = sorted(toks, key=lambda t: t["x0"])
-    # If the rightmost token alone is already a full BRL value AND nothing sits
-    # contiguously to its left, take it as-is.
-    joined = toks[0]["text"]
+    runs = [[toks[0]]]
     for prev, cur in zip(toks, toks[1:]):
-        gap = cur["x0"] - prev["x1"]
-        if gap <= max_gap:
-            joined += cur["text"]
+        if cur["x0"] - prev["x1"] <= max_gap:
+            runs[-1].append(cur)
         else:
-            # discontiguous: restart from this token (keeps the rightmost run)
-            joined = cur["text"]
-    return joined if is_brl(joined) else None
+            runs.append([cur])
+    cands = []
+    for run in runs:
+        joined = "".join(t["text"] for t in run)
+        if is_brl(joined):
+            cands.append((joined, run[-1]["x1"]))
+    if not cands:
+        return None
+    if right_edge is not None:
+        return min(cands, key=lambda c: abs(c[1] - right_edge))[0]
+    return cands[-1][0]   # rightmost run
 
 
 def fmt_brl(d: Decimal | None) -> str:

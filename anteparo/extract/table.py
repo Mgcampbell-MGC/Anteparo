@@ -13,17 +13,19 @@ heading in force (carried across pages). Values come only from the row's own val
 from __future__ import annotations
 
 import re
+from collections import Counter
 from statistics import median
 
 from ..cnpj import classify
 from ..money import merge_fragments, parse_brl, is_brl
-from .classes import class_from_text, is_class_heading, is_noise, TOTAL_RE
+from .classes import class_from_text, is_class_heading, is_noise, TOTAL_RE, boundary_tag
 from .models import ClaimRow, PrintedTotal
 
 DOC_TOKEN_RE = re.compile(r"^\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}$|^\d{3}\.\d{3}\.\d{3}-\d{2}$|^\d{11}$|^\d{14}$")
 DOC_IN_RE = re.compile(r"\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}-?\d{2}")
 DOCISH_RE = re.compile(r"^[\d./-]{8,}$")
 SEQ_RE = re.compile(r"^\d{1,5}$")
+SUMMARY_ROW_RE = re.compile(r"CLASSIFICA[ÇC][ÃA]O|QUANTIDADE|\bTOTAL\b|\bSOMA\b|SUBTOTAL|\bCLASSE\s+(?:I|II|III|IV)\b\s*[-–:]?\s*$", re.I)
 CUR_RE = re.compile(r"^R\$?$")
 CLASS_CELL_RE = re.compile(r"^(IV|III|II|I)$", re.I)
 CUR_PREFIX_RE = re.compile(r"^(R\$|US\$|USD\$?|U\$|EUR|€)", re.I)
@@ -92,6 +94,31 @@ class TableState:
         self.dev_split = None
         self.roles = None          # learned column roles for the ruled path
         self.layout = None
+        self.section_tag = None    # set when a non-class section (não sujeitos, reserva…) is in force
+        self.section = 0           # increments on every class/boundary heading
+        self.val_right = None      # right edge of the value column
+        self.running = set()       # band texts repeated on most pages (running headers/footers)
+
+
+def _apply_heading(txt: str, st: TableState) -> bool:
+    """Class heading or boundary section → update state. Returns True if the band was a heading."""
+    tag = boundary_tag(txt)
+    k = class_from_text(txt)
+    if tag and not (k and re.search(r"\bCLASSE\b", txt, re.I) and txt.upper().find("CLASSE") < txt.upper().find(tag.split("_")[0][:5])):
+        st.klass, st.heading, st.section_tag = None, txt[:120], tag
+        st.section += 1
+        return True
+    if is_class_heading(txt):
+        if k != st.klass or st.section_tag is not None:
+            st.section += 1
+        st.klass, st.heading, st.section_tag = k, txt[:120], None
+        return True
+    return False
+
+
+def _close_section(st: TableState):
+    """A printed total ends the current section; rows that follow belong to the next one."""
+    st.section += 1
 
 
 def _cell_value(text: str):
@@ -222,13 +249,22 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
         for j in alt_cols:
             if j < len(cells) and (cells[j] or "").strip() and (cells[j] or "").strip() not in DASHES:
                 extra_flags.append("ALT_VALUE:" + re.sub(r"\s+", "", cells[j]))
-        if TOTAL_RE.search(joined) and not raw_doc and val_str:
-            totals.append(PrintedTotal(klass=class_from_text(joined) or st.klass, total=parse_brl(val_str),
-                                       count=None, page=pageno, text=joined[:120], currency=cur))
+        if not raw_doc and val_str and (TOTAL_RE.search(joined) or is_class_heading(joined) or boundary_tag(joined) or SUMMARY_ROW_RE.search(name)):
+            if TOTAL_RE.search(joined) or is_class_heading(joined):
+                is_head = is_class_heading(joined) and not TOTAL_RE.search(joined)
+                if is_head:
+                    _apply_heading(joined, st)
+                totals.append(PrintedTotal(klass=class_from_text(joined) or st.klass, total=parse_brl(val_str),
+                                           count=None, page=pageno, text=joined[:120], currency=cur, section=st.section))
+                if not is_head:
+                    _apply_heading(joined, st)
+                    if TOTAL_RE.search(joined):
+                        _close_section(st)
+                continue
+            _apply_heading(joined, st)
             continue
         if not val_str and not raw_doc:
-            if is_class_heading(joined):
-                st.klass, st.heading = class_from_text(joined), joined[:120]
+            _apply_heading(joined, st)
             continue
         klass, set_by = st.klass, "SECTION_HEADING"
         if "class" in inv:
@@ -258,6 +294,8 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
             flags.append("NOT_A_CLAIM")
         if cur != "BRL":
             flags.append("FOREIGN_CURRENCY")
+        if st.section_tag and set_by != "COLUMN":
+            flags.append("SECTION_" + st.section_tag)
         idx += 1
         rows.append(ClaimRow(
             page=pageno, row_index=idx, seq_as_printed=seq,
@@ -266,14 +304,14 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
             klass=klass, class_set_by=set_by if klass else "NONE",
             value_as_printed=val_str, value_brl=val, currency=cur,
             debtor_as_printed=(re.sub(r"\s+", " ", get("debtor")).strip() or None),
-            section_heading=st.heading, flags=flags, strategy="TABLE_RULED",
+            section_heading=st.heading, flags=flags, strategy="TABLE_RULED", section=st.section,
         ))
     return rows, totals
 
 
 # ----------------------------------------------------------------------------- bands
 def _learn_geometry(bands, st: TableState):
-    doc_xs, cur_xs, brl_x0 = [], [], []
+    doc_xs, cur_xs, brl = [], [], []
     for b in bands:
         for w in b["words"]:
             if DOC_TOKEN_RE.match(w["text"]):
@@ -281,13 +319,19 @@ def _learn_geometry(bands, st: TableState):
             elif CUR_RE.match(w["text"]):
                 cur_xs.append(w["x0"])
             elif is_brl(w["text"]):
-                brl_x0.append(w["x0"])
+                brl.append((w["x0"], w["x1"]))
     if doc_xs:
         st.doc_x = median(doc_xs)
+    lefts = []
+    if brl:
+        right = max(x1 for _, x1 in brl)
+        col = [x0 for x0, x1 in brl if x1 >= right - 12]      # the right-aligned value column
+        st.val_right = right
+        lefts.append(min(col) - 3)
     if cur_xs:
-        st.val_left = median(cur_xs) - 3
-    elif brl_x0:
-        st.val_left = min(brl_x0) - 30
+        lefts.append(median(cur_xs) - 3)
+    if lefts:
+        st.val_left = min(lefts)
 
 
 def _learn_header_band(band, st: TableState):
@@ -312,8 +356,8 @@ def _learn_header_band(band, st: TableState):
 
 def _rows_from_bands(bands, pageno, st: TableState, start_idx):
     _learn_geometry(bands, st)
-    heights = [b["bottom"] - b["top"] for b in bands] or [10]
-    line_h = median(heights)
+    heights = [b["bottom"] - b["top"] for b in bands if len(b["words"]) >= 2] or [b["bottom"] - b["top"] for b in bands] or [10]
+    line_h = max(median(heights), 9.0)
     max_orphan_dist = line_h * 4.5 + 2
     anchors, orphans, totals = [], [], []
     for b in bands:
@@ -321,22 +365,40 @@ def _rows_from_bands(bands, pageno, st: TableState, start_idx):
         if _learn_header_band(b, st) or is_noise(txt):
             continue
         val_toks = [w for w in b["words"] if st.val_left is not None and w["x0"] >= st.val_left]
-        value_str = merge_fragments(val_toks) if val_toks else None
+        value_str = merge_fragments(val_toks, right_edge=st.val_right) if val_toks else None
         doc_toks = [w for w in b["words"] if DOC_TOKEN_RE.match(w["text"]) or
                     (st.doc_x is not None and DOCISH_RE.match(w["text"]) and abs(w["x0"] - st.doc_x) < 30)]
         docs = [w["text"] for w in doc_toks]
-        if TOTAL_RE.search(txt) and value_str and not docs:
-            totals.append(PrintedTotal(klass=class_from_text(txt) or st.klass, total=parse_brl(value_str),
-                                       count=None, page=pageno, text=txt))
+        if not value_str and not docs and _running_key(txt) in st.running:
+            continue   # running header/footer line — never a name continuation
+        if value_str and not docs and (TOTAL_RE.search(txt) or is_class_heading(txt) or boundary_tag(txt) or SUMMARY_ROW_RE.search(txt)):
+            is_head = is_class_heading(txt) and not TOTAL_RE.search(txt)
+            if is_head:
+                _apply_heading(txt, st)
+            if TOTAL_RE.search(txt) or is_class_heading(txt):
+                totals.append(PrintedTotal(klass=class_from_text(txt) or st.klass, total=parse_brl(value_str),
+                                           count=None, page=pageno, text=txt, section=st.section))
+            if not is_head:
+                _apply_heading(txt, st)
+                if TOTAL_RE.search(txt):
+                    _close_section(st)
             continue
         if not value_str and not docs:
-            if is_class_heading(txt):
-                st.klass, st.heading = class_from_text(txt), txt
-            else:
+            if not _apply_heading(txt, st):
                 orphans.append(b)
             continue
         anchors.append({"band": b, "value_str": value_str, "docs": docs, "doc_toks": doc_toks,
-                        "val_toks": val_toks, "klass": st.klass, "heading": st.heading})
+                        "val_toks": val_toks, "klass": st.klass, "heading": st.heading, "tag": st.section_tag, "section": st.section})
+    merged = []
+    for a in anchors:
+        prev = merged[-1] if merged else None
+        a_has_name = any(w["x0"] < (st.doc_x - 10 if st.doc_x else 1e9) and not CUR_RE.match(w["text"]) and w not in a["doc_toks"] and w not in a["val_toks"] for w in a["band"]["words"])
+        if (prev is not None and a["value_str"] and not a["docs"] and not a_has_name
+                and prev["docs"] and not prev["value_str"] and 0 < a["band"]["top"] - prev["band"]["top"] <= line_h * 2.4):
+            prev["value_str"], prev["val_toks"] = a["value_str"], a["val_toks"]
+            continue
+        merged.append(a)
+    anchors = merged
     for o in orphans:
         if not anchors:
             break
@@ -377,6 +439,8 @@ def _rows_from_bands(bands, pageno, st: TableState, start_idx):
             flags.append("NAME_MISSING")
         if a["klass"] is None and val is None:
             flags.append("NOT_A_CLAIM")
+        if a.get("tag"):
+            flags.append("SECTION_" + a["tag"])
         idx += 1
         rows.append(ClaimRow(
             page=pageno, row_index=idx, seq_as_printed=seq,
@@ -386,16 +450,20 @@ def _rows_from_bands(bands, pageno, st: TableState, start_idx):
             klass=a["klass"], class_set_by="SECTION_HEADING" if a["klass"] else "NONE",
             value_as_printed=a["value_str"], value_brl=val,
             debtor_as_printed=" ".join(dev_toks) or None, section_heading=a["heading"],
-            flags=flags, strategy="TABLE_BANDS",
+            flags=flags, strategy="TABLE_BANDS", section=a.get("section", 0),
         ))
     return rows, totals
 
 
+def _running_key(txt: str) -> str:
+    return re.sub(r"\d+", "#", txt or "").strip()[:80]
+
+
 # ----------------------------------------------------------------------------- page
-def parse_table_page(page, pageno: int, st: TableState):
+def parse_table_page(page, pageno: int, st: TableState, words=None):
     from .pdfio import page_words
 
-    words = page_words(page)
+    words = page_words(page) if words is None else words
     if not words:
         return [], []
     tables = []
@@ -415,7 +483,8 @@ def parse_table_page(page, pageno: int, st: TableState):
         return x0 - 1 <= cx <= x1 + 1 and top - 1 <= cy <= bottom + 1
 
     outside = [w for w in words if not any(inside(w, t.bbox) for t in tables)]
-    items = [("band", b["top"], b) for b in _bands(outside)] + [("table", t.bbox[1], t) for t in tables]
+    items = [("band", b["top"], b) for b in _bands(outside) if _running_key(b["text"]) not in st.running or is_class_heading(b["text"]) or TOTAL_RE.search(b["text"])] \
+            + [("table", t.bbox[1], t) for t in tables]
     items.sort(key=lambda it: it[1])
     rows, totals = [], []
     idx = 0
@@ -424,13 +493,18 @@ def parse_table_page(page, pageno: int, st: TableState):
             txt = obj["text"]
             if is_noise(txt):
                 continue
-            if is_class_heading(txt):
-                st.klass, st.heading = class_from_text(txt), txt
-            elif TOTAL_RE.search(txt):
+            is_head = is_class_heading(txt) and not TOTAL_RE.search(txt)
+            if is_head:
+                _apply_heading(txt, st)
+            if TOTAL_RE.search(txt) or (is_class_heading(txt) and merge_fragments(obj["words"])):
                 v = merge_fragments(obj["words"])
                 if v:
                     totals.append(PrintedTotal(klass=class_from_text(txt) or st.klass, total=parse_brl(v),
-                                               count=None, page=pageno, text=txt))
+                                               count=None, page=pageno, text=txt, section=st.section))
+                    if TOTAL_RE.search(txt) and not is_head:
+                        _close_section(st)
+            if not is_head:
+                _apply_heading(txt, st)
         else:
             r, t = _rows_from_table(obj, pageno, st, idx)
             if r is None:                      # table without a value column → try bands for the page
@@ -440,14 +514,27 @@ def parse_table_page(page, pageno: int, st: TableState):
             idx += len(r)
             rows.extend(r)
             totals.extend(t)
+    if not rows and any(is_brl(w["text"]) or CUR_RE.match(w["text"]) for w in words):
+        # tables were found but held no data rows (header-only grids): read the page as bands instead
+        st.layout = "TABLE_BANDS"
+        return _rows_from_bands(_bands(words), pageno, st, 0)
     return rows, totals
 
 
 def parse_table(pdf):
+    from .pdfio import page_words
+
     st = TableState()
+    pages = list(pdf.pages)
+    words_by_page = [page_words(p) for p in pages]
+    if len(pages) >= 3:
+        cnt = Counter()
+        for ws in words_by_page:
+            cnt.update({_running_key(b["text"]) for b in _bands(ws) if len(b["text"]) >= 6})
+        st.running = {k for k, c in cnt.items() if c >= max(3, len(pages) // 2)}
     rows, totals = [], []
-    for i, page in enumerate(pdf.pages, start=1):
-        r, t = parse_table_page(page, i, st)
+    for i, page in enumerate(pages, start=1):
+        r, t = parse_table_page(page, i, st, words_by_page[i - 1])
         rows.extend(r)
         totals.extend(t)
     return rows, totals, st.layout or "TABLE_BANDS"

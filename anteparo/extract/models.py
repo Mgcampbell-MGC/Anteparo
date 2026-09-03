@@ -24,6 +24,7 @@ class ClaimRow:
     section_heading: str | None = None     # the heading text in force for this row
     flags: list[str] = field(default_factory=list)
     strategy: str = ""              # TABLE / PROSE
+    section: int = 0                # heading occurrence index (group filings have several per class)
 
     def to_dict(self):
         d = asdict(self)
@@ -41,6 +42,7 @@ class PrintedTotal:
     page: int
     text: str
     currency: str = "BRL"
+    section: int = 0
 
 
 @dataclass

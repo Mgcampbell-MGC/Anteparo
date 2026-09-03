@@ -18,7 +18,8 @@ import re
 
 from ..cnpj import classify
 from ..money import parse_brl
-from .classes import CLASS_HEAD_RE
+from .classes import CLASS_HEAD_RE, BOUNDARY_RE as CLASS_BOUNDARY_RE, NOISE_RE
+PAGE_NOISE_RE = re.compile(r"^(Poder Judiciário|Tribunal de Justiça|Diário de Justiça|Certidão de publicação|Número do processo|Classe:|Tribunal:|Órgão:|Tipo de documento|Disponibilizado em|Inteiro teor|Destinatários|Advogado|Teor da Comunicação|Processo:|Comarca|Usuário:|ANO\s+[XVI]+\s*-\s*EDIÇÃO)", re.I)
 from .models import ClaimRow, PrintedTotal
 
 
@@ -37,11 +38,10 @@ CUR_VAL_RE = re.compile(CUR_SYM + r"\s*(" + VAL_P + r")(?![\d,])", re.I)
 MARKER_RE = re.compile(r",\s*(?:CPF|CNPJ)\s*:", re.I)
 DOC_LABEL_RE = re.compile(r"(?:CPF|CNPJ)\s*:\s*([\w./\-]+)", re.I)
 COUNT_RE = re.compile(r"\b(\d{1,5})\b\s*(?:\([^)]*\)\s*)?CREDOR", re.I)
-BOUNDARY_RE = re.compile(
-    r"\b(CR[ÉE]DITOS?\s+N[ÃA]O\s+SUJEITOS?|N[ÃA]O\s+SUJEITOS?\s+(?:À|A)\s+RECUPERA|EXTRACONCURSA\w*|"
-    r"RETARDAT[ÁA]RI\w*|TOTAL\s+GERAL|CR[ÉE]DITOS?\s+IL[ÍI]QUIDOS?|QUADRO\s+RESUMO|RESUMO\s+GERAL)\b",
-    re.I,
-)
+BOUNDARY_RE = CLASS_BOUNDARY_RE
+# a generic '(N CREDORES | R$ total):' section header that names no class, e.g. 'RESERVA DE CRÉDITO – AÇÕES TRABALHISTAS (20 CREDORES | R$ …):'
+SECTION_RE = re.compile(r"\(\s*\d{1,4}\s*CREDOR(?:ES)?\s*\|\s*R\s*\$", re.I)
+TOTAL_CONTEXT_RE = re.compile(r"(VALOR|TOTAL|SOMA|MONTANTE|IMPORT\w*|PERFAZ\w*|TOTALIZ\w*|\||\(|:|=)\s*(?:DE|EM|GERAL|DA\s+CLASSE|TOTAL|:)?\s*$", re.I)
 
 
 def _clean(s: str) -> str:
@@ -71,7 +71,10 @@ def _combined(page_texts):
     """Join pages; return (text, [(start_offset, pageno)])."""
     parts, offsets, pos = [], [], 0
     for i, t in enumerate(page_texts, start=1):
-        t = t.replace("\n", " ")
+        lines = t.split("\n")
+        # blank out (keep length) header/footer lines so entries that straddle a page break stay intact
+        lines = [(" " * len(ln)) if (NOISE_RE.search(ln) or (i > 1 and PAGE_NOISE_RE.match(ln.strip()))) else ln for ln in lines]
+        t = " ".join(lines)
         offsets.append((pos, i))
         parts.append(t)
         pos += len(t) + 1
@@ -97,13 +100,17 @@ def _headers(text):
         klass = m.group(1).upper()
         window = text[m.end(): m.end() + 300]
         cut = len(window)
-        for pat in (MARKER_RE, DOC_RE):
+        for pat in (MARKER_RE, DOC_RE, CLASS_HEAD_RE, BOUNDARY_RE):
             mm = pat.search(window)
             if mm and mm.start() < cut:
                 cut = mm.start()
         head = window[:cut]
         cnt = COUNT_RE.search(head)
-        tot = CUR_VAL_RE.search(head)
+        tot = None
+        for cand in CUR_VAL_RE.finditer(head):
+            if TOTAL_CONTEXT_RE.search(head[max(0, cand.start() - 40):cand.start()]):
+                tot = cand
+                break
         cur = _header_currency(head)
         end = m.end()
         if tot:
@@ -123,16 +130,34 @@ def _headers(text):
                     "count": int(cnt.group(1)) if cnt else None,
                     "total": parse_brl(_clean(tot.group(2))) if tot else None,
                     "text": text[m.start():end][:200]})
-    for bm in BOUNDARY_RE.finditer(text):
+    generic = []
+    for gm in SECTION_RE.finditer(text):
+        if any(h["start"] - 5 <= gm.start() <= h["end"] + 5 for h in out):
+            continue   # this '(N CREDORES | R$ …)' belongs to a class header
+        # walk back to the start of the section title (previous '.', ';' boundary)
+        st0 = max(text.rfind(". ", 0, gm.start()), text.rfind("; ", 0, gm.start()), gm.start() - 90)
+        title = text[st0 + 2:gm.start()].strip(" :–-")
+        if len(title) < 8 or CLASS_HEAD_RE.search(title) or BOUNDARY_RE.search(title):
+            continue   # handled by the class / boundary passes
+        if CLASS_HEAD_RE.search(text[max(0, gm.start() - 160):gm.start()]):
+            continue   # a class header sits just before: its own count/total
+        generic.append((st0 + 2, gm, title))
+    for bm in list(BOUNDARY_RE.finditer(text)) + [g[1] for g in generic]:
         # ignore if a class header sits within 90 chars after it (already used as a tag)
         if any(0 <= h["start"] - bm.start() <= 90 for h in out):
             continue
         tail = text[bm.end():bm.end() + 200]
         tot = CUR_VAL_RE.search(tail)
-        out.append({"start": bm.start(), "end": bm.end(), "klass": None, "currency": "BRL",
-                    "tag": bm.group(1).upper(), "count": None,
-                    "total": parse_brl(_clean(tot.group(2))) if (tot and "TOTAL" in bm.group(1).upper()) else None,
-                    "text": text[bm.start():bm.end() + 60]})
+        is_generic = bm.re is SECTION_RE
+        label = next((g[2] for g in generic if g[1] is bm), None) if is_generic else bm.group(1)
+        end = bm.end()
+        if is_generic:
+            mm = re.match(r"[^)]*\)\s*:?", tail)
+            end = bm.end() + (mm.end() if mm else 0)
+        out.append({"start": bm.start(), "end": end, "klass": None, "currency": "BRL",
+                    "tag": re.sub(r"\W+", "_", (label or "SECTION").upper())[:40], "count": None,
+                    "total": parse_brl(_clean(tot.group(2))) if (tot and "TOTAL" in (label or "").upper()) else None,
+                    "text": text[bm.start():end + 60]})
     out.sort(key=lambda h: h["start"])
     ded = []
     for h in out:
@@ -142,7 +167,7 @@ def _headers(text):
     return ded
 
 
-def _entry(chunk: str, base_off: int, offsets, klass, heading, seg_cur, tag, idx):
+def _entry(chunk: str, base_off: int, offsets, klass, heading, seg_cur, tag, idx, section=0):
     docs = list(DOC_RE.finditer(chunk))
     marker = MARKER_RE.search(chunk)
     label = DOC_LABEL_RE.search(chunk)
@@ -195,7 +220,7 @@ def _entry(chunk: str, base_off: int, offsets, klass, heading, seg_cur, tag, idx
         document_number=dnum, document_type=dtype, all_documents=all_docs,
         klass=klass, class_set_by="INLINE_HEADER" if klass else "NONE",
         value_as_printed=value_str, value_brl=val, currency=cur, section_heading=heading,
-        flags=flags, strategy="PROSE",
+        flags=flags, strategy="PROSE", section=section,
     )
 
 
@@ -204,18 +229,18 @@ def parse_prose(page_texts):
     heads = _headers(text)
     rows, totals = [], []
     if not heads:
-        segments = [(0, len(text), None, None, "BRL", None)]
+        segments = [(0, len(text), None, None, "BRL", None, 0)]
     else:
         segments = []
-        for i, h in enumerate(heads):
-            nxt = heads[i + 1]["start"] if i + 1 < len(heads) else len(text)
-            segments.append((h["end"], nxt, h["klass"], h["text"], h["currency"], h["tag"]))
+        for i, h in enumerate(heads, start=1):
+            nxt = heads[i]["start"] if i < len(heads) else len(text)
+            segments.append((h["end"], nxt, h["klass"], h["text"], h["currency"], h["tag"], i))
             if h["klass"] or h["total"] is not None:
                 totals.append(PrintedTotal(klass=h["klass"], total=h["total"], count=h["count"],
                                            page=_page_at(offsets, h["start"]), text=h["text"],
-                                           currency=h["currency"]))
+                                           currency=h["currency"], section=i))
     per_page_idx = {}
-    for (s, e, klass, heading, cur, tag) in segments:
+    for (s, e, klass, heading, cur, tag, section) in segments:
         seg = text[s:e]
         pos = 0
         for chunk in re.split(r";", seg):
@@ -226,7 +251,7 @@ def parse_prose(page_texts):
                 continue
             if not (DOC_RE.search(c) or DOC_LABEL_RE.search(c)) and len(c) > 250:
                 continue
-            row = _entry(c, base, offsets, klass, heading, cur, tag, 0)
+            row = _entry(c, base, offsets, klass, heading, cur, tag, 0, section)
             if row:
                 per_page_idx[row.page] = per_page_idx.get(row.page, 0) + 1
                 row.row_index = per_page_idx[row.page]

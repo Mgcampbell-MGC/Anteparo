@@ -12,19 +12,22 @@ from ..sources.rfb import RFB, normalise
 FLOOR = Decimal(200000)
 POOL_MIN = Decimal(100000)
 TYPE_RANK = {"QGC": 4, "AJ_LIST": 3, "DEBTOR_LIST": 2, "UNKNOWN": 1, "HOMOLOG": 0, "PLAN": 0}
-STATUS_RANK = {"OK": 2, "OK_NO_TOTALS": 1}
+STATUS_RANK = {"OK": 3, "PARTIAL_DOC": 2, "OK_NO_TOTALS": 1}
 DM_CODES = {49: "Sócio-Administrador", 5: "Administrador", 10: "Diretor", 16: "Presidente"}
 
 
 def best_document_per_case(db, run_id):
     """Rank usable creditor-list documents per case: QGC > AJ_LIST > DEBTOR_LIST, latest, most rows."""
     docs = db.execute("""SELECT d.doc_id, d.case_number, d.doc_type, d.status, d.publication_date,
-                                (SELECT COUNT(*) FROM claims c WHERE c.doc_id=d.doc_id AND c.run_id=d.run_id) AS n
-                         FROM documents d WHERE d.run_id=? AND d.status IN ('OK','OK_NO_TOTALS')
+                                (SELECT COUNT(*) FROM claims c WHERE c.doc_id=d.doc_id AND c.run_id=d.run_id) AS n, d.notes
+                         FROM documents d WHERE d.run_id=? AND (d.status IN ('OK','OK_NO_TOTALS')
+                              OR (d.status='QUARANTINED' AND d.notes LIKE '%classIII=PASS%'))
                          AND d.doc_type IN ('QGC','AJ_LIST','DEBTOR_LIST','UNKNOWN')""", (run_id,)).fetchall()
     best = {}
-    for doc_id, case, dtype, status, pub, n in docs:
+    for doc_id, case, dtype, status, pub, n, notes in docs:
         key = case or ("UNKNOWN:" + doc_id[:10])
+        if status == "QUARANTINED":
+            status = "PARTIAL_DOC"
         score = (TYPE_RANK.get(dtype, 0), STATUS_RANK.get(status, 0), pub or "", n)
         if key not in best or score > best[key][0]:
             best[key] = (score, doc_id, dtype, status)
@@ -78,6 +81,8 @@ def build_targets(db, run_id, log=print):
             fl = set(a["flags"])
             if status == "OK_NO_TOTALS":
                 fl.add("UNRECONCILED_SOURCE")
+            if status == "PARTIAL_DOC":
+                fl.add("PARTIAL_DOC_CLASS_III_RECONCILED")
             if case_key.startswith("UNKNOWN:"):
                 fl.add("CASE_NUMBER_MISSING")
             case_number = None if case_key.startswith("UNKNOWN:") else case_key

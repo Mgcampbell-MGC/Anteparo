@@ -182,8 +182,14 @@ class Crawler:
                             pdf_candidates[absu] = (score, kind, url, title, ltext, cases)
                     continue
                 same = pu.netloc.lower().replace("www.", "") == domain
-                if same and depth < 3 and absu not in seen and (NAV_RE.search(absu) or NAV_RE.search(_norm(ltext))):
-                    queue.append((absu, depth + 1))
+                if not same or depth >= 3 or absu in seen:
+                    continue
+                # archive/index pages (…/processos, …/casos, …/recuperacoes…) link to case pages by company name,
+                # so from an index page every same-domain link is followed; elsewhere stay keyword-guided
+                on_index = bool(NAV_RE.search(urlparse(url).path)) or depth == 0
+                if on_index or NAV_RE.search(absu) or NAV_RE.search(_norm(ltext)):
+                    if not re.search(r"/(tag|category|categoria|author|feed|wp-json|xmlrpc|wp-login|comments)/|\?(s|replytocom)=|#", absu):
+                        queue.append((absu, depth + 1))
         ranked = sorted(pdf_candidates.items(), key=lambda kv: -kv[1][0])
         got = 0
         for absu, (score, kind, page_url, title, ltext, cases) in ranked:

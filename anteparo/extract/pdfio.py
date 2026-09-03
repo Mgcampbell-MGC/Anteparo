@@ -15,7 +15,9 @@ def open_pdf(path: str):
 
 
 def page_words(page):
-    return page.extract_words(keep_blank_chars=False, use_text_flow=False)
+    """Words with geometry; rotated (non-upright) text such as gazette margin stamps is dropped."""
+    ws = page.extract_words(keep_blank_chars=False, use_text_flow=False, extra_attrs=["upright"])
+    return [w for w in ws if w.get("upright", True)]
 
 
 def page_text(page) -> str:

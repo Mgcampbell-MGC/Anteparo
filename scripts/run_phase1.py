@@ -16,6 +16,8 @@ ap.add_argument("--run", default="new", help="'new' or an existing run_id to con
 ap.add_argument("--no-enrich", action="store_true")
 ap.add_argument("--enrich-limit", type=int, default=None)
 ap.add_argument("--out", default=str(ROOT / "data" / "out"))
+ap.add_argument("--workers", type=int, default=4)
+ap.add_argument("--limit", type=int, default=None, help="ingest at most N documents (smoke test)")
 args = ap.parse_args()
 
 DB = str(ROOT / "data" / "anteparo.sqlite")
@@ -24,7 +26,7 @@ run = new_run(db, "phase1") if args.run == "new" else args.run
 log = lambda m: print(time.strftime("%H:%M:%S"), m, flush=True)
 log(f"run {run}")
 
-stats = ingest_all(db, run, log=log)
+stats = ingest_all(db, run, log=log, workers=args.workers, limit=args.limit)
 log(f"ingest: {dict(stats)}")
 build_targets(db, run, log=log)
 if not args.no_enrich:
