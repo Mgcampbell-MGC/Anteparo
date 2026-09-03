@@ -29,6 +29,43 @@ CLASS_CELL_RE = re.compile(r"^(IV|III|II|I)$", re.I)
 CUR_PREFIX_RE = re.compile(r"^(R\$|US\$|USD\$?|U\$|EUR|€)", re.I)
 
 
+DASHES = {"-", "–", "—", "", "0,00", "R$ 0,00", "R$-", "R$ -"}
+
+
+def _dedouble_token(t: str) -> str:
+    if len(t) >= 4 and len(t) % 2 == 0 and t[0::2] == t[1::2]:
+        return t[0::2]
+    if len(t) >= 5 and len(t) % 2 == 1 and t[:-1][0::2] == t[:-1][1::2]:   # trailing single glyph
+        return t[:-1][0::2] + t[-1]
+    return t
+
+
+def dedouble(s: str) -> str:
+    """Collapse fake-bold text where every glyph is drawn twice ('GGuussttaavvoo GGoommeess' → 'Gustavo Gomes')."""
+    if not s:
+        return s
+    toks = s.split()
+    fixed = [_dedouble_token(t) for t in toks]
+    n_changed = sum(1 for a, b in zip(toks, fixed) if a != b)
+    return " ".join(fixed) if n_changed and n_changed >= max(1, len(toks) // 2) else s
+
+
+def _value_header_score(t: str) -> int:
+    """Which value column is the admitted value. Higher wins; ties → rightmost column."""
+    u = t.upper()
+    if any(k in u for k in ("ATUALIZ", "ADMITID", "HABILITAD", "RECONHEC")):
+        return 5
+    if any(k in u for k in ("2ª", "2A LISTA", "SEGUNDA", " AJ", "ADMINISTRADOR", "QGC", "QUADRO")):
+        return 4
+    if any(k in u for k in ("CRÉDITO", "CREDITO", "TOTAL")):
+        return 3
+    if any(k in u for k in ("VALOR", "IMPORT", "MONTANTE")):
+        return 2
+    if any(k in u for k in ("1ª", "1A LISTA", "PRIMEIRA", "NOMINAL", "ORIGINAL", "PRINCIPAL", "ALTERA", "DIVERG")):
+        return 1
+    return 0
+
+
 # ----------------------------------------------------------------------------- shared
 def _bands(words, tol=2.6):
     ws = sorted(words, key=lambda w: (w["top"], w["x0"]))
@@ -89,8 +126,8 @@ def _learn_roles(grid):
                     roles[j] = "debtor"
                 elif "CNPJ" in t or "CPF" in t or "DOCUMENTO" in t:
                     roles[j] = "doc"
-                elif "VALOR" in t or "CRÉDITO" in t or "CREDITO" in t or "IMPORT" in t:
-                    roles.setdefault(j, "value")
+                elif _value_header_score(t) > 0:
+                    roles[j] = ("value_alt", _value_header_score(t), t.title())
                 elif t.startswith("CLASSE") or t == "CLASSE":
                     roles[j] = "class"
                 elif "CREDOR" in t or "NOME" in t or "RAZ" in t:
@@ -100,6 +137,13 @@ def _learn_roles(grid):
                 elif "MOEDA" in t:
                     roles[j] = "currency"
             break
+    # resolve value candidates: best header score wins, ties → rightmost
+    cands = [(j, r[1], r[2]) for j, r in roles.items() if isinstance(r, tuple)]
+    if cands:
+        best = max(cands, key=lambda c: (c[1], c[0]))
+        for j, sc, name in cands:
+            roles[j] = "value" if j == best[0] else "value_alt"
+        roles["__value_header__"] = best[2]
     data = grid[hdr + 1:] if hdr is not None else grid
     n = max(1, len(data))
     for j in range(ncol):
@@ -113,7 +157,10 @@ def _learn_roles(grid):
         vals = sum(1 for c in nonempty if _cell_value(c)[0] is not None)
         seqs = sum(1 for c in nonempty if SEQ_RE.match(c))
         cls = sum(1 for c in nonempty if CLASS_CELL_RE.match(c) or (class_from_text(c) and len(c) < 40))
-        if vals / len(nonempty) > 0.6 and "value" not in roles.values():
+        if vals / len(nonempty) > 0.6:
+            if "value" in roles.values():          # a later (rightmost) value-like column supersedes
+                prev = [k for k, v in roles.items() if v == "value"][0]
+                roles[prev] = "value_alt"
             roles[j] = "value"
         elif docs / len(nonempty) > 0.6 and "doc" not in roles.values():
             roles[j] = "doc"
@@ -123,6 +170,8 @@ def _learn_roles(grid):
             roles[j] = "class"
     # remaining text columns: the widest is the name; a low-cardinality one is the debtor
     text_cols = [j for j in range(ncol) if j not in roles]
+    vh = roles.pop("__value_header__", None)
+    roles["__vh__"] = vh
     if text_cols:
         stats = []
         for j in text_cols:
@@ -144,7 +193,9 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
     if "value" not in roles.values():
         return None, None       # not a creditor table — let the caller fall back
     st.roles = roles
-    inv = {v: k for k, v in roles.items()}
+    vh = roles.get("__vh__")
+    inv = {v: k for k, v in roles.items() if not str(k).startswith("__")}
+    alt_cols = [k for k, v in roles.items() if v == "value_alt"]
     rows, totals = [], []
     idx = start_idx
     for ri, cells in enumerate(grid):
@@ -154,11 +205,23 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
         joined = " ".join((c or "").replace("\n", " ") for c in cells)
         if not joined.strip() or is_noise(joined):
             continue
-        val_str, cur = _cell_value(get("value"))
+        row_doubled = dedouble(joined) != joined
+        if row_doubled:
+            cells = [dedouble((c or "").replace("\n", " ")) for c in cells]
+        raw_val = get("value").strip()
+        val_str, cur = _cell_value(raw_val)
+        extra_flags = []
+        if val_str is None and raw_val and _cell_value(dedouble(raw_val))[0]:
+            val_str, cur = _cell_value(dedouble(raw_val)); extra_flags.append("DEDOUBLED")
         doc_txt = re.sub(r"\s+", "", get("doc"))
-        doc_m = DOC_IN_RE.search(doc_txt) or DOC_IN_RE.search(re.sub(r"\s+", "", joined))
+        doc_m = DOC_IN_RE.search(doc_txt) or DOC_IN_RE.search(dedouble(doc_txt)) or DOC_IN_RE.search(re.sub(r"\s+", "", joined))
         raw_doc = doc_m.group() if doc_m else ""
         name = re.sub(r"\s+", " ", get("name").replace("\n", " ")).strip()
+        if row_doubled and "DEDOUBLED" not in extra_flags:
+            extra_flags.append("DEDOUBLED")
+        for j in alt_cols:
+            if j < len(cells) and (cells[j] or "").strip() and (cells[j] or "").strip() not in DASHES:
+                extra_flags.append("ALT_VALUE:" + re.sub(r"\s+", "", cells[j]))
         if TOTAL_RE.search(joined) and not raw_doc and val_str:
             totals.append(PrintedTotal(klass=class_from_text(joined) or st.klass, total=parse_brl(val_str),
                                        count=None, page=pageno, text=joined[:120], currency=cur))
@@ -182,8 +245,11 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
         dtype, dnum, dflags = classify(raw_doc) if raw_doc else ("NONE", "", ["NO_DOCUMENT"])
         flags = list(dflags)
         val = parse_brl(val_str) if val_str else None
+        flags.extend(extra_flags)
+        if vh:
+            flags.append("VALUE_COL:" + vh.replace(" ", "_"))
         if val is None:
-            flags.append("VALUE_MISSING" if not get("value").strip() else "VALUE_UNPARSEABLE")
+            flags.append("VALUE_MISSING" if raw_val in DASHES else "VALUE_UNPARSEABLE")
         if klass is None:
             flags.append("CLASS_UNKNOWN")
         if not name:

@@ -95,3 +95,18 @@ def find_documents(text: str) -> list[tuple[str, str]]:
             continue
         out.append(("CPF", digits(m.group())))
     return out
+
+
+def with_dv(base12: str) -> str:
+    """Append the two mod-11 check digits to a 12-digit CNPJ base (root + establishment order)."""
+    d = digits(base12)[:12]
+    if len(d) != 12:
+        return ""
+    w1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+    d1 = _mod11(d, w1)
+    d2 = _mod11(d + str(d1), [6] + w1)
+    return d + str(d1) + str(d2)
+
+
+def matriz(root8: str) -> str:
+    return with_dv(digits(root8)[:8] + "0001")
