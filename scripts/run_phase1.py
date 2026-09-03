@@ -18,6 +18,7 @@ ap.add_argument("--enrich-limit", type=int, default=None)
 ap.add_argument("--out", default=str(ROOT / "data" / "out"))
 ap.add_argument("--workers", type=int, default=4)
 ap.add_argument("--limit", type=int, default=None, help="ingest at most N documents (smoke test)")
+ap.add_argument("--reingest", default=None, help="'all' or a comma list of statuses (e.g. QUARANTINED,ERROR,NO_ROWS): drop those documents from this run and extract them again")
 args = ap.parse_args()
 
 DB = str(ROOT / "data" / "anteparo.sqlite")
@@ -26,6 +27,18 @@ run = new_run(db, "phase1") if args.run == "new" else args.run
 log = lambda m: print(time.strftime("%H:%M:%S"), m, flush=True)
 log(f"run {run}")
 
+if args.reingest and args.run != "new":
+    if args.reingest == "all":
+        ids = [r[0] for r in db.execute("SELECT doc_id FROM documents WHERE run_id=?", (run,))]
+    else:
+        sts = [x.strip() for x in args.reingest.split(",")]
+        ids = [r[0] for r in db.execute(f"SELECT doc_id FROM documents WHERE run_id=? AND status IN ({','.join('?'*len(sts))})", (run, *sts))]
+    for i in range(0, len(ids), 500):
+        chunk = ids[i:i + 500]
+        db.execute(f"DELETE FROM claims WHERE run_id=? AND doc_id IN ({','.join('?'*len(chunk))})", (run, *chunk))
+        db.execute(f"DELETE FROM documents WHERE run_id=? AND doc_id IN ({','.join('?'*len(chunk))})", (run, *chunk))
+    db.commit()
+    log(f"reingest: dropped {len(ids)} documents from run {run} for re-extraction")
 stats = ingest_all(db, run, log=log, workers=args.workers, limit=args.limit)
 log(f"ingest: {dict(stats)}")
 build_targets(db, run, log=log)

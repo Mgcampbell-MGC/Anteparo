@@ -42,6 +42,16 @@ COLS = [
 ]
 
 
+def _phone(p):
+    """RFB phones are DDD+number digits: 1144634833 → (11) 4463-4833."""
+    d = "".join(ch for ch in str(p or "") if ch.isdigit())
+    if len(d) == 10:
+        return f"({d[:2]}) {d[2:6]}-{d[6:]}"
+    if len(d) == 11:
+        return f"({d[:2]}) {d[2:7]}-{d[7:]}"
+    return str(p or "")
+
+
 def _plan_status(db, run_id, case_number, stage):
     if stage == "CONVERTED_TO_BANKRUPTCY":
         return "CONVERTED_TO_BANKRUPTCY"
@@ -112,7 +122,7 @@ def _write_lead_sheet(ws, leads, title):
             f"=U{row}*Assumptions!$B$4",
             f"=IF({face_cell}=0,\"\",ROUND(W{row}/{face_cell}*100,1))",
             L["debtor"] or "", L["case"] or "(not found in document)", L["court"] or "", L["adm"] or "",
-            (L["dm"][0] if L["dm"] else ""), (L["dm"][1] if L["dm"] else ""), L["phone"] or "", L["phone2"] or "", L["email"] or "",
+            (L["dm"][0] if L["dm"] else ""), (L["dm"][1] if L["dm"] else ""), _phone(L["phone"]), _phone(L["phone2"]), L["email"] or "",
             L["uf"] or "", L["city"] or "", L["cnae"] or "", L["porte"] or "", L["sit"] or "",
             L["url"] or "", "; ".join(f"p{p} r{r}" for p, r, _ in L["claims"]),
             "; ".join(f"p{p}: R$ {v}" for p, r, v in L["claims"]),

@@ -41,7 +41,7 @@ COUNT_RE = re.compile(r"\b(\d{1,5})\b\s*(?:\([^)]*\)\s*)?CREDOR", re.I)
 BOUNDARY_RE = CLASS_BOUNDARY_RE
 # a generic '(N CREDORES | R$ total):' section header that names no class, e.g. 'RESERVA DE CRÉDITO – AÇÕES TRABALHISTAS (20 CREDORES | R$ …):'
 SECTION_RE = re.compile(r"\(\s*\d{1,4}\s*CREDOR(?:ES)?\s*\|\s*R\s*\$", re.I)
-TOTAL_CONTEXT_RE = re.compile(r"(VALOR|TOTAL|SOMA|MONTANTE|IMPORT\w*|PERFAZ\w*|TOTALIZ\w*|\||\(|:|=)\s*(?:DE|EM|GERAL|DA\s+CLASSE|TOTAL|:)?\s*$", re.I)
+TOTAL_CONTEXT_RE = re.compile(r"(VALOR|TOTAL|SOMA|MONTANTE|IMPORT\w*|PERFAZ\w*|TOTALIZ\w*|\|)\s*(?:DE|EM|GERAL|DA\s+CLASSE|TOTAL|:|=)?\s*$", re.I)
 
 
 def _clean(s: str) -> str:
@@ -108,9 +108,9 @@ def _headers(text):
         cnt = COUNT_RE.search(head)
         tot = None
         for cand in CUR_VAL_RE.finditer(head):
-            if TOTAL_CONTEXT_RE.search(head[max(0, cand.start() - 40):cand.start()]):
-                tot = cand
-                break
+            ctx = head[max(0, cand.start() - 40):cand.start()]
+            if TOTAL_CONTEXT_RE.search(ctx) or re.search(r"\|\s*R\s*\$\s*[\d.,]+\s*\|\s*$", ctx):
+                tot = cand        # keep the last one: comparison headers list (1ª lista | 2ª lista)
         cur = _header_currency(head)
         end = m.end()
         if tot:
@@ -126,10 +126,12 @@ def _headers(text):
         pre = text[max(0, m.start() - 90):m.start()]
         bm = BOUNDARY_RE.search(pre)
         tag = bm.group(1).upper() if bm else None
+        total = parse_brl(_clean(tot.group(2))) if tot else None
+        count = int(cnt.group(1)) if cnt else None
+        if total is not None and total == 0 and (count or 0) > 0:
+            total = None          # 'R$ 0,00' next to a positive count is not the class total
         out.append({"start": m.start(), "end": end, "klass": klass, "currency": cur, "tag": tag,
-                    "count": int(cnt.group(1)) if cnt else None,
-                    "total": parse_brl(_clean(tot.group(2))) if tot else None,
-                    "text": text[m.start():end][:200]})
+                    "count": count, "total": total, "text": text[m.start():end][:200]})
     generic = []
     for gm in SECTION_RE.finditer(text):
         if any(h["start"] - 5 <= gm.start() <= h["end"] + 5 for h in out):

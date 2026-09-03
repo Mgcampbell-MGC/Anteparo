@@ -16,6 +16,16 @@ NOISE_RE = re.compile(
     re.I,
 )
 TOTAL_RE = re.compile(r"\b(TOTAL|SOMA|SUBTOTAL|MONTANTE)\b", re.I)
+_COMPANY_SUFFIX_RE = re.compile(r"\b(LTDA|S\.?A\.?|S/A|EIRELI|EPP|ME|CIA|COMERCIO|COM[ÉE]RCIO|INDUSTRIA|IND[ÚU]STRIA|SERVI[ÇC]OS|ENGENHARIA|TRANSPORTES|LOG[ÍI]STICA)\b", re.I)
+
+
+def is_total_line(s: str) -> bool:
+    """A printed total, not a creditor whose name contains 'Total'."""
+    if not s or not TOTAL_RE.search(s):
+        return False
+    if _COMPANY_SUFFIX_RE.search(s):
+        return False
+    return bool(re.search(r"^\s*(?:VALOR\s+)?(?:SUB)?TOTAL\b|\bTOTAL\s+(?:GERAL|CONCURSAL|D[OAE]S?\b|CLASSE|DA\s+CLASSE)|\bSOMA\b|\bMONTANTE\b|VALOR\s+TOTAL|TOTAL\s*:", s, re.I))
 # Sections that are not one of the four classes: rows under them are kept but never counted as class claims.
 BOUNDARY_RE = re.compile(
     r"\b(CR[ÉE]DITOS?\s+N[ÃA]O\s+SUJEITOS?|N[ÃA]O\s+SUJEITOS?\s+(?:À|A)\s+RECUPERA|N[ÃA]O\s+SUBMETID|EXTRACONCURSA\w*|"

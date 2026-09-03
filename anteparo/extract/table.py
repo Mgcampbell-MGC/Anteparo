@@ -18,7 +18,7 @@ from statistics import median
 
 from ..cnpj import classify
 from ..money import merge_fragments, parse_brl, is_brl
-from .classes import class_from_text, is_class_heading, is_noise, TOTAL_RE, boundary_tag
+from .classes import class_from_text, is_class_heading, is_noise, TOTAL_RE, boundary_tag, is_total_line
 from .models import ClaimRow, PrintedTotal
 
 DOC_TOKEN_RE = re.compile(r"^\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}$|^\d{3}\.\d{3}\.\d{3}-\d{2}$|^\d{11}$|^\d{14}$")
@@ -98,6 +98,7 @@ class TableState:
         self.section = 0           # increments on every class/boundary heading
         self.val_right = None      # right edge of the value column
         self.running = set()       # band texts repeated on most pages (running headers/footers)
+        self.rows_in_section = 0   # data rows since the last heading / closed section
 
 
 def _apply_heading(txt: str, st: TableState) -> bool:
@@ -107,10 +108,12 @@ def _apply_heading(txt: str, st: TableState) -> bool:
     if tag and not (k and re.search(r"\bCLASSE\b", txt, re.I) and txt.upper().find("CLASSE") < txt.upper().find(tag.split("_")[0][:5])):
         st.klass, st.heading, st.section_tag = None, txt[:120], tag
         st.section += 1
+        st.rows_in_section = 0
         return True
     if is_class_heading(txt):
         if k != st.klass or st.section_tag is not None:
             st.section += 1
+            st.rows_in_section = 0
         st.klass, st.heading, st.section_tag = k, txt[:120], None
         return True
     return False
@@ -119,6 +122,18 @@ def _apply_heading(txt: str, st: TableState) -> bool:
 def _close_section(st: TableState):
     """A printed total ends the current section; rows that follow belong to the next one."""
     st.section += 1
+    st.rows_in_section = 0
+
+
+def _record_total(totals, txt, klass, value, pageno, st: TableState, currency="BRL", count=None):
+    """Header-style totals (before any row of the section) stay with the section that follows;
+    footer-style totals close the section; totals repeated on most pages are document-level."""
+    if _running_key(txt) in st.running:
+        totals.append(PrintedTotal(klass=klass, total=value, count=count, page=pageno, text=txt[:120], currency=currency, section=-1))
+        return
+    totals.append(PrintedTotal(klass=klass, total=value, count=count, page=pageno, text=txt[:120], currency=currency, section=st.section))
+    if st.rows_in_section > 0:
+        _close_section(st)
 
 
 def _cell_value(text: str):
@@ -249,17 +264,14 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
         for j in alt_cols:
             if j < len(cells) and (cells[j] or "").strip() and (cells[j] or "").strip() not in DASHES:
                 extra_flags.append("ALT_VALUE:" + re.sub(r"\s+", "", cells[j]))
-        if not raw_doc and val_str and (TOTAL_RE.search(joined) or is_class_heading(joined) or boundary_tag(joined) or SUMMARY_ROW_RE.search(name)):
-            if TOTAL_RE.search(joined) or is_class_heading(joined):
-                is_head = is_class_heading(joined) and not TOTAL_RE.search(joined)
+        if not raw_doc and val_str and (is_total_line(joined) or is_class_heading(joined) or boundary_tag(joined) or SUMMARY_ROW_RE.search(name)):
+            if is_total_line(joined) or is_class_heading(joined):
+                is_head = is_class_heading(joined) and not is_total_line(joined)
                 if is_head:
                     _apply_heading(joined, st)
-                totals.append(PrintedTotal(klass=class_from_text(joined) or st.klass, total=parse_brl(val_str),
-                                           count=None, page=pageno, text=joined[:120], currency=cur, section=st.section))
+                _record_total(totals, joined, class_from_text(joined) or st.klass, parse_brl(val_str), pageno, st, cur)
                 if not is_head:
                     _apply_heading(joined, st)
-                    if TOTAL_RE.search(joined):
-                        _close_section(st)
                 continue
             _apply_heading(joined, st)
             continue
@@ -296,6 +308,7 @@ def _rows_from_table(table, pageno, st: TableState, start_idx):
             flags.append("FOREIGN_CURRENCY")
         if st.section_tag and set_by != "COLUMN":
             flags.append("SECTION_" + st.section_tag)
+        st.rows_in_section += 1
         idx += 1
         rows.append(ClaimRow(
             page=pageno, row_index=idx, seq_as_printed=seq,
@@ -371,22 +384,20 @@ def _rows_from_bands(bands, pageno, st: TableState, start_idx):
         docs = [w["text"] for w in doc_toks]
         if not value_str and not docs and _running_key(txt) in st.running:
             continue   # running header/footer line — never a name continuation
-        if value_str and not docs and (TOTAL_RE.search(txt) or is_class_heading(txt) or boundary_tag(txt) or SUMMARY_ROW_RE.search(txt)):
-            is_head = is_class_heading(txt) and not TOTAL_RE.search(txt)
+        if value_str and not docs and (is_total_line(txt) or is_class_heading(txt) or boundary_tag(txt) or SUMMARY_ROW_RE.search(txt)):
+            is_head = is_class_heading(txt) and not is_total_line(txt)
             if is_head:
                 _apply_heading(txt, st)
-            if TOTAL_RE.search(txt) or is_class_heading(txt):
-                totals.append(PrintedTotal(klass=class_from_text(txt) or st.klass, total=parse_brl(value_str),
-                                           count=None, page=pageno, text=txt, section=st.section))
+            if is_total_line(txt) or is_class_heading(txt):
+                _record_total(totals, txt, class_from_text(txt) or st.klass, parse_brl(value_str), pageno, st)
             if not is_head:
                 _apply_heading(txt, st)
-                if TOTAL_RE.search(txt):
-                    _close_section(st)
             continue
         if not value_str and not docs:
             if not _apply_heading(txt, st):
                 orphans.append(b)
             continue
+        st.rows_in_section += 1
         anchors.append({"band": b, "value_str": value_str, "docs": docs, "doc_toks": doc_toks,
                         "val_toks": val_toks, "klass": st.klass, "heading": st.heading, "tag": st.section_tag, "section": st.section})
     merged = []
@@ -483,7 +494,7 @@ def parse_table_page(page, pageno: int, st: TableState, words=None):
         return x0 - 1 <= cx <= x1 + 1 and top - 1 <= cy <= bottom + 1
 
     outside = [w for w in words if not any(inside(w, t.bbox) for t in tables)]
-    items = [("band", b["top"], b) for b in _bands(outside) if _running_key(b["text"]) not in st.running or is_class_heading(b["text"]) or TOTAL_RE.search(b["text"])] \
+    items = [("band", b["top"], b) for b in _bands(outside) if _running_key(b["text"]) not in st.running or is_class_heading(b["text"]) or is_total_line(b["text"])] \
             + [("table", t.bbox[1], t) for t in tables]
     items.sort(key=lambda it: it[1])
     rows, totals = [], []
@@ -493,16 +504,13 @@ def parse_table_page(page, pageno: int, st: TableState, words=None):
             txt = obj["text"]
             if is_noise(txt):
                 continue
-            is_head = is_class_heading(txt) and not TOTAL_RE.search(txt)
+            is_head = is_class_heading(txt) and not is_total_line(txt)
             if is_head:
                 _apply_heading(txt, st)
-            if TOTAL_RE.search(txt) or (is_class_heading(txt) and merge_fragments(obj["words"])):
+            if is_total_line(txt) or (is_class_heading(txt) and merge_fragments(obj["words"])):
                 v = merge_fragments(obj["words"])
                 if v:
-                    totals.append(PrintedTotal(klass=class_from_text(txt) or st.klass, total=parse_brl(v),
-                                               count=None, page=pageno, text=txt, section=st.section))
-                    if TOTAL_RE.search(txt) and not is_head:
-                        _close_section(st)
+                    _record_total(totals, txt, class_from_text(txt) or st.klass, parse_brl(v), pageno, st)
             if not is_head:
                 _apply_heading(txt, st)
         else:
