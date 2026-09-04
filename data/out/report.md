@@ -1,10 +1,11 @@
 # ANTEPARO index — Phase 1 report
-run `20260903T230425Z-e7c9a7` · 2026-09-04 16:59Z
+run `20260903T230425Z-e7c9a7` · 2026-09-04 20:34Z
 
 ## Call sheet
 - **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1068 name-only rows ≥ R$200k on *Needs CNPJ*
-- excluded from the Call List by registry data: banks 95 · public 1 · inactive 48; by name pre-filter: 151
-- 1199 documents ingested · 529 cases with a document · 209 of 529 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
+- closer workbook (ANTEPARO_CALL_SHEET.xlsx): trade creditors on CALL SHEET; banks/FIDCs/co-ops (95 companies by CNAE) on FINANCIAL CREDITORS; state-owned creditors on STATE-OWNED CREDITORS; public bodies (1) and inactive companies (48) on EXCLUDED (review); name pre-filter hits: 151
+- rows from QUARANTINED documents whose class III subtotal reconciled are kept and labelled PARTIAL in PROOF QUALITY; rows from lists that print no totals are labelled NO TOTALS; nothing is silently dropped
+- 1199 documents ingested · 531 cases with a document · 209 of 531 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
 
 ## Documents by status
 - ERROR: 34

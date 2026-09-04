@@ -30,10 +30,16 @@
   "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=NO_TOTAL; reader: footer ties to 1000203-38.2023.8.26.0260"
  },
  {
+  "doc_id": "64f07c6cbda782ca1aea5b7f294be5b8b87b4d9d",
+  "case_number": "0026172-78.2019.8.17.2001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unable to allocate output buffer.; case from portal record 0026172-78.2019.8.17.2001 (2026-09-04T20:26:40Z)"
+ },
+ {
   "doc_id": "24ed98480a572989bb0ce06fbd92e30151b7c249",
-  "case_number": null,
+  "case_number": "5088952-81.2025.8.13.0024",
   "doc_type": "DEBTOR_LIST",
-  "notes": "prose_signal=1; classIII=PASS | case_number corrected from 0000472-94.2012.5.06.0193 (creditor-side labor number) on 2026-09-04T13:19:15Z"
+  "notes": "prose_signal=1; classIII=PASS | case_number corrected from 0000472-94.2012.5.06.0193 (creditor-side labor number) on 2026-09-04T13:19:15Z; case from portal record 5088952-81.2025.8.13.0024 (2026-09-04T20:26:40Z)"
  },
  {
   "doc_id": "424b54fee6a110938dcb9ca54168acdb6434dece",
@@ -42,16 +48,160 @@
   "notes": "prose_signal=40; classIII=NO_TOTAL | case_number corrected from 0000436-69.2024.5.09.0671 (creditor-side labor number) on 2026-09-04T13:19:15Z"
  },
  {
+  "doc_id": "61f267a0bd1c12e426984f3a7cd91686609e33c5",
+  "case_number": "0026395-77.2025.8.16.0019",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: <built-in function unraisablehook>; case from portal record 0026395-77.2025.8.16.0019 (2026-09-04T20:26:40Z)"
+ },
+ {
   "doc_id": "d7c426fbd475685a322559791802848a6b81e7db",
   "case_number": "0700707-87.2025.8.02.0043",
   "doc_type": "AJ_LIST",
   "notes": "prose_signal=19; classIII=NO_TOTAL; reader: edital on the same Diário page belongs to 0700707-87.2025.8.02.0043"
  },
  {
+  "doc_id": "203e140fab27b603aabc7e67de97e12b2d22ee08",
+  "case_number": "0026395-77.2025.8.16.0019",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: SystemError: error return without exception set; case from portal record 0026395-77.2025.8.16.0019 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "1bba3f128f5ff9d620f1e155b19f16556a5a6231",
+  "case_number": "0026395-77.2025.8.16.0019",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: SystemError: error return without exception set; case from portal record 0026395-77.2025.8.16.0019 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "eda40debe79ffd970b609f81381fb34027f375bf",
+  "case_number": "0026395-77.2025.8.16.0019",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: lost sys.stderr; case from portal record 0026395-77.2025.8.16.0019 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "c8ce321b0f86d07acd561c3cf464aa71c4055573",
+  "case_number": "0029772-63.2026.8.17.2001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0029772-63.2026.8.17.2001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "3f0683ea04b70075ee4d1109048e9c48246f11df",
+  "case_number": "0300841-02.2018.8.24.0048",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: lost sys.stderr; case from portal record 0300841-02.2018.8.24.0048 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "a7e814cd2913bd6b4441e02d7b713bb620aa1774",
+  "case_number": "0004686-90.2026.8.17.2001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: SystemError: error return without exception set; case from portal record 0004686-90.2026.8.17.2001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "4ba63c94dfa7cbf719de6c8d496d15d3afc54eda",
+  "case_number": "0001639-09.2026.8.17.2810",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0001639-09.2026.8.17.2810 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "30119bf2ce42f224ddf865a1ad6c63f59c40d3d3",
+  "case_number": "0007565-40.2020.8.17.2370",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0007565-40.2020.8.17.2370 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "fc552310456ac2d17c9dc0904b42f9d75671f4d6",
+  "case_number": "0089327-55.2019.8.17.2001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0089327-55.2019.8.17.2001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "b5414c73cffeec4c1f752f3752fab26b1c7d1a77",
+  "case_number": "0000707-30.2008.8.02.0042",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0000707-30.2008.8.02.0042 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "73c1c85d368adde0ee63c11818aa08841dce04c3",
+  "case_number": "0001324-92.2023.8.17.2710",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0001324-92.2023.8.17.2710 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "0bd471e855ca35354dcf1dd27d498b8996cd8bd7",
+  "case_number": "0804994-81.2024.8.07.0016",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 0804994-81.2024.8.07.0016 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "ac35259fbff0c9a8972982342284c5d2d4472272",
+  "case_number": "1000647-12.2025.8.26.0354",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: Exception ignored in sys.unraisablehookException ignored in sys.unraisablehookException ignored in atexit callback: <function shutdown at 0x7f926a3119e0>Exception ignored in sys.unraisablehook: <built-in function unraisablehook>; case from portal record 1000647-12.2025.8.26.0354 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "b258b3729a43f5a711369a6d57907d9f74969ab4",
+  "case_number": "1000647-12.2025.8.26.0354",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 1000647-12.2025.8.26.0354 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "8fdc88db1ffb60bcff273b4d83a6e3ff30492a16",
+  "case_number": "1000647-12.2025.8.26.0354",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 1000647-12.2025.8.26.0354 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "14e32946bad0d76dd0cfb1ada4189418c3f9b149",
+  "case_number": "0016474-19.2022.8.03.0001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 0016474-19.2022.8.03.0001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "d903d4d566cf22bcdc08926dfeb645747df38c83",
+  "case_number": "5012487-62.2024.8.24.0023",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 5012487-62.2024.8.24.0023 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "8bf5608b1fd965899b0b7fcc77768b7a0a9e9837",
+  "case_number": "5005840-92.2026.8.24.0019",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_120: MemoryError; case from portal record 5005840-92.2026.8.24.0019 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "0232438c4306e33ed218afe25c431991ea28e00b",
+  "case_number": "5074883-62.2023.8.21.0001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 5074883-62.2023.8.21.0001 (2026-09-04T20:26:40Z)"
+ },
+ {
   "doc_id": "d7e9e03151cdb13cad656a2c255d8f11b06d8aed",
   "case_number": "1035775-55.2020.8.26.0100",
   "doc_type": "UNKNOWN",
   "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=NO_ROWS; reader: TJSP footer stamp 1035775-55.2020.8.26.0100"
+ },
+ {
+  "doc_id": "a9c88dc0db7576126c921f3ea929dc545226523d",
+  "case_number": "0422581-77.2016.8.19.0001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: Exception ignored in sys.unraisablehook; case from portal record 0422581-77.2016.8.19.0001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "186f958a84a13596859e2a343e77fd93b0577e39",
+  "case_number": "5092815-63.2023.8.21.0001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException; case from portal record 5092815-63.2023.8.21.0001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "ace1d081a6447d579f74537f4a4acec1e68da8f7",
+  "case_number": "5074883-62.2023.8.21.0001",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 5074883-62.2023.8.21.0001 (2026-09-04T20:26:40Z)"
+ },
+ {
+  "doc_id": "410e9da33d239b8a6e295266123ac722244ebfbe",
+  "case_number": "5000326-62.2014.8.21.0020",
+  "doc_type": null,
+  "notes": "WORKER_EXIT_1: pdfplumber.utils.exceptions.PdfminerException: Unexpected EOF; case from portal record 5000326-62.2014.8.21.0020 (2026-09-04T20:26:40Z)"
  },
  {
   "doc_id": "87f368a460cc05df773bd68046bb8335364013fd",

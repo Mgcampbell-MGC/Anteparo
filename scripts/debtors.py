@@ -46,7 +46,7 @@ log = lambda m: print(time.strftime("%H:%M:%S"), m, flush=True)
 # --- 1. debtor name + CNPJ per case (best document per case) ---
 def step1():
     cases = {}
-    for case, doc_id, path, hint in db.execute("""SELECT d.case_number, d.doc_id, d.file_path, COALESCE(dd.debtor, d.debtor_name_hint)
+    for case, doc_id, path, hint in db.execute("""SELECT d.case_number, d.doc_id, d.file_path, COALESCE(NULLIF(dd.debtor,''), d.debtor_name_hint)
             FROM documents d LEFT JOIN doc_debtor dd ON dd.doc_id=d.doc_id
             WHERE d.run_id=? AND d.case_number IS NOT NULL AND d.status IN ('OK','OK_NO_TOTALS','QUARANTINED') ORDER BY d.case_number""", (run,)):
         cases.setdefault(case, []).append((doc_id, path, hint))
@@ -121,26 +121,33 @@ def band_for(case):
     stage, last_mv, filing = (db.execute("SELECT stage, last_movement, filing_date FROM cases WHERE case_number=?", (case,)).fetchone() or (None, None, None))
     m = re.match(r"\d{7}-\d{2}\.(\d{4})\.", case or "")
     year = int(filing[:4]) if filing else (int(m.group(1)) if m else None)
-    plan = db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type IN ('PLAN','HOMOLOG')", (run, case)).fetchone()[0]
-    sit = db.execute("SELECT situacao, rfb_source, proceeding FROM debtors WHERE case_number=?", (case,)).fetchone() or (None, None, None)
+    granted = db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type='HOMOLOG'", (run, case)).fetchone()[0]
+    plan_filed = db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type='PLAN'", (run, case)).fetchone()[0]
+    rj_granted = (db.execute("SELECT rj_granted_signal FROM cases WHERE case_number=?", (case,)).fetchone() or (0,))[0]
+    plan = granted or rj_granted   # band A needs the GRANT (art. 58); a filed plan (art. 53) is band B
+    sit = db.execute("SELECT situacao, rfb_source, proceeding, COALESCE(display_name, razao_social, debtor_name) FROM debtors WHERE case_number=?", (case,)).fetchone() or (None, None, None, None)
     age = (2026 - year) if year else None
     dormant = bool(last_mv) and last_mv < "2025-09-01"
-    if stage == "CONVERTED_TO_BANKRUPTCY" or sit[2] == "FALENCIA":
-        reasons.append("falência decreed" if stage == "CONVERTED_TO_BANKRUPTCY" else "document is a falência (bankruptcy) list"); band = "D"
-    elif sit[1] and sit[1] not in ("NOT_IN_RFB", "NAME_MISMATCH") and sit[0] and sit[0] != "02":
-        reasons.append(f"debtor not ATIVA at RFB ({sit[0]})"); band = "D"
+    accepted = sit[1] and sit[1] not in ("NOT_IN_RFB", "NAME_MISMATCH", "CREDITOR_CNPJ")
+    falida = bool(re.search(r"MASSA FALIDA|\bFALID[AO]\b", sit[3] or "", re.I))
+    if stage == "CONVERTED_TO_BANKRUPTCY" or sit[2] == "FALENCIA" or falida:
+        reasons.append("falência decreed (DataJud)" if stage == "CONVERTED_TO_BANKRUPTCY" else "falência proceeding (list/name says falida)"); band = "D"
+        if year and year < 2005: reasons.append("pre-Lei 11.101 proceeding (DL 7.661/45)")
+    elif accepted and sit[0] == "08":
+        reasons.append("debtor closed at RFB (baixada)"); band = "D"
     elif plan and stage != "CLOSED":
-        reasons.append("plan/homologation document found"); band = "A"
+        reasons.append("recovery granted (art. 58): grant document or DataJud grant movement"); band = "A"
         if age is not None and age > 8: reasons.append(f"but case is {age}y old"); band = "B"
-    elif (age is not None and age > 4 and not plan) or dormant or stage == "CLOSED":
+    elif (age is not None and age > 4) or dormant or stage == "CLOSED" or (accepted and sit[0] in ("03", "04")):
         band = "C"
-        if age is not None and age > 4: reasons.append(f"{age}y since filing, no plan document")
+        if age is not None and age > 4: reasons.append(f"{age}y since filing; plan not in our documents")
         if dormant: reasons.append(f"no movement since {last_mv}")
-        if stage == "CLOSED": reasons.append("case closed/archived")
+        if stage == "CLOSED": reasons.append("case closed/archived (DataJud)")
+        if accepted and sit[0] in ("03", "04"): reasons.append(f"debtor {'SUSPENSA' if sit[0]=='03' else 'INAPTA'} at RFB")
     else:
-        band = "B"; reasons.append("live case, no plan document yet")
+        band = "B"; reasons.append("plan filed (art. 53), not yet granted" if plan_filed else "live case, no plan document yet")
     if stage is None and not m: reasons.append("case not matched")
-    plan_status = "CONFIRMED" if plan else ("ESTIMATED" if stage else "UNKNOWN")
+    plan_status = "CONFIRMED" if plan else ("PLAN_FILED" if plan_filed else ("ESTIMATED" if stage else "UNKNOWN"))
     return band, "; ".join(reasons), plan_status, stage, year, last_mv
 
 
@@ -182,8 +189,16 @@ def step4():
     # display name for every case
     n = 0
     for case, vname, razao, src, hint, gm in db.execute("SELECT case_number, verified_name, razao_social, rfb_source, debtor_name, group_members FROM debtors").fetchall():
-        hints = [h for (h,) in db.execute("SELECT COALESCE(dd.debtor, d.debtor_name_hint) FROM documents d LEFT JOIN doc_debtor dd ON dd.doc_id=d.doc_id WHERE d.case_number=? AND d.run_id=?", (case, run))]
+        hints = [h for (h,) in db.execute("SELECT COALESCE(NULLIF(dd.debtor,''), d.debtor_name_hint) FROM documents d LEFT JOIN doc_debtor dd ON dd.doc_id=d.doc_id WHERE d.case_number=? AND d.run_id=?", (case, run))]
         hints += [t for (t,) in db.execute("SELECT r.page_title FROM raw_documents r JOIN documents d ON d.source_url=r.url WHERE d.case_number=? AND d.run_id=?", (case, run))]
+        # the portal slug ('recuperacao-judicial_<name>__id') names the debtor more reliably than the page title
+        for (pu,) in db.execute("SELECT r.page_url FROM raw_documents r JOIN documents d ON d.source_url=r.url WHERE d.case_number=? AND d.run_id=?", (case, run)):
+            mm = re.search(r"recuperacao-judicial_([^/]+?)__\d+$", pu or "")
+            if mm: hints.insert(0, re.sub(r"\s+", " ", mm.group(1).replace("+", ".").replace("-", " ")).strip().upper())
+        if not db.execute("SELECT proceeding FROM debtors WHERE case_number=?", (case,)).fetchone()[0]:
+            blob = " ".join(h for h in hints if h) + " " + (razao or "")
+            if re.search(r"MASSA FALIDA|\bFALID[AO]\b|FAL[ÊE]NCIA D[EAO]", blob, re.I): db.execute("UPDATE debtors SET proceeding='FALENCIA' WHERE case_number=?", (case,))
+            elif re.search(r"EXTRAJUDICIAL", blob, re.I): db.execute("UPDATE debtors SET proceeding='RE' WHERE case_number=?", (case,))
         if vname:
             disp, srcname = vname, "pdf-read"
             if " / " in vname and len(vname) > 60:   # reader listed the members; the portal's group name is what a caller says

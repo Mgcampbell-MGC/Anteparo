@@ -8,6 +8,7 @@ quote is an Excel formula off the Assumptions tab, so changing the IRR reprices 
 from __future__ import annotations
 
 import json
+from anteparo.export.callsheet import BANDS, STATUSES as CLOSER_STATUSES
 from datetime import date
 from decimal import Decimal
 
@@ -16,7 +17,7 @@ from openpyxl.styles import Alignment, Font, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
-STATUSES = ["NEW", "QUEUED", "EMAILED", "CALLED", "VOICEMAIL", "CONNECTED", "INTERESTED", "NOT INTERESTED", "DEAD", "DEAL"]
+STATUSES = CLOSER_STATUSES
 PLAN_STATUSES = ["CONFIRMED", "ESTIMATED", "UNKNOWN", "CONVERTED_TO_BANKRUPTCY"]
 HEAD_FILL = PatternFill("solid", fgColor="1F3A5F")
 CRM_FILL = PatternFill("solid", fgColor="FFF4D6")
@@ -30,7 +31,7 @@ COLS = [
     ("Next action", 22, "crm"), ("Next date", 12, "crm"), ("Notes", 40, "crm"),
     ("Company (RFB)", 42, "lead"), ("Name as printed", 42, "lead"), ("CNPJ root", 11, "lead"), ("Establishment CNPJs", 22, "lead"),
     ("Class III face (R$)", 18, "lead"), ("Claims", 7, "lead"),
-    ("Plan status", 14, "price"), ("Stage", 12, "price"), ("Case filed", 12, "price"), ("Years since filing", 9, "price"),
+    ("Debtor band", 10, "price"), ("Stage", 12, "price"), ("Case filed", 12, "price"), ("Years since filing", 9, "price"),
     ("Est. recovery %", 10, "price"), ("Years to payment (est.)", 10, "price"), ("Fund price @ IRR (R$)", 18, "price"),
     ("Fund price (cents)", 10, "price"), ("OUR QUOTE (R$)", 18, "price"), ("Quote (cents)", 10, "price"),
     ("Debtor", 40, "case"), ("Case number", 26, "case"), ("Court", 8, "case"), ("Administrator (site)", 26, "case"),
@@ -168,6 +169,7 @@ def _lead_rows(db, run_id, band):
             "uf": uf, "city": city, "cnae": cnae, "porte": porte, "sit": sit, "url": url, "dtype": dtype, "pub": pub, "dstatus": dstatus,
             "adm": adm, "court": court, "filed": filed, "dm": dm, "claims": claims,
             "plan_status": _plan_status(db, run_id, case, stage),
+            "band": (db.execute("SELECT band FROM debtors WHERE case_number=?", (case,)).fetchone() or ("U",))[0] if case else "U",
         })
     return out
 
@@ -189,10 +191,10 @@ def _write_lead_sheet(ws, leads, title):
             i - 1, "NEW", "", 0, "", "", "", "",
             L["razao"] or "", L["name_printed"], L["root"], (L["ests"] or "").replace("|", ", "),
             float(L["face"]), L["n"],
-            L["plan_status"], L["stage"], (date.fromisoformat(L["filed"]) if L["filed"] and len(L["filed"]) == 10 else ""),
+            L["band"], L["stage"], (date.fromisoformat(L["filed"]) if L["filed"] and len(L["filed"]) == 10 else ""),
             f'=IF(Q{row}="","",ROUND((TODAY()-Q{row})/365.25,1))',
-            f"=VLOOKUP({ps},Assumptions!$A$7:$E$10,2,FALSE)",
-            f'=MAX(0.5,VLOOKUP({ps},Assumptions!$A$7:$E$10,3,FALSE)+VLOOKUP({ps},Assumptions!$A$7:$E$10,4,FALSE)/2-IF({ysf}="",0,{ysf}))',
+            f"=IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,2,FALSE),0.25)",
+            f'=IF({ps}="A",MAX(1,IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,3,FALSE),3)+IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,4,FALSE),8)/2-MAX(0,IF({ysf}="",0,{ysf})-IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,5,FALSE),1.5))),IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,5,FALSE),2.5)+IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,3,FALSE),3)+IFERROR(VLOOKUP({ps},Assumptions!$A$7:$F$11,4,FALSE),8)/2)',
             f"={face_cell}*S{row}/(1+Assumptions!$B$3)^T{row}",
             f"=IF({face_cell}=0,\"\",ROUND(U{row}/{face_cell}*100,1))",
             f"=U{row}*Assumptions!$B$4",
@@ -235,17 +237,12 @@ def _assumptions(ws):
     ws["A4"] = "Buy price as share of fund price (we pay 60% → 0.60)"; ws["B4"] = 0.60; ws["B4"].number_format = "0%"
     ws["F3"] = "Fund price = face × recovery% ÷ (1+IRR)^(years to payment). A fund needing 25% IRR on a plan paying 30% over years 3–10 pays ~8 cents, not 25 — check the 7 buyers' real numbers against this."
     ws["F4"] = "Our quote = fund price × this share. The doc rule is 60% of mandate price; expected 55–70% once Gate 6 data exists."
-    ws["A6"] = "Plan status"; ws["B6"] = "Class III recovery % of face"; ws["C6"] = "Grace (years)"; ws["D6"] = "Term (years)"; ws["E6"] = "Note"
-    for c in "ABCDE":
+    ws["A6"] = "Debtor band"; ws["B6"] = "Class III recovery % of face"; ws["C6"] = "Grace (years)"; ws["D6"] = "Term (years)"; ws["E6"] = "Plan lag (years)"; ws["F6"] = "Note"
+    for c in "ABCDEF":
         ws[f"{c}6"].font = Font(bold=True, color="FFFFFF"); ws[f"{c}6"].fill = HEAD_FILL
-    rows = [
-        ("CONFIRMED", 0.40, 2, 8, "A plan/homologation document exists for the case. ASSUMED terms until plan parsing lands — replace with the plan's own class III terms."),
-        ("ESTIMATED", 0.30, 2, 8, "No plan document found; case is live in DataJud. ASSUMED typical Brazilian class III terms."),
-        ("UNKNOWN", 0.25, 3, 8, "Case not matched to DataJud. ASSUMED, conservative."),
-        ("CONVERTED_TO_BANKRUPTCY", 0.05, 4, 4, "Falência decreed. Class III ranks behind labour and secured; assume near-zero."),
-    ]
-    for i, (a, b, c, d, e) in enumerate(rows, start=7):
-        ws[f"A{i}"] = a; ws[f"B{i}"] = b; ws[f"C{i}"] = c; ws[f"D{i}"] = d; ws[f"E{i}"] = e
+    rows = [(b, rec, g, t, lag, note) for b, rec, g, t, lag, note in BANDS]   # one source of truth with the closer workbook
+    for i, (a, b, c, d, lag, e) in enumerate(rows, start=7):
+        ws[f"A{i}"] = a; ws[f"B{i}"] = b; ws[f"C{i}"] = c; ws[f"D{i}"] = d; ws[f"E{i}"] = lag; ws[f"F{i}"] = e
         ws[f"B{i}"].number_format = "0%"
         for col in "BCD":
             ws[f"{col}{i}"].fill = PatternFill("solid", fgColor="FFF2CC")
