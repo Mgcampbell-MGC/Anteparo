@@ -1,0 +1,512 @@
+[
+ {
+  "root": "00000000",
+  "razao": "BANCO DO BRASIL SA",
+  "uf": "DF",
+  "face": 231941333,
+  "claims": 36,
+  "cases": 35,
+  "kw": "BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "07450604",
+  "razao": "BANK OF CHINA (BRASIL) BANCO MULTIPLO S/A",
+  "uf": "SP",
+  "face": 87833889,
+  "claims": 2,
+  "cases": 2,
+  "kw": "BANK OF CHINA",
+  "kind": "BANK"
+ },
+ {
+  "root": "28195667",
+  "razao": "BANCO ABC BRASIL S.A.",
+  "uf": "SP",
+  "face": 36621883,
+  "claims": 7,
+  "cases": 7,
+  "kw": "ABC BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "11303092",
+  "razao": "KLT PARTICIPACOES SA",
+  "uf": "SC",
+  "face": 20417361,
+  "claims": 1,
+  "cases": 1,
+  "kw": "KLT PARTICIPACOES",
+  "kind": "BANK"
+ },
+ {
+  "root": "00795423",
+  "razao": "BANCO SEMEAR S.A.",
+  "uf": "MG",
+  "face": 17013791,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SEMEAR",
+  "kind": "BANK"
+ },
+ {
+  "root": "38725768",
+  "razao": "ARAUJO FONTES PARTICIPACOES LTDA.",
+  "uf": "MG",
+  "face": 15143906,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ARAUJO FONTES PARTICIPACOES",
+  "kind": "BANK"
+ },
+ {
+  "root": "31872495",
+  "razao": "BANCO C6 S.A.",
+  "uf": "SP",
+  "face": 13847142,
+  "claims": 6,
+  "cases": 6,
+  "kw": "C6",
+  "kind": "BANK"
+ },
+ {
+  "root": "60770336",
+  "razao": "BANCO ALFA DE INVESTIMENTO S.A.",
+  "uf": "SP",
+  "face": 12737379,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ALFA",
+  "kind": "BANK"
+ },
+ {
+  "root": "37255049",
+  "razao": "SICOOB CREDIGOIAS COOPERATIVA DE CREDITO LTDA",
+  "uf": null,
+  "face": 8134853,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SICOOB CREDIGOIAS",
+  "kind": "COOP"
+ },
+ {
+  "root": "81192106",
+  "razao": "COOPERATIVA DE CREDITO POUPANCA E INVESTIMENTO NOSSA TERRA SICREDI NOSSA TERRA PRSP",
+  "uf": null,
+  "face": 7666040,
+  "claims": 1,
+  "cases": 1,
+  "kw": "POUPANCA NOSSA TERRA",
+  "kind": "COOP"
+ },
+ {
+  "root": "29720639",
+  "razao": "FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS JPM III",
+  "uf": null,
+  "face": 6750000,
+  "claims": 1,
+  "cases": 1,
+  "kw": "JPM III",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "32193199",
+  "razao": "GCD ADMINISTRADORA DE CARTOES DE CREDITO LTDA",
+  "uf": "PE",
+  "face": 5397873,
+  "claims": 1,
+  "cases": 1,
+  "kw": "GCD ADMINISTRADORA CARTOES",
+  "kind": "BANK"
+ },
+ {
+  "root": "10249419",
+  "razao": "CARGILL BIOENERGIA LTDA.",
+  "uf": "SP",
+  "face": 4173329,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CARGILL BIOENERGIA",
+  "kind": "BANK"
+ },
+ {
+  "root": "04902979",
+  "razao": "BANCO DA AMAZONIA SA",
+  "uf": "PA",
+  "face": 3804846,
+  "claims": 2,
+  "cases": 2,
+  "kw": "AMAZONIA",
+  "kind": "BANK"
+ },
+ {
+  "root": "33721490",
+  "razao": "METAL CREDIT SECURITIZADORA S.A.",
+  "uf": "SP",
+  "face": 3539956,
+  "claims": 1,
+  "cases": 1,
+  "kw": "METAL CREDIT SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "92816560",
+  "razao": "BANCO REGIONAL DE DESENVOLVIMENTO DO EXTREMO SUL - BRDE (",
+  "uf": null,
+  "face": 3110845,
+  "claims": 1,
+  "cases": 1,
+  "kw": "REGIONAL DESENVOLVIMENTO EXTREMO",
+  "kind": "BANK"
+ },
+ {
+  "root": "73443863",
+  "razao": "COOPERATIVA DE CREDITO UNICRED VALE LTDA UNICRED VALE",
+  "uf": "SC",
+  "face": 2753771,
+  "claims": 1,
+  "cases": 1,
+  "kw": "UNICRED VALE UNICRED",
+  "kind": "COOP"
+ },
+ {
+  "root": "20204300",
+  "razao": "MSN SECURITIZADORA S.A.",
+  "uf": "PR",
+  "face": 2463063,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MSN SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "42605322",
+  "razao": "OPHIR FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS",
+  "uf": "SP",
+  "face": 2246493,
+  "claims": 2,
+  "cases": 2,
+  "kw": "OPHIR",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "08632394",
+  "razao": "RED FIDC",
+  "uf": null,
+  "face": 2167194,
+  "claims": 2,
+  "cases": 2,
+  "kw": "RED",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "40895649",
+  "razao": "Audax Capital Fundo de Investimento em Direitos Creditórios",
+  "uf": null,
+  "face": 1945690,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Audax Capital",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "57691429",
+  "razao": "VERTIS CAPITAL FUNDO DE INVESTIMENTO",
+  "uf": null,
+  "face": 1767950,
+  "claims": 1,
+  "cases": 1,
+  "kw": "VERTIS CAPITAL",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "92894922",
+  "razao": "Banco Original S.A.",
+  "uf": null,
+  "face": 1653305,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Original",
+  "kind": "BANK"
+ },
+ {
+  "root": "02211906",
+  "razao": "TRUSTHUB SECURITIZADORA SA",
+  "uf": null,
+  "face": 1533722,
+  "claims": 1,
+  "cases": 1,
+  "kw": "TRUSTHUB SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "28849641",
+  "razao": "DLR CAPITAL FUNDOS DE INVESTIMENTOS EM DIREITOS CREDITÓRIOS (",
+  "uf": null,
+  "face": 1170053,
+  "claims": 1,
+  "cases": 1,
+  "kw": "DLR CAPITAL FUNDOS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "01039011",
+  "razao": "COOPERATIVA DE CREDITO UNICRED DESBRAVADORA LTDA - UNICRED DESBRAVADORA",
+  "uf": null,
+  "face": 1145435,
+  "claims": 2,
+  "cases": 2,
+  "kw": "UNICRED DESBRAVADORA UNICRED",
+  "kind": "COOP"
+ },
+ {
+  "root": "79342069",
+  "razao": "Banco Cooperativo Sicredi S.A.",
+  "uf": null,
+  "face": 1110075,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Cooperativo Sicredi",
+  "kind": "COOP"
+ },
+ {
+  "root": "39664088",
+  "razao": "Fundo De Investimento Em Direitos Creditorios ML Bank II",
+  "uf": null,
+  "face": 1031250,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ML Bank II",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "18862277",
+  "razao": "Brasfor Fundo De Investimento Em Direitos Creditorios Multisetorial",
+  "uf": null,
+  "face": 980674,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Brasfor Multisetorial",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "03084842",
+  "razao": "TIME CONSULTORIA E FOMENTO MERCANTIL LTDA",
+  "uf": null,
+  "face": 864333,
+  "claims": 1,
+  "cases": 1,
+  "kw": "TIME CONSULTORIA FOMENTO",
+  "kind": "BANK"
+ },
+ {
+  "root": "22175405",
+  "razao": "Mr Fundo De Investimento Em Direitos Creditorios",
+  "uf": null,
+  "face": 750053,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Mr",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "11261368",
+  "razao": "ALFA FUNDO DE INVET EM DIREITOS CREDITORIOS MULTISSETOR",
+  "uf": null,
+  "face": 713186,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ALFA INVET MULTISSETOR",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "43552951",
+  "razao": "3F CAPITAL SECURITIZADORA S/A",
+  "uf": null,
+  "face": 685174,
+  "claims": 2,
+  "cases": 2,
+  "kw": "3F CAPITAL SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "07679404",
+  "razao": "BANCO TOPÁZIO S/A",
+  "uf": null,
+  "face": 629629,
+  "claims": 1,
+  "cases": 1,
+  "kw": "TOPÁZIO",
+  "kind": "BANK"
+ },
+ {
+  "root": "17213074",
+  "razao": "CENTRUM FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS",
+  "uf": null,
+  "face": 566560,
+  "claims": 2,
+  "cases": 2,
+  "kw": "CENTRUM",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "32274874",
+  "razao": "CREDIT PARTNERS FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS NÃO PADRONIZADOS",
+  "uf": null,
+  "face": 547127,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CREDIT PARTNERS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "39769038",
+  "razao": "PHD FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS (",
+  "uf": null,
+  "face": 521700,
+  "claims": 1,
+  "cases": 1,
+  "kw": "PHD",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "09576849",
+  "razao": "COOPERATIVA DE CREDITO DE LIVRE ADMISSAO DE CERES E RIALMA LTDA",
+  "uf": "GO",
+  "face": 487839,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LIVRE ADMISSAO CERES",
+  "kind": "COOP"
+ },
+ {
+  "root": "24506071",
+  "razao": "ARTEMUS FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS MULTISSETORIAL (",
+  "uf": null,
+  "face": 440967,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ARTEMUS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "40373446",
+  "razao": "W K SECURITIZADORA S.A.",
+  "uf": null,
+  "face": 402501,
+  "claims": 1,
+  "cases": 1,
+  "kw": "W K SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "36238945",
+  "razao": "POLUX SECURITIZADORA DE RECEBÍVEIS COMERCIAIS S.A.",
+  "uf": null,
+  "face": 361044,
+  "claims": 1,
+  "cases": 1,
+  "kw": "POLUX SECURITIZADORA RECEBÍVEIS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "03732359",
+  "razao": "COOPERATIVA DE CRÉDITO RURAL DO ALTO PAJEU LTDA.",
+  "uf": null,
+  "face": 334273,
+  "claims": 1,
+  "cases": 1,
+  "kw": "RURAL ALTO PAJEU",
+  "kind": "COOP"
+ },
+ {
+  "root": "32904168",
+  "razao": "CONSORCIO VALORGÁS ENERGIA SUSTENTÁVEL PE I",
+  "uf": null,
+  "face": 315496,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CONSORCIO VALORGÁS ENERGIA",
+  "kind": "BANK"
+ },
+ {
+  "root": "04281182",
+  "razao": "COOPERATIVA DE CREDITO E ECONOMIA COM INTERACAO SOLIDARIA DE CHAPECO - CRESOL CHAPECO (",
+  "uf": null,
+  "face": 295395,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ECONOMIA COM INTERACAO",
+  "kind": "COOP"
+ },
+ {
+  "root": "07808907",
+  "razao": "Soldamaq Comercio de Ferramentas Sicredi LTDA (CNPJ nº",
+  "uf": null,
+  "face": 288725,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Soldamaq Comercio Ferramentas",
+  "kind": "COOP"
+ },
+ {
+  "root": "34548181",
+  "razao": "LUGUS SECURITIZADORA S/A (",
+  "uf": null,
+  "face": 275418,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LUGUS SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "34816202",
+  "razao": "M&T CAPITAL SECURITIZADORA S/A (FIDEM BANK) (",
+  "uf": null,
+  "face": 264375,
+  "claims": 1,
+  "cases": 1,
+  "kw": "M&T CAPITAL SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "16942458",
+  "razao": "JPF FOMENTO MERCANTIL LTDA",
+  "uf": null,
+  "face": 250000,
+  "claims": 1,
+  "cases": 1,
+  "kw": "JPF FOMENTO MERCANTIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "25387655",
+  "razao": "COOPERATIVA DE CREDITO CREDIVALE LTDA - SICOOB CREDIVALE",
+  "uf": "MG",
+  "face": 245000,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CREDIVALE SICOOB CREDIVALE",
+  "kind": "COOP"
+ },
+ {
+  "root": "24504464",
+  "razao": "OXSS SECURITIZADORA FUNDOS DE INVESTIMENTOS EM DIREITOS CREDITORIOS",
+  "uf": null,
+  "face": 222133,
+  "claims": 1,
+  "cases": 1,
+  "kw": "OXSS SECURITIZADORA FUNDOS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "32202903",
+  "razao": "MATRIZ FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS",
+  "uf": null,
+  "face": 201561,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MATRIZ",
+  "kind": "FIDC/FUND"
+ }
+]

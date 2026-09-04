@@ -1,0 +1,512 @@
+[
+ {
+  "root": "00360305",
+  "razao": "CAIXA ECONOMICA FEDERAL",
+  "uf": "DF",
+  "face": 634483364,
+  "claims": 28,
+  "cases": 26,
+  "kw": "CAIXA ECONOMICA FEDERAL",
+  "kind": "BANK"
+ },
+ {
+  "root": "60701190",
+  "razao": "ITAU UNIBANCO S.A.",
+  "uf": "SP",
+  "face": 109586144,
+  "claims": 28,
+  "cases": 28,
+  "kw": "ITAU UNIBANCO",
+  "kind": "BANK"
+ },
+ {
+  "root": "58160789",
+  "razao": "BANCO SAFRA S A",
+  "uf": "SP",
+  "face": 62993584,
+  "claims": 22,
+  "cases": 22,
+  "kw": "SAFRA S A",
+  "kind": "BANK"
+ },
+ {
+  "root": "62232889",
+  "razao": "BANCO DAYCOVAL S.A.",
+  "uf": "SP",
+  "face": 25586197,
+  "claims": 12,
+  "cases": 12,
+  "kw": "DAYCOVAL",
+  "kind": "BANK"
+ },
+ {
+  "root": "29644666",
+  "razao": "Banco do Veneza Equipamentos Sul Comercio LTDA (CNPJ nº",
+  "uf": null,
+  "face": 19901499,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Veneza Equipamentos Sul",
+  "kind": "BANK"
+ },
+ {
+  "root": "60889128",
+  "razao": "BANCO SOFISA S.A.",
+  "uf": "SP",
+  "face": 15770617,
+  "claims": 6,
+  "cases": 6,
+  "kw": "SOFISA",
+  "kind": "BANK"
+ },
+ {
+  "root": "33657248",
+  "razao": "BANCO NACIONAL DE DESENVOLVIMENTO ECONOMICO E SOCIAL",
+  "uf": null,
+  "face": 14681470,
+  "claims": 2,
+  "cases": 2,
+  "kw": "NACIONAL DESENVOLVIMENTO ECONOMICO",
+  "kind": "BANK"
+ },
+ {
+  "root": "60872504",
+  "razao": "Itaú Unibanco Holding S.A.",
+  "uf": null,
+  "face": 12852152,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Itaú Unibanco Holding",
+  "kind": "BANK"
+ },
+ {
+  "root": "17192451",
+  "razao": "BANCO ITAUCARD S.A.",
+  "uf": "SP",
+  "face": 10682846,
+  "claims": 3,
+  "cases": 3,
+  "kw": "ITAUCARD",
+  "kind": "BANK"
+ },
+ {
+  "root": "07502031",
+  "razao": "Cooperativa de Crédito de Livre Admissão Centro Oeste Ltda - Sicoob Emprecred",
+  "uf": null,
+  "face": 7977880,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Livre Admissão Centro",
+  "kind": "COOP"
+ },
+ {
+  "root": "31880826",
+  "razao": "Banco Guanabara S.A.",
+  "uf": null,
+  "face": 7391913,
+  "claims": 2,
+  "cases": 2,
+  "kw": "Guanabara",
+  "kind": "BANK"
+ },
+ {
+  "root": "47151680",
+  "razao": "FARM TECH IBBA I FIDC",
+  "uf": null,
+  "face": 5767666,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FARM TECH IBBA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "22415372",
+  "razao": "FUNDO DE RECUPERACAO DE ATIVOS FIDC - RESPONSABILIDADE LIMITADA",
+  "uf": "SP",
+  "face": 4514078,
+  "claims": 1,
+  "cases": 1,
+  "kw": "RECUPERACAO ATIVOS RESPONSABILIDADE",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "02641032",
+  "razao": "COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO UNICRED PONTO CAPITAL",
+  "uf": null,
+  "face": 4069397,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ECONOMIA MÚTUO UNICRED",
+  "kind": "COOP"
+ },
+ {
+  "root": "10793428",
+  "razao": "FAIRFAX BRASIL SEGUROS CORPORATIVOS SA",
+  "uf": "SP",
+  "face": 3663130,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FAIRFAX BRASIL SEGUROS",
+  "kind": "BANK"
+ },
+ {
+  "root": "02038232",
+  "razao": "BANCO COOPERATIVO SICOOB S.A.",
+  "uf": "DF",
+  "face": 3253399,
+  "claims": 3,
+  "cases": 3,
+  "kw": "COOPERATIVO SICOOB",
+  "kind": "COOP"
+ },
+ {
+  "root": "21397569",
+  "razao": "FS FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS NAO PADRONIZADOS",
+  "uf": "SP",
+  "face": 3056640,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "76059997",
+  "razao": "COOPERATIVA DE CREDITO, POUPANCA E INVESTIMENTO PROGRESSO - SICREDI PROGRESSO PR/SP",
+  "uf": "PR",
+  "face": 2656901,
+  "claims": 1,
+  "cases": 1,
+  "kw": "POUPANCA PROGRESSO SICREDI",
+  "kind": "COOP"
+ },
+ {
+  "root": "12910431",
+  "razao": "GAVEA FIDC",
+  "uf": null,
+  "face": 2327494,
+  "claims": 1,
+  "cases": 1,
+  "kw": "GAVEA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "33021064",
+  "razao": "COOPERATIVA DE CREDITO POUPANCA E INVESTIMENTO DO ARAGUAIA E XINGU SICREDI ARAXINGU",
+  "uf": null,
+  "face": 2198652,
+  "claims": 1,
+  "cases": 1,
+  "kw": "POUPANCA ARAGUAIA XINGU",
+  "kind": "COOP"
+ },
+ {
+  "root": "22007308",
+  "razao": "EVOQUE SECURITIZADORA S.A. (",
+  "uf": null,
+  "face": 2006117,
+  "claims": 1,
+  "cases": 1,
+  "kw": "EVOQUE SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "11581339",
+  "razao": "BMP SOCIEDADE DE CREDITO AO MICROEMPREENDEDOR E A EMPRESA DE PEQUENO PORTE LTDA",
+  "uf": "SP",
+  "face": 1881174,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BMP AO MICROEMPREENDEDOR",
+  "kind": "BANK"
+ },
+ {
+  "root": "03566655",
+  "razao": "Cooperativa de Crédito Poupança e Investimento Celeiro Centro Oeste - Sicredi Celeiro Centro Oeste",
+  "uf": null,
+  "face": 1743001,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Poupança Celeiro Centro",
+  "kind": "COOP"
+ },
+ {
+  "root": "20791371",
+  "razao": "INTERBANK FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS",
+  "uf": "SP",
+  "face": 1630829,
+  "claims": 2,
+  "cases": 2,
+  "kw": "INTERBANK",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "31024386",
+  "razao": "Gavea Open Fundo De Investimento Em Direitos Creditorios",
+  "uf": null,
+  "face": 1218763,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Gavea Open",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "18329685",
+  "razao": "OXSS SECURITIZADORA S/A. (",
+  "uf": null,
+  "face": 1150185,
+  "claims": 1,
+  "cases": 1,
+  "kw": "OXSS SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "40974616",
+  "razao": "P.S FACTORING",
+  "uf": null,
+  "face": 1131366,
+  "claims": 1,
+  "cases": 1,
+  "kw": "P S FACTORING",
+  "kind": "BANK"
+ },
+ {
+  "root": "10311218",
+  "razao": "COOPERATIVA DE CREDITO EVOLUA",
+  "uf": null,
+  "face": 1049021,
+  "claims": 1,
+  "cases": 1,
+  "kw": "EVOLUA",
+  "kind": "COOP"
+ },
+ {
+  "root": "16551061",
+  "razao": "SICOOB ADMINISTRADORA DE CONSORCIOS LTDA",
+  "uf": null,
+  "face": 1000149,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SICOOB ADMINISTRADORA CONSORCIOS",
+  "kind": "COOP"
+ },
+ {
+  "root": "01727929",
+  "razao": "COOPERATIVA DE CRÉD ITO UNICRED EVOLUÇÃO LTDA",
+  "uf": null,
+  "face": 890473,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CRÉD ITO UNICRED",
+  "kind": "COOP"
+ },
+ {
+  "root": "11504852",
+  "razao": "NOVA S.R.M. ADMINISTRACAO DE RECURSOS E FINANCAS S/A",
+  "uf": "SP",
+  "face": 758973,
+  "claims": 1,
+  "cases": 1,
+  "kw": "NOVA S R",
+  "kind": "BANK"
+ },
+ {
+  "root": "78825270",
+  "razao": "COOPERATIVA DE CREDITO MAXI ALFA DE LIVRE ADMISSAO DE ASSOCIADOS - SICOOB MAXICREDITO",
+  "uf": null,
+  "face": 722008,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MAXI ALFA LIVRE",
+  "kind": "COOP"
+ },
+ {
+  "root": "12107667",
+  "razao": "JRS EMPREENDIMENTOS IMOBILIARIOS LTDA",
+  "uf": "MT",
+  "face": 698356,
+  "claims": 1,
+  "cases": 1,
+  "kw": "JRS EMPREENDIMENTOS IMOBILIARIOS",
+  "kind": "BANK"
+ },
+ {
+  "root": "26506898",
+  "razao": "TREVISO FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS",
+  "uf": "SP",
+  "face": 661425,
+  "claims": 1,
+  "cases": 1,
+  "kw": "TREVISO",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "04250224",
+  "razao": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
+  "uf": "SP",
+  "face": 617039,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MAGGI ADMINISTRADORA CONSORCIOS",
+  "kind": "BANK"
+ },
+ {
+  "root": "42898825",
+  "razao": "SICOOB CREDICOM - COOP. ECONOMIA E CRED MÚTUO MÉDICOS E PROF DA SAÚDE DO BR LTDA",
+  "uf": null,
+  "face": 553542,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SICOOB CREDICOM COOP",
+  "kind": "COOP"
+ },
+ {
+  "root": "12144737",
+  "razao": "CREDIT BRASIL FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS MULTISSETORIAL MASTER - EM LIQUIDACAO",
+  "uf": "SP",
+  "face": 526333,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CREDIT BRASIL MASTER",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "46799305",
+  "razao": "INTER SIMPLES FUNDO DE INVESTIMENTO EM DIREITOS CREDITO",
+  "uf": null,
+  "face": 505186,
+  "claims": 1,
+  "cases": 1,
+  "kw": "INTER SIMPLES",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "11597992",
+  "razao": "FIRMA SECURITIZADORA S/A",
+  "uf": null,
+  "face": 474036,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FIRMA SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "14723388",
+  "razao": "BR CONSORCIOS ADMINISTRADORA DE CONSORCIOS LTDA",
+  "uf": "PR",
+  "face": 432822,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BR CONSORCIOS ADMINISTRADORA",
+  "kind": "BANK"
+ },
+ {
+  "root": "00000776",
+  "razao": "Itau Administradora de Consórcios Ltda",
+  "uf": null,
+  "face": 380137,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Itau Administradora Consórcios",
+  "kind": "BANK"
+ },
+ {
+  "root": "49655558",
+  "razao": "SOCIEDADE EMBUENSE ADMINISTRACAO E PARTICIPACAO LTDA",
+  "uf": "SP",
+  "face": 350000,
+  "claims": 1,
+  "cases": 1,
+  "kw": "EMBUENSE ADMINISTRACAO PARTICIPACAO",
+  "kind": "BANK"
+ },
+ {
+  "root": "12222798",
+  "razao": "C.H.F. ONE PARTICIPACOES LTDA",
+  "uf": "SP",
+  "face": 327670,
+  "claims": 1,
+  "cases": 1,
+  "kw": "C H F",
+  "kind": "BANK"
+ },
+ {
+  "root": "05040481",
+  "razao": "BANCO DE LAGE LANDEN BRASIL S.A",
+  "uf": null,
+  "face": 302609,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LAGE LANDEN BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "28517628",
+  "razao": "BANCO PACCAR S.A.",
+  "uf": "PR",
+  "face": 293344,
+  "claims": 1,
+  "cases": 1,
+  "kw": "PACCAR",
+  "kind": "BANK"
+ },
+ {
+  "root": "33254319",
+  "razao": "SERRANA FINANCIAMENTO - BANCO LOSANGO",
+  "uf": null,
+  "face": 283611,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SERRANA LOSANGO",
+  "kind": "BANK"
+ },
+ {
+  "root": "51186412",
+  "razao": "RAFAEL VERCELLI PARTICIPACOES LTDA",
+  "uf": "SP",
+  "face": 269991,
+  "claims": 1,
+  "cases": 1,
+  "kw": "RAFAEL VERCELLI PARTICIPACOES",
+  "kind": "BANK"
+ },
+ {
+  "root": "51473709",
+  "razao": "LOURENCO MALULY PARTICIPACOES LTDA",
+  "uf": "SP",
+  "face": 258139,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LOURENCO MALULY PARTICIPACOES",
+  "kind": "BANK"
+ },
+ {
+  "root": "61550141",
+  "razao": "YELUM SEGUROS S.A",
+  "uf": "SP",
+  "face": 246955,
+  "claims": 1,
+  "cases": 1,
+  "kw": "YELUM SEGUROS",
+  "kind": "BANK"
+ },
+ {
+  "root": "50479122",
+  "razao": "BTG PACTUAL LOGCP FUNDO DE INVESTIMENTO IMOBILIARIO RESPONSABILIDADE LIMITADA",
+  "uf": "RJ",
+  "face": 236116,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BTG PACTUAL LOGCP",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "16727386",
+  "razao": "RIOPAR PARTICIPACOES S.A.",
+  "uf": "RJ",
+  "face": 215452,
+  "claims": 1,
+  "cases": 1,
+  "kw": "RIOPAR PARTICIPACOES",
+  "kind": "BANK"
+ }
+]

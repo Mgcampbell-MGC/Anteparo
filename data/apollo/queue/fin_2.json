@@ -1,0 +1,512 @@
+[
+ {
+  "root": "60746948",
+  "razao": "BANCO BRADESCO S.A.",
+  "uf": "SP",
+  "face": 244564248,
+  "claims": 34,
+  "cases": 33,
+  "kw": "BRADESCO",
+  "kind": "BANK"
+ },
+ {
+  "root": "33124959",
+  "razao": "BANCO RURAL S.A - EM LIQUIDACAO EXTRAJUDICIAL",
+  "uf": "MG",
+  "face": 94428324,
+  "claims": 2,
+  "cases": 2,
+  "kw": "RURAL LIQUIDACAO EXTRAJUDICIAL",
+  "kind": "BANK"
+ },
+ {
+  "root": "58616418",
+  "razao": "BANCO FIBRA SA",
+  "uf": "SP",
+  "face": 51939955,
+  "claims": 4,
+  "cases": 4,
+  "kw": "FIBRA",
+  "kind": "BANK"
+ },
+ {
+  "root": "00968602",
+  "razao": "Cooperativa de Crédito de Livre Admissão do Vale do São Patrício Ltda - Sicoob Coopercred",
+  "uf": null,
+  "face": 20802132,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Livre Admissão Vale",
+  "kind": "COOP"
+ },
+ {
+  "root": "15114366",
+  "razao": "BANCO BOCOM BBM S.A.",
+  "uf": "BA",
+  "face": 19153714,
+  "claims": 3,
+  "cases": 3,
+  "kw": "BOCOM BBM",
+  "kind": "BANK"
+ },
+ {
+  "root": "01181521",
+  "razao": "Banco Cooperativo Sicredi S.A.",
+  "uf": null,
+  "face": 15447466,
+  "claims": 3,
+  "cases": 3,
+  "kw": "Cooperativo Sicredi",
+  "kind": "COOP"
+ },
+ {
+  "root": "34799393",
+  "razao": "BOCOM BBM CORPORATE CREDIT HIGH YIELD FIF - CLASSE DE INVESTIMENTO MULT CRED PRIV - RESP LIMITADA",
+  "uf": "SP",
+  "face": 14500489,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BOCOM BBM CORPORATE",
+  "kind": "BANK"
+ },
+ {
+  "root": "02553526",
+  "razao": "JGM EMPREENDIMENTOS E PARTICIPACOES LTDA",
+  "uf": "SC",
+  "face": 12841448,
+  "claims": 1,
+  "cases": 1,
+  "kw": "JGM EMPREENDIMENTOS PARTICIPACOES",
+  "kind": "BANK"
+ },
+ {
+  "root": "31895683",
+  "razao": "Banco Industrial do Brasil S.A.",
+  "uf": null,
+  "face": 9121060,
+  "claims": 4,
+  "cases": 4,
+  "kw": "Industrial Brasil",
+  "kind": "BANK"
+ },
+ {
+  "root": "35571249",
+  "razao": "SICREDI EVOLUCAO - COOP CREDITO POUPANCA E INVESTIME NTO",
+  "uf": null,
+  "face": 7778971,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SICREDI EVOLUCAO COOP",
+  "kind": "COOP"
+ },
+ {
+  "root": "07207996",
+  "razao": "BANCO BRADESCO FINANCIAMENTOS S.A.",
+  "uf": "SP",
+  "face": 7186585,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BRADESCO FINANCIAMENTOS",
+  "kind": "BANK"
+ },
+ {
+  "root": "11417016",
+  "razao": "SCANIA BANCO S.A.",
+  "uf": "SP",
+  "face": 5488259,
+  "claims": 3,
+  "cases": 3,
+  "kw": "SCANIA",
+  "kind": "BANK"
+ },
+ {
+  "root": "29309127",
+  "razao": "AMIL ASSISTENCIA MEDICA INTERNACIONAL S.A.",
+  "uf": "SP",
+  "face": 4484696,
+  "claims": 1,
+  "cases": 1,
+  "kw": "AMIL ASSISTENCIA MEDICA",
+  "kind": "BANK"
+ },
+ {
+  "root": "12442737",
+  "razao": "UNIMED MACEIO COOPERATIVA DE TRABALHO MEDICO",
+  "uf": "AL",
+  "face": 3860405,
+  "claims": 1,
+  "cases": 1,
+  "kw": "UNIMED MACEIO TRABALHO",
+  "kind": "COOP"
+ },
+ {
+  "root": "11193684",
+  "razao": "Gavea Securitizadora S.A.",
+  "uf": null,
+  "face": 3660944,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Gavea Securitizadora",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "04247370",
+  "razao": "2.1 SICOOB TRANSCREDI",
+  "uf": null,
+  "face": 3189375,
+  "claims": 2,
+  "cases": 2,
+  "kw": "2 1 SICOOB",
+  "kind": "COOP"
+ },
+ {
+  "root": "01701201",
+  "razao": "KIRTON BANK S.A. - BANCO MULTIPLO",
+  "uf": "SP",
+  "face": 2848829,
+  "claims": 3,
+  "cases": 3,
+  "kw": "KIRTON BANK",
+  "kind": "BANK"
+ },
+ {
+  "root": "89468565",
+  "razao": "COOPERATIVA DE CREDITO, POUPANCA E INVESTIMENTO DA REGIAO DA PRODUCAO - SICREDI REGIAO DA PRODUCAO RS/SC/MG",
+  "uf": null,
+  "face": 2536776,
+  "claims": 1,
+  "cases": 1,
+  "kw": "POUPANCA REGIAO PRODUCAO",
+  "kind": "COOP"
+ },
+ {
+  "root": "59109165",
+  "razao": "BANCO VOLKSWAGEN S.A.",
+  "uf": "SP",
+  "face": 2266536,
+  "claims": 1,
+  "cases": 1,
+  "kw": "VOLKSWAGEN",
+  "kind": "BANK"
+ },
+ {
+  "root": "12592411",
+  "razao": "BOA VISTA FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS - NAO PADRONIZADO",
+  "uf": null,
+  "face": 2172950,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BOA VISTA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "62063177",
+  "razao": "SAFRA LEASING S.A. ARRENDAMENTO MERCANTIL",
+  "uf": "SP",
+  "face": 2000000,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SAFRA LEASING ARRENDAMENTO",
+  "kind": "BANK"
+ },
+ {
+  "root": "25382606",
+  "razao": "URA AGRO FUNDO DE INVESTIMENTO EM DIREIT",
+  "uf": null,
+  "face": 1849551,
+  "claims": 1,
+  "cases": 1,
+  "kw": "URA AGRO DIREIT",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "91884981",
+  "razao": "Banco John Deere S.A.",
+  "uf": null,
+  "face": 1728493,
+  "claims": 1,
+  "cases": 1,
+  "kw": "John Deere",
+  "kind": "BANK"
+ },
+ {
+  "root": "26628896",
+  "razao": "GUARDIAN CAPITAL SECURITIZADORA S/A. (",
+  "uf": null,
+  "face": 1588129,
+  "claims": 1,
+  "cases": 1,
+  "kw": "GUARDIAN CAPITAL SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "12692416",
+  "razao": "VALVITALIA SPA",
+  "uf": "EX",
+  "face": 1203895,
+  "claims": 1,
+  "cases": 1,
+  "kw": "VALVITALIA SPA",
+  "kind": "BANK"
+ },
+ {
+  "root": "40155056",
+  "razao": "LOTUS PERFOMANCE FUNDO DE INVESTIMENTO",
+  "uf": null,
+  "face": 1148564,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LOTUS PERFOMANCE",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "59118133",
+  "razao": "BANCO LUSO BRASILEIRO SA",
+  "uf": null,
+  "face": 1113960,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LUSO BRASILEIRO",
+  "kind": "BANK"
+ },
+ {
+  "root": "34799162",
+  "razao": "BOCOM BBM CORPORATE CREDIT FIF - CLASSE DE INVESTIMENTO RF CRED PRIV - RESP LIMITADA",
+  "uf": "SP",
+  "face": 1031463,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BOCOM BBM CORPORATE",
+  "kind": "BANK"
+ },
+ {
+  "root": "11507489",
+  "razao": "BFC FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS",
+  "uf": "SP",
+  "face": 987774,
+  "claims": 2,
+  "cases": 2,
+  "kw": "BFC",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "34126828",
+  "razao": "VP FOMENTO COMERCIAL LTDA",
+  "uf": null,
+  "face": 886712,
+  "claims": 1,
+  "cases": 1,
+  "kw": "VP FOMENTO COMERCIAL",
+  "kind": "BANK"
+ },
+ {
+  "root": "09172117",
+  "razao": "ASIA FIDC",
+  "uf": null,
+  "face": 758759,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ASIA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "05349595",
+  "razao": "CNP Consorcio S.A. Administradora De Consorcios",
+  "uf": null,
+  "face": 713321,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CNP Consorcio Administradora",
+  "kind": "BANK"
+ },
+ {
+  "root": "29957532",
+  "razao": "Fundo de Investimento em Direitos Creditórios Sabia Capital Credit",
+  "uf": null,
+  "face": 689134,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Sabia Capital Credit",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "26489103",
+  "razao": "INVISTA III FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS - RESPONSABILIDADE LIMITADA",
+  "uf": "PR",
+  "face": 658063,
+  "claims": 1,
+  "cases": 1,
+  "kw": "INVISTA III RESPONSABILIDADE",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "07599206",
+  "razao": "BANCO SICOOB",
+  "uf": null,
+  "face": 599166,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SICOOB",
+  "kind": "COOP"
+ },
+ {
+  "root": "08928243",
+  "razao": "DAX MERCANTIL SECURITIZADORA S/A",
+  "uf": "SC",
+  "face": 550680,
+  "claims": 1,
+  "cases": 1,
+  "kw": "DAX MERCANTIL SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "47509120",
+  "razao": "BRADESCO LEASING S.A. - ARRENDAMENTO MERCANTIL",
+  "uf": "SP",
+  "face": 525846,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BRADESCO LEASING ARRENDAMENTO",
+  "kind": "BANK"
+ },
+ {
+  "root": "21081976",
+  "razao": "TAIPATSB FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS MULTISSETORIAL",
+  "uf": "SP",
+  "face": 499971,
+  "claims": 1,
+  "cases": 1,
+  "kw": "TAIPATSB",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "29236426",
+  "razao": "Sigma Credit Fundo De Investimento Em Direitos Creditorios",
+  "uf": null,
+  "face": 454618,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Sigma Credit",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "32528241",
+  "razao": "DANIELE MULTIPLO FIDC",
+  "uf": null,
+  "face": 417506,
+  "claims": 1,
+  "cases": 1,
+  "kw": "DANIELE MULTIPLO",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "10774307",
+  "razao": "PLATINUM FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS MULTISSETORIAL (",
+  "uf": null,
+  "face": 364775,
+  "claims": 1,
+  "cases": 1,
+  "kw": "PLATINUM",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "24744042",
+  "razao": "FS TATUI SECURITIZADORA S.A.",
+  "uf": "SP",
+  "face": 341146,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FS TATUI SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "41182665",
+  "razao": "AVLA SEGUROS BRASIL S.A.",
+  "uf": "SP",
+  "face": 321452,
+  "claims": 1,
+  "cases": 1,
+  "kw": "AVLA SEGUROS BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "11491061",
+  "razao": "Fundo De Investimento Em Direitos Creditorios - Não Padronizados Daniele",
+  "uf": null,
+  "face": 301000,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Daniele",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "04463602",
+  "razao": "Cooperativa de Crédito, Poupança e Investimento da Região Centro Oeste Paulista - Sicredi Centro Oeste Paulista",
+  "uf": null,
+  "face": 289548,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Poupança Região Centro",
+  "kind": "COOP"
+ },
+ {
+  "root": "34337707",
+  "razao": "BMP SOCIEDADE DE CREDITO DIRETO S.A",
+  "uf": "SP",
+  "face": 275990,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BMP DIRETO",
+  "kind": "BANK"
+ },
+ {
+  "root": "07906625",
+  "razao": "FAN SECURITIZADORA S/A (IGUANA)",
+  "uf": null,
+  "face": 266462,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FAN SECURITIZADORA IGUANA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "62285390",
+  "razao": "META FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS MULTISSETORIAL LP (",
+  "uf": null,
+  "face": 252514,
+  "claims": 1,
+  "cases": 1,
+  "kw": "META LP",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "35099311",
+  "razao": "FORTE OESTE SECURITIZADORA S.A",
+  "uf": null,
+  "face": 246897,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FORTE OESTE SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "23956882",
+  "razao": "SB CREDITO FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS MULTISSETORIAL (",
+  "uf": null,
+  "face": 229189,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SB",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "29953928",
+  "razao": "META FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS (",
+  "uf": null,
+  "face": 205685,
+  "claims": 1,
+  "cases": 1,
+  "kw": "META",
+  "kind": "FIDC/FUND"
+ }
+]

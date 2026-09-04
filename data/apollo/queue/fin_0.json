@@ -1,0 +1,512 @@
+[
+ {
+  "root": "45741898",
+  "razao": "TRAVESSIA SECURITIZADORA DE CREDITOS MERCANTIS XXV S.A.",
+  "uf": "SP",
+  "face": 860209703,
+  "claims": 1,
+  "cases": 1,
+  "kw": "TRAVESSIA SECURITIZADORA CREDITOS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "90400888",
+  "razao": "BANCO SANTANDER (BRASIL) S.A.",
+  "uf": "SP",
+  "face": 225788250,
+  "claims": 26,
+  "cases": 25,
+  "kw": "SANTANDER BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "59588111",
+  "razao": "BANCO VOTORANTIM S.A.",
+  "uf": "SP",
+  "face": 80470845,
+  "claims": 6,
+  "cases": 6,
+  "kw": "VOTORANTIM",
+  "kind": "BANK"
+ },
+ {
+  "root": "02282709",
+  "razao": "COOPERATIVA DE CREDITO DE LIVRE ADMISSAO DO CENTRO NORTE BRASILEIRO",
+  "uf": "GO",
+  "face": 27780771,
+  "claims": 2,
+  "cases": 2,
+  "kw": "LIVRE ADMISSAO CENTRO",
+  "kind": "COOP"
+ },
+ {
+  "root": "07237373",
+  "razao": "BANCO DO NORDESTE DO BRASIL SA",
+  "uf": "CE",
+  "face": 19982951,
+  "claims": 9,
+  "cases": 9,
+  "kw": "NORDESTE BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "34590184",
+  "razao": "STONE SOCIEDADE DE CREDITO DIRETO S.A.",
+  "uf": "SP",
+  "face": 16005897,
+  "claims": 1,
+  "cases": 1,
+  "kw": "STONE DIRETO",
+  "kind": "BANK"
+ },
+ {
+  "root": "12428086",
+  "razao": "FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS NÃO PADRONIZADOS MULTISSETORIA L BS NP",
+  "uf": null,
+  "face": 14857605,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MULTISSETORIA L BS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "59981829",
+  "razao": "RODOBENS S.A.",
+  "uf": "SP",
+  "face": 13075094,
+  "claims": 1,
+  "cases": 1,
+  "kw": "RODOBENS",
+  "kind": "BANK"
+ },
+ {
+  "root": "72145931",
+  "razao": "SWISS RE CORPORATE SOLUTIONS BRASIL SEGUROS S.A.",
+  "uf": "SP",
+  "face": 12002085,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SWISS RE CORPORATE",
+  "kind": "BANK"
+ },
+ {
+  "root": "92693118",
+  "razao": "BRADESCO SAUDE S/A",
+  "uf": "RJ",
+  "face": 8130702,
+  "claims": 2,
+  "cases": 2,
+  "kw": "BRADESCO SAUDE",
+  "kind": "BANK"
+ },
+ {
+  "root": "10860776",
+  "razao": "FINANCA FOMENTO MERCANTIL LTDA",
+  "uf": null,
+  "face": 7562593,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FINANCA FOMENTO MERCANTIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "18563847",
+  "razao": "LIBRA II NP FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS NÃO PADRONIZADOS MULTISSETORIAL",
+  "uf": null,
+  "face": 6738246,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LIBRA II",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "78840071",
+  "razao": "2.7 SICOOB CREDIAUC",
+  "uf": null,
+  "face": 5387227,
+  "claims": 2,
+  "cases": 2,
+  "kw": "2 7 SICOOB",
+  "kind": "COOP"
+ },
+ {
+  "root": "46542000",
+  "razao": "AMFI DIGITAL ASSETS LTDA",
+  "uf": "SP",
+  "face": 4122689,
+  "claims": 1,
+  "cases": 1,
+  "kw": "AMFI DIGITAL ASSETS",
+  "kind": "BANK"
+ },
+ {
+  "root": "06043050",
+  "razao": "BB ADMINISTRADORA DE CONSORCIOS S.A.",
+  "uf": "DF",
+  "face": 3675477,
+  "claims": 2,
+  "cases": 2,
+  "kw": "BB ADMINISTRADORA CONSORCIOS",
+  "kind": "BANK"
+ },
+ {
+  "root": "30351359",
+  "razao": "FOR PARTICIPACOES SOCIAIS LTDA",
+  "uf": "RS",
+  "face": 3397738,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FOR PARTICIPACOES SOCIAIS",
+  "kind": "BANK"
+ },
+ {
+  "root": "09414255",
+  "razao": "Fundo De Investimento Em Direitos Creditorios Multisetorial Daniele Lp",
+  "uf": null,
+  "face": 3064013,
+  "claims": 2,
+  "cases": 2,
+  "kw": "Multisetorial Daniele Lp",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "18488755",
+  "razao": "VALOREM SOLUCOES FINANCEIRAS S.A.",
+  "uf": "SC",
+  "face": 2727260,
+  "claims": 1,
+  "cases": 1,
+  "kw": "VALOREM SOLUCOES FINANCEIRAS",
+  "kind": "BANK"
+ },
+ {
+  "root": "70241658",
+  "razao": "SICREDI RECIFE - COOPERATIVA DE CREDITO, POUPANCA E INVESTIMENTO SICREDI RECIFE",
+  "uf": null,
+  "face": 2386846,
+  "claims": 1,
+  "cases": 1,
+  "kw": "SICREDI RECIFE POUPANCA",
+  "kind": "COOP"
+ },
+ {
+  "root": "14177238",
+  "razao": "G & F ASSESSORIA CONSULTORIA EMPREENDIMENTOS E PARTICIPACOES LTDA",
+  "uf": "SC",
+  "face": 2204283,
+  "claims": 1,
+  "cases": 1,
+  "kw": "G & F",
+  "kind": "BANK"
+ },
+ {
+  "root": "23360870",
+  "razao": "ASTRA SECURITIZADORA S.A.",
+  "uf": "SP",
+  "face": 2144705,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ASTRA SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "01489979",
+  "razao": "PROSPERE SECURITIZADORA S.A.",
+  "uf": "PR",
+  "face": 1941127,
+  "claims": 1,
+  "cases": 1,
+  "kw": "PROSPERE SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "48703388",
+  "razao": "ASA SOCIEDADE DE CREDITO FINANCIAMENTO E INVESTIMENTO S.A.",
+  "uf": "SP",
+  "face": 1766224,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ASA",
+  "kind": "BANK"
+ },
+ {
+  "root": "24452704",
+  "razao": "DLR CAPITAL SECURITIZADORA S.A (",
+  "uf": null,
+  "face": 1647642,
+  "claims": 1,
+  "cases": 1,
+  "kw": "DLR CAPITAL SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "14051028",
+  "razao": "FIDC DA INDUSTRIA EXODUS INSTITUCIONAL (TRUST)",
+  "uf": null,
+  "face": 1325953,
+  "claims": 2,
+  "cases": 2,
+  "kw": "INDUSTRIA EXODUS INSTITUCIONAL",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "12910463",
+  "razao": "CAPITAL RS NP FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRIOS NÃO PADRONIZADOS MULTISSETORIAL (",
+  "uf": null,
+  "face": 1169956,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CAPITAL RS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "50202890",
+  "razao": "CREDMEI SECURITIZADORA II SPE S.A",
+  "uf": null,
+  "face": 1135255,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CREDMEI SECURITIZADORA II",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "67915785",
+  "razao": "REDFACTOR FACTORING E FOMENTO COMERCIAL S/A",
+  "uf": null,
+  "face": 1097809,
+  "claims": 1,
+  "cases": 1,
+  "kw": "REDFACTOR FACTORING FOMENTO",
+  "kind": "BANK"
+ },
+ {
+  "root": "12813212",
+  "razao": "Rnx Fundo De Investimento Em Direitos Creditorios Multissetorial",
+  "uf": null,
+  "face": 1000918,
+  "claims": 2,
+  "cases": 2,
+  "kw": "Rnx",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "40072614",
+  "razao": "FX CAPITAL E SECURITIZACOES S.A.",
+  "uf": "RS",
+  "face": 912213,
+  "claims": 1,
+  "cases": 1,
+  "kw": "FX CAPITAL SECURITIZACOES",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "31658884",
+  "razao": "CONFIANÇA FUNDO DE INVESTIMENTO EM DIREITOS CREDITÓRI",
+  "uf": null,
+  "face": 858339,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CONFIANÇA CREDITÓRI",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "32522072",
+  "razao": "ZET CAPITAL TECNOLOGIA DE ATIVOS E FOMENTO LTDA",
+  "uf": "RS",
+  "face": 732434,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ZET CAPITAL TECNOLOGIA",
+  "kind": "BANK"
+ },
+ {
+  "root": "03303563",
+  "razao": "PERSONAL FIF - CLASSE DE INVESTIMENTO MULTIMERCADO - RESP LIMITADA",
+  "uf": "SP",
+  "face": 705998,
+  "claims": 1,
+  "cases": 1,
+  "kw": "PERSONAL FIF CLASSE",
+  "kind": "BANK"
+ },
+ {
+  "root": "23125558",
+  "razao": "DSX SECURITIZADORA S/A (",
+  "uf": null,
+  "face": 678577,
+  "claims": 1,
+  "cases": 1,
+  "kw": "DSX SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "58017179",
+  "razao": "Banco Volvo (Brasil) S.A.",
+  "uf": null,
+  "face": 622937,
+  "claims": 1,
+  "cases": 1,
+  "kw": "Volvo Brasil",
+  "kind": "BANK"
+ },
+ {
+  "root": "27749786",
+  "razao": "MILANO SECURITIZADORA S.A. (",
+  "uf": null,
+  "face": 558920,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MILANO SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "14064928",
+  "razao": "CONSORCIO BLUMENAU NORTE SHOPPING",
+  "uf": null,
+  "face": 542734,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CONSORCIO BLUMENAU NORTE",
+  "kind": "BANK"
+ },
+ {
+  "root": "51145521",
+  "razao": "LUIZ HENRIQUE RICCIARELLI PARTICIPACOES LTDA",
+  "uf": "SP",
+  "face": 518978,
+  "claims": 1,
+  "cases": 1,
+  "kw": "LUIZ HENRIQUE RICCIARELLI",
+  "kind": "BANK"
+ },
+ {
+  "root": "33479023",
+  "razao": "BANCO CITIBANK S A",
+  "uf": "SP",
+  "face": 481719,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CITIBANK S A",
+  "kind": "BANK"
+ },
+ {
+  "root": "02398976",
+  "razao": "UNIPRIME NORTE DO PARANA - COOPERATIVA DE CREDITO LTDA",
+  "uf": null,
+  "face": 436177,
+  "claims": 1,
+  "cases": 1,
+  "kw": "UNIPRIME NORTE PARANA",
+  "kind": "COOP"
+ },
+ {
+  "root": "33289359",
+  "razao": "NOVA CAPITAL FUNDO DE INVESTIMENTO EM DIREITOS CREDITO",
+  "uf": null,
+  "face": 387460,
+  "claims": 1,
+  "cases": 1,
+  "kw": "NOVA CAPITAL",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "70018759",
+  "razao": "ACL FACTORING FOMENTO MERCANTIL LTDA",
+  "uf": null,
+  "face": 354247,
+  "claims": 1,
+  "cases": 1,
+  "kw": "ACL FACTORING FOMENTO",
+  "kind": "BANK"
+ },
+ {
+  "root": "33918160",
+  "razao": "FUNDO DE INVESTIMENTOS EM DIREITOS CREDITÓRIOS - EXODUS III",
+  "uf": null,
+  "face": 332680,
+  "claims": 1,
+  "cases": 1,
+  "kw": "INVESTIMENTOS EXODUS III",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "27695272",
+  "razao": "BPLACE SECURITIZADORA S.A. (",
+  "uf": null,
+  "face": 303480,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BPLACE SECURITIZADORA",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "20057764",
+  "razao": "HARPIA FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS (A",
+  "uf": null,
+  "face": 293906,
+  "claims": 1,
+  "cases": 1,
+  "kw": "HARPIA A",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "12093804",
+  "razao": "CAPITAL ANNEX FUNDO DE INVESTIMENTO EM DIREITOS CREDITORIOS MULTISSETORIAL",
+  "uf": null,
+  "face": 286766,
+  "claims": 1,
+  "cases": 1,
+  "kw": "CAPITAL ANNEX",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "31216519",
+  "razao": "Fundo de Investimento em Direitos Creditórios XPCE Crédito Middle",
+  "uf": null,
+  "face": 275065,
+  "claims": 1,
+  "cases": 1,
+  "kw": "XPCE Middle",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "17184037",
+  "razao": "BANCO MERCANTIL DO BRASIL SA",
+  "uf": "MG",
+  "face": 258787,
+  "claims": 1,
+  "cases": 1,
+  "kw": "MERCANTIL BRASIL",
+  "kind": "BANK"
+ },
+ {
+  "root": "36213950",
+  "razao": "PRAJA SECURITIZADORA DE CREDITOS S.A.",
+  "uf": "SP",
+  "face": 249652,
+  "claims": 1,
+  "cases": 1,
+  "kw": "PRAJA SECURITIZADORA CREDITOS",
+  "kind": "FIDC/FUND"
+ },
+ {
+  "root": "42723848",
+  "razao": "BARU SOCIEDADE DE CREDITO, FINANCIAMENTO E INVESTIMENTO S/A",
+  "uf": "RS",
+  "face": 239740,
+  "claims": 1,
+  "cases": 1,
+  "kw": "BARU",
+  "kind": "BANK"
+ },
+ {
+  "root": "91108027",
+  "razao": "RANDON ADMINISTRADORA DE CONSÓRCIO LTDA",
+  "uf": null,
+  "face": 219519,
+  "claims": 1,
+  "cases": 1,
+  "kw": "RANDON ADMINISTRADORA CONSÓRCIO",
+  "kind": "BANK"
+ }
+]
