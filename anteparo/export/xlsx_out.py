@@ -42,6 +42,78 @@ COLS = [
 ]
 
 
+import re as _re
+_AJ_WORDS = _re.compile(r"administra[çc][ãa]o judicial|administradora? judicial|\bAJ\b|processos?|home|in[íi]cio|p[áa]gina|recupera[çc][õo]es judiciais|fal[êe]ncias?|consultoria|per[íi]cia|escrit[óo]rio|advogados|\.com\.br|\.adm\.br", _re.I)
+_RJ_LEAD = _re.compile(r"(?:recupera[çc][ãa]o judicial|RJ|fal[êe]ncia)\s+(?:d[eao]s?\s+|do grupo\s+)?(.+)", _re.I)
+
+
+_JUNK_DEBTOR = _re.compile(r"\bOAB\b|^DRA?\.|\bADVOGAD|\bDOUTOR|\bJUIZ|\bDESEMBARGADOR|\bMINIST[ÉE]RIO P[ÚU]BLICO|^(?:e\s+)?(?:na\s+|de\s+|da\s+)?fal[êe]ncia|\bvara\b|\bcomarca\b|\btribunal\b|\bju[íi]zo\b|\bempresarial\b|\bconcurso\b|\bcredores?\b|\bedital\b|\brela[çc][ãa]o\b|\blista\b|\bquadro\b|^(?:e|de|da|do|dos|das|na|no)\b", _re.I)
+_DEBTOR_PATTERNS = [
+    _re.compile(r"RECUPERANDA\(?S?\)?\s*[:\-–]\s*(.+?)(?=\s*(?:,\s*CNPJ|\s+CNPJ|\(|;|\n|$))", _re.I),
+    _re.compile(r"\b(?:REQUERENTE|AUTOR(?:A|ES)?|DEVEDOR(?:A|ES)?|RECUPERANDAS?)\s*[:\-–]\s*(.+?)(?=\s*(?:\(|,\s*CNPJ|;|\n|$))", _re.I),
+    _re.compile(r"([A-ZÀ-Ú0-9&][A-ZÀ-Ú0-9&.,\-'\s]{4,90}?)\s*\((?:REQUERENTE|AUTOR|RECUPERANDA)\)", _re.I),
+    _re.compile(r"ajuizad[ao]\s+pel[ao]s?\s*:?\s*(?:\(i\)\s*)?(.+?)(?=\s*(?:\(|;|,|\n))", _re.I),
+    _re.compile(r"RECUPERA[ÇC][ÃA]O JUDICIAL\s+(?:D[EAO]S?\s+)(?:EMPRESAS?\s+)?(GRUPO\s+[^\n,;(]{2,60}|[A-ZÀ-Ú0-9&][^\n,;(]{3,80}?(?:LTDA\.?|S\.?A\.?|S/A|EIRELI|\bME\b|\bEPP\b|CIA\.?|E OUTR[AO]S?))", _re.I),
+    _re.compile(r"\b(?:RJ|RECUPERA[ÇC][ÃA]O JUDICIAL)\s+D[EAO]S?\s+(?:GRUPO\s+)?([A-ZÀ-Ú][A-ZÀ-Ú0-9&.\-'\s]{3,60}?)\s*(?:\n|,|;|\(|$)", _re.I),
+]
+_DEBTOR_CACHE = {}
+
+
+def _debtor_from_pdf(db, doc_id, path):
+    """First credible debtor name printed in the document's first pages; cached per document."""
+    if doc_id in _DEBTOR_CACHE:
+        return _DEBTOR_CACHE[doc_id]
+    db.execute("CREATE TABLE IF NOT EXISTS doc_debtor(doc_id TEXT PRIMARY KEY, debtor TEXT)")
+    row = db.execute("SELECT debtor FROM doc_debtor WHERE doc_id=?", (doc_id,)).fetchone()
+    if row is not None:
+        _DEBTOR_CACHE[doc_id] = row[0]
+        return row[0]
+    found = ""
+    try:
+        from ..extract.pdfio import open_pdf, page_text
+        with open_pdf(path) as pdf:
+            head = "\n".join(page_text(p) for p in pdf.pages[:2])
+        for pat in _DEBTOR_PATTERNS:
+            for m in pat.finditer(head):
+                cand = _re.sub(r"\s+", " ", m.group(1)).strip(" -–—|:.,;")
+                cand = _re.sub(r"\s*(?:\(|\bCNPJ\b).*$", "", cand).strip()
+                if 3 <= len(cand) <= 90 and not _JUNK_DEBTOR.search(cand) and not _AJ_WORDS.search(cand) and _re.search(r"[A-Za-zÀ-ú]{3}", cand):
+                    found = cand
+                    break
+            if found:
+                break
+    except Exception:  # noqa: BLE001
+        found = ""
+    db.execute("INSERT OR REPLACE INTO doc_debtor VALUES(?,?)", (doc_id, found))
+    db.commit()
+    _DEBTOR_CACHE[doc_id] = found
+    return found
+
+
+def _clean_debtor(hint, page_title, domain):
+    """Best available debtor name: the case page title minus the administrator's branding, else the PDF hint."""
+    cands = []
+    for src in (page_title or "", hint or ""):
+        for part in _re.split(r"\s+[–—|:]+\s+|\s+-\s+|\s+::\s+|\s+»\s+", src):
+            part = part.strip(" -–—|:.")
+            if not part or len(part) < 3:
+                continue
+            m = _RJ_LEAD.match(part)
+            if m:
+                part = m.group(1).strip(" -–—|:.")
+            if _AJ_WORDS.search(part) or (domain and domain.split(".")[0].lower() in part.lower()):
+                continue
+            if _re.fullmatch(r"[\d\W]+", part):
+                continue
+            cands.append(part)
+    cands = [c for c in cands if not _JUNK_DEBTOR.search(c)]
+    if not cands:
+        return ""
+    # prefer a company-looking candidate, then the longest
+    cands.sort(key=lambda c: (bool(_re.search(r"\b(LTDA|S\.?A\.?|S/A|EIRELI|ME|EPP|GRUPO|CIA)\b", c, _re.I)), len(c)), reverse=True)
+    return cands[0][:80]
+
+
 def _phone(p):
     """RFB phones are DDD+number digits: 1144634833 → (11) 4463-4833."""
     d = "".join(ch for ch in str(p or "") if ch.isdigit())
@@ -71,16 +143,18 @@ def _lead_rows(db, run_id, band):
                c.razao_social, c.phone, c.phone2, c.email, c.uf, c.municipio, c.cnae_desc, c.porte, c.situacao_desc,
                c.is_bank, c.is_public, c.is_inactive, c.rfb_source,
                d.source_url, d.doc_type, d.publication_date, d.status, d.administrator_hint,
-               cs.court, cs.filing_date
+               cs.court, cs.filing_date, rd.page_title, d.debtor_name_hint, d.file_path
         FROM targets t
         LEFT JOIN companies c ON c.cnpj_basico=t.cnpj_basico
         LEFT JOIN documents d ON d.doc_id=t.doc_id AND d.run_id=t.run_id
+        LEFT JOIN raw_documents rd ON rd.sha1=t.doc_id
         LEFT JOIN cases cs ON cs.case_number=t.case_number
         WHERE t.run_id=? AND t.band=? ORDER BY CAST(t.class_iii_face_sum AS REAL) DESC""", (run_id, band)).fetchall()
     out = []
     for r in q:
         (root, case, doc_id, face, ests, ncl, name_printed, debtor, stage, flags, razao, phone, phone2, email, uf, city, cnae, porte, sit,
-         is_bank, is_public, is_inactive, rfb_src, url, dtype, pub, dstatus, adm, court, filed) = r
+         is_bank, is_public, is_inactive, rfb_src, url, dtype, pub, dstatus, adm, court, filed, page_title, dhint, fpath) = r
+        debtor = (_debtor_from_pdf(db, doc_id, fpath) if fpath else "") or _clean_debtor(dhint or debtor, page_title, adm)
         if is_bank or is_public or is_inactive or "LIKELY_FINANCIAL_BY_NAME" in (flags or "") or "LIKELY_PUBLIC_BY_NAME" in (flags or ""):
             continue   # excluded by step G; kept in targets.csv with flags
         dm = db.execute("SELECT person_name, role FROM contacts WHERE cnpj_basico=? ORDER BY CASE role_code WHEN 49 THEN 0 WHEN 5 THEN 1 WHEN 16 THEN 2 WHEN 10 THEN 3 ELSE 9 END LIMIT 1", (root,)).fetchone()

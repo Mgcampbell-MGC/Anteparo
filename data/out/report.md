@@ -1,0 +1,287 @@
+# ANTEPARO index — Phase 1 report
+run `20260903T230425Z-e7c9a7` · 2026-09-04 00:09Z
+
+## Call sheet
+- **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1063 name-only rows ≥ R$200k on *Needs CNPJ*
+- excluded from the Call List by registry data: banks 95 · public 1 · inactive 48; by name pre-filter: 151
+- 1199 documents ingested · 534 cases with a document · 209 of 534 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
+
+## Documents by status
+- ERROR: 34
+- NO_ROWS: 231
+- NO_TEXT_LAYER: 74
+- OK: 90
+- OK_NO_TOTALS: 494
+- QUARANTINED: 276
+- of the QUARANTINED, 51 reconciled on class III and are used (flag PARTIAL_DOC_CLASS_III_RECONCILED)
+
+## Layouts
+- None · ERROR: 34
+- NONE/ · NO_TEXT_LAYER: 74
+- PROSE/PROSE · NO_ROWS: 4
+- PROSE/PROSE · OK: 20
+- PROSE/PROSE · OK_NO_TOTALS: 158
+- PROSE/PROSE · QUARANTINED: 61
+- TABLE/TABLE_BANDS · NO_ROWS: 221
+- TABLE/TABLE_BANDS · OK: 24
+- TABLE/TABLE_BANDS · OK_NO_TOTALS: 198
+- TABLE/TABLE_BANDS · QUARANTINED: 106
+- TABLE/TABLE_RULED · NO_ROWS: 6
+- TABLE/TABLE_RULED · OK: 46
+- TABLE/TABLE_RULED · OK_NO_TOTALS: 138
+- TABLE/TABLE_RULED · QUARANTINED: 109
+
+## Name-resolution queue
+- class III rows with a value but no printed document number: 35965 (Phase 2: name → CNPJ with an RFB name match)
+
+## RFB releases used (via mirror)
+- minhareceita: 943 companies, fetched 2026-09-03T22:31:00Z … 2026-09-04T00:06:42Z
+
+## Coverage by court (DataJud RJ cases since 2020 → cases with ≥1 usable creditor list)
+- TJRJ: 2963 cases · 3 with a usable list (0%)
+- TJSP: 1651 cases · 25 with a usable list (1%)
+- TJGO: 1042 cases · 11 with a usable list (1%)
+- TJMG: 653 cases · 1 with a usable list (0%)
+- TJRS: 627 cases · 18 with a usable list (2%)
+- TJPR: 494 cases · 21 with a usable list (4%)
+- TJMT: 476 cases · 3 with a usable list (0%)
+- TJSC: 368 cases · 13 with a usable list (3%)
+- TJPE: 247 cases · 21 with a usable list (8%)
+- TJAM: 148 cases · 0 with a usable list (0%)
+- TJMS: 139 cases · 4 with a usable list (2%)
+- TJCE: 120 cases · 7 with a usable list (5%)
+- TJES: 111 cases · 2 with a usable list (1%)
+- TJPA: 101 cases · 1 with a usable list (0%)
+- TJTO: 87 cases · 0 with a usable list (0%)
+- TJAL: 86 cases · 2 with a usable list (2%)
+- TJBA: 82 cases · 2 with a usable list (2%)
+- TJMA: 73 cases · 0 with a usable list (0%)
+- TJPB: 59 cases · 5 with a usable list (8%)
+- TJRN: 57 cases · 2 with a usable list (3%)
+- TJPI: 51 cases · 1 with a usable list (1%)
+- TJRO: 47 cases · 0 with a usable list (0%)
+- TJDFT: 32 cases · 0 with a usable list (0%)
+- TJAC: 22 cases · 0 with a usable list (0%)
+- TJSE: 20 cases · 0 with a usable list (0%)
+- TJAP: 11 cases · 0 with a usable list (0%)
+- TJRR: 3 cases · 0 with a usable list (0%)
+
+## Quarantined documents where class III did not reconcile
+- 02743de15063 https://bugarimecoelho.com.br/ws/media-library/8a53bcdaec5b4d4cab59343874ff9f0b/04---relacao-de-credores.pdf
+- 0425bbd7eff9 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6266
+- 056df00cb39c https://www.cb2d.com.br/portal/_uploads/6a6b36d4-b6c6-4f3a-ba96-7c77198334d8.pdf
+- 05880af2d8c0 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento12205627062025_1_.pdf&nome=Relação de Credores Retificada - Art. 7º, §2º da Lei 11.101/05 - 04/06/2025
+- 060265d1d83b https://rlg-aj.com.br/wp-content/uploads/2026/04/2a-Lista-de-Credores-Relacao-Completa-Art.-7o-§2-Lei-11.101-de-2005-Diomar-dados.pdf
+- 070704f09c8c https://ricardobiancardi.com.br/wp-content/uploads/2025/01/Plano-de-Recuperacao-Judicial-1a-versao-Assinado.pdf
+- 071c6f7fc88c https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-megasan.pdf
+- 07fd7dcdfc40 https://vtladm.com.br/wp-content/uploads/2024/02/08-–-Segunda-Relacao-de-Credores-–-WWS-Services-e-Worldwide.pdf
+- 080cff6af1f7 https://vivanteaj.com.br/wp-content/uploads/2023/06/2o-Edital-de-Credores-2.pdf
+- 08efc38b7020 https://recuperacaojudicial.squarespace.com/s/02-1-LISTA-DE-CREDORES_5613.pdf
+- 09aaed7e1d03 https://vtladm.com.br/wp-content/uploads/2025/07/02-–-Primeira-Relacao-de-Credores-–-Meqso-Distribuicao-S.A.-e-outros.pdf
+- 0a1d6d369f9f https://gatekeeperaj.com.br/wp-content/uploads/2026/01/QGC-Amuage-05.01.2026.pdf
+- 0bc34a3e128f https://recuperacaojudicial.squarespace.com/s/0720699-1020188020001.pdf
+- 0bc39b0b10cf https://bugarimecoelho.com.br/ws/media-library/1e823e882f8d4b548225778a021af627/05---edital---relacao-de-credores.pdf
+- 0c6b459780fc https://inova-aj.com.br/wp-content/uploads/2024/01/Relacao-de-Credores-Art.-7o-§-2o.pdf
+- 0f0ec10c8dee https://www.cb2d.com.br/portal/_uploads/6de06b46-f33d-44b7-b79c-37f57704c038.pdf
+- 0fc9aeb46c87 https://vtladm.com.br/wp-content/uploads/2024/02/06-Segundo-Edital-de-Credores-Wws-Services-Prestadora-de-Servicos-Ltda.pdf
+- 1020f84ab543 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2024-02/2._relacao_de_credores.pdf
+- 11506686ba3c https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento11074904022026_1_.pdf&nome=05 - Quadro Geral de Credores
+- 12e6f4e0aae9 https://arquivos.integrawebsites.com.br/66886/9170dba63d72405b67b006af1763ed17.pdf
+- 14dd8421bc5e https://inova-aj.com.br/wp-content/uploads/2017/06/Edital-de-Credores-BSM-e-Tensor-Art.-7º-§2º-LRE-17.01.2017.pdf
+- 15a3f60047bf https://recuperacaojudicial.squarespace.com/s/0700087-5120208020043-2.pdf
+- 15fe618eb5c4 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=6054
+- 17c5ea68673c https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/Fernandes-Engenharia/Listagem-de-Credores-Completa-Fernandes-Engenharia.pdf
+- 184f578cccf6 https://inova-aj.com.br/wp-content/uploads/2022/11/QGC-Consolidado.pdf
+- 19928a573828 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento11175828042026_1_.pdf&nome=Relação de Credores Provisória - Art. 7º, §2º da Lei 11.101/05 - 27/04/2026
+- 19975b16e29b https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1473
+- 1aeb10c3e145 https://realbrasil.com.br/wp-content/uploads/2024/10/2.QUADRO-DE-CREDORES-DO-AJ.pdf
+- 1b13e9761a26 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-08/safrasul_relacao_aj_s._total.pdf
+- 1b4d3c34dc15 https://vivanteaj.com.br/wp-content/uploads/2024/11/PRJ-JA.pdf
+- 1b6488259b42 https://mpbadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16354517072026_1_.pdf&nome=Plano de Recuperação Judicial e Anexos
+- 1f7034a9c4cd https://recuperacaojudicial.squarespace.com/s/doc_40308947.pdf
+- 213341b931b5 https://vivanteaj.com.br/wp-content/uploads/2024/11/2a-lista-Grupo-Metalloys-vf.pdf
+- 24566ba7dfe4 https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1470
+- 2539fa839b2e https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/andorinha/QUADRO-GERAL-DE-CREDORES-PUBLICADO-ART.-18-LRF.pdf
+- 267ea9a584ce https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-10-edital-de-publicacao-da-relacao-de-credores-do-adm-judicial-e-plano-de-recuperacao.pdf
+- 27519e1f23d9 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6247
+- 2af41e113613 https://cataliseaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento10324122042025_1_.pdf&nome=5. PLANO DE RECUPERAÇÃO JUDICIAL
+- 2b5d1bf7a00a https://realbrasil.com.br/wp-content/uploads/2017/06/Quadro-de-Credores-Radar.pdf
+- 2d7b50466aa0 https://recuperacaojudicial.squarespace.com/s/RJ-Comercial-Mercantil-de-Cimentos-Peticao-juntada-2a-Lista-de-Credores-agosto-2021-1.pdf
+- 2e02b137d8e6 https://recuperacaojudicial.squarespace.com/s/RJ-CHL-Publicaco-do-Edital-com-a-2-Lista-de-Credores.pdf
+- 2fe8bf8886c0 https://inova-aj.com.br/wp-content/uploads/2021/02/Relacao-de-credores-Art.-52§1o-LRE-Cimento-Tupi-Atualizada-01.02.2021.pdf
+- 300527a02f3b https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2025-11/relacao_de_credores_art._7o_ss_2o.pdf
+- 3194036a7923 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento14350027032023_1_.pdf&nome=Edital e Relação de credores do Art. 7º, §2º da Lei 11.101/2005 - 24/03/2023
+- 328d87753c81 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3752
+- 32ff695d5129 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2024-04/relacao_de_credores_da_aj_do_art._7o_paragrafo_2o_da_lre_1.pdf
+- 341bab0580f4 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento10231312042024_1_.pdf&nome=Relação Nominal de Credores AJ
+- 34db2e6fa465 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-07-relacao-de-credores-do-administrador-judicial-1.pdf
+- 363f13a9f11b https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1654
+- 36f119bf822b https://rlg-aj.com.br/wp-content/uploads/2023/07/6.-Segunda-Lista-de-Credores-art.-7º-§-2º-LREF-Grupo-Mobra.pdf
+- 370b6af59419 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-art-7.pdf
+- 37fa6c841dfc https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=4089
+- 3892f93f7b4b https://recuperacaojudicial.squarespace.com/s/RJCredimoveisEdital2alistaDJE291121.pdf
+- 3a99cb501db0 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5966
+- 3db03c9c5dc0 https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/ever-ton/segundo-edital-e-aviso-do-plano.pdf
+- 3de1572f858f https://vivanteaj.com.br/wp-content/uploads/2024/11/2o-Edital-de-credores.pdf
+- 3e05e52fd98e https://rlg-aj.com.br/wp-content/uploads/2025/02/Segunda-Lista-de-Credores-Artigo-7.-Paragrafo-2.-da-LRF-Comtemporanea-1.pdf
+- 40e23db8ca6b https://recuperacaojudicial.squarespace.com/s/0700707-8720258020043.pdf
+- 40e99aaadefb https://violet-wolf-754008.hostingersite.com/wp-content/uploads/2023/11/Segundo-Edital-de-Credores-e-Edital-Aviso-ao-Plano.pdf
+- 43199e058dca https://vivanteaj.com.br/wp-content/uploads/2024/12/Plano-de-Recuperacao-Judicial-Alternativo-Procenge.pdf
+- 43426e2dbc0a https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento15073627072022_1_.pdf&nome=Relação de Credores - art. 52, §1º da Lei 11.101/05 - 19/07/2022
+- 449e13576783 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento10452918072025_1_.pdf&nome=Relação de Credores - Art. 7º, §2º da Lei 11.101/05 - 17/07/2025
+- 4730c62bdfc5 https://rlg-aj.com.br/wp-content/uploads/2024/02/Relacao-de-Credores-do-art.-7o-§2o-da-Lei-n.o-11.101-de-2005-DF-Confeccoes.pdf
+- 495d3b7b6af3 https://gatekeeperaj.com.br/wp-content/uploads/2024/07/QGC-Seno-e-filhos.pdf
+- 4cc8d45b9aae https://credibilita.com.br/wp-content/uploads/2023/08/93692.1-qgc.pdf
+- 4cf2d2e008e7 https://inova-aj.com.br/wp-content/uploads/2018/11/Relacao-de-Credores-SINOPEC-Art.-7o-§2o-LRE....pdf
+- 4de8ce425bee https://rlg-aj.com.br/wp-content/uploads/2023/07/QGC-Quadro-Geral-de-Credores-Grupo-Mobra.pdf
+- 4e1fcf7e9f9f https://recuperacaojudicial.squarespace.com/s/2-LISTA-DE-CREDORES-p65c.pdf
+- 4f4bd38e514d https://gatekeeperaj.com.br/wp-content/uploads/2026/07/QGC-WIRELESS-01.07.2026.pdf
+- 500a480477ad https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento13071716122025_1_.pdf&nome=Relação de Credores - art. 7º, §2º da Lei 11.101/05 - 12/12/2025
+- 50e10e25bb6a https://rlg-aj.com.br/wp-content/uploads/2026/02/20260313-Plano-de-Recuperacao-Judicial-Madefus.pdf
+- 51d102c725cc https://realbrasil.com.br/wp-content/uploads/2017/08/QUADRO-DE-CREDORES-MASTTER.pdf
+- 5247afbb1cc3 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=4525
+- 52ed13987a92 https://vivanteaj.com.br/wp-content/uploads/2024/11/1o-edital-de-credores.pdf
+- 53122b3c23c0 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17295409012026_1_.pdf&nome=Relação de Credores AJ
+- 54c730aa334f https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-06/relacao_de_credores_art._7o_ss_2o_da_lre.pdf
+- 57288e77c26d https://www.cb2d.com.br/portal/_uploads/92edcfca-5a25-43b6-b84f-6c9835be490a.pdf
+- 58415096d122 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6256
+- 58642c27d5f3 https://rlg-aj.com.br/wp-content/uploads/2025/03/02.-Relação-de-Credores.pdf
+- 5afb34734679 https://gatekeeperaj.com.br/wp-content/uploads/2026/08/RELACAO-BS.pdf
+- 5f5fcdbf1192 https://realbrasil.com.br/wp-content/uploads/2025/07/QUADRO-GERAL-DE-CREDORES-DO-AJ.pdf
+- 5f9795324481 https://realbrasil.com.br/wp-content/uploads/2017/07/LISTA-DE-CREDORES-IMPERATRIZ.pdf
+- 623782b81a85 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6281
+- 629a5bb37f98 https://rlg-aj.com.br/wp-content/uploads/2023/08/Plano-de-Recuperacao-Judicial-Instituto-CAV.pdf
+- 63102d7a75fd https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-05-edital-de-publicacao-relacao-de-credores-adm-judicial.pdf
+- 667246f02c08 https://recuperacaojudicial.squarespace.com/s/0700087-5120208020043-3-3hf4.pdf
+- 66aa05df6b62 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-07/relacao_de_credores_art._7o_ss2o_lre.pdf
+- 67c07a6a190c https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6195
+- 68643bdcd1dc https://realbrasil.com.br/wp-content/uploads/2018/06/QUADRO-DE-CREDORES-DO-AJ_SÓLIDA.pdf
+- 68d56a800e58 https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento20371127072024_1_.pdf&nome=06 - Edital do art. 7º, §2º da Lei 11.101/2005 (segunda lista de credores)
+- 6a193e7f1dda https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3614
+- 6dc26e2430e3 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16561007032024_1_.pdf&nome=Relação Nominal de Credores
+- 6ed5c736ab72 https://violet-wolf-754008.hostingersite.com/wp-content/uploads/2022/12/2o-Edital-Grupo-Somilio.pdf
+- 740d02e8f9ca https://credibilita.com.br/wp-content/uploads/2025/02/Lista-de-credores-do-art.-7o-2o-da-LFRE.pdf
+- 74acccd5aa11 https://recuperacaojudicial.squarespace.com/s/doc_48744068-2z93.pdf
+- 7832cb3b4a46 https://recuperacaojudicial.squarespace.com/s/5-RJCMCEditalda2ListadeCredoresnovembro2021.pdf
+- 7c11a437b1d0 https://www.cb2d.com.br/portal/_uploads/b6e6d59c-7888-40a6-867c-5330e790dcfc.pdf
+- 7ed2ffbcee61 https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1590
+- 7eeb9fc39c5f https://vtladm.com.br/wp-content/uploads/2025/08/08_Manifestacao_Adm_Judicial_Habilitacoes_Divergencias_Segunda_Lista_Credores_Distribuidora_Frutas.pdf
+- 7f03f38933a6 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6204
+- 7f8a0c606efc https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento12291327062025_1_.pdf&nome=Relação de Credores - Art. 7º, §2º da Lei 11.101/05 - 04/04/2025
+- 80730aa8fd57 https://rlg-aj.com.br/wp-content/uploads/2025/03/06.-Plano-de-Recuperacao-Judicial.pdf
+- 83fc91f80744 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-09/relacao-de-credores-aj-art.-7o-a7-2o-da-lre-concreserv-concreto-sa.pdf
+- 87f368a460cc https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-12/azeplast_relacao_de_credores_recuperanda.pdf
+- 884ec31d2635 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento16153711122025_1_.pdf&nome=Relação de Credores art. 52, §1º, da Lei 11.101/2005 - 13/11/2025
+- 8b9a4375b767 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento11330206042026_1_.pdf&nome=Relação Nominal de Credores Retificada
+- 8dc2218bfb07 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento11510315072025_1_.pdf&nome=Relação de Credores - Art. 7º § 2º, da Lei nº 11.101/2005 - 14/07/2025
+- 8ec4d41971bd https://recuperacaojudicial.squarespace.com/s/Edital-1a-lista-publicado-tes5.pdf
+- 8ef3ace2fbe9 https://vivanteaj.com.br/wp-content/uploads/2023/06/1o-Edital-de-Credores.pdf
+- 8ff5b9edb21c https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17364409012026_1_.pdf&nome=Relação de Credores - Recuperanda
+- 93080070b324 https://gatekeeperaj.com.br/wp-content/uploads/2025/01/QGC-atualizado.pdf
+- 94970a210dbf https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4098
+- 961ad94c5cbc https://vivanteaj.com.br/wp-content/uploads/2025/02/Plano-de-Recuperacao-Judicial-MFC-Industria.pdf
+- 9ab1e2a2b4be https://recuperacaojudicial.squarespace.com/s/0705602-9620208020001-1-mlkc.pdf
+- 9c8a0050fb58 https://recuperacaojudicial.squarespace.com/s/doc_36593341.pdf
+- 9d57116a72d8 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-11/9_edital_relacao_de_credores_art._7o_parag._2o_da_lre_e_aviso_sobre_o_plano_de_recuperacao_judicial.pdf
+- 9d5f782a8aa6 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-adm-jud.pdf
+- 9e0f406a5486 https://rlg-aj.com.br/wp-content/uploads/2025/03/09.-Aditivo-ao-Plano-de-Recuperacao-Judicial.pdf
+- 9f1eb264da27 https://realbrasil.com.br/wp-content/uploads/2019/08/02.RELAÇÃO-DE-CREDORES-RECUPERANDA-RETIFICADA.pdf
+- a0df81015fce https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5777
+- a1e1f2961eea https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5964
+- a3ec2a16cff4 https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento16563107072026_1_.pdf&nome=05. Lista de credores apresentada pelas Recuperandas
+- a485636834b1 https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1506
+- a8bed2db03df https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4095
+- a9431b5b0515 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09453022082025_1_.pdf&nome=Relação Nominal de Credores AJ
+- a9601c1a7fef https://rlg-aj.com.br/wp-content/uploads/2025/11/2.-Relacao-de-Credores-3.pdf
+- aa02843210a6 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento14530931032026_1_.pdf&nome=Quadro Geral de Credores Atualizado - 23/03/2026
+- aa2a5a37eb93 https://inova-aj.com.br/wp-content/uploads/2020/02/Relação-de-credores-Grupo-Miguel-Couto-1.pdf
+- ae2b8f9e9222 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17043029052024_1_.pdf&nome=Relação Nominal de Credores AJ-Analítica
+- af394a20bb52 https://vtladm.com.br/wp-content/uploads/2024/04/08-Plano-de-Recuperacao-Judicial-–-Frigorifico-Alfa-Industria-e-Comercio-de-Carnes-e-Derivados-Ltda.-e-Ctx-Logistica-Transporte-E-Locacoes-Ltda.pdf
+- b0d726009e1b https://rlg-aj.com.br/wp-content/uploads/2026/07/Publicacao-Edital-Artigo-52.-Paragrafo-1.-Primeira-Lista-de-Credores-Dal-Santo-1.pdf
+- b16317915c79 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-02-relacao-de-credores-apresentado-pela-recuperanda.pdf
+- b185675b17e9 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6283
+- b197b3096d09 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-07-relacao-credores-do-adm-judicial.pdf
+- b58e7ce614ff https://stenius.com.br/wp-content/uploads/2026/03/PRJ-UNIBRAS-PARTE-2.pdf
+- b66baafd022f https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-09/relacao-de-credores-sintetica-art.-51-iii-da-lre-concreserv-concreto-sa.pdf
+- b7f5f14de64b https://recuperacaojudicial.squarespace.com/s/QGC-CHL-CONSOLIDADO-FEV2025.pdf
+- b8a8046d9b21 https://credibilita.com.br/wp-content/uploads/2023/08/SCHMIDT-MOV-234-RELACAO-DE-CREDORES-ART.-52-1o-20-01-2017.pdf
+- b924a2b19cdf https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento17052414082026_1_.pdf&nome=Relação de Credores - Art. 7º, § 2º da Lei 11.101/2005 - 14/08/2026
+- b989ba8c2eac https://www.cb2d.com.br/portal/_uploads/0f0e2ee5-d45e-4ef3-89f4-ee0df9ac86fc.pdf
+- ba2c48dd360d https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09354208072024_1_.pdf&nome=Relação Nominal de Credores Atualizada
+- bca4f361820e https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3517
+- bd5d1da60cec https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-11/8_relacao_de_credores_da_aj_art._7o_parag._2o_da_lre.pdf
+- bd6853d33471 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-10/alianca_relacao_de_credores_individualizada_1.pdf
+- becfeadaba48 https://recuperacaojudicial.squarespace.com/s/Edital-1a-lista-publicado-4zf5.pdf
+- bed5dc333ecf https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1474
+- c065235b216e https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6257
+- c0b6b5d7df9a https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1592
+- c35c55df849c https://vtladm.com.br/wp-content/uploads/2024/07/05-–-Arrecadacao-e-Quadro-Geral-de-Credores-–-Massa-Falida-de-Xadi-Servicos-de-Odontologia-Ltda.pdf
+- c5f0c6b6a194 https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1469
+- c83663ca1867 https://vivanteaj.com.br/wp-content/uploads/2024/12/PRJ-PROCENGE.pdf
+- c98e8488866d https://cataliseaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento16344704102024_1_.pdf&nome=07. PLANO DE RECUPERAÇÃO JUDICIAL
+- c9ded76ba27f https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3468
+- ccc1278999b1 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5817
+- cd681b19657b https://inova-aj.com.br/wp-content/uploads/2018/09/Relacao-de-Credores-Sinopec-art.-52-§1o-LRE-1.pdf
+- ce2753b5543e https://inova-aj.com.br/wp-content/uploads/2020/03/Grupo-Leader-Relação-de-credores-apesentada-pelas-recuperandas.pdf
+- cfde4efdd53f https://realbrasil.com.br/wp-content/uploads/2017/07/LISTA-DE-CREDORES-AZZA.pdf
+- d485ce14d398 https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-11/6_relacao_de_credores_aj_art.-7o_parag_2o_da_lre.pdf
+- d48af26ade75 https://vtladm.com.br/wp-content/uploads/2025/08/11_Segunda_Lista_Credores_Distribuidora_Frutas_Rumo_Novo.pdf
+- d62422ae75e7 https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento14104723032026_1_.pdf&nome=Relação Nominal de Credores
+- d8c4a0ed4700 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-07-relacao-de-credores-do-administrador-judicial.pdf
+- d90152406a91 https://vivanteaj.com.br/wp-content/uploads/2024/11/Apresentacao-do-2o-edital-de-credores-1.pdf
+- da70c7730bcc https://credibilita.com.br/wp-content/uploads/2023/08/relacaodecredoresparaedital.pdf
+- dab480ae5541 https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4096
+- db34e3ad7057 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento12044029012026_1_.pdf&nome=Relação de Credores - Art. 7º § 2º, da Lei nº 11.101/2005 - 30/07/2015
+- db456c585d89 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento11095927062025_1_.pdf&nome=Relação de Credores - Art. 7º da Lei 11.101/2005 - 25/06/2025
+- dc23c1a20e26 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3976
+- de4f9ddb34e9 https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1380
+- df10484b8676 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3975
+- dfd2096a12ee https://rlg-aj.com.br/wp-content/uploads/2026/03/Relacao.pdf
+- e11fd7188c3f https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento18120225072025_1_.pdf&nome=Relação de Credores - Art. 7º, § 2º da Lei 11.101/2005 - 22/07/2025
+- e1d135240626 https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/advogados-sgrott-relacao-de-credores-do-administrador-judicial.pdf
+- e3838e8d98db https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-09-relacao-de-credores-do-adminsitrador-judicial.pdf
+- e5759eaea27d https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento15414008032024_1_.pdf&nome=Relação Nominal de Credores da AJ - art. 7º, §2º, da Lei 11.101_2005
+- ea620902508c https://credibilita.com.br/wp-content/uploads/2023/08/SCHMIDT-MOV-431-RELACAO-DE-CREDORES-RETIFICADA-28-09-2017.pdf
+- ea645815adc8 https://recuperacaojudicial.squarespace.com/s/04-RJSampaioConstrucesEditalcoma2relacodecredores.pdf
+- ed0228059371 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5965
+- f0b65b7b5f6b https://rlg-aj.com.br/wp-content/uploads/2025/02/Segunda.pdf
+- f33b7fcc2eec https://gatekeeperaj.com.br/wp-content/uploads/2025/05/Relacao-AJ-Kennedy.pdf
+- f4f0ce689879 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento16002502092024_1_.pdf&nome=Quadro Geral de Credores - 15/08/2024
+- f6b63453b37b https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=3720
+- f82c74e21ebe https://credibilita.com.br/wp-content/uploads/2024/04/17.-Apresentacao-da-Lista-de-Credores-pela-Administradora-Judicial-e-analises-de-credito-em-06.02.24-mov.-502.pdf
+- f95a2d6addf1 https://credibilita.com.br/wp-content/uploads/2023/12/11.-Plano-de-Recuperacao-Judicial.pdf
+- fa60f3237f23 https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento15384617042026_1_.pdf&nome=Relação de Credores - art. 7º, §2º da Lei 11.101/2005 - 17/04/2026
+- fcb77411c906 https://vivanteaj.com.br/wp-content/uploads/2023/06/1o-Edital-de-Credores-1.pdf
+- fd56b1b49916 https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5700
+- fe555f1f16f4 https://vivanteaj.com.br/wp-content/uploads/2024/11/Edital-1.pdf
+- fe88f4396613 https://realbrasil.com.br/wp-content/uploads/2018/08/QUADRO-DE-CREDORES-DO-AJ.pdf
+
+## Sources that failed or were blocked
+- brasiltrustee.com.br: 622 failed downloads
+- credibilita.com.br: 132 failed downloads
+- ajcabezon.com.br: 6 failed downloads
+- vivanteaj.com.br: 5 failed downloads
+- tjrj.jus.br: 5 failed downloads
+- portal.tjpr.jus.br: 5 failed downloads
+- wwa.tjto.jus.br: 3 failed downloads
+- adjud.com.br: 3 failed downloads
+- reestruturaaj.com.br: 1 failed downloads
+- mmradvempresarial.com.br: 1 failed downloads
+- estevezguarda.com.br: 1 failed downloads
+- escavador.com: 1 failed downloads
+- download-files.wixmp.com: 1 failed downloads
+- compassojudicial.com.br: 1 failed downloads
+- cdn.douradosnews.com.br: 1 failed downloads
+- adjud.com.br: no documents retrievable (form/JS-gated or blocked)
+- ajud-mm.s3.amazonaws.com: no documents retrievable (form/JS-gated or blocked)
+- alvarezandmarsal.com: no documents retrievable (form/JS-gated or blocked)
+- cdn.douradosnews.com.br: no documents retrievable (form/JS-gated or blocked)
+- compassojudicial.com.br: no documents retrievable (form/JS-gated or blocked)
+- download-files.wixmp.com: no documents retrievable (form/JS-gated or blocked)
+- escavador.com: no documents retrievable (form/JS-gated or blocked)
+- estevezguarda.com.br: no documents retrievable (form/JS-gated or blocked)
+- mmradvempresarial.com.br: no documents retrievable (form/JS-gated or blocked)
+- portal.tjpr.jus.br: no documents retrievable (form/JS-gated or blocked)
+- reestruturaaj.com.br: no documents retrievable (form/JS-gated or blocked)
+- tjrj.jus.br: no documents retrievable (form/JS-gated or blocked)
+- wwa.tjto.jus.br: no documents retrievable (form/JS-gated or blocked)

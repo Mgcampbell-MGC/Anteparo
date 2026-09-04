@@ -11,4 +11,6 @@ run = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] != "latest" else db.execu
 out = sys.argv[2] if len(sys.argv) > 2 else str(ROOT / "data/out")
 export_csvs(db, run, out)
 counts = export_xlsx(db, run, str(Path(out) / "ANTEPARO_call_sheet.xlsx"), old_csv=str(ROOT / "data/seeds/old_sheet_targets.csv"))
+from anteparo.export.report import write_report
+write_report(db, run, out, counts)
 print(run, counts)

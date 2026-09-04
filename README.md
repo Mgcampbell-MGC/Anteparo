@@ -78,6 +78,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
   need name resolution before enrichment.
 - **Diff vs Drive sheet** tab: old amount vs new root-summed face, with the reason.
 
-## Status
-See `data/out/report.md` for the current run's numbers. Phase 0 calibration: 3 layouts, all facts pass, two
-documents reconcile to the cent.
+## Status — Phase 1 (2026-09-04)
+- 44 administrator portals crawled → 1,224 PDFs · 1,199 ingested · 9,770 RJ cases since 2020 in the DataJud universe
+- **559 leads ≥ R$200k on the Call List**, 236 pooling, 1,063 name-only leads ≥ R$200k awaiting CNPJ resolution
+- 943 companies enriched from the RFB registry (100% hit) · 2,800+ decision-maker contacts
+- End-to-end spot check: 50/50 sampled leads → the printed value is on the cited page
+- Details: `data/out/report.md`. Phase 2 levers: OCR for 74 scanned lists, name→CNPJ resolution, TJRJ/TJSP court portals.

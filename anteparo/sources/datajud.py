@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 
 import requests
@@ -81,8 +82,10 @@ def derive(hit: dict) -> dict:
     da = src.get("dataAjuizamento") or ""
     filing = f"{da[:4]}-{da[4:6]}-{da[6:8]}" if len(da) >= 8 else None
     oj = src.get("orgaoJulgador") or {}
+    num = re.sub(r"\D", "", src.get("numeroProcesso") or "")
+    case_number = f"{num[:7]}-{num[7:9]}.{num[9:13]}.{num[13]}.{num[14:16]}.{num[16:20]}" if len(num) == 20 else src.get("numeroProcesso")
     return {
-        "case_number": src.get("numeroProcesso"),
+        "case_number": case_number,
         "court": (src.get("tribunal") or "").upper(),
         "chamber": oj.get("nome"),
         "chamber_code": oj.get("codigo"),
