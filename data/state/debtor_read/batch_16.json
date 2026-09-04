@@ -1,0 +1,187 @@
+[
+ {
+  "case_number": "0315021-46.2018.8.24.0008",
+  "floor_leads": 1,
+  "floor_face": 377942,
+  "db_hint": "BLUFIX INDÚSTRIA E COMÉRCIO LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "f27c1682",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/f27c1682cf46c9ed.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-empresa.pdf",
+    "hint": "BLUFIX INDÚSTRIA E COMÉRCIO LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "BLUFIX INDÚSTRIA E COMÉRCIO LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/blufix-industria-e-comercio-ltda/"
+   },
+   {
+    "doc_id": "9d5f782a",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/9d5f782a8aa6a019.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-adm-jud.pdf",
+    "hint": "BLUFIX INDÚSTRIA E COMÉRCIO LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "BLUFIX INDÚSTRIA E COMÉRCIO LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/blufix-industria-e-comercio-ltda/"
+   }
+  ]
+ },
+ {
+  "case_number": "0077403-37.2025.8.17.2001",
+  "floor_leads": 1,
+  "floor_face": 216560,
+  "db_hint": "E FALENCIA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "206dfa70",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/206dfa70c8876fa9.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6284",
+    "hint": "E FALENCIA",
+    "page_title": "GRUPO LUMETRON – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/grupo-lumetron/"
+   },
+   {
+    "doc_id": "b185675b",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/b185675b17e9e104.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6283",
+    "hint": "E FALENCIA",
+    "page_title": "GRUPO LUMETRON – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/grupo-lumetron/"
+   },
+   {
+    "doc_id": "623782b8",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/623782b81a850752.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6281",
+    "hint": "E FALENCIA",
+    "page_title": "GRUPO LUMETRON – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/grupo-lumetron/"
+   }
+  ]
+ },
+ {
+  "case_number": "0010193-34.2013.8.19.0028",
+  "floor_leads": 1,
+  "floor_face": 503949,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "c1999368",
+    "path": "/home/user/Anteparo/data/pdfs/realbrasil.com.br/c1999368afebc37e.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://realbrasil.com.br/wp-content/uploads/2019/02/LISTA-DE-CREDORES-DA-RECUPERANDA.pdf",
+    "hint": "SERMAP Comércio e Serviços LTDA - Real Brasil Consultoria",
+    "page_title": "SERMAP Comércio e Serviços LTDA - Real Brasil Consultoria",
+    "page_url": "https://realbrasil.com.br/rj/sermap/"
+   }
+  ]
+ },
+ {
+  "case_number": "0003232-89.2024.8.16.0185",
+  "floor_leads": 1,
+  "floor_face": 604311,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "32987552",
+    "path": "/home/user/Anteparo/data/pdfs/bbsadvogados.com.br/32987552198c36f8.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://bbsadvogados.com.br/wp-content/uploads/2025/09/Edital-Relacao-de-Credores-da-Administradora-Judicial-art.-7o2o-da-LRF.-Visao-14-02-2025.pdf",
+    "hint": "VISÃO ASSESSORIA CONTÁBIL SC LTDA – Falência – Brazilio Bacellar Shirai Advogados",
+    "page_title": "VISÃO ASSESSORIA CONTÁBIL SC LTDA – Falência – Brazilio Bacellar Shirai Advogados",
+    "page_url": "https://bbsadvogados.com.br/visao-assessoria-contabil-sc-ltda-falencia/"
+   },
+   {
+    "doc_id": "7b043ed6",
+    "path": "/home/user/Anteparo/data/pdfs/bbsadvogados.com.br/7b043ed69346e1b5.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "NO_ROWS",
+    "url": "https://bbsadvogados.com.br/wp-content/uploads/2025/09/edital-contendo-a-integra-do-encerramento-da-falencia-Visao-Assessoria-Contabil-Ltda-Me.pdf",
+    "hint": "VISÃO ASSESSORIA CONTÁBIL SC LTDA – Falência – Brazilio Bacellar Shirai Advogados",
+    "page_title": "VISÃO ASSESSORIA CONTÁBIL SC LTDA – Falência – Brazilio Bacellar Shirai Advogados",
+    "page_url": "https://bbsadvogados.com.br/visao-assessoria-contabil-sc-ltda-falencia/"
+   }
+  ]
+ },
+ {
+  "case_number": "0000941-21.2012.8.26.0101",
+  "floor_leads": 1,
+  "floor_face": 13129218,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "cefc6f1f",
+    "path": "/home/user/Anteparo/data/pdfs/brasiltrustee.com.br/cefc6f1f4e0b0de0.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://violet-wolf-754008.hostingersite.com/wp-content/uploads/2022/10/Primeiro-Edital-de-Credores-Integral-com-creditos.pdf",
+    "hint": "Recuperações Judiciais – Brasil Trustee",
+    "page_title": "Recuperações Judiciais – Brasil Trustee",
+    "page_url": "https://brasiltrustee.com.br/recuperacoes-judiciais/"
+   },
+   {
+    "doc_id": "97d149cc",
+    "path": "/home/user/Anteparo/data/pdfs/brasiltrustee.com.br/97d149cc912c2109.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/eit/05-Certidão-de-Publicação-do-Primeiro-Edital.pdf",
+    "hint": "Recuperações Judiciais – Brasil Trustee",
+    "page_title": "Recuperações Judiciais – Brasil Trustee",
+    "page_url": "https://brasiltrustee.com.br/recuperacoes-judiciais/"
+   },
+   {
+    "doc_id": "6ede1cbd",
+    "path": "/home/user/Anteparo/data/pdfs/brasiltrustee.com.br/6ede1cbd1f296e21.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/Graúna/04-primeiro-edital.pdf",
+    "hint": "Recuperações Judiciais – Brasil Trustee",
+    "page_title": "Recuperações Judiciais – Brasil Trustee",
+    "page_url": "https://brasiltrustee.com.br/recuperacoes-judiciais/"
+   },
+   {
+    "doc_id": "d7e9e031",
+    "path": "/home/user/Anteparo/data/pdfs/brasiltrustee.com.br/d7e9e03151cdb13c.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/Grupo-bem/1º-EDITAL-DE-CREDORES-GRUPO-BEM-DJE.pdf",
+    "hint": "Recuperações Judiciais – Brasil Trustee",
+    "page_title": "Recuperações Judiciais – Brasil Trustee",
+    "page_url": "https://brasiltrustee.com.br/recuperacoes-judiciais/"
+   }
+  ]
+ }
+]

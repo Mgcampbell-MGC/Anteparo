@@ -1,0 +1,227 @@
+[
+ {
+  "case_number": "0001943-40.2024.8.16.0115",
+  "floor_leads": 11,
+  "floor_face": 10816667,
+  "db_hint": "no prazo de 776, sa",
+  "db_rfb_razao": "D'AGOSTINI & DIDOMENICO LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.2816901408450704,
+  "db_cnpj": "77317972000139",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "dfc3207d",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/dfc3207dcd0fa485.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento20014127022025_1_.pdf&nome=Relação Nominal de Credores",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_d-e-d-logistica-e-transporte-ltda-+-d’agostini-e-didomenico-ltda__417"
+   },
+   {
+    "doc_id": "53aab9ec",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/53aab9ec10afdb9c.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "NO_ROWS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento20010827022025_1_.pdf&nome= Manifestação da AJ - Apresentação da relação nominal de credores",
+    "hint": "- D & D LOGÍSTICA E TRANSPORTE LTDA",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_d-e-d-logistica-e-transporte-ltda-+-d’agostini-e-didomenico-ltda__417"
+   },
+   {
+    "doc_id": "f3cc2594",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/f3cc2594600ba52c.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16040221112024_1_.pdf&nome=1º Edital - Art.52, § 1º - Intimação de Credores e Terceiros - Deferimento de Processamento",
+    "hint": "no prazo de 776, sa",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_d-e-d-logistica-e-transporte-ltda-+-d’agostini-e-didomenico-ltda__417"
+   },
+   {
+    "doc_id": "59edede5",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/59edede5a45f10de.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16013521112024_1_.pdf&nome=4º Edital - Art. 7º, § 2º - Aviso de Apresentação da Relação de Credores",
+    "hint": "- D & D LOGÍSTICA E TRANSPORTE Comercia",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_d-e-d-logistica-e-transporte-ltda-+-d’agostini-e-didomenico-ltda__417"
+   }
+  ]
+ },
+ {
+  "case_number": "3000117-40.2025.8.06.0512",
+  "floor_leads": 10,
+  "floor_face": 11505036,
+  "db_hint": "- VENEZA SERVIÇOS ADMINISTRATIVOS LTDA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "73b45cbf",
+    "path": "/home/user/Anteparo/data/pdfs/bugarimecoelho.com.br/73b45cbf1779afc0.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://bugarimecoelho.com.br/ws/media-library/b6b7ea42b9fa2afe30bc728fe00cd5c6/07---edital-do-processamento-da-recuperacao-judicial.pdf",
+    "hint": "PÃ¡gina inicial",
+    "page_title": "PÃ¡gina inicial",
+    "page_url": "https://bugarimecoelho.com.br/"
+   },
+   {
+    "doc_id": "e6f78408",
+    "path": "/home/user/Anteparo/data/pdfs/bugarimecoelho.com.br/e6f7840898dd61cf.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://bugarimecoelho.com.br/ws/media-library/fcc045082b2058d33121dc5c3776994e/06---relacao-de-credores-veneza.pdf",
+    "hint": "- VENEZA SERVIÇOS ADMINISTRATIVOS LTDA",
+    "page_title": "PÃ¡gina inicial",
+    "page_url": "https://bugarimecoelho.com.br/"
+   },
+   {
+    "doc_id": "1e8e27e1",
+    "path": "/home/user/Anteparo/data/pdfs/bugarimecoelho.com.br/1e8e27e13f99399e.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://bugarimecoelho.com.br/ws/media-library/38bfb264f2d01233d1cc8db0ec27f7b2/15---sentenca-de-extincao-da-recuperacao.pdf",
+    "hint": "PÃ¡gina inicial",
+    "page_title": "PÃ¡gina inicial",
+    "page_url": "https://bugarimecoelho.com.br/"
+   },
+   {
+    "doc_id": "a923271a",
+    "path": "/home/user/Anteparo/data/pdfs/bugarimecoelho.com.br/a923271a1999d4d4.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://bugarimecoelho.com.br/ws/media-library/9ad2df0a19eb3365e6333816a0a7d63a/16---apelacao-da-sentenca-de-extincao.pdf",
+    "hint": "PÃ¡gina inicial",
+    "page_title": "PÃ¡gina inicial",
+    "page_url": "https://bugarimecoelho.com.br/"
+   }
+  ]
+ },
+ {
+  "case_number": "0802426-35.2019.8.10.0000",
+  "floor_leads": 9,
+  "floor_face": 11589893,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "d85bdfbf",
+    "path": "/home/user/Anteparo/data/pdfs/realbrasil.com.br/d85bdfbfbdc814ff.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://realbrasil.com.br/wp-content/uploads/2018/06/2_LISTA-DE-CREDORES-DA-RECUPERANDA_ROQUE.pdf",
+    "hint": "Roque Materiais para Construção - Real Brasil Consultoria",
+    "page_title": "Roque Materiais para Construção - Real Brasil Consultoria",
+    "page_url": "https://realbrasil.com.br/rj/roque/"
+   }
+  ]
+ },
+ {
+  "case_number": "0032731-52.2010.8.17.0001",
+  "floor_leads": 9,
+  "floor_face": 14304620,
+  "db_hint": "E FALENCIA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "9f9b3214",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/9f9b321436d85197.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4582",
+    "hint": "E FALENCIA",
+    "page_title": "COPA FRUIT IMPORTACAO E EXPORTACAO S.A – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/copafruit/"
+   },
+   {
+    "doc_id": "bf3c4e44",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/bf3c4e448c3e0499.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4579",
+    "hint": "E FALENCIA",
+    "page_title": "COPA FRUIT IMPORTACAO E EXPORTACAO S.A – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/copafruit/"
+   },
+   {
+    "doc_id": "0ecae0da",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/0ecae0dabc2caeed.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4581",
+    "hint": "E FALENCIA",
+    "page_title": "COPA FRUIT IMPORTACAO E EXPORTACAO S.A – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/copafruit/"
+   }
+  ]
+ },
+ {
+  "case_number": "0019761-43.2024.8.17.2001",
+  "floor_leads": 9,
+  "floor_face": 72049760,
+  "db_hint": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "def0c025",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/def0c025d7f13527.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5778",
+    "hint": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_title": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/adlim-terceirizacao-em-servicos-ltda/"
+   },
+   {
+    "doc_id": "a1e1f296",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/a1e1f2961eeafd34.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5964",
+    "hint": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_title": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/adlim-terceirizacao-em-servicos-ltda/"
+   },
+   {
+    "doc_id": "a3249779",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/a32497797bacd26a.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=6051",
+    "hint": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_title": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/adlim-terceirizacao-em-servicos-ltda/"
+   },
+   {
+    "doc_id": "ccc12789",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/ccc1278999b19619.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5817",
+    "hint": "Requerentes, mantendo seus atuais administradores na condução da atividade empresa",
+    "page_title": "GRUPO ADLIM – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/adlim-terceirizacao-em-servicos-ltda/"
+   }
+  ]
+ }
+]

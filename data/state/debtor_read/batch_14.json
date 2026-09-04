@@ -1,0 +1,137 @@
+[
+ {
+  "case_number": "5027051-28.2023.8.24.0008",
+  "floor_leads": 1,
+  "floor_face": 3666741,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "219e6d16",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/219e6d16c94cc4ed.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/11/relacao-credores-recuperanda.pdf",
+    "hint": "CENTRAL DA EDUCAÇÃO CURSOS LTDA; ESPAÇO DA EDUCAÇÃO CURSOS LTDA; ESPAÇO DA EDUCAÇÃO PACATUBA LTDA; NÚCLEO DA EDUCAÇÃO CURSOS LTDA. – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "CENTRAL DA EDUCAÇÃO CURSOS LTDA; ESPAÇO DA EDUCAÇÃO CURSOS LTDA; ESPAÇO DA EDUCAÇÃO PACATUBA LTDA; NÚCLEO DA EDUCAÇÃO CURSOS LTDA. – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/central-educacao-polo-unicessumar/"
+   }
+  ]
+ },
+ {
+  "case_number": "5003439-20.2020.8.24.0282",
+  "floor_leads": 1,
+  "floor_face": 496312,
+  "db_hint": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "102b04dc",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/102b04dc13b84d35.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-da-recuperanda-2.pdf",
+    "hint": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/falencia/sofia-freccia-confeccoes-ltda/"
+   },
+   {
+    "doc_id": "a228ba15",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/a228ba15e8ae6fae.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/albertina-relacao-de-credores.pdf",
+    "hint": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/falencia/sofia-freccia-confeccoes-ltda/"
+   },
+   {
+    "doc_id": "82c3a1a8",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/82c3a1a860e42f85.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/roberto-relacao-credores.pdf",
+    "hint": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "ALBERTINA MARTINS PEREIRA FRECCIA / ROBERTO BRUNATO FRECCIA – EPP / SOFIA FRECCIA CONFECÇÕES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/falencia/sofia-freccia-confeccoes-ltda/"
+   }
+  ]
+ },
+ {
+  "case_number": "4087055-04.2026.8.26.0100",
+  "floor_leads": 1,
+  "floor_face": 2656901,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "eb0a94ff",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/eb0a94ffe21d8842.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento14170815062026_1_.pdf&nome=Relação de Credores - Art. 52º § 1º, da Lei nº 11.101/2005 - 20/05/2026",
+    "hint": "Ativos",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=65"
+   }
+  ]
+ },
+ {
+  "case_number": "4077687-05.2025.8.26.0100",
+  "floor_leads": 1,
+  "floor_face": 228216,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "1b265515",
+    "path": "/home/user/Anteparo/data/pdfs/acfb.com.br/1b26551517db2cdc.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://acfb.com.br/wp-content/uploads/2026/06/Relacao_de_Credores_Pneus_-_SITE.pdf",
+    "hint": "Grupo Pneus Paulista – ACFB",
+    "page_title": "Grupo Pneus Paulista – ACFB",
+    "page_url": "https://acfb.com.br/grupo-pneus-paulista/"
+   }
+  ]
+ },
+ {
+  "case_number": "4039082-53.2026.8.26.0100",
+  "floor_leads": 1,
+  "floor_face": 262508,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "780bb17a",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/780bb17a2618822d.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento18560022042026_1_.pdf&nome=Relação de Credores - art. 52, §1º da Lei 11.101/05 - 22/04/2026",
+    "hint": "Ativos",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=60"
+   }
+  ]
+ }
+]

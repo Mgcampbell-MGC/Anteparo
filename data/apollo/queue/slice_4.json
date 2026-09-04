@@ -1,0 +1,222 @@
+[
+ {
+  "i": 443,
+  "root": "04196935",
+  "razao": "GOLDEN DISTRIBUIDORA LTDA.",
+  "fantasia": "GOLDEN / SHARPENER",
+  "uf": "ES",
+  "city": "SERRA",
+  "face": 271484.12,
+  "kw": "Golden Sharpener",
+  "size": "MID"
+ },
+ {
+  "i": 448,
+  "root": "02676351",
+  "razao": "SOAGRO - SOCIEDADE AGRO-PECUARIA LTDA",
+  "fantasia": "",
+  "uf": "GO",
+  "city": "RIO VERDE",
+  "face": 264931.98,
+  "kw": "Soagro Sociedade Agro Pecuaria",
+  "size": "MID"
+ },
+ {
+  "i": 453,
+  "root": "16820052",
+  "razao": "PRIMA FOODS S.A.",
+  "fantasia": "MATABOI ALIMENTOS",
+  "uf": "MG",
+  "city": "ARAGUARI",
+  "face": 260820.7,
+  "kw": "Mataboi Alimentos",
+  "size": "MID"
+ },
+ {
+  "i": 458,
+  "root": "04214651",
+  "razao": "PACKDUQUE INDUSTRIA DE PLASTICOS LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "VALINHOS",
+  "face": 258953.37,
+  "kw": "Packduque Plasticos",
+  "size": "MID"
+ },
+ {
+  "i": 463,
+  "root": "16629296",
+  "razao": "CASA NOVA EMPREENDIMENTOS IMOBILIARIOS LTDA",
+  "fantasia": "CASA NOVA EMPREENDIMENTOS",
+  "uf": "PE",
+  "city": "OLINDA",
+  "face": 255115.32,
+  "kw": "Casa Nova Empreendimentos",
+  "size": "MID"
+ },
+ {
+  "i": 468,
+  "root": "30222814",
+  "razao": "VITAMEDIC INDUSTRIA FARMACEUTICA LTDA",
+  "fantasia": "",
+  "uf": "GO",
+  "city": "ANAPOLIS",
+  "face": 250921.84,
+  "kw": "Vitamedic Farmaceutica",
+  "size": "LARGE"
+ },
+ {
+  "i": 473,
+  "root": "95758330",
+  "razao": "SOMAR INDUSTRIAL DE EMBALAGENS LTDA -",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "CACADOR",
+  "face": 246969.59,
+  "kw": "Somar Industrial Embalagens",
+  "size": "MID"
+ },
+ {
+  "i": 478,
+  "root": "08981590",
+  "razao": "OGAN SERVICOS ADMINISTRATIVOS LTDA",
+  "fantasia": "OGAN",
+  "uf": "SP",
+  "city": "SAO BERNARDO DO CAMPO",
+  "face": 244053.12,
+  "kw": "Ogan",
+  "size": "MID"
+ },
+ {
+  "i": 483,
+  "root": "28929686",
+  "razao": "PELOZATO HENRIQUE SOCIEDADE INDIVIDUAL DE ADVOCACIA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "BARUERI",
+  "face": 240000.0,
+  "kw": "Pelozato Henrique Sociedade Individual Advocacia",
+  "size": "MID"
+ },
+ {
+  "i": 488,
+  "root": "04301024",
+  "razao": "CALOI NORTE SA",
+  "fantasia": "CALOI SA",
+  "uf": "AM",
+  "city": "MANAUS",
+  "face": 237701.23,
+  "kw": "Caloi",
+  "size": "LARGE"
+ },
+ {
+  "i": 493,
+  "root": "04327273",
+  "razao": "LT QUIMICA LTDA",
+  "fantasia": "",
+  "uf": "RS",
+  "city": "ESTANCIA VELHA",
+  "face": 235156.14,
+  "kw": "Lt Quimica",
+  "size": "MID"
+ },
+ {
+  "i": 498,
+  "root": "06990590",
+  "razao": "GOOGLE BRASIL INTERNET LTDA.",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "SAO PAULO",
+  "face": 228215.86,
+  "kw": "Google Brasil Internet",
+  "size": "MID"
+ },
+ {
+  "i": 503,
+  "root": "09373468",
+  "razao": "USINA DE VENDAS SOLUCOES COMERCIAIS EM DISTRIBUICAO LTDA EM RECUPERACAO JUDICIAL",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "SAO PAULO",
+  "face": 223400.0,
+  "kw": "Usina Vendas Solucoes Comerciais Em Distribuicao",
+  "size": "MID"
+ },
+ {
+  "i": 508,
+  "root": "42470088",
+  "razao": "GEOQUEST BRASIL LTDA",
+  "fantasia": "",
+  "uf": "RJ",
+  "city": "RIO DE JANEIRO",
+  "face": 220382.08,
+  "kw": "Geoquest Brasil",
+  "size": "MID"
+ },
+ {
+  "i": 513,
+  "root": "04310390",
+  "razao": "APC DO BRASIL LTDA.",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "CHAPECO",
+  "face": 218400.0,
+  "kw": "Apc Brasil",
+  "size": "MID"
+ },
+ {
+  "i": 518,
+  "root": "08718921",
+  "razao": "T & T COMERCIO E REPRESENTACAO LTDA",
+  "fantasia": "T & T REPRESENTACAO",
+  "uf": "GO",
+  "city": "APARECIDA DE GOIANIA",
+  "face": 216279.12,
+  "kw": "T & T Representacao",
+  "size": "MID"
+ },
+ {
+  "i": 523,
+  "root": "08584931",
+  "razao": "RADICAL STYLE INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+  "fantasia": "******",
+  "uf": "SC",
+  "city": "TIJUCAS",
+  "face": 210265.38,
+  "kw": "Radical Style Confeccoes",
+  "size": "MID"
+ },
+ {
+  "i": 528,
+  "root": "08464282",
+  "razao": "WAL CONSULTORIA AERONAUTICA LTDA",
+  "fantasia": "WAL AVIATION",
+  "uf": "MG",
+  "city": "BELO HORIZONTE",
+  "face": 208303.18,
+  "kw": "Wal Aviation",
+  "size": "MID"
+ },
+ {
+  "i": 533,
+  "root": "03609434",
+  "razao": "AEROMECANICA LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "CURITIBA",
+  "face": 205080.7,
+  "kw": "Aeromecanica",
+  "size": "MID"
+ },
+ {
+  "i": 538,
+  "root": "06314327",
+  "razao": "JC DISTRIBUICAO LOGISTICA IMPORTACAO E EXPORTACAO DE PRODUTOS INDUSTRIALIZADOS S/A",
+  "fantasia": "JC DISTRIBUICAO",
+  "uf": "GO",
+  "city": "APARECIDA DE GOIANIA",
+  "face": 200738.49,
+  "kw": "Jc Distribuicao",
+  "size": "MID"
+ }
+]

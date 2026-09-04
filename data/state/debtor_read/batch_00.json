@@ -1,0 +1,187 @@
+[
+ {
+  "case_number": "5341375-33.2026.8.09.0049",
+  "floor_leads": 74,
+  "floor_face": 223407179,
+  "db_hint": "RJ Grupo 3E - Stenius",
+  "db_rfb_razao": "COMERCIO RACOES BEM BOM LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.3673469387755102,
+  "db_cnpj": "41324359000100",
+  "db_band": "A",
+  "docs": [
+   {
+    "doc_id": "29ff4732",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/29ff4732fc87cfcf.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/08/Edital-2°-Relacao-de-Credores-e-Aviso-de-Recebumento-do-Plano-de-Reccuperacao-Judicial-do-Grupo-3E-1.pdf",
+    "hint": "RJ Grupo 3E - Stenius",
+    "page_title": "RJ Grupo 3E - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-3e/"
+   },
+   {
+    "doc_id": "a88903e5",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/a88903e5064384d1.pdf",
+    "doc_type": "PLAN",
+    "status": "QUARANTINED",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/07/Plano-de-Recuperacao-Judicial-GRUPO-3E.pdf",
+    "hint": "RJ Grupo 3E - Stenius",
+    "page_title": "RJ Grupo 3E - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-3e/"
+   },
+   {
+    "doc_id": "8e883209",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/8e8832093a15aa7f.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/06/EDITAL-GRUPO-3E.pdf",
+    "hint": "Grupo 3E, em consolidação substancia",
+    "page_title": "RJ Grupo 3E - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-3e/"
+   }
+  ]
+ },
+ {
+  "case_number": "0005010-98.2023.8.16.0001",
+  "floor_leads": 54,
+  "floor_face": 179879832,
+  "db_hint": "Marques Administrações Judiciais",
+  "db_rfb_razao": "VEV COMERCIO DE MEDICAMENTOS LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.3820224719101124,
+  "db_cnpj": "22771751000144",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "b465a5d1",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/b465a5d11eec7a46.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento15293208032024_1_.pdf&nome=Relação Nominal de Credores da AJ-Sintética",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-dp4__393"
+   },
+   {
+    "doc_id": "9cdc12d4",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/9cdc12d4347bf3d8.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento14474608032024_1_.pdf&nome=3º Edital-Relação de Credores AJ e PRJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-dp4__393"
+   }
+  ]
+ },
+ {
+  "case_number": "0007565-40.2020.8.17.2370",
+  "floor_leads": 49,
+  "floor_face": 34386886,
+  "db_hint": "aludida empresa",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "849d4fe5",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/849d4fe5adce792f.pdf",
+    "doc_type": "QGC",
+    "status": "OK",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Credimoveis-QGC-01082025.pdf",
+    "hint": "e Falência",
+    "page_title": "Credimóveis Novolar Ltda - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/credimveis-novolar-ltda-pgina"
+   },
+   {
+    "doc_id": "5e274422",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/5e274422f357dd0f.pdf",
+    "doc_type": "QGC",
+    "status": "OK",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Credimoveis-Publicaco-Edital-art-52-1-1-Lista-de-Credores.pdf",
+    "hint": "aludida empresa",
+    "page_title": "Credimóveis Novolar Ltda - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/credimveis-novolar-ltda-pgina"
+   },
+   {
+    "doc_id": "3892f93f",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/3892f93f7b4b1622.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJCredimoveisEdital2alistaDJE291121.pdf",
+    "hint": "e Falência",
+    "page_title": "Credimóveis Novolar Ltda - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/credimveis-novolar-ltda-pgina"
+   }
+  ]
+ },
+ {
+  "case_number": "5057720-48.2025.8.24.0023",
+  "floor_leads": 43,
+  "floor_face": 321549956,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "cf92cff7",
+    "path": "/home/user/Anteparo/data/pdfs/credibilita.com.br/cf92cff797d25108.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://credibilita.com.br/wp-content/uploads/2025/09/Relacao-Credores-29.04.2026.pdf",
+    "hint": "Grupo Rech | Administração Judicial - Credibilità",
+    "page_title": "Grupo Rech | Administração Judicial - Credibilità",
+    "page_url": "https://credibilita.com.br/processos/grupo-rech/"
+   }
+  ]
+ },
+ {
+  "case_number": "0005010-50.2013.8.24.0026",
+  "floor_leads": 42,
+  "floor_face": 66119216,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "0330e72a",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/0330e72a6dfd789b.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2024/12/4-relacao-de-credores-recuperanda.pdf",
+    "hint": "MANNES LTDA E BM EMPREENDIMENTOS E PARTICIPAÇÕES – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "MANNES LTDA E BM EMPREENDIMENTOS E PARTICIPAÇÕES – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/falencia/mannes-ltda-e-bm-empreendimentos-e-participacoes/"
+   },
+   {
+    "doc_id": "ecb9e93b",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/ecb9e93b23ac14bc.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2024/12/5-relacao-de-credores-adm-jud.pdf",
+    "hint": "MANNES LTDA E BM EMPREENDIMENTOS E PARTICIPAÇÕES – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "MANNES LTDA E BM EMPREENDIMENTOS E PARTICIPAÇÕES – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/falencia/mannes-ltda-e-bm-empreendimentos-e-participacoes/"
+   },
+   {
+    "doc_id": "ea17ba43",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/ea17ba43b2611e60.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2024/12/relacao-de-credores-da-falida.pdf",
+    "hint": "MANNES LTDA E BM EMPREENDIMENTOS E PARTICIPAÇÕES – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "MANNES LTDA E BM EMPREENDIMENTOS E PARTICIPAÇÕES – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/falencia/mannes-ltda-e-bm-empreendimentos-e-participacoes/"
+   }
+  ]
+ }
+]

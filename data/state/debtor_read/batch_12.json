@@ -1,0 +1,187 @@
+[
+ {
+  "case_number": "0000357-17.2024.8.16.0131",
+  "floor_leads": 4,
+  "floor_face": 2738729,
+  "db_hint": "Marques Administrações Judiciais",
+  "db_rfb_razao": "COOPERATIVA REGIONAL AGROPECUARIA VALE DO ITAJAI",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.3,
+  "db_cnpj": "85789782000142",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "341bab05",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/341bab0580f4da36.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento10231312042024_1_.pdf&nome=Relação Nominal de Credores AJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-battisti__358"
+   },
+   {
+    "doc_id": "96830f5e",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/96830f5ef11b636a.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento10074612042024_1_.pdf&nome=2º Edital-Relação de Credores AJ e PRJ",
+    "hint": "Destro Comercio De Alimentos LTDA",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-battisti__358"
+   }
+  ]
+ },
+ {
+  "case_number": "5012295-78.2023.8.24.0019",
+  "floor_leads": 3,
+  "floor_face": 2181225,
+  "db_hint": "GAMAC IMPORTACAO E EXPORTACAO LTDA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "a57b29e0",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/a57b29e07c6d192c.pdf",
+    "doc_type": "QGC",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento10141405032024_1_.pdf&nome=10 - Edital do art. 7º, §2º da Lei 11.101/2005 (segunda lista de credores)",
+    "hint": "GAMAC IMPORTACAO E EXPORTACAO LTDA",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_gamac-comercio,-importacao-e-exportacao-de-pecas-e-maquinas-ltda__34"
+   }
+  ]
+ },
+ {
+  "case_number": "0804204-35.2022.8.15.0731",
+  "floor_leads": 3,
+  "floor_face": 1817297,
+  "db_hint": "SECULAR COMÉRCIO CONSTRUÇÃO E REPRESENTAÇÃO LTDA - ME, EM",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "1355f93a",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/1355f93a13cd2722.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/uploads/2022/08/4.-EDITAL-2a-LISTA-DE-CREDORES.pdf",
+    "hint": "SECULAR COMERCIO CONSTRUÇÃO E REPRESENTAÇÃO LTDA",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "0700087-51.2020.8.02.0043",
+  "floor_leads": 3,
+  "floor_face": 1330793,
+  "db_hint": "empresa",
+  "db_rfb_razao": "AUTO POSTO FREITAS & MAIA LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.21621621621621628,
+  "db_cnpj": "12436978000180",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "9b292ab9",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/9b292ab966194c5a.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://recuperacaojudicial.squarespace.com/s/LISTA-DE-CREDORES-CONSOLIDADA-EM-11072025_6419.pdf",
+    "hint": "AUTO POSTO FREITAS & MAIA LTDA",
+    "page_title": "AUTO POSTO FREITAS & MAIA — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/autopostofreitasemaia"
+   },
+   {
+    "doc_id": "15a3f600",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/15a3f60047bf7434.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://recuperacaojudicial.squarespace.com/s/0700087-5120208020043-2.pdf",
+    "hint": "AUTO POSTO FREITAS & MAIA LTDA",
+    "page_title": "AUTO POSTO FREITAS & MAIA — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/autopostofreitasemaia"
+   },
+   {
+    "doc_id": "857975b5",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/857975b5f0c1ced2.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Auto-Posto-Edital-1a-lista-de-credores.pdf",
+    "hint": "empresa",
+    "page_title": "AUTO POSTO FREITAS & MAIA — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/autopostofreitasemaia"
+   },
+   {
+    "doc_id": "667246f0",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/667246f02c08f780.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://recuperacaojudicial.squarespace.com/s/0700087-5120208020043-3-3hf4.pdf",
+    "hint": "AUTO POSTO FREITAS & MAIA — Lindoso e Araujo",
+    "page_title": "AUTO POSTO FREITAS & MAIA — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/autopostofreitasemaia"
+   }
+  ]
+ },
+ {
+  "case_number": "0044747-14.2024.8.16.0021",
+  "floor_leads": 3,
+  "floor_face": 11811951,
+  "db_hint": "Marques Administrações Judiciais",
+  "db_rfb_razao": "BANCO DO BRASIL SA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.36,
+  "db_cnpj": "00000000000191",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "82275b95",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/82275b95fa5bba91.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09342616012025_1_.pdf&nome=Relação de Credores Recuperandas Classe III - Quirografário",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-gomiero__422"
+   },
+   {
+    "doc_id": "739e2939",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/739e29399ac0ac7b.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09391327032025_1_.pdf&nome=Relação Nominal de Credores AJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-gomiero__422"
+   },
+   {
+    "doc_id": "2c00af99",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/2c00af99d308a8ec.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09335916012025_1_.pdf&nome=Relação de Credores Recuperandas Classe II - Garantia Real",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-gomiero__422"
+   },
+   {
+    "doc_id": "9ab32db8",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/9ab32db8c6196271.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09364127032025_1_.pdf&nome=3º Edital - Relação de Credores AJ e PRJ",
+    "hint": "foi apresentado no movimento 103 dos autos supramencionados, em consonância",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-gomiero__422"
+   }
+  ]
+ }
+]

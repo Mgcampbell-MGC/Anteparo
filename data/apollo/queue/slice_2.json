@@ -1,0 +1,222 @@
+[
+ {
+  "i": 441,
+  "root": "02212918",
+  "razao": "BELCAR CAMINHOES E MAQUINAS LTDA",
+  "fantasia": "BELCAR CAMINHOES",
+  "uf": "GO",
+  "city": "GOIANIA",
+  "face": 277586.31,
+  "kw": "Belcar Caminhoes",
+  "size": "MID"
+ },
+ {
+  "i": 446,
+  "root": "10925045",
+  "razao": "OPTIMUM CONSULTORIA EM GESTAO PUBLICA E EMPRESARIAL LTDA",
+  "fantasia": "OPTIMUM",
+  "uf": "PB",
+  "city": "CAMPINA GRANDE",
+  "face": 267635.55,
+  "kw": "Optimum",
+  "size": "MID"
+ },
+ {
+  "i": 451,
+  "root": "05701847",
+  "razao": "MOMENTIVE PERFORMANCE MATERIALS INDUSTRIA DE SILICONES LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "ITATIBA",
+  "face": 262038.21,
+  "kw": "Momentive Performance Materials Silicones",
+  "size": "MID"
+ },
+ {
+  "i": 456,
+  "root": "20750654",
+  "razao": "GOIAS DISTRIBUIDORA DE ALIMENTOS LTDA",
+  "fantasia": "DISDAL DISTRIBUIDORA",
+  "uf": "GO",
+  "city": "APARECIDA DE GOIANIA",
+  "face": 260082.71,
+  "kw": "Disdal Distribuidora",
+  "size": "MID"
+ },
+ {
+  "i": 461,
+  "root": "46167507",
+  "razao": "3- PLASTIC SOLUCOES EM COMERCIO DE POLIMEROS LTDA",
+  "fantasia": "3-PLASTIC SOLUCOES EM RESINAS",
+  "uf": "SP",
+  "city": "AMERICANA",
+  "face": 256709.29,
+  "kw": "3 Plastic Solucoes Em Resinas",
+  "size": "MID"
+ },
+ {
+  "i": 466,
+  "root": "86205416",
+  "razao": "KASPER INDUSTRIA DE MOVEIS LTDA",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "SAO JOSE DO CEDRO",
+  "face": 253853.5,
+  "kw": "Kasper Moveis",
+  "size": "MID"
+ },
+ {
+  "i": 471,
+  "root": "60182904",
+  "razao": "TEXTILNOVA FIACAO LTDA EM RECUPERACAO JUDICIAL",
+  "fantasia": "",
+  "uf": "MG",
+  "city": "GUAXUPE",
+  "face": 248330.45,
+  "kw": "Textilnova Fiacao",
+  "size": "MID"
+ },
+ {
+  "i": 476,
+  "root": "37350519",
+  "razao": "MASUT COMBUSTIVEIS LTDA",
+  "fantasia": "MASUT-TRR",
+  "uf": "GO",
+  "city": "SENADOR CANEDO",
+  "face": 245850.0,
+  "kw": "Masut Trr",
+  "size": "MID"
+ },
+ {
+  "i": 481,
+  "root": "35474405",
+  "razao": "MDG INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+  "fantasia": "MDG INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+  "uf": "AM",
+  "city": "MANAUS",
+  "face": 241458.9,
+  "kw": "Mdg Plasticos",
+  "size": "MID"
+ },
+ {
+  "i": 486,
+  "root": "15640226",
+  "razao": "EMPREENDIMENTO IMOBILIARIO IB GATTO SPE LTDA - EM RECUPERACAO JUDICIAL",
+  "fantasia": "",
+  "uf": "AL",
+  "city": "MACEIO",
+  "face": 239311.13,
+  "kw": "Empreendimento Imobiliario Ib Gatto Spe",
+  "size": "MID"
+ },
+ {
+  "i": 491,
+  "root": "02162259",
+  "razao": "MWM - TUPY DO BRASIL LTDA.",
+  "fantasia": "MWM MOTORES E GERADORES",
+  "uf": "SP",
+  "city": "SAO PAULO",
+  "face": 236192.33,
+  "kw": "Mwm Motores Geradores",
+  "size": "LARGE"
+ },
+ {
+  "i": 496,
+  "root": "13884068",
+  "razao": "UNICHARM DO BRASIL INDUSTRIA E COMERCIO DE PRODUTOS DE HIGIENE LTDA.,",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "JAGUARIUNA",
+  "face": 228249.92,
+  "kw": "Unicharm Brasil Produtos Higiene",
+  "size": "LARGE"
+ },
+ {
+  "i": 501,
+  "root": "65947236",
+  "razao": "WGM SISTEMAS IMPORTACAO E EXPORTACAO LTDA",
+  "fantasia": "WGM EQUIPAMENTOS",
+  "uf": "SP",
+  "city": "BARUERI",
+  "face": 226506.99,
+  "kw": "Wgm Equipamentos",
+  "size": "MID"
+ },
+ {
+  "i": 506,
+  "root": "12613484",
+  "razao": "POTENCIAL AGRO S/A",
+  "fantasia": "PB-BIOS",
+  "uf": "PR",
+  "city": "LAPA",
+  "face": 222764.53,
+  "kw": "Pb Bios",
+  "size": "LARGE"
+ },
+ {
+  "i": 511,
+  "root": "47799028",
+  "razao": "EDENTEC INDUSTRIA E COMERCIO LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "SOROCABA",
+  "face": 219345.95,
+  "kw": "Edentec",
+  "size": "MID"
+ },
+ {
+  "i": 516,
+  "root": "17115437",
+  "razao": "LABORATORIO GLOBO SA",
+  "fantasia": "GLOBO PHARMA",
+  "uf": "MG",
+  "city": "SAO JOSE DA LAPA",
+  "face": 216418.96,
+  "kw": "Globo Pharma",
+  "size": "MID"
+ },
+ {
+  "i": 521,
+  "root": "02694691",
+  "razao": "CANADA LOCADORA DE EQUIPAMENTOS LIMITADA",
+  "fantasia": "",
+  "uf": "MG",
+  "city": "NOVA LIMA",
+  "face": 212769.31,
+  "kw": "Canada Locadora Equipamentos",
+  "size": "MID"
+ },
+ {
+  "i": 526,
+  "root": "01792254",
+  "razao": "L. J. MOVEIS LTDA",
+  "fantasia": "",
+  "uf": "MG",
+  "city": "SAO GERALDO",
+  "face": 209470.24,
+  "kw": "L J Moveis",
+  "size": "MID"
+ },
+ {
+  "i": 531,
+  "root": "75655720",
+  "razao": "SEPAC SERRADOS E PASTA DE CELULOSE LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "MALLET",
+  "face": 206015.81,
+  "kw": "Sepac Serrados Pasta Celulose",
+  "size": "LARGE"
+ },
+ {
+  "i": 536,
+  "root": "86765971",
+  "razao": "LAMINADOS PROGRESSO LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "IMBITUVA",
+  "face": 203412.12,
+  "kw": "Laminados Progresso",
+  "size": "MID"
+ }
+]

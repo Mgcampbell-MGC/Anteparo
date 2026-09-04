@@ -1,0 +1,170 @@
+[
+ {
+  "id": "5f4ff5509ae8060001622805",
+  "root": "05855974",
+  "kw": "Baston Aerossol",
+  "title": "Sales Representative",
+  "note": "weak; has_email; needs finance-title pass"
+ },
+ {
+  "id": "68c1c06dc1e77400010fb507",
+  "root": "10956258",
+  "kw": "Federação Pernambucana de Futebol",
+  "title": "Member of the Management Team",
+  "note": "backup"
+ },
+ {
+  "id": "57d7f0d0a6da9809e555f812",
+  "root": "05429994",
+  "kw": "Vegetal Agronegócios",
+  "title": "Gerente Comercial Filial Cristalina",
+  "note": "backup, has_email, phone Yes"
+ },
+ {
+  "id": "60788c8a5e61a50001849154",
+  "root": "61352050",
+  "kw": "ITM Latin America",
+  "title": "Business Specialist",
+  "note": "weak, has_email, phone Yes"
+ },
+ {
+  "id": "65106318f15c23000198aaec",
+  "root": "29652131",
+  "kw": "Nutrihorto",
+  "title": "Logistics Manager",
+  "note": "backup"
+ },
+ {
+  "id": "5e7281839ac3860001fdb9ba",
+  "root": "43237254",
+  "kw": "Tecelagem Jolitex",
+  "title": "Purchasing Coordinator",
+  "note": "weak, has_email; no finance found"
+ },
+ {
+  "id": "57dfdea4a6da980af0ee7992",
+  "root": "59850115",
+  "kw": "Venturoso Valentini",
+  "title": "Coordenador de Desenvolvimento de Produtos",
+  "note": "weak, has_email, phone Yes"
+ },
+ {
+  "id": "60d3f06239dbc50001479714",
+  "root": "47827332",
+  "kw": "Agro Safra Adubos",
+  "title": "Industrial Manager",
+  "note": "backup, phone Yes"
+ },
+ {
+  "id": "54a2e8b47468693fda0be045",
+  "root": "20286415",
+  "kw": "Deflor Bioengenharia",
+  "title": "Production Manager",
+  "note": "backup"
+ },
+ {
+  "id": "636a9dd715f3b200014a6600",
+  "root": "03119889",
+  "kw": "Ferronorte Industrial",
+  "title": "Analyst",
+  "note": "weak, has_email, phone Yes"
+ },
+ {
+  "id": "57d9df67a6da98765c1d5eab",
+  "root": "06294126",
+  "kw": "Soma RS Produtos Hospitalares",
+  "title": "IT Infrastructure Coordinator",
+  "note": "backup, has_email, phone Yes"
+ },
+ {
+  "id": "54abbec87468692a6b8b6a0a",
+  "root": "72096100",
+  "kw": "Micromazza",
+  "title": "Especialista em Melhoria de Processos",
+  "note": "backup, has_email, phone Yes"
+ },
+ {
+  "id": "57dd4920a6da987ae490d71b",
+  "root": "00939873",
+  "kw": "Brusinox",
+  "title": "(no title)",
+  "note": "backup, has_email"
+ },
+ {
+  "id": "55705e5973696478eef86d00",
+  "root": "67729178",
+  "kw": "Comercial Cirúrgica Rioclarense",
+  "title": "Farmacêutica Responsável Técnica",
+  "note": "weak, has_email"
+ },
+ {
+  "id": "5e6c64ccd02fa20001bee1ef",
+  "root": "37031044",
+  "kw": "Charrua Comercial Agrícola",
+  "title": "Executiva de Recursos Humanos",
+  "note": "backup, has_email, phone Yes"
+ },
+ {
+  "id": "54c181bd74686916393d6d18",
+  "root": "12927088",
+  "kw": "Cia do Jeans",
+  "title": "Manager of Sales",
+  "note": "weak"
+ },
+ {
+  "id": "60b7adf16ac97a0001f638ce",
+  "root": "00749526",
+  "kw": "Superfine Steel",
+  "title": "(no title)",
+  "note": "weak, has_email, phone Yes"
+ },
+ {
+  "id": "54a9e9f97468692d1c4b711a",
+  "root": "01791741",
+  "kw": "Asfaltos Nordeste",
+  "title": "Industrial Manager",
+  "note": "backup, has_email, phone Yes"
+ },
+ {
+  "id": "54a5562374686938ac6a2e90",
+  "root": "02017233",
+  "kw": "Proger Comércio Importação",
+  "title": "Commercial Manager",
+  "note": "backup, phone Yes"
+ },
+ {
+  "id": "57d6e6c4a6da985472f0d072",
+  "root": "04422548",
+  "kw": "Laponia Sudeste",
+  "title": "Administrative Analyst",
+  "note": "backup"
+ },
+ {
+  "id": "6429a4e45e89b70001fff82f",
+  "root": "10758022",
+  "kw": "I. F. dos Santos",
+  "title": "Office Assistant",
+  "note": "only person listed"
+ },
+ {
+  "id": "68a2f194f63a2b0001ed01cb",
+  "root": "92306257",
+  "kw": "MV Informática Nordeste",
+  "title": "Administrative Analyst",
+  "note": "backup"
+ },
+ {
+  "id": "6199b95428e3810001844b4b",
+  "root": "05052443",
+  "kw": "Plaskem Embalagens",
+  "title": "Manager",
+  "note": "backup"
+ },
+ {
+  "id": "67232a3a6011120001e1c293",
+  "root": "47180625",
+  "kw": "Corteva",
+  "title": "Supervisora de Cobrança",
+  "note": "backup2"
+ }
+]

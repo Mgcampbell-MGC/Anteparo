@@ -1,0 +1,222 @@
+[
+ {
+  "i": 442,
+  "root": "79460192",
+  "razao": "KIT S PARANA-INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+  "fantasia": "KITS PARANA",
+  "uf": "PR",
+  "city": "ARAPONGAS",
+  "face": 277283.04,
+  "kw": "Kits Parana",
+  "size": "MID"
+ },
+ {
+  "i": 447,
+  "root": "07478963",
+  "razao": "ECOPNEUS COMERCIO DE PNEUMATICOS E SERVICOS LTDA",
+  "fantasia": "ECOPNEUS",
+  "uf": "PA",
+  "city": "BARCARENA",
+  "face": 265611.35,
+  "kw": "Ecopneus",
+  "size": "MID"
+ },
+ {
+  "i": 452,
+  "root": "01257995",
+  "razao": "GOIASMINAS INDUSTRIA DE LATICINIOS LTDA",
+  "fantasia": "ITALAC",
+  "uf": "GO",
+  "city": "CORUMBAIBA",
+  "face": 261853.71,
+  "kw": "Italac",
+  "size": "LARGE"
+ },
+ {
+  "i": 457,
+  "root": "47254545",
+  "razao": "SELENE INDUSTRIA TEXTIL S A",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "CERQUILHO",
+  "face": 259498.98,
+  "kw": "Selene Textil S A",
+  "size": "LARGE"
+ },
+ {
+  "i": 462,
+  "root": "12863297",
+  "razao": "LOGOMAR COMERCIO, IMPORTACAO E EXPORTACAO LTDA",
+  "fantasia": "LOGOMAR COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+  "uf": "SC",
+  "city": "ITAJAI",
+  "face": 256557.88,
+  "kw": "Logomar Importacao Exportacao",
+  "size": "MID"
+ },
+ {
+  "i": 467,
+  "root": "75205831",
+  "razao": "SANTOS ANDIRA INDUSTRIA DE MOVEIS LTDA",
+  "fantasia": "SANTOS ANDIRA",
+  "uf": "PR",
+  "city": "ANDIRA",
+  "face": 252798.81,
+  "kw": "Santos Andira",
+  "size": "MID"
+ },
+ {
+  "i": 472,
+  "root": "43026198",
+  "razao": "TERTO TRANSPORTES LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "APUCARANA",
+  "face": 247935.21,
+  "kw": "Terto Transportes",
+  "size": "MID"
+ },
+ {
+  "i": 477,
+  "root": "12286944",
+  "razao": "CONSTRUTORA HUMBERTO LOBO LTDA EM RECUPERACAO JUDICIAL",
+  "fantasia": "",
+  "uf": "AL",
+  "city": "MACEIO",
+  "face": 244838.03,
+  "kw": "Construtora Humberto Lobo",
+  "size": "MID"
+ },
+ {
+  "i": 482,
+  "root": "85335487",
+  "razao": "H J MALHAS LTDA",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "BRUSQUE",
+  "face": 240337.28,
+  "kw": "H J Malhas",
+  "size": "MID"
+ },
+ {
+  "i": 487,
+  "root": "08810422",
+  "razao": "GUARARAPES PAINEIS S/A",
+  "fantasia": "GUARARAPES PAINEIS S/A",
+  "uf": "SC",
+  "city": "CACADOR",
+  "face": 238085.39,
+  "kw": "Guararapes Paineis",
+  "size": "MID"
+ },
+ {
+  "i": 492,
+  "root": "54289830",
+  "razao": "DOREMUS ALIMENTOS LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "GUARULHOS",
+  "face": 235792.34,
+  "kw": "Doremus Alimentos",
+  "size": "MID"
+ },
+ {
+  "i": 497,
+  "root": "02624729",
+  "razao": "MADETEC MOVEIS LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "ARAPONGAS",
+  "face": 228237.0,
+  "kw": "Madetec Moveis",
+  "size": "MID"
+ },
+ {
+  "i": 502,
+  "root": "95387569",
+  "razao": "LINEA BRASIL IND E COM DE MOVEIS LTDA",
+  "fantasia": "LINEA BRASIL",
+  "uf": "PR",
+  "city": "ARAPONGAS",
+  "face": 224015.98,
+  "kw": "Linea Brasil",
+  "size": "MID"
+ },
+ {
+  "i": 507,
+  "root": "09260643",
+  "razao": "RECORD PARTICIPACOES LTDA",
+  "fantasia": "",
+  "uf": "AL",
+  "city": "MACEIO",
+  "face": 222369.09,
+  "kw": "Record Participacoes",
+  "size": "MID"
+ },
+ {
+  "i": 512,
+  "root": "46645768",
+  "razao": "LINHASITA INDUSTRIA DE LINHAS PARA COSER LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "ITATIBA",
+  "face": 218971.2,
+  "kw": "Linhasita Linhas Para Coser",
+  "size": "MID"
+ },
+ {
+  "i": 517,
+  "root": "77215606",
+  "razao": "ARAPLAC INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+  "fantasia": "MOVEIS ARAPLAC",
+  "uf": "PR",
+  "city": "ARAPONGAS",
+  "face": 216381.53,
+  "kw": "Moveis Araplac",
+  "size": "MID"
+ },
+ {
+  "i": 522,
+  "root": "21233373",
+  "razao": "TRADESTAR IMPORTACAO E EXPORTACAO LTDA",
+  "fantasia": "PVC TRADE",
+  "uf": "SC",
+  "city": "GARUVA",
+  "face": 210630.0,
+  "kw": "Pvc Trade",
+  "size": "MID"
+ },
+ {
+  "i": 527,
+  "root": "62859128",
+  "razao": "EMBALARTE EMBALAGENS LTDA",
+  "fantasia": "EMBALARTE EMBALAGENS",
+  "uf": "GO",
+  "city": "GOIANIA",
+  "face": 209405.66,
+  "kw": "Embalarte Embalagens",
+  "size": "MID"
+ },
+ {
+  "i": 532,
+  "root": "02721927",
+  "razao": "POLIMAN INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "ARAPONGAS",
+  "face": 205935.56,
+  "kw": "Poliman Moveis",
+  "size": "MID"
+ },
+ {
+  "i": 537,
+  "root": "04591114",
+  "razao": "NUTRANE NUTRICAO ANIMAL LTDA",
+  "fantasia": "",
+  "uf": "PE",
+  "city": "PESQUEIRA",
+  "face": 201080.88,
+  "kw": "Nutrane Nutricao Animal",
+  "size": "MID"
+ }
+]

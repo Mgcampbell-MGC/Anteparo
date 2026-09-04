@@ -1,0 +1,177 @@
+[
+ {
+  "case_number": "0002484-82.2022.8.17.2001",
+  "floor_leads": 41,
+  "floor_face": 72779484,
+  "db_hint": "SEVERINO DO RAMO VIEIRA DE CARVALHO",
+  "db_rfb_razao": "R W CONSTRUCOES LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.36363636363636365,
+  "db_cnpj": "01054509000180",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "37fa6c84",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/37fa6c841dfca958.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=4089",
+    "hint": "e Falência",
+    "page_title": "GRUPO CATTAN – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/grupo-cattan/"
+   },
+   {
+    "doc_id": "f3b6182e",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/f3b6182e3aa27154.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=4023",
+    "hint": "em que figuram como demandantes CATÃO & CIA",
+    "page_title": "GRUPO CATTAN – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/grupo-cattan/"
+   }
+  ]
+ },
+ {
+  "case_number": "0003971-03.2023.8.16.0119",
+  "floor_leads": 36,
+  "floor_face": 38671117,
+  "db_hint": "Marques Administrações Judiciais",
+  "db_rfb_razao": "ADVOCACIA WANDERLEI DE PAULA BARRETO",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.35294117647058826,
+  "db_cnpj": "78846169000154",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "ae2b8f9e",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/ae2b8f9e922216f8.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17043029052024_1_.pdf&nome=Relação Nominal de Credores AJ-Analítica",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-agromeal__413"
+   },
+   {
+    "doc_id": "1209dafe",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/1209dafe77b77089.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17040729052024_1_.pdf&nome=Relação Nominal de Credores AJ-Sintética",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-agromeal__413"
+   },
+   {
+    "doc_id": "1b8b44f1",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/1b8b44f15e4b1c69.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento10482924062024_1_.pdf&nome=2º Edital - Relação de credores do AJ e PRJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-agromeal__413"
+   }
+  ]
+ },
+ {
+  "case_number": "8005129-09.2023.8.05.0039",
+  "floor_leads": 34,
+  "floor_face": 183235324,
+  "db_hint": "Conduscabos Brasil Indústria Comércio de",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "a0ae32a5",
+    "path": "/home/user/Anteparo/data/pdfs/assistjud.com.br/a0ae32a59c2928e3.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://assistjud.com.br/wp-content/uploads/elementor/forms/65098c80a5824.pdf",
+    "hint": "e na falência",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "0000721-61.2024.8.17.2620",
+  "floor_leads": 33,
+  "floor_face": 43241685,
+  "db_hint": "em litisconsórcio ativo, conforme entendimento jurisprudencia",
+  "db_rfb_razao": "DIVINA INDUSTRIA DE COURO LTDA - EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.47863247863247865,
+  "db_cnpj": "08785522000158",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "6232303a",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/6232303ad9277ada.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=6104",
+    "hint": "em litisconsórcio ativo, conforme entendimento jurisprudencia",
+    "page_title": "GRUPO DIVINA INDUSTRIA DE COURO LTDA – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/grupo-divina-de-couro-ltda/"
+   },
+   {
+    "doc_id": "38f0c15b",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/38f0c15b8a2d8dc1.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=6252",
+    "hint": "GRUPO DIVINA INDUSTRIA DE COURO LTDA – LRF Líderes em Recuperação Judicial e Falência",
+    "page_title": "GRUPO DIVINA INDUSTRIA DE COURO LTDA – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/grupo-divina-de-couro-ltda/"
+   }
+  ]
+ },
+ {
+  "case_number": "5014104-85.2021.8.21.0010",
+  "floor_leads": 30,
+  "floor_face": 23975727,
+  "db_hint": "SCZ Scalzilli Administração Judicial",
+  "db_rfb_razao": "VECTOR INDUSTRIA DE PRODUTOS METALURGICOS LTDA - EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.4444444444444444,
+  "db_cnpj": "03018339000103",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "8b4f9213",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/8b4f9213992f6f80.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento15593902082022_1_.pdf&nome=08 - Relação de credores apresentada pela recuperanda",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_vector-industria-de-produtos-metalurgicos-ltda-(arke)__30"
+   },
+   {
+    "doc_id": "84c58636",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/84c586360a663c7c.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento15513401112022_1_.pdf&nome=15 - Edital do art. 7º, §2º (segunda lista de credores) e do art. 53 da Lei 11.101/2005 (recebimento do plano)",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_vector-industria-de-produtos-metalurgicos-ltda-(arke)__30"
+   },
+   {
+    "doc_id": "a7f404e1",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/a7f404e1fcedf9f3.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento12173113102022_1_.pdf&nome=14 - Lista de credores apresentada pela administração judicial",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_vector-industria-de-produtos-metalurgicos-ltda-(arke)__30"
+   }
+  ]
+ }
+]

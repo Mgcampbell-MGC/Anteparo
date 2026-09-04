@@ -1,0 +1,233 @@
+[
+ {
+  "i": 439,
+  "root": "04230984",
+  "razao": "STARSPRINGS DO BRASIL LTDA.",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "ARAUCARIA",
+  "face": 279092.97,
+  "kw": "Starsprings Brasil",
+  "size": "MID"
+ },
+ {
+  "i": 444,
+  "root": "84683408",
+  "razao": "DOHLER S.A.",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "JOINVILLE",
+  "face": 268521.81,
+  "kw": "Dohler",
+  "size": "LARGE"
+ },
+ {
+  "i": 449,
+  "root": "12656690",
+  "razao": "DISTRITO DE IRRIGACAO DO PERIMETRO SENADOR NILO COELHO",
+  "fantasia": "DISTRITO",
+  "uf": "PE",
+  "city": "PETROLINA",
+  "face": 264882.79,
+  "kw": "Distrito",
+  "size": "MID"
+ },
+ {
+  "i": 454,
+  "root": "05113942",
+  "razao": "SALUX - INFORMATIZACAO EM SAUDE S.A.",
+  "fantasia": "",
+  "uf": "RS",
+  "city": "PORTO ALEGRE",
+  "face": 260799.62,
+  "kw": "Salux Informatizacao Em Saude",
+  "size": "MID"
+ },
+ {
+  "i": 459,
+  "root": "18773359",
+  "razao": "AGROBRASILCHEMICAL INDUSTRIA E COMERCIO LTDA EM RECUPERACAO JUDICIAL",
+  "fantasia": "AGROBRASILCHEMICAL",
+  "uf": "PR",
+  "city": "MANDAGUARI",
+  "face": 257434.5,
+  "kw": "Agrobrasilchemical",
+  "size": "MID"
+ },
+ {
+  "i": 464,
+  "root": "62173620",
+  "razao": "SERASA S.A.",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "SAO PAULO",
+  "face": 254832.18,
+  "kw": "Serasa",
+  "size": "LARGE"
+ },
+ {
+  "i": 469,
+  "root": "80959513",
+  "razao": "CATIVA TEXTIL INDUSTRIA E COMERCIO LTDA",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "POMERODE",
+  "face": 249899.16,
+  "kw": "Cativa Textil",
+  "size": "MID"
+ },
+ {
+  "i": 474,
+  "root": "02513991",
+  "razao": "DE HEUS INDUSTRIA E COMERCIO DE NUTRICAO ANIMAL LTDA",
+  "fantasia": "DE HEUS",
+  "uf": "SP",
+  "city": "RIO CLARO",
+  "face": 246779.9,
+  "kw": "Heus",
+  "size": "MID"
+ },
+ {
+  "i": 479,
+  "root": "12995199",
+  "razao": "TECNOPLAST S.A - INDUSTRIA E COMERCIO DE PLASTICOS",
+  "fantasia": "TECNOPLAST S.A.",
+  "uf": "PR",
+  "city": "CURITIBA",
+  "face": 243641.39,
+  "kw": "Tecnoplast",
+  "size": "MID"
+ },
+ {
+  "i": 484,
+  "root": "50290329",
+  "razao": "CARGILL NOVOS HORIZONTES LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "SAO PAULO",
+  "face": 239695.0,
+  "kw": "Cargill Novos Horizontes",
+  "size": "LARGE"
+ },
+ {
+  "i": 489,
+  "root": "60752763",
+  "razao": "IRMAOS D AGOSTO LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "SAO PAULO",
+  "face": 236603.51,
+  "kw": "Irmaos D Agosto",
+  "size": "MID"
+ },
+ {
+  "i": 494,
+  "root": "02520829",
+  "razao": "DIMASTER - COMERCIO DE PRODUTOS HOSPITALARES LTDA.",
+  "fantasia": "DIMASTER",
+  "uf": "RS",
+  "city": "BARAO DE COTEGIPE",
+  "face": 232250.7,
+  "kw": "Dimaster",
+  "size": "MID"
+ },
+ {
+  "i": 499,
+  "root": "57378542",
+  "razao": "IOSEI PARTICIPACOES LTDA",
+  "fantasia": "IOSEI SMART SCAN",
+  "uf": "GO",
+  "city": "GOIANIA",
+  "face": 226966.22,
+  "kw": "Iosei Smart Scan",
+  "size": "MID"
+ },
+ {
+  "i": 504,
+  "root": "03498812",
+  "razao": "EBEG EMBALAGENS E DESCARTAVEIS LTDA",
+  "fantasia": "",
+  "uf": "SP",
+  "city": "RIBEIRAO PRETO",
+  "face": 222911.78,
+  "kw": "Ebeg Embalagens Descartaveis",
+  "size": "MID"
+ },
+ {
+  "i": 509,
+  "root": "91062497",
+  "razao": "MOVEIS RODIAL LTDA",
+  "fantasia": "",
+  "uf": "RS",
+  "city": "LAGOA VERMELHA",
+  "face": 219780.0,
+  "kw": "Moveis Rodial",
+  "size": "MID"
+ },
+ {
+  "i": 514,
+  "root": "10811586",
+  "razao": "TETO PLANEJAMENTO E INCORPORACOES LTDA",
+  "fantasia": "TETO",
+  "uf": "AL",
+  "city": "MACEIO",
+  "face": 217484.26,
+  "kw": "Teto",
+  "size": "MID"
+ },
+ {
+  "i": 519,
+  "root": "07206989",
+  "razao": "UZ3 INDUSTRIA TEXTIL LTDA",
+  "fantasia": "",
+  "uf": "SC",
+  "city": "INDAIAL",
+  "face": 215699.34,
+  "kw": "Uz3 Textil",
+  "size": "MID"
+ },
+ {
+  "i": 524,
+  "root": "05949989",
+  "razao": "REISTAR INDUSTRIA E COMERCIO DE ELETRONICOS LTDA EM RECUPERACAO JUDICIAL",
+  "fantasia": "AMVOX",
+  "uf": "BA",
+  "city": "CAMACARI",
+  "face": 210200.14,
+  "kw": "Amvox",
+  "size": "MID"
+ },
+ {
+  "i": 529,
+  "root": "69975530",
+  "razao": "CONSULTAR ASSIST TEC EM DOCUMENTACAO E INFORMACAO LTDA",
+  "fantasia": "CONSULTAR",
+  "uf": "AL",
+  "city": "MACEIO",
+  "face": 207006.28,
+  "kw": "Consultar",
+  "size": "MID"
+ },
+ {
+  "i": 534,
+  "root": "13177802",
+  "razao": "SAFEGOLD GERENCIAMENTO DE CAPITAL LTDA",
+  "fantasia": "",
+  "uf": "PR",
+  "city": "CURITIBA",
+  "face": 203501.15,
+  "kw": "Safegold Gerenciamento Capital",
+  "size": "MID"
+ },
+ {
+  "i": 539,
+  "root": "10885321",
+  "razao": "WEG LINHARES EQUIPAMENTOS ELETRICOS S/A",
+  "fantasia": "",
+  "uf": "ES",
+  "city": "LINHARES",
+  "face": 200577.9,
+  "kw": "Weg Linhares Equipamentos Eletricos",
+  "size": "LARGE"
+ }
+]

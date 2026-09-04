@@ -1,0 +1,167 @@
+[
+ {
+  "case_number": "5012306-16.2022.8.21.0023",
+  "floor_leads": 30,
+  "floor_face": 151530928,
+  "db_hint": "SCZ Scalzilli Administração Judicial",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "ebfb999b",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/ebfb999b457caf45.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento09120721032023_1_.pdf&nome=15 - Edital do art. 7º, §2º e 53 da Lei 11.101/2005 (segunda lista de credores e recebimento do plano))",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_associacao-de-caridade-santa-casa-do-rio-grande__29"
+   },
+   {
+    "doc_id": "62631ed3",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/62631ed3cb72fee1.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento15084716032023_1_.pdf&nome=13 - Lista de credores apresentada pela administração judicial",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_associacao-de-caridade-santa-casa-do-rio-grande__29"
+   }
+  ]
+ },
+ {
+  "case_number": "0001639-09.2026.8.17.2810",
+  "floor_leads": 20,
+  "floor_face": 144309140,
+  "db_hint": "E FALENCIA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "aaa3ba84",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/aaa3ba84eaa9fed5.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6245",
+    "hint": "E FALENCIA",
+    "page_title": "GRUPO GLP – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/grupo-glp/"
+   },
+   {
+    "doc_id": "5da7b77b",
+    "path": "/home/user/Anteparo/data/pdfs/recuperasolucoes.com/5da7b77bb56987c0.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK",
+    "url": "https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1597",
+    "hint": "E FALENCIA",
+    "page_title": "GRUPO GLP - PEÇA GÁS - Recupera Soluções Empresariais",
+    "page_url": "https://recuperasolucoes.com/processos/grupo-glp-peca-gas/"
+   },
+   {
+    "doc_id": "27519e1f",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/27519e1f23d9c4e7.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=6247",
+    "hint": "E FALENCIA",
+    "page_title": "GRUPO GLP – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/grupo-glp/"
+   }
+  ]
+ },
+ {
+  "case_number": "5011369-81.2026.8.09.0093",
+  "floor_leads": 18,
+  "floor_face": 23807442,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "c536a2fa",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/c536a2fa4da39efa.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento11421222052026_1_.pdf&nome=08. Lista de credores do edital do art. 52, §1º da LREF",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_grupo-ferrari-(alex,-alexandre-,-andrielle-ferrari-mantelli,-arcir-luis,-erica-santos-assis-lima,-fernando-mantelli,-idelsi,-talita-leite-silva,-agropecuaria-ferrari-ltda-e-ferrari-armazens-gerais)__422"
+   }
+  ]
+ },
+ {
+  "case_number": "5009149-92.2024.8.24.0019",
+  "floor_leads": 16,
+  "floor_face": 21884657,
+  "db_hint": "Suinocultura Kunzler - RLG-AJ",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "6c6ecb84",
+    "path": "/home/user/Anteparo/data/pdfs/rlg-aj.com.br/6c6ecb84247fb500.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://rlg-aj.com.br/wp-content/uploads/2024/11/edital_52_lista_credores.pdf",
+    "hint": "e de Falência",
+    "page_title": "Suinocultura Kunzler - RLG-AJ",
+    "page_url": "https://rlg-aj.com.br/recuperacoes/suinocultura-kunzler/"
+   },
+   {
+    "doc_id": "a62ac8ee",
+    "path": "/home/user/Anteparo/data/pdfs/rlg-aj.com.br/a62ac8ee04589de0.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://rlg-aj.com.br/wp-content/uploads/2024/11/07.-Relação-de-credores.pdf",
+    "hint": "Suinocultura Kunzler - RLG-AJ",
+    "page_title": "Suinocultura Kunzler - RLG-AJ",
+    "page_url": "https://rlg-aj.com.br/recuperacoes/suinocultura-kunzler/"
+   },
+   {
+    "doc_id": "f57b212d",
+    "path": "/home/user/Anteparo/data/pdfs/rlg-aj.com.br/f57b212d586fb6c2.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://rlg-aj.com.br/wp-content/uploads/2024/11/14.-Relação-de-credores-Retificação-1.pdf",
+    "hint": "Suinocultura Kunzler - RLG-AJ",
+    "page_title": "Suinocultura Kunzler - RLG-AJ",
+    "page_url": "https://rlg-aj.com.br/recuperacoes/suinocultura-kunzler/"
+   }
+  ]
+ },
+ {
+  "case_number": "0804401-51.2025.8.14.0039",
+  "floor_leads": 16,
+  "floor_face": 52950508,
+  "db_hint": "SOJAL COMERCIAL AGRICOLA",
+  "db_rfb_razao": "NORTESUL COMERCIAL AGRICOLA LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.8571428571428571,
+  "db_cnpj": "15626673000390",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "c5675154",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/c567515473236164.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=6879",
+    "hint": "SOJAL COMERCIA",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ }
+]

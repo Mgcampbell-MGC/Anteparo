@@ -1,0 +1,187 @@
+[
+ {
+  "case_number": "0800778-16.2023.8.20.5104",
+  "floor_leads": 12,
+  "floor_face": 15697583,
+  "db_hint": "civilmente LTDA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "7501ec99",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/7501ec99fc8e3ad0.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "http://recuperacaojudicial.squarespace.com/s/LISTA-DE-CREDORES-CONSOLIDADA-ATE-04102024.pdf",
+    "hint": "e Falência",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "0022845-08.2013.8.24.0008",
+  "floor_leads": 12,
+  "floor_face": 11685958,
+  "db_hint": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "22ac347c",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/22ac347cfe4f3e48.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/advogados-sgrott-doc-22-relacao-de-credores-do-administrador-judicial-classe-iii-05-02-14.pdf",
+    "hint": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/blutrafos-blumenau-transformadores-ltda/"
+   },
+   {
+    "doc_id": "cd4d5c0f",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/cd4d5c0f8200bcf0.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/advogados-sgrott-relacao-credores-aj-trabalhista.pdf",
+    "hint": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/blutrafos-blumenau-transformadores-ltda/"
+   },
+   {
+    "doc_id": "7dc4b6cc",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/7dc4b6cc0e2b2d02.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/advogados-sgrott-relacao-credores-aj-garantia-real.pdf",
+    "hint": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/blutrafos-blumenau-transformadores-ltda/"
+   },
+   {
+    "doc_id": "a461d54c",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/a461d54c1840408e.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/relacao-de-credores-da-recuperanda-1.pdf",
+    "hint": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "BLUTRAFOS BLUMENAU TRANSFORMADORES LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/blutrafos-blumenau-transformadores-ltda/"
+   }
+  ]
+ },
+ {
+  "case_number": "0011283-80.2023.8.17.2001",
+  "floor_leads": 12,
+  "floor_face": 18158445,
+  "db_hint": "Náutico - Página — Lindoso e Araujo",
+  "db_rfb_razao": "CLUBE NAUTICO CAPIBARIBE - EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.44705882352941173,
+  "db_cnpj": "08145021000107",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "88742494",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/8874249418db7b6a.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Clube-Nautico-Lista-de-Credores-Consolidada-em-10122025.pdf",
+    "hint": "Náutico - Página — Lindoso e Araujo",
+    "page_title": "Náutico - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/nautico-pagina"
+   },
+   {
+    "doc_id": "24cf2f95",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/24cf2f95fd57a357.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Nautico-Edital-de-1-Lista-republicado-abril-2023.pdf",
+    "hint": "e a concretização de uma etapa no processo, visa",
+    "page_title": "Náutico - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/nautico-pagina"
+   },
+   {
+    "doc_id": "696032dd",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/696032dd196f649c.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://recuperacaojudicial.squarespace.com/s/05-RJ-Nautico-1-Lista-de-Credores-marco-2023.pdf",
+    "hint": "Náutico - Página — Lindoso e Araujo",
+    "page_title": "Náutico - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/nautico-pagina"
+   },
+   {
+    "doc_id": "c4663fd9",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/c4663fd9c819733d.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Clube-Nautico-Lista-de-Credores-Retificada-novembro-2023.pdf",
+    "hint": "Náutico - Página — Lindoso e Araujo",
+    "page_title": "Náutico - Página — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/nautico-pagina"
+   }
+  ]
+ },
+ {
+  "case_number": "5009529-81.2025.8.24.0019",
+  "floor_leads": 11,
+  "floor_face": 6793853,
+  "db_hint": null,
+  "db_rfb_razao": "GRUPO CASAS BAHIA S.A.",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": null,
+  "db_cnpj": "33041260065290",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "2e464116",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/2e46411688575df1.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento15180810062026_1_.pdf&nome=10 - Relação de credores do art. 7º, §2º, da Lei 11.101/2005",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/falencia_massa-falida-de-agimax-esquadrias-metalicas-ltda__411"
+   }
+  ]
+ },
+ {
+  "case_number": "0822279-56.2026.8.15.2001",
+  "floor_leads": 11,
+  "floor_face": 22465870,
+  "db_hint": "DIAGSON DIAGNOSTICO EM ULTRA SONOGRAFIA MED FETAL LTDA – EPP – LRF Líderes em Recuperação Judicial e Falência",
+  "db_rfb_razao": "DIAGSON DIAGNOSTICO EM ULTRA SONOGRAFIA MED FETAL LTDA - EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.9,
+  "db_cnpj": "00149703000186",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "f57433fc",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/f57433fcdb6dd0d9.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=7266",
+    "hint": "DIAGSON DIAGNOSTICO EM ULTRA SONOGRAFIA MED FETAL LTDA – EPP – LRF Líderes em Recuperação Judicial e Falência",
+    "page_title": "DIAGSON DIAGNOSTICO EM ULTRA SONOGRAFIA MED FETAL LTDA – EPP – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/diagson-diagnostico-em-ultra-sonografia-med-fetal-ltda-epp/"
+   },
+   {
+    "doc_id": "088be522",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/088be5223af3f8c9.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=7418",
+    "hint": "DIAGSON DIAGNOSTICO EM ULTRA SONOGRAFIA MED FETAL LTDA – EPP – LRF Líderes em Recuperação Judicial e Falência",
+    "page_title": "DIAGSON DIAGNOSTICO EM ULTRA SONOGRAFIA MED FETAL LTDA – EPP – LRF Líderes em Recuperação Judicial e Falência",
+    "page_url": "https://lrflideres.com.br/processos/diagson-diagnostico-em-ultra-sonografia-med-fetal-ltda-epp/"
+   }
+  ]
+ }
+]

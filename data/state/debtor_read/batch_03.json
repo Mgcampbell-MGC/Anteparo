@@ -1,0 +1,187 @@
+[
+ {
+  "case_number": "5012743-51.2023.8.24.0019",
+  "floor_leads": 15,
+  "floor_face": 19785771,
+  "db_hint": "Alto Uruguai Indústria e Comércio de Óleos Ltda",
+  "db_rfb_razao": "BBR AGRO SUPLEMENTOS LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.5,
+  "db_cnpj": "31158176000108",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "ab1781e6",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/ab1781e6d00b777e.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2024-06/relacao_de_credores_aj_alto_uruguai.pdf",
+    "hint": "Alto Uruguai Indústria e Comércio de Óleos Ltda",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   },
+   {
+    "doc_id": "75336e98",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/75336e98f447837f.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-06/alto_uruguai_qgc_junho.2026.pdf",
+    "hint": "Alto Uruguai Indústria e Comércio de Óleos Ltda",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   }
+  ]
+ },
+ {
+  "case_number": "0700256-03.2019.8.02.0066",
+  "floor_leads": 15,
+  "floor_face": 23057826,
+  "db_hint": "Grupo Arnon de Mello — Lindoso e Araujo",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "8d882092",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/8d882092195ab5c6.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://recuperacaojudicial.squarespace.com/s/Edital2alista.pdf",
+    "hint": "Grupo Arnon de Mello — Lindoso e Araujo",
+    "page_title": "Grupo Arnon de Mello — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/grupo-arnon-de-mello"
+   },
+   {
+    "doc_id": "60fd9c01",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/60fd9c017d90deff.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://recuperacaojudicial.squarespace.com/s/RJ-Grupo-Arnon-de-Melo-Lista-de-Credores-Consolidada-abril-2022.pdf",
+    "hint": "Grupo Arnon de Mello — Lindoso e Araujo",
+    "page_title": "Grupo Arnon de Mello — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/grupo-arnon-de-mello"
+   },
+   {
+    "doc_id": "8ec4d419",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/8ec4d41971bd3351.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://recuperacaojudicial.squarespace.com/s/Edital-1a-lista-publicado-tes5.pdf",
+    "hint": "Grupo Arnon de Mello — Lindoso e Araujo",
+    "page_title": "Grupo Arnon de Mello — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/grupo-arnon-de-mello"
+   }
+  ]
+ },
+ {
+  "case_number": "5011460-87.2023.8.24.0020",
+  "floor_leads": 14,
+  "floor_face": 18373800,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "741aed48",
+    "path": "/home/user/Anteparo/data/pdfs/cataliseaj.com.br/741aed48dd004485.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://cataliseaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento15092204102024_1_.pdf&nome=02. RELAÇÃO DE CREDORES",
+    "hint": "TOP TEXTIL EMBALAGENS LTDA",
+    "page_title": "Catalise Administração Judicial",
+    "page_url": "https://cataliseaj.com.br/processo/recuperacao-judicial_top-textil-embalagens-ltda-__378"
+   }
+  ]
+ },
+ {
+  "case_number": "5008793-34.2023.8.24.0019",
+  "floor_leads": 14,
+  "floor_face": 20633287,
+  "db_hint": "AZEPLAST INDÚSTRIA E COMÉRCIO LTDA",
+  "db_rfb_razao": "CRISTAL MASTER INDUSTRIA E COMERCIO LTDA",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.6216216216216216,
+  "db_cnpj": "05378317000180",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "f1851f88",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/f1851f88a3d64bd7.pdf",
+    "doc_type": "QGC",
+    "status": "QUARANTINED",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2024-03/relacao_de_credores_aj_art._7_lre.pdf",
+    "hint": "AZEPLAST INDÚSTRIA E COMÉRCIO LTDA",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   },
+   {
+    "doc_id": "229081ed",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/229081edb0eaccd4.pdf",
+    "doc_type": "QGC",
+    "status": "QUARANTINED",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-08/qgc_azeplast_julho_2026.pdf",
+    "hint": "AZEPLAST INDÚSTRIA E COMÉRCIO LTDA",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   }
+  ]
+ },
+ {
+  "case_number": "1000119-75.2025.8.26.0354",
+  "floor_leads": 14,
+  "floor_face": 16092767,
+  "db_hint": "ATIVOS ADMINISTRAÇÃO JUDICIA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "db456c58",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/db456c585d89d9d2.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento11095927062025_1_.pdf&nome=Relação de Credores - Art. 7º da Lei 11.101/2005 - 25/06/2025",
+    "hint": "ATIVOS ADMINISTRAÇÃO JUDICIA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=40"
+   },
+   {
+    "doc_id": "7e2dd027",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/7e2dd0270ed86b1f.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento13422625032025_1_.pdf&nome=Relação de Credores - Art. 52º § 1º, da Lei nº 11.101/2005 - 25/02/2025",
+    "hint": "Ativos",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=40"
+   },
+   {
+    "doc_id": "cbe77849",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/cbe77849620aaa30.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "NO_ROWS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento15240822082025_1_.pdf&nome=Edital de Credores - Art. 7º, § 2º, da Lei 11.101/2005 - 06/08/2025",
+    "hint": "FLAVOUR MIX INDÚSTRIA, COMÉRCIO, IMPORTAÇÃO E EXPORTAÇÃO LTDA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=40"
+   },
+   {
+    "doc_id": "39f80e8c",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/39f80e8ce1b12ae0.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "NO_ROWS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento17420203122025_1_.pdf&nome=Edital de Aviso aos Credores - art. 53 da Lei 11.101/05 - 04/12/2025",
+    "hint": "FLAVOUR MIX IND. E REP. ALIM. E INGR. QUÍMICO S LTDA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=40"
+   }
+  ]
+ }
+]

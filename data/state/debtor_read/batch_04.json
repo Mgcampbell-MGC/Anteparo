@@ -1,0 +1,217 @@
+[
+ {
+  "case_number": "0008526-45.2025.8.17.2001",
+  "floor_leads": 14,
+  "floor_face": 39340417,
+  "db_hint": "ARRUDA & MELO COMERCIO E DISTRIBUICAO DE ALIMENTOS E BEBIDAS LTDA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "1658892f",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/1658892fa167d233.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK",
+    "url": "https://diligence.adm.br/wp-content/uploads/2025/06/Edital-1a-Lista-de-Credores.pdf",
+    "hint": "E FALENCIA",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "4054599-35.2025.8.26.0100",
+  "floor_leads": 13,
+  "floor_face": 19777511,
+  "db_hint": "ATIVOS ADMINISTRAÇÃO JUDICIA",
+  "db_rfb_razao": "BIGOLIN MATERIAIS DE CONSTRUCAO LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.375,
+  "db_cnpj": "76087964000342",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "fa60f323",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/fa60f3237f23b8d4.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento15384617042026_1_.pdf&nome=Relação de Credores - art. 7º, §2º da Lei 11.101/2005 - 17/04/2026",
+    "hint": "ATIVOS ADMINISTRAÇÃO JUDICIA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=52"
+   },
+   {
+    "doc_id": "2fe04bf4",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/2fe04bf4466d0420.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento16022716122025_1_.pdf&nome=Relação de credores - art. 52, §1º da Lei 11.101/05 - 15/12/2025",
+    "hint": "Ativos",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=52"
+   },
+   {
+    "doc_id": "347e3b59",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/347e3b59cb55bd53.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "NO_ROWS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento17302902022026_1_.pdf&nome=Edital de Credores - art. 52, §1º da Lei 11.101/05 - 03/02/2026",
+    "hint": "CENTURY CONSTRUÇÕES COMÉRCIO E SERVIÇOS LTDA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=52"
+   },
+   {
+    "doc_id": "d079e3a4",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/d079e3a447497b6d.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "NO_ROWS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento18042606052026_1_.pdf&nome=Edital de Credores - art. 7º, §2º da Lei 11.101/05 - 30/04/2026",
+    "hint": "CENTURY CONSTRUÇÕES COMÉRCIO E SERVIÇOS LTDA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=52"
+   }
+  ]
+ },
+ {
+  "case_number": "4000167-23.2025.8.26.0373",
+  "floor_leads": 13,
+  "floor_face": 45255332,
+  "db_hint": "Cerealista Sa",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "18975be4",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/18975be46188194b.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-01/safrasul_relacao_de_credores_recuperanda.pdf",
+    "hint": "em epígrafe, vem, respeitosa",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   },
+   {
+    "doc_id": "1b13e976",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/1b13e9761a266b34.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2026-08/safrasul_relacao_aj_s._total.pdf",
+    "hint": "Cerealista Sa",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   }
+  ]
+ },
+ {
+  "case_number": "0000148-67.1996.8.24.0079",
+  "floor_leads": 13,
+  "floor_face": 4944010,
+  "db_hint": "Base | AJ RUIZ - Administração Judicial",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "38092248",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/380922480f805dfa.pdf",
+    "doc_type": "QGC",
+    "status": "OK",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2024-04/relacao_de_credores_recuperanda_1.pdf",
+    "hint": "Base | AJ RUIZ - Administração Judicial",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   },
+   {
+    "doc_id": "b66baafd",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/b66baafd022fa601.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-09/relacao-de-credores-sintetica-art.-51-iii-da-lre-concreserv-concreto-sa.pdf",
+    "hint": "Base | AJ RUIZ - Administração Judicial",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   },
+   {
+    "doc_id": "a16b8366",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/a16b83662029f007.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-11/4_relacao_de_credores_recuperanda_art._52_parag._1o_ii_da_lre.pdf",
+    "hint": "Base | AJ RUIZ - Administração Judicial",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   },
+   {
+    "doc_id": "87f368a4",
+    "path": "/home/user/Anteparo/data/pdfs/ajruiz.com.br/87f368a460cc05df.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://ajruiz.com.br/sites/default/files/public/arquivos-processos/2023-12/azeplast_relacao_de_credores_recuperanda.pdf",
+    "hint": "Base | AJ RUIZ - Administração Judicial",
+    "page_title": "Base | AJ RUIZ - Administração Judicial",
+    "page_url": "https://ajruiz.com.br/processos"
+   }
+  ]
+ },
+ {
+  "case_number": "0873061-47.2023.8.19.0001",
+  "floor_leads": 12,
+  "floor_face": 54823148,
+  "db_hint": "REAL DISTRIBUIDORA ÚNICA RIO COMÉRCIO DE REFRIGERAÇÃO LTDA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "8eb5d0d6",
+    "path": "/home/user/Anteparo/data/pdfs/inova-aj.com.br/8eb5d0d64353bf5f.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://inova-aj.com.br/wp-content/uploads/2026/08/1a-Relacao-de-Credores-Real.pdf",
+    "hint": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_title": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_url": "https://inova-aj.com.br/recuperacao-judicial/real-distribuidora/"
+   },
+   {
+    "doc_id": "9439b692",
+    "path": "/home/user/Anteparo/data/pdfs/inova-aj.com.br/9439b6923afe6df1.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://inova-aj.com.br/wp-content/uploads/2026/08/2a-Relacao-de-Credores-Real.pdf",
+    "hint": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_title": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_url": "https://inova-aj.com.br/recuperacao-judicial/real-distribuidora/"
+   },
+   {
+    "doc_id": "2329ec5b",
+    "path": "/home/user/Anteparo/data/pdfs/inova-aj.com.br/2329ec5bf53993c9.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://inova-aj.com.br/wp-content/uploads/2024/10/Real-Edital-Relacao-de-Credores-Art.-7o-§-2o-Lei-no-11.101.pdf",
+    "hint": "REAL DISTRIBUIDORA ÚNICA RIO COMÉRCIO DE REFRIGERAÇÃO LTDA",
+    "page_title": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_url": "https://inova-aj.com.br/recuperacao-judicial/real-distribuidora/"
+   },
+   {
+    "doc_id": "675516c7",
+    "path": "/home/user/Anteparo/data/pdfs/inova-aj.com.br/675516c7349d89ad.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://inova-aj.com.br/wp-content/uploads/2024/09/Doc.-02-2°-Relacao-de-Credores.pdf",
+    "hint": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_title": "Real Distribuidora – Processo nº 0873061-47.2023.8.19.0001 – e-mail: admjudunica@inova-aj.com.br – INOVA",
+    "page_url": "https://inova-aj.com.br/recuperacao-judicial/real-distribuidora/"
+   }
+  ]
+ }
+]

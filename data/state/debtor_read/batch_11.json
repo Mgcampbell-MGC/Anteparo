@@ -1,0 +1,197 @@
+[
+ {
+  "case_number": "0301015-33.2016.8.24.0031",
+  "floor_leads": 4,
+  "floor_face": 2848863,
+  "db_hint": "DICARLO MOVEIS E ACESSORIOS PARA CASA E LOJAS LTDA",
+  "db_rfb_razao": "DECOR MOVEIS PARA LOJA LTDA",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.7441860465116279,
+  "db_cnpj": "01314776000149",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "82aff00d",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/82aff00da43d9912.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "NO_ROWS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-02-relacao-de-credores.pdf",
+    "hint": "DICARLO MÓVEIS E ACESSÓRIOS PARA CASA E LOJAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "DICARLO MÓVEIS E ACESSÓRIOS PARA CASA E LOJAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/dicarlo-moveis-e-acessorios-para-casa-e-lojas-ltda/"
+   },
+   {
+    "doc_id": "98f99945",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/98f99945499b4824.pdf",
+    "doc_type": "QGC",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/edital-quadro-geral-de-credores.pdf",
+    "hint": "e Extrajudicia",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "0133628-14.2024.8.17.2001",
+  "floor_leads": 4,
+  "floor_face": 7984860,
+  "db_hint": "CEAM - Recupera Soluções Empresariais",
+  "db_rfb_razao": "CEAM NUCLEO ESPECIALIZADO EM APOIO MULTIDISCIPLINAR LTDA - EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.4482758620689655,
+  "db_cnpj": "32525567000178",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "dcca871a",
+    "path": "/home/user/Anteparo/data/pdfs/recuperasolucoes.com/dcca871af84ad41a.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK",
+    "url": "https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1363",
+    "hint": "CEAM - Recupera Soluções Empresariais",
+    "page_title": "CEAM - Recupera Soluções Empresariais",
+    "page_url": "https://recuperasolucoes.com/processos/ceam/"
+   },
+   {
+    "doc_id": "e9d023c6",
+    "path": "/home/user/Anteparo/data/pdfs/recuperasolucoes.com/e9d023c65bbda295.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1492",
+    "hint": "CEAM - Recupera Soluções Empresariais",
+    "page_title": "CEAM - Recupera Soluções Empresariais",
+    "page_url": "https://recuperasolucoes.com/processos/ceam/"
+   },
+   {
+    "doc_id": "0142de17",
+    "path": "/home/user/Anteparo/data/pdfs/recuperasolucoes.com/0142de179331d471.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://recuperasolucoes.com/wp-content/plugins/download-attachments/includes/download.php?id=1493",
+    "hint": "CEAM - Recupera Soluções Empresariais",
+    "page_title": "CEAM - Recupera Soluções Empresariais",
+    "page_url": "https://recuperasolucoes.com/processos/ceam/"
+   }
+  ]
+ },
+ {
+  "case_number": "0016033-22.2025.8.16.0017",
+  "floor_leads": 4,
+  "floor_face": 181090204,
+  "db_hint": "KADIMA EMPREENDIMENTOS subscrevi e assinei. E PARTICIPAÇÕES S.A",
+  "db_rfb_razao": "KADIMA EMPREENDIMENTOS E PARTICIPACOES EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.6829268292682927,
+  "db_cnpj": "00073485000143",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "fcb10a25",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/fcb10a251582ff4f.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento19270817122025_1_.pdf&nome=Relação Nominal de Credores AJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-maringa-park-shopping__440"
+   },
+   {
+    "doc_id": "92b73325",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/92b73325488e9d88.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento15033119082026_1_.pdf&nome=Laudo de Credenciamento – Cenário V – Relação Nominal de Todos os Credores",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-maringa-park-shopping__440"
+   },
+   {
+    "doc_id": "2512aa41",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/2512aa41775ce7ff.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento15471501122025_1_.pdf&nome=Relação Inicial De Credores",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-maringa-park-shopping__440"
+   },
+   {
+    "doc_id": "2b3afeed",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/2b3afeed1492e822.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento15291029012026_1_.pdf&nome=3° Edital de Intimação de Credores e Terceiros Interessados",
+    "hint": "KADIMA EMPREENDIMENTOS subscrevi e assinei. E PARTICIPAÇÕES S.A",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-maringa-park-shopping__440"
+   }
+  ]
+ },
+ {
+  "case_number": "0015488-29.2018.8.17.2810",
+  "floor_leads": 4,
+  "floor_face": 1859554,
+  "db_hint": "CENTRO DE TRATAMENTO RENAL ZONA SUL LTDA",
+  "db_rfb_razao": "CENTRO DE TRATAMENTO RENAL ZONA SUL LTDA - EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 1.0,
+  "db_cnpj": "03648189000111",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "05e15e3a",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/05e15e3ab0973ce0.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://recuperacaojudicial.squarespace.com/s/4-RJCTREditalda2ListadeCredoresnovembro2019.pdf",
+    "hint": "CENTRO DE TRATAMENTO RENAL ZONA SUL LTDA",
+    "page_title": "CTR — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/ctr"
+   },
+   {
+    "doc_id": "fd5db755",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/fd5db755f9d65104.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "QUARANTINED",
+    "url": "https://recuperacaojudicial.squarespace.com/s/3-RJ-CTR-Edital-da-1-Lista-de-Credores-abril-2019.pdf",
+    "hint": "CENTRO DE TRATAMENTO RENAL ZONA SUL LTDA",
+    "page_title": "CTR — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/ctr"
+   }
+  ]
+ },
+ {
+  "case_number": "0008897-71.2025.8.16.0017",
+  "floor_leads": 4,
+  "floor_face": 10501550,
+  "db_hint": "Marques Administrações Judiciais",
+  "db_rfb_razao": "GRUPO TSI BRASIL LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.339622641509434,
+  "db_cnpj": "40237847000109",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "a9431b5b",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/a9431b5b05157217.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09453022082025_1_.pdf&nome=Relação Nominal de Credores AJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-be-eight__433"
+   },
+   {
+    "doc_id": "1180d0ff",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/1180d0ff83f8b661.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento09444722082025_1_.pdf&nome=2° Edital - Relação de Credores AJ e PRJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_grupo-be-eight__433"
+   }
+  ]
+ }
+]

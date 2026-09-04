@@ -1,0 +1,127 @@
+[
+ {
+  "case_number": "4000807-49.2026.8.26.0354",
+  "floor_leads": 1,
+  "floor_face": 8000000,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "abf6f465",
+    "path": "/home/user/Anteparo/data/pdfs/vtladm.com.br/abf6f46571cf6e72.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://vtladm.com.br/wp-content/uploads/2026/06/02-–-Relacao-de-Credores-–-NAIR-AKICO-KAWAKAMI-MORIOKA-E-OUTROS.pdf",
+    "hint": "Nair Kawakami Morioka e Outros – VTL",
+    "page_title": "Nair Kawakami Morioka e Outros – VTL",
+    "page_url": "https://vtladm.com.br/recuperacao-judicial/1656/"
+   }
+  ]
+ },
+ {
+  "case_number": "1054969-12.2018.8.26.0100",
+  "floor_leads": 1,
+  "floor_face": 632894,
+  "db_hint": "Ever Ton Fps Importação E Exportação Ltda",
+  "db_rfb_razao": "EVER TON FPS IMPORTACAO E EXPORTACAO LTDA",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.9024390243902439,
+  "db_cnpj": "15338345000127",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "814b9783",
+    "path": "/home/user/Anteparo/data/pdfs/brasiltrustee.com.br/814b9783cf4802fc.pdf",
+    "doc_type": "QGC",
+    "status": "OK_NO_TOTALS",
+    "url": "https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/ever-ton/1º-edital.pdf",
+    "hint": "EVER TON FPS IMPORTAÇÃO E EXPORTAÇÃO LTDA",
+    "page_title": "Recuperações Judiciais – Brasil Trustee",
+    "page_url": "https://brasiltrustee.com.br/recuperacoes-judiciais/"
+   }
+  ]
+ },
+ {
+  "case_number": "1004204-09.2020.8.26.0604",
+  "floor_leads": 1,
+  "floor_face": 1352094,
+  "db_hint": "EMBRAC EMPRESA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "506c6270",
+    "path": "/home/user/Anteparo/data/pdfs/brasiltrustee.com.br/506c627084b6455f.pdf",
+    "doc_type": "QGC",
+    "status": "OK_NO_TOTALS",
+    "url": "https://violet-wolf-754008.hostingersite.com/wp-content/uploads/recuperacoes-judiciais/Ebramec/2o-Edital-de-Credores.pdf",
+    "hint": "EMBRAC EMPRESA",
+    "page_title": "Recuperações Judiciais – Brasil Trustee",
+    "page_url": "https://brasiltrustee.com.br/recuperacoes-judiciais/"
+   }
+  ]
+ },
+ {
+  "case_number": "1003322-70.2024.8.26.0260",
+  "floor_leads": 1,
+  "floor_face": 1685996,
+  "db_hint": "JOAQUIM JOSÉ XAVIER ISA",
+  "db_rfb_razao": "JOAQUIM JOSE XAVIER ISAAC",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.9166666666666667,
+  "db_cnpj": "07972667000103",
+  "db_band": "A",
+  "docs": [
+   {
+    "doc_id": "5e92e3ed",
+    "path": "/home/user/Anteparo/data/pdfs/vivanteaj.com.br/5e92e3edcc85b40e.pdf",
+    "doc_type": "PLAN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://vivanteaj.com.br/wp-content/uploads/2025/02/PRJ-AGRO-SAFRA.pdf",
+    "hint": "JOAQUIM JOSÉ XAVIER ISA",
+    "page_title": "AGROSAFRA INDÚSTRIA E COMÉRCIO DE ADUBOS LTDA. e outros - Vivante Gestão e Administração Judicial",
+    "page_url": "https://vivanteaj.com.br/processos/agrosafra-industria-e-comercio-de-adubos-ltda-e-outros/"
+   },
+   {
+    "doc_id": "710a314c",
+    "path": "/home/user/Anteparo/data/pdfs/vivanteaj.com.br/710a314c1bca9ce8.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://vivanteaj.com.br/wp-content/uploads/2025/02/2a-lista-de-credores-Agro-Safra-e-outros.pdf",
+    "hint": "AGROSAFRA INDÚSTRIA E COMÉRCIO DE ADUBOS LTDA. e outros - Vivante Gestão e Administração Judicial",
+    "page_title": "AGROSAFRA INDÚSTRIA E COMÉRCIO DE ADUBOS LTDA. e outros - Vivante Gestão e Administração Judicial",
+    "page_url": "https://vivanteaj.com.br/processos/agrosafra-industria-e-comercio-de-adubos-ltda-e-outros/"
+   }
+  ]
+ },
+ {
+  "case_number": "0824037-95.2022.8.15.0001",
+  "floor_leads": 1,
+  "floor_face": 209200,
+  "db_hint": "INDÚSTRIA DE PRODUTOS METALÚRGICOS",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "49e76773",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/49e767732638d57c.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/uploads/2023/01/4.-EDITAL-2a-LISTA-DE-CREDORES-1.pdf",
+    "hint": "em questão. FAZ SA",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ }
+]

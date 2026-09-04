@@ -1,0 +1,197 @@
+[
+ {
+  "case_number": "0000880-57.2020.8.17.2001",
+  "floor_leads": 9,
+  "floor_face": 28379328,
+  "db_hint": "CONSTRUTORA ANDRADE GUEDES LDTA – Diligence Administração em Recuperação Judicial e Falência",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "44ecd0af",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/44ecd0afa707dc9a.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4599",
+    "hint": "e Falência",
+    "page_title": "CONSTRUTORA ANDRADE GUEDES LDTA – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/construtoraandradeguedes-2/"
+   },
+   {
+    "doc_id": "7bbd6274",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/7bbd6274b1489b4d.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4598",
+    "hint": "e Falência",
+    "page_title": "CONSTRUTORA ANDRADE GUEDES LDTA – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/construtoraandradeguedes-2/"
+   },
+   {
+    "doc_id": "a0e12805",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/a0e12805e27ae5da.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4594",
+    "hint": "e Falência",
+    "page_title": "CONSTRUTORA ANDRADE GUEDES LDTA – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/construtoraandradeguedes-2/"
+   },
+   {
+    "doc_id": "3727d738",
+    "path": "/home/user/Anteparo/data/pdfs/diligence.adm.br/3727d738e67cf64c.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://diligence.adm.br/wp-content/plugins/download-attachments/includes/download.php?id=4601",
+    "hint": "e Falência",
+    "page_title": "CONSTRUTORA ANDRADE GUEDES LDTA – Diligence Administração em Recuperação Judicial e Falência",
+    "page_url": "https://diligence.adm.br/processos/construtoraandradeguedes-2/"
+   }
+  ]
+ },
+ {
+  "case_number": "0000410-68.2021.8.16.0174",
+  "floor_leads": 9,
+  "floor_face": 43540196,
+  "db_hint": "- FORMAPLAN FORMASPLANEJADAS INDÚSTRIA E COMÉRCIO LTDA",
+  "db_rfb_razao": "FORMAPLAN FORMAS PLANEJADAS INDUSTRIA E COMERCIO LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.6717557251908397,
+  "db_cnpj": "00262371000141",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "b1a9f73b",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/b1a9f73b4c119a16.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento15232121112024_1_.pdf&nome=Relação de Credores",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_formaplan-formas-planejadas-industria-e-comercio-ltda__391"
+   },
+   {
+    "doc_id": "b6332d5c",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/b6332d5cbdbfa406.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16335821112024_1_.pdf&nome=2º Edital - Art.52, § 1º - Intimação de Credores e Terceiros - Deferimento de Processamento",
+    "hint": "- FORMAPLAN FORMAS PLANEJADAS INDÚSTRIA Administrador Judicia",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_formaplan-formas-planejadas-industria-e-comercio-ltda__391"
+   },
+   {
+    "doc_id": "c720f6bd",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/c720f6bdb4f772d7.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento14290608032024_1_.pdf&nome=3º Edital - Art. 7º, § 2º - Aviso de Apresentação da Relação de Credores",
+    "hint": "consonância",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_formaplan-formas-planejadas-industria-e-comercio-ltda__391"
+   },
+   {
+    "doc_id": "8968c57c",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/8968c57cedaa34c9.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16353121112024_1_.pdf&nome=1º Edital - Art.52, § 1º - Intimação de Credores e Terceiros - Deferimento de Processamento - Retificação",
+    "hint": "- FORMAPLAN FORMASPLANEJADAS INDÚSTRIA E COMÉRCIO LTDA",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_formaplan-formas-planejadas-industria-e-comercio-ltda__391"
+   }
+  ]
+ },
+ {
+  "case_number": "0302174-63.2015.8.24.0025",
+  "floor_leads": 7,
+  "floor_face": 2732352,
+  "db_hint": "CONFECÇÕES ANDRIMALHAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+  "db_rfb_razao": "BANCO BRADESCO S.A.",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.2476190476190476,
+  "db_cnpj": "60746948000112",
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "c178292f",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/c178292f19b3134a.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-02-relacao-de-credores-2.pdf",
+    "hint": "CONFECÇÕES ANDRIMALHAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "CONFECÇÕES ANDRIMALHAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/confeccoes-andrimalhas-ltda/"
+   },
+   {
+    "doc_id": "d403116b",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/d403116b357dac27.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2023/08/doc-06-relacao-credores-do-administrador-judicial-10-02-2015.pdf",
+    "hint": "CONFECÇÕES ANDRIMALHAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "CONFECÇÕES ANDRIMALHAS LTDA – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/confeccoes-andrimalhas-ltda/"
+   }
+  ]
+ },
+ {
+  "case_number": "0041309-42.2014.8.08.0024",
+  "floor_leads": 7,
+  "floor_face": 3258135,
+  "db_hint": "HOSPITAL SA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "bf96785f",
+    "path": "/home/user/Anteparo/data/pdfs/ricardobiancardi.com.br/bf96785f7a4e919f.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ricardobiancardi.com.br/wp-content/uploads/2024/12/Edital-1-relacao-de-credores-pub.-02.12.24-.pdf",
+    "hint": "E FALÊNCIA",
+    "page_title": "HOSPITAL SANTA MÔNICA – NOVA RECUPERAÇÃO JUDICIAL – Ricardo Biancardi A. Fernandes",
+    "page_url": "https://ricardobiancardi.com.br/2026/06/29/hospital-santa-monica-nova-recuperacao-judicial/"
+   }
+  ]
+ },
+ {
+  "case_number": "0033736-15.2023.8.16.0185",
+  "floor_leads": 7,
+  "floor_face": 13985627,
+  "db_hint": "EQUIP SEG INTELIGÊNCIA EM SEGURANÇA LTDA – FALÊNCIA – Brazilio Bacellar Shirai Advogados",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "b9895d3b",
+    "path": "/home/user/Anteparo/data/pdfs/bbsadvogados.com.br/b9895d3bab0574f7.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://bbsadvogados.com.br/wp-content/uploads/2025/04/Equipseg-Edital-Relacao-de-Credores-da-Administradora-Judicial-art.-7o2o-da-LRF.pdf",
+    "hint": "EQUIP SEG INTELIGÊNCIA EM SEGURANÇA LTDA – FALÊNCIA – Brazilio Bacellar Shirai Advogados",
+    "page_title": "EQUIP SEG INTELIGÊNCIA EM SEGURANÇA LTDA – FALÊNCIA – Brazilio Bacellar Shirai Advogados",
+    "page_url": "https://bbsadvogados.com.br/equip-seg-inteligencia-em-seguranca-ltda-falencia/"
+   },
+   {
+    "doc_id": "5a6a0fb3",
+    "path": "/home/user/Anteparo/data/pdfs/bbsadvogados.com.br/5a6a0fb33b67e8b4.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://bbsadvogados.com.br/wp-content/uploads/2025/09/EDITAL-DE-PUBLICACAO-DA-RELACAO-DE-CREDORES-§-2.o-DO-ART.-7.o-DA-LEI-n.o-11.101-equipseg.pdf",
+    "hint": "EQUIP SEG INTELIGÊNCIA EM SEGURANÇA LTDA – FALÊNCIA – Brazilio Bacellar Shirai Advogados",
+    "page_title": "EQUIP SEG INTELIGÊNCIA EM SEGURANÇA LTDA – FALÊNCIA – Brazilio Bacellar Shirai Advogados",
+    "page_url": "https://bbsadvogados.com.br/equip-seg-inteligencia-em-seguranca-ltda-falencia/"
+   }
+  ]
+ }
+]

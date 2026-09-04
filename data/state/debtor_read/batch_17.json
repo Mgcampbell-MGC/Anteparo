@@ -1,0 +1,25 @@
+[
+ {
+  "case_number": "0000635-08.2003.8.08.0024",
+  "floor_leads": 1,
+  "floor_face": 799671,
+  "db_hint": "Alcoa Aluminlo S/A",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "0b51e1c1",
+    "path": "/home/user/Anteparo/data/pdfs/rlg-aj.com.br/0b51e1c12c635307.pdf",
+    "doc_type": "QGC",
+    "status": "OK_NO_TOTALS",
+    "url": "https://rlg-aj.com.br/wp-content/uploads/2024/01/Quadro-Geral-de-Credores-Refrigerantes-Polo-Sul.pdf",
+    "hint": "Refrigerantes Polo Sul - RLG-AJ",
+    "page_title": "Refrigerantes Polo Sul - RLG-AJ",
+    "page_url": "https://rlg-aj.com.br/falencias/refrigerantes-polo-sul/"
+   }
+  ]
+ }
+]

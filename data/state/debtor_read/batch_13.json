@@ -1,0 +1,187 @@
+[
+ {
+  "case_number": "0829315-43.2023.8.15.0001",
+  "floor_leads": 2,
+  "floor_face": 3909585,
+  "db_hint": "TREZE FUTEBOL CLUBE",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "e7a1e923",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/e7a1e923dae2e5a0.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/uploads/2023/12/3.1-PROTOCOLO-DA-2a-LISTA-DE-CREDORES.pdf",
+    "hint": "consta no Doc 04 aqui acostado, servindo a Rua Padre Carapuceiro, 706, Empresa",
+    "page_title": "",
+    "page_url": ""
+   },
+   {
+    "doc_id": "47e92e4d",
+    "path": "/home/user/Anteparo/data/pdfs/lrflideres.com.br/47e92e4db6f8d9b0.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://lrflideres.com.br/wp-content/plugins/download-attachments/includes/download.php?id=5828",
+    "hint": null,
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "0820780-23.2026.8.14.0301",
+  "floor_leads": 2,
+  "floor_face": 666151,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "38d930ab",
+    "path": "/home/user/Anteparo/data/pdfs/cdn.dol.com.br/38d930ab1caa2c95.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://cdn.dol.com.br/img/attachmentinline/940000/6publicacao-2-edital-art-7-parag-2-da-lei-11101-20009467060.pdf?xid=3272528",
+    "hint": "e mpresa",
+    "page_title": "",
+    "page_url": ""
+   }
+  ]
+ },
+ {
+  "case_number": "0700536-67.2024.8.02.0043",
+  "floor_leads": 2,
+  "floor_face": 3283784,
+  "db_hint": "Reu, registrado civilmente como José Renaldo dos",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "d7c426fb",
+    "path": "/home/user/Anteparo/data/pdfs/recuperacaojudicial.squarespace.com/d7c426fbd475685a.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://recuperacaojudicial.squarespace.com/s/EDITAL-COM-A-2-LISTA-DE-CREDORES-E-INFORMANDO-A-APRESENTACO-DO-PRJ_1532.pdf",
+    "hint": "GRUPO PISEBEM — Lindoso e Araujo",
+    "page_title": "GRUPO PISEBEM — Lindoso e Araujo",
+    "page_url": "https://recuperacaojudicial.squarespace.com/grupo-pisebem"
+   }
+  ]
+ },
+ {
+  "case_number": "0026395-77.2025.8.16.0019",
+  "floor_leads": 2,
+  "floor_face": 6291128,
+  "db_hint": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "424b54fe",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/424b54fee6a11093.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2025/09/relacao-de-credores-forest-sa.pdf",
+    "hint": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/grupo-forest/"
+   },
+   {
+    "doc_id": "12e12dae",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/12e12dae8d0f8b9d.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2025/09/relacao-de-credores-forest-1.pdf",
+    "hint": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/grupo-forest/"
+   },
+   {
+    "doc_id": "e62a665e",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/e62a665e78b62bbf.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2025/09/relacao-de-credores-greenpar.pdf",
+    "hint": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/grupo-forest/"
+   },
+   {
+    "doc_id": "030b8070",
+    "path": "/home/user/Anteparo/data/pdfs/administradorajudicialgs.com.br/030b8070be9a46e9.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://administradorajudicialgs.com.br/wp-content/uploads/2025/09/relacao-de-credores-forest-espirito-santo.pdf",
+    "hint": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_title": "GRUPO FOREST – Sgrott Administradora Judicial e Consultoria Empresarial",
+    "page_url": "https://administradorajudicialgs.com.br/recuperacoes-judiciais/grupo-forest/"
+   }
+  ]
+ },
+ {
+  "case_number": "5677250-87.2023.8.09.0051",
+  "floor_leads": 1,
+  "floor_face": 2000200,
+  "db_hint": "EMPRESA",
+  "db_rfb_razao": "ASSOCIACAO EDUCACIONAL DR. ODILON FERNANDES EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.16216216216216212,
+  "db_cnpj": "19062231000158",
+  "db_band": "A",
+  "docs": [
+   {
+    "doc_id": "b58e7ce6",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/b58e7ce614ffe355.pdf",
+    "doc_type": "PLAN",
+    "status": "QUARANTINED",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/03/PRJ-UNIBRAS-PARTE-2.pdf",
+    "hint": "RJ Unibras - Stenius",
+    "page_title": "RJ Unibras - Stenius",
+    "page_url": "https://stenius.com.br/rj-unibras/"
+   },
+   {
+    "doc_id": "62943bec",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/62943bec34234d5f.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/03/EDITAL-1-UNIBRAS.pdf",
+    "hint": "GRUPO UNIBRÁS, por seu representante legal Dr. STENIUS LACERDA BASTOS, faz sa",
+    "page_title": "RJ Unibras - Stenius",
+    "page_url": "https://stenius.com.br/rj-unibras/"
+   },
+   {
+    "doc_id": "ec141f83",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/ec141f83234ff68c.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/04/1-edital.pdf",
+    "hint": "EMPRESA",
+    "page_title": "RJ Unibras - Stenius",
+    "page_url": "https://stenius.com.br/rj-unibras/"
+   },
+   {
+    "doc_id": "3d500fac",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/3d500facab236ae8.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/03/PLANORJ-UNIBRAS.pdf",
+    "hint": "RJ Unibras - Stenius",
+    "page_title": "RJ Unibras - Stenius",
+    "page_url": "https://stenius.com.br/rj-unibras/"
+   }
+  ]
+ }
+]

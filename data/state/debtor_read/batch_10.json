@@ -1,0 +1,167 @@
+[
+ {
+  "case_number": "0031120-52.2024.8.16.0017",
+  "floor_leads": 5,
+  "floor_face": 2364340,
+  "db_hint": "supramencionado, nos autos principais da presente Recuperação Judicia",
+  "db_rfb_razao": "AGROFORTE AGROPECUARIA LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.45,
+  "db_cnpj": "33286454000120",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "200afc9e",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/200afc9e12c1bc0f.pdf",
+    "doc_type": "QGC",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento11370527032026_1_.pdf&nome=Quadro Geral de Credores (QGC) -AJ Anterior",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_agroforte-agropecuaria-ltda__452"
+   },
+   {
+    "doc_id": "9c6ed1c6",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/9c6ed1c6cb6bff35.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento11241027032026_1_.pdf&nome=2° Edital - Relação de Credores AJ e PRJ",
+    "hint": "supramencionado, nos autos principais da presente Recuperação Judicia",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_agroforte-agropecuaria-ltda__452"
+   }
+  ]
+ },
+ {
+  "case_number": "0028131-73.2024.8.16.0017",
+  "floor_leads": 5,
+  "floor_face": 2272831,
+  "db_hint": "ENIVALDO BARELLA TIRONI, MATEUS INFORMATICA LIMITADA",
+  "db_rfb_razao": "AEGRO INFORMATICA LIMITADA",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.8695652173913043,
+  "db_cnpj": "23706398000181",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "70eb7014",
+    "path": "/home/user/Anteparo/data/pdfs/scalzilliaj.com.br/70eb7014739f42d0.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://scalzilliaj.com.br/sgc/download.php?file=files/processo_documento/processo_documento15542620022025_1_.pdf&nome=11 - Relação de credores - art. 7º, §2º, da LREF",
+    "hint": "SCZ Scalzilli Administração Judicial",
+    "page_title": "SCZ Scalzilli Administração Judicial",
+    "page_url": "https://scalzilliaj.com.br/processo/recuperacao-judicial_grupo-bef-agro-(enivaldo-barella-tironi,-mateus-manhani-barella,-leila-regina-manhani-barella,-bef-agro-comercio-de-graos-e-insumos-agricolas-ltda,-barella-e-filhos-ltda-e-m-m-locacao-eireli)__344"
+   }
+  ]
+ },
+ {
+  "case_number": "5264228-81.2025.8.09.0172",
+  "floor_leads": 4,
+  "floor_face": 9136262,
+  "db_hint": "RJ GRUPO FAEL - Stenius",
+  "db_rfb_razao": "BOI VERDE LEILOES LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.3111111111111111,
+  "db_cnpj": "08893021000195",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "4702d720",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/4702d7201f185502.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/04/5-Plano-de-Recuperacao-Judicial-mov.55.pdf",
+    "hint": "RJ GRUPO FAEL - Stenius",
+    "page_title": "RJ GRUPO FAEL - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-fael/"
+   },
+   {
+    "doc_id": "b849bff8",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/b849bff8b99885d8.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/06/edital_publicadorecuperacao.pdf",
+    "hint": "RJ GRUPO FAEL - Stenius",
+    "page_title": "RJ GRUPO FAEL - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-fael/"
+   },
+   {
+    "doc_id": "301e3cf5",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/301e3cf58b98f2b7.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/06/EDITAL-GRUPO-FAEL.pdf",
+    "hint": "CINCOS CONSULTORIA ORGANIZACIONAL LTDA",
+    "page_title": "RJ GRUPO FAEL - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-fael/"
+   }
+  ]
+ },
+ {
+  "case_number": "5164979-18.2026.8.09.0110",
+  "floor_leads": 4,
+  "floor_face": 13772284,
+  "db_hint": null,
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "9eb5be41",
+    "path": "/home/user/Anteparo/data/pdfs/stenius.com.br/9eb5be419208c690.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://stenius.com.br/wp-content/uploads/2026/07/EDITAL-1-RELACAO-DE-CREDORES-GRUPO-GE.pdf",
+    "hint": "e informem eventuais créditos perante as devedoras, para divulgação aos demais interessa",
+    "page_title": "Rj Grupo GE - Stenius",
+    "page_url": "https://stenius.com.br/rj-grupo-ge/"
+   }
+  ]
+ },
+ {
+  "case_number": "1000117-72.2020.8.26.0260",
+  "floor_leads": 4,
+  "floor_face": 9308973,
+  "db_hint": "promovida por TRANSLOCOMOTIVA TRANSPORTES RODOVIÁRIOS E DISTRIBUIÇÃO DE CARGAS LTDA",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "6dc8e47b",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/6dc8e47b273826ad.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento11482307012026_1_.pdf&nome=Relação de Credores - Arts. 22, I,‘e’ c.c. 7º, § 2º, da Lei nº 11.101/2005 - 28/10/2020",
+    "hint": "promovida por TRANSLOCOMOTIVA TRANSPORTES RODOVIÁRIOS E DISTRIBUIÇÃO DE CARGAS LTDA",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=8"
+   },
+   {
+    "doc_id": "f41f5693",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/f41f56937a1d74e4.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento18430011062025_1_.pdf&nome=Relação de Credores - Art. 52º § 1º, da Lei nº 11.101/2005 - 13/08/2020",
+    "hint": "Ativos",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=8"
+   },
+   {
+    "doc_id": "3e9f88ae",
+    "path": "/home/user/Anteparo/data/pdfs/ativosajce.com.br/3e9f88ae9f303a92.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_ROWS",
+    "url": "https://ativosajce.com.br/admin/download.php?file=files/processo_documento/processo_documento21511013072022_1_.pdf&nome= Edital de Credores - Art. 53,  lei 11.101/2005 - 03/11/2020",
+    "hint": "Translocomotiva Transportes Rodoviários e Distribuição de Cargas Ltda",
+    "page_title": "Ativos",
+    "page_url": "https://ativosajce.com.br/processo?c=8"
+   }
+  ]
+ }
+]

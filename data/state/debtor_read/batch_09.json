@@ -1,0 +1,217 @@
+[
+ {
+  "case_number": "1018313-46.2024.8.26.0100",
+  "floor_leads": 5,
+  "floor_face": 6515740,
+  "db_hint": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+  "db_rfb_razao": "JA SANTOS IMPORTACAO EXPORTACAO DE FERRAMENTAS E SERVICOS ESPECIALIZADOS LTDA",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.6321243523316062,
+  "db_cnpj": "15408785000103",
+  "db_band": "A",
+  "docs": [
+   {
+    "doc_id": "033d2914",
+    "path": "/home/user/Anteparo/data/pdfs/vivanteaj.com.br/033d29144f63dddd.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK",
+    "url": "https://vivanteaj.com.br/wp-content/uploads/2024/11/1a-lista-de-credores-JA-Santos.pdf",
+    "hint": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+    "page_title": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+    "page_url": "https://vivanteaj.com.br/processos/ja-santos-importacao-e-exportacao-de-ferramentas-ltda-concept-ferramentas/"
+   },
+   {
+    "doc_id": "1b4d3c34",
+    "path": "/home/user/Anteparo/data/pdfs/vivanteaj.com.br/1b4d3c34dc152f64.pdf",
+    "doc_type": "PLAN",
+    "status": "QUARANTINED",
+    "url": "https://vivanteaj.com.br/wp-content/uploads/2024/11/PRJ-JA.pdf",
+    "hint": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+    "page_title": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+    "page_url": "https://vivanteaj.com.br/processos/ja-santos-importacao-e-exportacao-de-ferramentas-ltda-concept-ferramentas/"
+   },
+   {
+    "doc_id": "1d5a86f7",
+    "path": "/home/user/Anteparo/data/pdfs/vivanteaj.com.br/1d5a86f7f971f25a.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "OK_NO_TOTALS",
+    "url": "https://vivanteaj.com.br/wp-content/uploads/2024/11/2a-lista-de-credores-JA-Santos.pdf",
+    "hint": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+    "page_title": "JA SANTOS IMPORTAÇÃO E EXPORTAÇÃO DE FERRAMENTAS LTDA. (CONCEPT FERRAMENTAS) - Vivante Gestão e Administração Judicial",
+    "page_url": "https://vivanteaj.com.br/processos/ja-santos-importacao-e-exportacao-de-ferramentas-ltda-concept-ferramentas/"
+   }
+  ]
+ },
+ {
+  "case_number": "1009827-02.2024.8.26.0576",
+  "floor_leads": 5,
+  "floor_face": 2603225,
+  "db_hint": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+  "db_rfb_razao": "FRIGORIFICO ALFA INDUSTRIA E COMERCIO DE CARNES E DERIVADOS LTDA EM RECUPERACAO JUDICIAL",
+  "db_rfb_source": "minhareceita",
+  "db_name_match": 0.7157894736842105,
+  "db_cnpj": "00975846000147",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "89671ae4",
+    "path": "/home/user/Anteparo/data/pdfs/vtladm.com.br/89671ae49d87f89f.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK",
+    "url": "https://vtladm.com.br/wp-content/uploads/2024/04/09-–-EDITAL-DE-CONVOCACAO-DE-CREDORES-–-Frigorifico-Alfa-Industria-e-Comercio-de-Carnes-e-Derivados-Ltda.-e-Ctx-Logistica-Transporte-E-Locacoes-Ltda.pdf",
+    "hint": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+    "page_title": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+    "page_url": "https://vtladm.com.br/recuperacao-judicial/frigorifico-alfa-industria-e-comercio-de-carnes-e-derivados-ltda-e-ctx-logistica-transporte-e-locacoes-ltda/"
+   },
+   {
+    "doc_id": "af394a20",
+    "path": "/home/user/Anteparo/data/pdfs/vtladm.com.br/af394a20bb523c91.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://vtladm.com.br/wp-content/uploads/2024/04/08-Plano-de-Recuperacao-Judicial-–-Frigorifico-Alfa-Industria-e-Comercio-de-Carnes-e-Derivados-Ltda.-e-Ctx-Logistica-Transporte-E-Locacoes-Ltda.pdf",
+    "hint": "FRIGORÍFICO ALFA INDÚSTRIA E COMÉRCIO DE CARNES E DERIVADOS LTDA",
+    "page_title": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+    "page_url": "https://vtladm.com.br/recuperacao-judicial/frigorifico-alfa-industria-e-comercio-de-carnes-e-derivados-ltda-e-ctx-logistica-transporte-e-locacoes-ltda/"
+   },
+   {
+    "doc_id": "7da28c40",
+    "path": "/home/user/Anteparo/data/pdfs/vtladm.com.br/7da28c400e52a211.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "NO_TEXT_LAYER",
+    "url": "https://vtladm.com.br/wp-content/uploads/2024/04/13-1o-Modificativo-ao-Plano-de-Recuperacao-Judicial-–-Frigorifico-Alfa-e-Ctx.pdf",
+    "hint": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+    "page_title": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+    "page_url": "https://vtladm.com.br/recuperacao-judicial/frigorifico-alfa-industria-e-comercio-de-carnes-e-derivados-ltda-e-ctx-logistica-transporte-e-locacoes-ltda/"
+   },
+   {
+    "doc_id": "295719aa",
+    "path": "/home/user/Anteparo/data/pdfs/vtladm.com.br/295719aabe027d88.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://vtladm.com.br/wp-content/uploads/2024/04/15-Homologacao-Do-Plano-De-Recuperacao-Judicial-Frigorifico-Alfa-e-Ctx.pdf",
+    "hint": "formuladopelasempresa",
+    "page_title": "Frigorífico Alfa Indústria e Comércio de Carnes e Derivados Ltda.  e Ctx Logística, Transporte E Locações Ltda. – VTL",
+    "page_url": "https://vtladm.com.br/recuperacao-judicial/frigorifico-alfa-industria-e-comercio-de-carnes-e-derivados-ltda-e-ctx-logistica-transporte-e-locacoes-ltda/"
+   }
+  ]
+ },
+ {
+  "case_number": "0801893-91.2016.8.12.0011",
+  "floor_leads": 5,
+  "floor_face": 3521480,
+  "db_hint": "empresa",
+  "db_rfb_razao": null,
+  "db_rfb_source": null,
+  "db_name_match": null,
+  "db_cnpj": null,
+  "db_band": "C",
+  "docs": [
+   {
+    "doc_id": "cdf3c4d1",
+    "path": "/home/user/Anteparo/data/pdfs/realbrasil.com.br/cdf3c4d148612ed9.pdf",
+    "doc_type": "DEBTOR_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://realbrasil.com.br/wp-content/uploads/2017/05/Relação-de-Credores_-Mastter-1.pdf",
+    "hint": "Grupo Mastter - Real Brasil Consultoria",
+    "page_title": "Grupo Mastter - Real Brasil Consultoria",
+    "page_url": "https://realbrasil.com.br/rj/grupo-mastter/"
+   },
+   {
+    "doc_id": "51d102c7",
+    "path": "/home/user/Anteparo/data/pdfs/realbrasil.com.br/51d102c725ccbd59.pdf",
+    "doc_type": "QGC",
+    "status": "QUARANTINED",
+    "url": "https://realbrasil.com.br/wp-content/uploads/2017/08/QUADRO-DE-CREDORES-MASTTER.pdf",
+    "hint": "empresa",
+    "page_title": "Grupo Mastter - Real Brasil Consultoria",
+    "page_url": "https://realbrasil.com.br/rj/grupo-mastter/"
+   }
+  ]
+ },
+ {
+  "case_number": "0043030-30.2025.8.16.0021",
+  "floor_leads": 5,
+  "floor_face": 8395240,
+  "db_hint": "nº E para que chegue ao conhecimento de todos e ninguém possa",
+  "db_rfb_razao": "BACKES SOLUCOES LTDA",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.30379746835443044,
+  "db_cnpj": "57831940000140",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "8ff5b9ed",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/8ff5b9edb21c1653.pdf",
+    "doc_type": "UNKNOWN",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17364409012026_1_.pdf&nome=Relação de Credores - Recuperanda",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_b1-comercio-de-manufaturados-ltda__441"
+   },
+   {
+    "doc_id": "53122b3c",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/53122b3c23c08a57.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento17295409012026_1_.pdf&nome=Relação de Credores AJ",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_b1-comercio-de-manufaturados-ltda__441"
+   },
+   {
+    "doc_id": "9846e4c0",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/9846e4c0bb373e6d.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento18581929042026_1_.pdf&nome=3º Edital - Relação de Credores e PRJ",
+    "hint": "foi apresentado no movimento 112 dos autos supramencionados, em consonância",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_b1-comercio-de-manufaturados-ltda__441"
+   }
+  ]
+ },
+ {
+  "case_number": "0037411-27.2022.8.16.0021",
+  "floor_leads": 5,
+  "floor_face": 24528960,
+  "db_hint": "Marques Administrações Judiciais",
+  "db_rfb_razao": "CPX DISTRIBUIDORA S.A.",
+  "db_rfb_source": "NAME_MISMATCH",
+  "db_name_match": 0.3703703703703704,
+  "db_cnpj": "10158356000535",
+  "db_band": "B",
+  "docs": [
+   {
+    "doc_id": "6dc26e24",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/6dc26e2430e36037.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16561007032024_1_.pdf&nome=Relação Nominal de Credores",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_caravaggio-construtora-ltda__370"
+   },
+   {
+    "doc_id": "8b9a4375",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/8b9a4375b76774ca.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "QUARANTINED",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento11330206042026_1_.pdf&nome=Relação Nominal de Credores Retificada",
+    "hint": "Marques Administrações Judiciais",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_caravaggio-construtora-ltda__370"
+   },
+   {
+    "doc_id": "437e7974",
+    "path": "/home/user/Anteparo/data/pdfs/marquesadmjudicial.com.br/437e79745649ebc2.pdf",
+    "doc_type": "AJ_LIST",
+    "status": "OK_NO_TOTALS",
+    "url": "https://marquesadmjudicial.com.br/sgc/download.php?file=files/processo_documento/processo_documento16562707032024_1_.pdf&nome=2º Edital-Relação de Credores do art. 7, §2 da LREF e do Plano de Recuperação Judicial",
+    "hint": "APRESENTADO PELA RECUPERANDA, NA FORMA Distribuidora S.A",
+    "page_title": "Marques Administrações Judiciais",
+    "page_url": "https://marquesadmjudicial.com.br/processo/recuperacao-judicial_caravaggio-construtora-ltda__370"
+   }
+  ]
+ }
+]
