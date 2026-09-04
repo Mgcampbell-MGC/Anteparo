@@ -3,9 +3,9 @@
 rank 1 = decision maker, rank 2 = backup. Only people whose full record was revealed by bulk_match are loaded;
 a pick that was never matched has only a masked surname and is skipped.
 """
-import json
+import json, sys, time
 BAD_DOMAINS = {"stonebrewing.com": "Apollo matched a US brewery, not Stone SCD", "ecopneus.it": "Italian namesake, not Ecopneus PA",
-               "casaraomc.com.br": "side job domain, not Laponia", "fazenda.no": "personal domain", "sicoobtranscredi.com.br": "previous employer domain"}, sys, time
+               "casaraomc.com.br": "side job domain, not Laponia", "fazenda.no": "personal domain", "sicoobtranscredi.com.br": "previous employer domain"}
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; sys.path.insert(0, str(ROOT))
 from anteparo.db import connect
