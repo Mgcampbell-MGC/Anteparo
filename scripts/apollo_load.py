@@ -3,7 +3,9 @@
 rank 1 = decision maker, rank 2 = backup. Only people whose full record was revealed by bulk_match are loaded;
 a pick that was never matched has only a masked surname and is skipped.
 """
-import json, sys, time
+import json
+BAD_DOMAINS = {"stonebrewing.com": "Apollo matched a US brewery, not Stone SCD", "ecopneus.it": "Italian namesake, not Ecopneus PA",
+               "casaraomc.com.br": "side job domain, not Laponia", "fazenda.no": "personal domain", "sicoobtranscredi.com.br": "previous employer domain"}, sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; sys.path.insert(0, str(ROOT))
 from anteparo.db import connect
@@ -30,10 +32,15 @@ for line in open(ROOT / "data/apollo/results.jsonl", encoding="utf-8"):
             rank += 1
             phones = dict((t, num) for t, num in (m.get("phones") or []) if num)
             mobile = phones.get("mobile"); direct = phones.get("work_direct") or phones.get("direct") or phones.get("other")
+            email, status, note = m.get("email"), m.get("email_status"), p.get("note")
+            # emails the enrichment workers identified as sitting on a stranger's domain (namesake company, personal domain, ex-employer)
+            dom = (email or "").rsplit("@", 1)[-1].lower()
+            if email and dom in BAD_DOMAINS:
+                note = (note + "; " if note else "") + f"email dropped: {BAD_DOMAINS[dom]}"; email = None; status = "dropped"
             db.execute("INSERT OR REPLACE INTO apollo_contacts VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                       (root, rank, m["id"], m.get("name"), m.get("title") or p.get("title"), m.get("email"), m.get("email_status"),
+                       (root, rank, m["id"], m.get("name"), m.get("title") or p.get("title"), email, status,
                         mobile, direct, m.get("org_phone"), m.get("linkedin"), m.get("org"), m.get("city"), m.get("state"),
-                        p.get("note"), "apollo", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())))
+                        note, "apollo", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())))
             n += 1
 db.commit()
 print(f"apollo_contacts: {n} rows loaded, {skipped} picks not yet revealed; companies with a contact: "
