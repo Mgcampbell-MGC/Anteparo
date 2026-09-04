@@ -5,3 +5,4 @@ data/pdfs/
 data/*.sqlite
 .DS_Store
 data/out/claims.csv
+data/*.log
