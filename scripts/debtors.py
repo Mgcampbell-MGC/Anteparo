@@ -186,6 +186,9 @@ def step4():
         hints += [t for (t,) in db.execute("SELECT r.page_title FROM raw_documents r JOIN documents d ON d.source_url=r.url WHERE d.case_number=? AND d.run_id=?", (case, run))]
         if vname:
             disp, srcname = vname, "pdf-read"
+            if " / " in vname and len(vname) > 60:   # reader listed the members; the portal's group name is what a caller says
+                g = next((clean_hint(h) for h in [hint] + hints if clean_hint(h) and clean_hint(h).upper().startswith("GRUPO")), None)
+                if g: disp = f"{g} ({vname[:70]}…)"
         else:
             disp = debtor_display(None, razao, src, hint, *hints)
             srcname = "rfb" if disp and disp == razao else ("hint" if disp else "")

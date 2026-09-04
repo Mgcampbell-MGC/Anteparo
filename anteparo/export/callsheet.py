@@ -39,12 +39,15 @@ DEFAULT_IRR, DEFAULT_SHARE = 0.25, 0.60
 NAVY = "1F3A5F"; HEAD = PatternFill("solid", fgColor=NAVY); WHITE = Font(bold=True, color="FFFFFF")
 FILL = {"crm": "FFF4D6", "deal": "E6EEF8", "proof": "E8F1E8", "contact": "F6F0FA", "ctx": "F3F3F3"}
 BAND_FILL = {"A": "C6EFCE", "B": "E2EFDA", "C": "FFEB9C", "D": "FFC7CE", "U": "EDEDED"}
-PROOF_FILL = {"NO TOTALS": "FFEB9C", "PARTIAL": "F8CBAD"}
+PROOF_FILL = {"NO TOTALS": "FFEB9C", "PARTIAL": "F8CBAD", "CHECK": "FF9999"}
 TR = {"26": "SP", "19": "RJ", "16": "PR", "21": "RS", "24": "SC", "13": "MG", "09": "GO", "17": "PE", "05": "BA", "11": "MT", "12": "MS",
       "14": "PA", "15": "PB", "08": "ES", "10": "MA", "07": "DF", "06": "CE", "02": "AL", "25": "SE", "27": "TO", "20": "RN", "18": "PI",
       "22": "RO", "01": "AC", "04": "AM", "23": "RR", "03": "AP"}
 LIST_KIND = {"AJ_LIST": "AJ list (art. 7 §2)", "DEBTOR_LIST": "Debtor list (art. 51)", "QGC": "QGC (art. 18)", "PLAN": "Plan / homologation",
-             "EDITAL": "Edital (art. 7 §2)", "UNKNOWN": "Unclassified list"}
+             "EDITAL": "Edital (art. 7 §2)", "UNKNOWN": "Unclassified list", "QUORUM_LIST": "Quorum list — NOT an art. 7/51 list",
+             "OTHER": "Other filing — NOT an art. 7/51 list", "FALENCIA_LIST": "Falência creditor list (art. 99/83)"}
+NOT_STATUTORY = {"QUORUM_LIST", "OTHER", "PLAN"}
+DEBTOR_SOURCE = {"pdf-read": "printed on the list (read twice)", "rfb": "registry (RFB) match", "hint": "portal page title / URL — not printed on the list", None: "not identified"}
 
 COLS = [  # (header, width, group)
     ("CREDITOR — company owed money", 40, "lead"), ("AMOUNT OWED (R$)", 17, "lead"), ("DEBTOR — company in RJ", 36, "lead"),
@@ -58,7 +61,7 @@ COLS = [  # (header, width, group)
     ("OUR ÁGIO (R$)", 16, "deal"), ("Ágio pts of face", 8, "deal"),
     ("PROOF QUALITY", 26, "proof"), ("PROOF: source document", 50, "proof"), ("Page / row", 16, "proof"), ("Value as printed", 30, "proof"),
     ("Which list", 20, "proof"), ("List date", 11, "proof"), ("Plan evidence", 16, "proof"),
-    ("Case number", 26, "ctx"), ("Court", 7, "ctx"), ("Stage", 12, "ctx"), ("Filed", 7, "ctx"), ("Band reason", 40, "ctx"), ("Debtor CNPJ", 19, "ctx"),
+    ("Case number", 26, "ctx"), ("Court", 7, "ctx"), ("Stage", 12, "ctx"), ("Filed", 7, "ctx"), ("Band reason", 40, "ctx"), ("Debtor CNPJ", 19, "ctx"), ("Debtor source", 30, "ctx"),
     ("City", 18, "ctx"), ("UF", 5, "ctx"), ("Sector", 34, "ctx"), ("Size", 10, "ctx"), ("Capital (R$)", 15, "ctx"), ("Seller fit", 13, "ctx"),
     ("CNPJ root", 10, "ctx"), ("Claims", 6, "ctx"), ("Flags", 30, "ctx"),
 ]
@@ -151,7 +154,7 @@ def _leads(db, run_id):
                d.source_url, d.doc_type, d.publication_date, d.status, d.file_path, d.debtor_name_hint,
                cs.court, cs.stage, cs.filing_date,
                db2.debtor_name, db2.razao_social, db2.band, db2.band_reasons, db2.plan_status, db2.filing_year, db2.stage, db2.rfb_source, db2.debtor_cnpj,
-               db2.display_name, db2.verified_cnpj, db2.group_members, dd.debtor
+               db2.display_name, db2.verified_cnpj, db2.group_members, dd.debtor, db2.display_source, db2.proceeding
         FROM targets t
         LEFT JOIN companies c ON c.cnpj_basico=t.cnpj_basico
         LEFT JOIN documents d ON d.doc_id=t.doc_id AND d.run_id=t.run_id
@@ -163,7 +166,7 @@ def _leads(db, run_id):
     for r in q:
         (root, case, doc_id, face, ests, ncl, name_printed, flags, razao, phone, phone2, email, uf, city, cnae, porte, capital,
          is_bank, is_public, is_inactive, url, dtype, pub, dstatus, fpath, dhint, court, stage, filed,
-         dname, drazao, band, breason, pstatus, fyear, dstage, dsrc, dcnpj, ddisplay, vcnpj, gmembers, dd_debtor) = r
+         dname, drazao, band, breason, pstatus, fyear, dstage, dsrc, dcnpj, ddisplay, vcnpj, gmembers, dd_debtor, dsource, proceeding) = r
         if is_public or is_inactive or "LIKELY_PUBLIC" in (flags or ""):
             continue
         fin = bool(is_bank) or "LIKELY_FINANCIAL" in (flags or "")   # banks / FIDCs / securitizers / credit co-ops → their own tab
@@ -208,6 +211,7 @@ def _leads(db, run_id):
         claims = db.execute("SELECT page, row_index, value_as_printed FROM claims WHERE doc_id=? AND run_id=? AND class='III' AND currency='BRL' AND document_number IN (%s) ORDER BY page,row_index"
                             % ",".join("?" * len((ests or "").split("|"))), (doc_id, run_id, *((ests or "").split("|")))).fetchall()
         proof = {"OK": "OK — totals reconciled", "OK_NO_TOTALS": "NO TOTALS — list prints none; check page", "QUARANTINED": "PARTIAL — class III reconciled, other classes not"}.get(dstatus, dstatus or "")
+        if (dtype or "") in NOT_STATUTORY: proof = "CHECK — source is not a statutory creditor list"
         court_txt = court if court and court != "UNKNOWN" else (("TJ" + TR.get(case[18:20], "")) if case else "")
         lead = {"root": root, "case": case, "face": face_d, "n": ncl, "name_printed": name_printed, "razao": razao, "phone": phone, "phone2": phone2,
                 "uf": uf, "city": city, "cnae": cnae, "porte": porte, "capital": capital, "url": url, "dtype": LIST_KIND.get(dtype or "UNKNOWN", dtype or ""),
@@ -215,7 +219,9 @@ def _leads(db, run_id):
                 "debtor_cnpj": vcnpj or (dcnpj if dsrc not in (None, "NAME_MISMATCH", "NOT_IN_RFB") else "") or "",
                 "band": band, "breason": breason or "", "pstatus": {"CONFIRMED": "PLAN DOC FOUND", "ESTIMATED": "NONE FOUND", "UNKNOWN": "NONE FOUND"}.get(pstatus or "UNKNOWN", pstatus),
                 "fund": fund, "primary": primary, "backup": backup, "note": "; ".join(notes), "claims": claims, "flags": flags or "",
-                "fit": _seller_fit(razao, capital, porte), "financial": fin, "related": rel}
+                "fit": _seller_fit(razao, capital, porte), "financial": fin, "related": rel,
+                "dsource": DEBTOR_SOURCE.get((dsource if ddisplay else None) or (None if not debtor else ("rfb" if debtor == drazao else "hint")), "not identified"),
+                "proceeding": proceeding or ""}
         (related if rel else out).append(lead)
     out.sort(key=lambda x: -x["fund"])
     return out, related
@@ -277,7 +283,7 @@ def _call_sheet(ws, leads, title="CALL SHEET"):
             "OUR ÁGIO (R$)": f"={fund}-{quote}", "Ágio pts of face": f'=IF({face}=0,"",ROUND(({fund}-{quote})/{face}*100,1))',
             "PROOF QUALITY": Ld["proof"], "PROOF: source document": Ld["url"] or "", "Page / row": "; ".join(f"p{pg} r{ri}" for pg, ri, _ in Ld["claims"]),
             "Value as printed": "; ".join(f"p{pg}: R$ {v}" for pg, ri, v in Ld["claims"]), "Which list": Ld["dtype"], "List date": Ld["pub"] or "", "Plan evidence": Ld["pstatus"],
-            "Case number": Ld["case"] or "(not printed)", "Court": Ld["court"], "Stage": Ld["stage"], "Filed": Ld["year"] or "", "Band reason": Ld["breason"], "Debtor CNPJ": _cnpj(Ld["debtor_cnpj"]),
+            "Case number": Ld["case"] or "(not printed)", "Court": Ld["court"], "Stage": Ld["stage"], "Filed": Ld["year"] or "", "Band reason": Ld["breason"], "Debtor CNPJ": _cnpj(Ld["debtor_cnpj"]), "Debtor source": Ld["dsource"],
             "City": Ld["city"] or "", "UF": Ld["uf"] or "", "Sector": Ld["cnae"] or "", "Size": Ld["porte"] or "",
             "Capital (R$)": (float(Ld["capital"]) if Ld["capital"] not in (None, "") else ""), "Seller fit": Ld["fit"],
             "CNPJ root": Ld["root"], "Claims": Ld["n"], "Flags": Ld["flags"].replace("|", " "),
@@ -366,7 +372,7 @@ def _dashboard(ws, leads, nrows, books):
             ("Overdue follow-ups", f'=COUNTIFS({rng("NEXT DATE")},"<"&TODAY(),{rng("NEXT DATE")},"<>",{S},"<>DEAD",{S},"<>DEAL")', "0"),
             ("Interested + Deal — ágio (R$)", f'=SUMIF({S},"INTERESTED",{A})+SUMIF({S},"DEAL",{A})', "#,##0"),
             ("Rows with a decision-maker email", f'=SUMPRODUCT(--({rng("Email")}<>""))', "0"),
-            ("Rows needing a proof check", f'=COUNTIF({rng("PROOF QUALITY")},"NO TOTALS*")+COUNTIF({rng("PROOF QUALITY")},"PARTIAL*")', "0")]
+            ("Rows needing a proof check", f'=COUNTIF({rng("PROOF QUALITY")},"NO TOTALS*")+COUNTIF({rng("PROOF QUALITY")},"PARTIAL*")+COUNTIF({rng("PROOF QUALITY")},"CHECK*")', "0")]
     r = block(4, "PIPELINE", ("", ""))
     for lab, f, fmt in kpis:
         ws[f"A{r}"] = lab; ws[f"B{r}"] = f; ws[f"B{r}"].number_format = fmt; ws[f"B{r}"].font = Font(bold=True, size=12); r += 1
@@ -396,7 +402,7 @@ def _dashboard(ws, leads, nrows, books):
 
     r = block(r + 1, "PROOF QUALITY", ("leads", "ágio (R$)"))
     PQ = rng("PROOF QUALITY")
-    for lab, pat in (("OK — reconciled against printed totals", "OK*"), ("NO TOTALS — list prints none", "NO TOTALS*"), ("PARTIAL — class III reconciled only", "PARTIAL*")):
+    for lab, pat in (("OK — reconciled against printed totals", "OK*"), ("NO TOTALS — list prints none", "NO TOTALS*"), ("PARTIAL — class III reconciled only", "PARTIAL*"), ("CHECK — not a statutory creditor list", "CHECK*")):
         ws[f"A{r}"] = lab; ws[f"B{r}"] = f'=COUNTIF({PQ},"{pat}")'; ws[f"C{r}"] = f'=SUMIF({PQ},"{pat}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
 
     notes = ["How to use: work each call tab top-down (both are sorted by our ágio). Set STATUS and NEXT DATE on every touch; this tab updates itself.",

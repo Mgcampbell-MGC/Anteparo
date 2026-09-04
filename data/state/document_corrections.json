@@ -1,22 +1,74 @@
 [
  {
-  "doc_id": "24ed98480a572989bb0ce06fbd92e30151b7c249",
-  "case_number": null
+  "doc_id": "ea17ba43b2611e60da78d77cd10f534a8d7ffa56",
+  "case_number": "0005010-50.2013.8.24.0026",
+  "doc_type": "OTHER",
+  "notes": "prose_signal=0; classIII=NO_TOTAL; reader: relação de credores atualizada annexed to a petition in a falência; not the AJ's art. 7 §2 list"
  },
  {
-  "doc_id": "424b54fee6a110938dcb9ca54168acdb6434dece",
-  "case_number": "0026395-77.2025.8.16.0019"
+  "doc_id": "cf92cff797d25108be0439a46ee6864d615a1be4",
+  "case_number": "5057720-48.2025.8.24.0023",
+  "doc_type": "QUORUM_LIST",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=NO_TOTAL; reader: quorum-computation spreadsheet, not an art. 7/52 list"
+ },
+ {
+  "doc_id": "cefc6f1f4e0b0de0562158c57eae626fe9aac144",
+  "case_number": "1001087-02.2022.8.26.0390",
+  "doc_type": "UNKNOWN",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=PASS; reader: list of Paulo César Somilio, autos 1001087-02.2022.8.26.0390"
  },
  {
   "doc_id": "2407a56c35028c413305535a1dd008db0d00dcd7",
-  "case_number": null
+  "case_number": null,
+  "doc_type": "UNKNOWN",
+  "notes": "prose_signal=0; classIII=PASS | case_number corrected from 0020255-24.2020.5.04.0104 (creditor-side labor number) on 2026-09-04T13:19:15Z"
+ },
+ {
+  "doc_id": "a16b83662029f0070141c33a0526f89ce4c7f47f",
+  "case_number": "1000203-38.2023.8.26.0260",
+  "doc_type": "UNKNOWN",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=NO_TOTAL; reader: footer ties to 1000203-38.2023.8.26.0260"
  },
  {
   "doc_id": "24ed98480a572989bb0ce06fbd92e30151b7c249",
-  "case_number": null
+  "case_number": null,
+  "doc_type": "DEBTOR_LIST",
+  "notes": "prose_signal=1; classIII=PASS | case_number corrected from 0000472-94.2012.5.06.0193 (creditor-side labor number) on 2026-09-04T13:19:15Z"
  },
  {
   "doc_id": "424b54fee6a110938dcb9ca54168acdb6434dece",
-  "case_number": "0026395-77.2025.8.16.0019"
+  "case_number": "0026395-77.2025.8.16.0019",
+  "doc_type": "AJ_LIST",
+  "notes": "prose_signal=40; classIII=NO_TOTAL | case_number corrected from 0000436-69.2024.5.09.0671 (creditor-side labor number) on 2026-09-04T13:19:15Z"
+ },
+ {
+  "doc_id": "d7c426fbd475685a322559791802848a6b81e7db",
+  "case_number": "0700707-87.2025.8.02.0043",
+  "doc_type": "AJ_LIST",
+  "notes": "prose_signal=19; classIII=NO_TOTAL; reader: edital on the same Diário page belongs to 0700707-87.2025.8.02.0043"
+ },
+ {
+  "doc_id": "d7e9e03151cdb13cad656a2c255d8f11b06d8aed",
+  "case_number": "1035775-55.2020.8.26.0100",
+  "doc_type": "UNKNOWN",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=NO_ROWS; reader: TJSP footer stamp 1035775-55.2020.8.26.0100"
+ },
+ {
+  "doc_id": "87f368a460cc05df773bd68046bb8335364013fd",
+  "case_number": null,
+  "doc_type": "UNKNOWN",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=FAIL; reader: no process number printed"
+ },
+ {
+  "doc_id": "b66baafd022fa6011950bb0fd7732b939bbe6ca7",
+  "case_number": "1039842-97.2019.8.26.0100",
+  "doc_type": "DEBTOR_LIST",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=FAIL; reader: footer ties to 1039842-97.2019.8.26.0100"
+ },
+ {
+  "doc_id": "380922480f805dfaf39e8a8e23ade683bd745f87",
+  "case_number": "1022634-27.2024.8.26.0100",
+  "doc_type": "QGC",
+  "notes": "prose_signal=0; CASE_FROM_PAGE; classIII=PASS; reader: e-SAJ footer ties this QGC to 1022634-27.2024.8.26.0100; debtor not printed"
  }
 ]

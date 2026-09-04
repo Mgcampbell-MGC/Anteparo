@@ -1,10 +1,10 @@
 # ANTEPARO index — Phase 1 report
-run `20260903T230425Z-e7c9a7` · 2026-09-04 14:07Z
+run `20260903T230425Z-e7c9a7` · 2026-09-04 16:59Z
 
 ## Call sheet
-- **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1063 name-only rows ≥ R$200k on *Needs CNPJ*
+- **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1068 name-only rows ≥ R$200k on *Needs CNPJ*
 - excluded from the Call List by registry data: banks 95 · public 1 · inactive 48; by name pre-filter: 151
-- 1199 documents ingested · 531 cases with a document · 209 of 531 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
+- 1199 documents ingested · 529 cases with a document · 209 of 529 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
 
 ## Documents by status
 - ERROR: 34
@@ -39,7 +39,7 @@ run `20260903T230425Z-e7c9a7` · 2026-09-04 14:07Z
 
 ## Coverage by court (DataJud RJ cases since 2020 → cases with ≥1 usable creditor list)
 - TJRJ: 2963 cases · 3 with a usable list (0%)
-- TJSP: 1651 cases · 25 with a usable list (1%)
+- TJSP: 1651 cases · 26 with a usable list (1%)
 - TJGO: 1042 cases · 11 with a usable list (1%)
 - TJMG: 653 cases · 1 with a usable list (0%)
 - TJRS: 627 cases · 18 with a usable list (2%)
