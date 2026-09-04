@@ -33,12 +33,12 @@ BANDS = [("A", 0.40, 2, 8, 1.5, "Plan confirmed (art. 58) or plan document found
          ("B", 0.30, 2, 8, 1.5, "Live case, no confirmed plan found yet — the payment clock has not started"),
          ("C", 0.15, 3, 10, 2.5, "Stale: >4 years since filing with no plan, or no movement in 12 months, or case closed"),
          ("D", 0.03, 0, 0, 6.0, "Avoid: falência decreed, or debtor no longer ATIVA at RFB — liquidation payout years away"),
-         ("?", 0.25, 3, 8, 2.5, "Debtor or case not resolved — conservative default")]
+         ("U", 0.25, 3, 8, 2.5, "Unresolved: debtor or case not identified — conservative default")]
 BAND_MAP = {b: (rec, g, t, lag) for b, rec, g, t, lag, _ in BANDS}
 DEFAULT_IRR, DEFAULT_SHARE = 0.25, 0.60
 NAVY = "1F3A5F"; HEAD = PatternFill("solid", fgColor=NAVY); WHITE = Font(bold=True, color="FFFFFF")
 FILL = {"crm": "FFF4D6", "deal": "E6EEF8", "proof": "E8F1E8", "contact": "F6F0FA", "ctx": "F3F3F3"}
-BAND_FILL = {"A": "C6EFCE", "B": "E2EFDA", "C": "FFEB9C", "D": "FFC7CE", "?": "EDEDED"}
+BAND_FILL = {"A": "C6EFCE", "B": "E2EFDA", "C": "FFEB9C", "D": "FFC7CE", "U": "EDEDED"}
 PROOF_FILL = {"NO TOTALS": "FFEB9C", "PARTIAL": "F8CBAD"}
 TR = {"26": "SP", "19": "RJ", "16": "PR", "21": "RS", "24": "SC", "13": "MG", "09": "GO", "17": "PE", "05": "BA", "11": "MT", "12": "MS",
       "14": "PA", "15": "PB", "08": "ES", "10": "MA", "07": "DF", "06": "CE", "02": "AL", "25": "SE", "27": "TO", "20": "RN", "18": "PI",
@@ -129,7 +129,7 @@ def debtor_display(display, razao, src, *hints):
 
 
 def _years(band, ysf):
-    rec, g, term, lag = BAND_MAP.get(band, BAND_MAP["?"])
+    rec, g, term, lag = BAND_MAP.get(band, BAND_MAP["U"])
     if band == "A":
         return max(1.0, g + term / 2 - max(0.0, ysf - lag))
     return lag + g + term / 2
@@ -168,8 +168,8 @@ def _leads(db, run_id):
             continue
         fin = bool(is_bank) or "LIKELY_FINANCIAL" in (flags or "")   # banks / FIDCs / securitizers / credit co-ops → their own tab
         if not case or case[16:17] != "8":   # RJ cases live in state courts (J=8); anything else is a creditor-side number picked off the page
-            case = ""; band = "?"; breason = "RJ case number not identified on the document"; stage = stage or ""
-        band = band if band in BAND_MAP else "?"
+            case = ""; band = "U"; breason = "RJ case number not identified on the document"; stage = stage or ""
+        band = band if band in BAND_MAP else "U"   # "U" not "?": a "?" is a wildcard inside COUNTIF/VLOOKUP
         debtor = debtor_display(ddisplay, drazao, dsrc, dd_debtor, dname, dhint)
         accepted_cnpj = dcnpj if dsrc not in (None, "NAME_MISMATCH", "NOT_IN_RFB") else ""   # a rejected registry match is not the debtor's CNPJ
         debtor_root = (vcnpj or accepted_cnpj or "")[:8]
@@ -254,7 +254,7 @@ def _call_sheet(ws, leads, title="CALL SHEET"):
         ws.column_dimensions[get_column_letter(j)].width = w
     ws.row_dimensions[1].height = 34
     dv = DataValidation(type="list", formula1='"' + ",".join(STATUSES) + '"', allow_blank=True); ws.add_data_validation(dv)
-    dvb = DataValidation(type="list", formula1='"A,B,C,D,?"', allow_blank=True); ws.add_data_validation(dvb)
+    dvb = DataValidation(type="list", formula1='"A,B,C,D,U"', allow_blank=True); ws.add_data_validation(dvb)
     thin = Side(style="thin", color="D9D9D9")
     VL = lambda band, k, dflt: f"IFERROR(VLOOKUP({band},Assumptions!$A$7:$F$11,{k},FALSE),{dflt})"
     fund_col = C["FUND PRICE @ IRR (R$)"]; quote_col = C["OUR QUOTE (R$)"]
@@ -400,7 +400,7 @@ def _dashboard(ws, leads, nrows, books):
         ws[f"A{r}"] = lab; ws[f"B{r}"] = f'=COUNTIF({PQ},"{pat}")'; ws[f"C{r}"] = f'=SUMIF({PQ},"{pat}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
 
     notes = ["How to use: work each call tab top-down (both are sorted by our ágio). Set STATUS and NEXT DATE on every touch; this tab updates itself.",
-             "Bands: A plan confirmed · B live, no plan yet · C stale · D avoid · ? unresolved. Quotes are a model off the Assumptions tab; FACE VALUE, page/row and the PROOF link are court data.",
+             "Bands: A plan confirmed · B live, no plan yet · C stale · D avoid · U unresolved. Quotes are a model off the Assumptions tab; FACE VALUE, page/row and the PROOF link are court data.",
              "PROOF QUALITY: OK = the list's own printed totals reconcile; NO TOTALS = the list prints none, so the value stands on its row alone; PARTIAL = class III reconciled but another class on the same list did not.",
              "FINANCIAL CREDITORS are banks, FIDCs, securitizers and credit co-operatives: same class III paper, but they sell through a desk, and plans usually give them worse terms than trade suppliers.",
              "Do not delete rows on the call tabs (the dashboard reads them by position); mark DEAD instead. Sorting and filtering are fine."]
@@ -426,7 +426,7 @@ def _dashboard(ws, leads, nrows, books):
     for c in "EFGHI": ws[f"{c}{r2}"].font = WHITE; ws[f"{c}{r2}"].fill = HEAD
     D = rng("DEBTOR — company in RJ")
     for i, (deb, _) in enumerate(top, start=r2 + 1):
-        d = deb.replace('"', '""')
+        d = deb.replace('"', '""').replace("~", "~~").replace("*", "~*").replace("?", "~?")   # COUNTIF wildcards
         ws[f"E{i}"] = deb; ws[f"F{i}"] = f'=COUNTIF({D},"{d}")'; ws[f"G{i}"] = f'=SUMIF({D},"{d}",{A})'; ws[f"G{i}"].number_format = "#,##0"
         ws[f"H{i}"] = f'=COUNTIFS({D},"{d}",{S},"<>NEW")'; ws[f"I{i}"] = f'=COUNTIFS({D},"{d}",{S},"INTERESTED")+COUNTIFS({D},"{d}",{S},"DEAL")'
     r3 = r2 + len(top) + 2
