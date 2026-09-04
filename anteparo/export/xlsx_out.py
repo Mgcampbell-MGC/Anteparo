@@ -154,7 +154,9 @@ def _lead_rows(db, run_id, band):
     for r in q:
         (root, case, doc_id, face, ests, ncl, name_printed, debtor, stage, flags, razao, phone, phone2, email, uf, city, cnae, porte, sit,
          is_bank, is_public, is_inactive, rfb_src, url, dtype, pub, dstatus, adm, court, filed, page_title, dhint, fpath) = r
-        debtor = (_debtor_from_pdf(db, doc_id, fpath) if fpath else "") or _clean_debtor(dhint or debtor, page_title, adm)
+        # one source of truth with the closer workbook: the verified/resolved display name in debtors; PDF/hint heuristics only as fallback
+        resolved = db.execute("SELECT display_name FROM debtors WHERE case_number=?", (case,)).fetchone() if case else None
+        debtor = (resolved[0] if resolved and resolved[0] else "") or (_debtor_from_pdf(db, doc_id, fpath) if fpath else "") or _clean_debtor(dhint or debtor, page_title, adm)
         if is_bank or is_public or is_inactive or "LIKELY_FINANCIAL_BY_NAME" in (flags or "") or "LIKELY_PUBLIC_BY_NAME" in (flags or ""):
             continue   # excluded by step G; kept in targets.csv with flags
         dm = db.execute("SELECT person_name, role FROM contacts WHERE cnpj_basico=? ORDER BY CASE role_code WHEN 49 THEN 0 WHEN 5 THEN 1 WHEN 16 THEN 2 WHEN 10 THEN 3 ELSE 9 END LIMIT 1", (root,)).fetchone()

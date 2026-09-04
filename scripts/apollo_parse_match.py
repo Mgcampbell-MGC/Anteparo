@@ -1,5 +1,6 @@
 """Parse a saved apollo_people_bulk_match tool result (raw JSON, or the persisted [{"type":"text","text":...}] wrapper)
-and append the revealed people to data/apollo/matched.jsonl."""
+and append the revealed people to data/apollo/matched.jsonl (or to the file given as 2nd arg).
+Usage: apollo_parse_match.py <saved result file> [output jsonl]"""
 import json, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
@@ -8,9 +9,10 @@ d = json.loads(s[s.find("{"):]) if s.startswith("{") or not s.startswith("[") el
 if isinstance(d, list):   # persisted wrapper
     d = json.loads(next(x["text"] for x in d if x.get("type") == "text"))
 print("credits_consumed:", d.get("credits_consumed"), "| unique:", d.get("unique_enriched_records"), "| missing:", d.get("missing_records"))
-seen = {json.loads(l)["id"] for l in open(ROOT / "data/apollo/matched.jsonl", encoding="utf-8")} if (ROOT / "data/apollo/matched.jsonl").exists() else set()
+OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "data/apollo/matched.jsonl"   # optional own output file (parallel workers)
+seen = {json.loads(l)["id"] for l in open(OUT, encoding="utf-8")} if OUT.exists() else set()
 n = 0
-with open(ROOT / "data/apollo/matched.jsonl", "a", encoding="utf-8") as f:
+with open(OUT, "a", encoding="utf-8") as f:
     for m in d.get("matches") or []:
         if not m or m.get("id") in seen: continue
         org = m.get("organization") or {}
