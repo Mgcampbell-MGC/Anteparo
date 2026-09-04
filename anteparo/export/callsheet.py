@@ -216,52 +216,99 @@ def _call_sheet(ws, leads, title="CALL SHEET"):
     return n
 
 
-def _dashboard(ws, leads, n):
+STACK = [("CREDITOR — company owed money", "text"), ("DEBTOR — company in RJ", "text"), ("FACE VALUE (as printed)", "num"),
+         ("FUND PRICE @ IRR (R$)", "num"), ("OUR ÁGIO (R$)", "num"), ("DEBTOR BAND", "text"), ("STATUS", "text"),
+         ("NEXT DATE", "date"), ("UF", "text"), ("Seller fit", "text")]
+SC = {h: get_column_letter(i + 1) for i, (h, _) in enumerate(STACK)}
+SC["BOOK"] = get_column_letter(len(STACK) + 1)
+SC["Where"] = get_column_letter(len(STACK) + 2)
+
+
+def _book(ws, books):
+    """Hidden sheet stacking every call tab, so the dashboard measures the whole book, not one tab."""
+    ws.title = "_BOOK"
+    for j, h in enumerate([h for h, _ in STACK] + ["BOOK", "Where"], 1):
+        ws.cell(row=1, column=j, value=h).font = Font(bold=True)
+    r = 1
+    for title, last in books:
+        for i in range(2, last + 1):
+            r += 1
+            for j, (h, kind) in enumerate(STACK, 1):
+                ref = f"'{title}'!${L(h)}${i}"
+                ws.cell(row=r, column=j, value=f"={ref}" if kind == "num" else f'=IF({ref}="","",{ref})')
+            ws.cell(row=r, column=len(STACK) + 1, value="FINANCIAL" if "FINANCIAL" in title else "TRADE")
+            ws.cell(row=r, column=len(STACK) + 2, value=f"{title} · row {i}")
+    ws.sheet_state = "hidden"
+    return r
+
+
+def _dashboard(ws, leads, nrows, books):
     ws.title = "DASHBOARD"
-    cs = "'CALL SHEET'!"
-    rng = lambda h: f"{cs}${L(h)}$2:${L(h)}${n}"
-    ws.column_dimensions["A"].width = 30; ws.column_dimensions["B"].width = 16; ws.column_dimensions["C"].width = 16; ws.column_dimensions["D"].width = 4
-    for col, w in zip("EFGHIJ", (36, 32, 16, 8, 14, 12)): ws.column_dimensions[col].width = w
+    rng = lambda h: f"_BOOK!${SC[h]}$2:${SC[h]}${nrows}"
+    A = rng("OUR ÁGIO (R$)"); F = rng("FACE VALUE (as printed)"); S = rng("STATUS"); BK = rng("BOOK")
+    ws.column_dimensions["A"].width = 32; ws.column_dimensions["B"].width = 16; ws.column_dimensions["C"].width = 16; ws.column_dimensions["D"].width = 4
+    for col, w in zip("EFGHIJK", (34, 30, 15, 7, 14, 12, 26)): ws.column_dimensions[col].width = w
     ws["A1"] = "ANTEPARO — CALL DASHBOARD"; ws["A1"].font = Font(bold=True, size=16, color=NAVY)
-    ws["A2"] = f"Live off the CALL SHEET tab · sorted by fund price (∝ our ágio) · {date.today().isoformat()}"; ws["A2"].font = Font(italic=True, color="666666")
-    tile = lambda cell, label, formula, fmt=None: (ws.__setitem__(cell, label), ws.__setitem__(cell.replace("A", "B").replace("C", "D") if False else cell[0] + str(int(cell[1:]) + 1), formula))
-    # KPI block
-    kpis = [("Leads on sheet", f"=COUNTA({rng('CREDITOR — company owed money')})", "0"),
-            ("Total face (R$)", f"=SUM({rng('FACE VALUE (as printed)')})", "#,##0"),
-            ("Fund price pipeline (R$)", f"=SUM({rng('FUND PRICE @ IRR (R$)')})", "#,##0"),
-            ("OUR ÁGIO pipeline (R$)", f"=SUM({rng('OUR ÁGIO (R$)')})", "#,##0"),
-            ("Untouched (NEW)", f'=COUNTIF({rng("STATUS")},"NEW")', "0"),
+    ws["A2"] = f"Both call tabs — CALL SHEET (trade) and FINANCIAL CREDITORS — counted together · {date.today().isoformat()}"
+    ws["A2"].font = Font(italic=True, color="666666")
+
+    def block(row, title, cols):
+        ws[f"A{row}"] = title
+        for i, (c, lab) in enumerate(zip("BC", cols)): ws[f"{c}{row}"] = lab
+        for c in "ABC": ws[f"{c}{row}"].font = WHITE; ws[f"{c}{row}"].fill = HEAD
+        return row + 1
+
+    kpis = [("Leads in book (both tabs)", f'=SUMPRODUCT(--({rng("CREDITOR — company owed money")}<>""))', "0"),
+            ("Total face (R$)", f"=SUM({F})", "#,##0"),
+            ("Fund price pipeline (R$)", f'=SUM({rng("FUND PRICE @ IRR (R$)")})', "#,##0"),
+            ("OUR ÁGIO pipeline (R$)", f"=SUM({A})", "#,##0"),
+            ("Untouched (NEW)", f'=COUNTIF({S},"NEW")', "0"),
             ("Calls due today", f'=COUNTIF({rng("NEXT DATE")},TODAY())', "0"),
-            ("Overdue follow-ups", f'=COUNTIFS({rng("NEXT DATE")},"<"&TODAY(),{rng("NEXT DATE")},"<>",{rng("STATUS")},"<>DEAD",{rng("STATUS")},"<>DEAL")', "0"),
-            ("Interested + Deal — ágio (R$)", f'=SUMIF({rng("STATUS")},"INTERESTED",{rng("OUR ÁGIO (R$)")})+SUMIF({rng("STATUS")},"DEAL",{rng("OUR ÁGIO (R$)")})', "#,##0")]
-    ws["A4"] = "PIPELINE"; ws["A4"].font = WHITE; ws["A4"].fill = HEAD; ws["B4"].fill = HEAD
-    for i, (lab, f, fmt) in enumerate(kpis, start=5):
-        ws[f"A{i}"] = lab; ws[f"B{i}"] = f; ws[f"B{i}"].number_format = fmt; ws[f"B{i}"].font = Font(bold=True, size=12)
-    # funnel by status
-    r0 = 5 + len(kpis) + 1
-    ws[f"A{r0}"] = "FUNNEL"; ws[f"B{r0}"] = "leads"; ws[f"C{r0}"] = "ágio (R$)"
-    for c in "ABC": ws[f"{c}{r0}"].font = WHITE; ws[f"{c}{r0}"].fill = HEAD
-    for i, s in enumerate(STATUSES, start=r0 + 1):
-        ws[f"A{i}"] = s; ws[f"B{i}"] = f'=COUNTIF({rng("STATUS")},"{s}")'; ws[f"C{i}"] = f'=SUMIF({rng("STATUS")},"{s}",{rng("OUR ÁGIO (R$)")})'; ws[f"C{i}"].number_format = "#,##0"
-    # by band
-    r1 = r0 + len(STATUSES) + 2
-    ws[f"A{r1}"] = "DEBTOR BAND"; ws[f"B{r1}"] = "leads"; ws[f"C{r1}"] = "ágio (R$)"
-    for c in "ABC": ws[f"{c}{r1}"].font = WHITE; ws[f"{c}{r1}"].fill = HEAD
-    for i, (b, _, _, _, note) in enumerate(BANDS, start=r1 + 1):
-        ws[f"A{i}"] = f"{b} — {note[:28]}"; ws[f"B{i}"] = f'=COUNTIF({rng("DEBTOR BAND")},"{b}")'; ws[f"C{i}"] = f'=SUMIF({rng("DEBTOR BAND")},"{b}",{rng("OUR ÁGIO (R$)")})'; ws[f"C{i}"].number_format = "#,##0"
-        ws[f"A{i}"].fill = PatternFill("solid", fgColor=BAND_FILL[b])
-    # top 15 by ágio (live: LARGE + INDEX/MATCH)
-    ws["E4"] = "TOP 15 BY OUR ÁGIO"; ws["F4"] = "Debtor"; ws["G4"] = "Ágio (R$)"; ws["H4"] = "Band"; ws["I4"] = "Status"; ws["J4"] = "Next date"
-    for c in "EFGHIJ": ws[f"{c}4"].font = WHITE; ws[f"{c}4"].fill = HEAD
-    A = rng("OUR ÁGIO (R$)")
+            ("Overdue follow-ups", f'=COUNTIFS({rng("NEXT DATE")},"<"&TODAY(),{rng("NEXT DATE")},"<>",{S},"<>DEAD",{S},"<>DEAL")', "0"),
+            ("Interested + Deal — ágio (R$)", f'=SUMIF({S},"INTERESTED",{A})+SUMIF({S},"DEAL",{A})', "#,##0")]
+    r = block(4, "PIPELINE", ("", ""))
+    for lab, f, fmt in kpis:
+        ws[f"A{r}"] = lab; ws[f"B{r}"] = f; ws[f"B{r}"].number_format = fmt; ws[f"B{r}"].font = Font(bold=True, size=12); r += 1
+
+    # which book the caller is working
+    r = block(r + 1, "BOOK", ("leads", "ágio (R$)"))
+    for lab, key in (("TRADE — CALL SHEET tab", "TRADE"), ("FINANCIAL — banks, FIDCs, co-ops", "FINANCIAL")):
+        ws[f"A{r}"] = lab; ws[f"B{r}"] = f'=COUNTIF({BK},"{key}")'; ws[f"C{r}"] = f'=SUMIF({BK},"{key}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
+    ws[f"A{r}"] = "Both books"; ws[f"B{r}"] = f'=SUMPRODUCT(--({BK}<>""))'; ws[f"C{r}"] = f"=SUM({A})"; ws[f"C{r}"].number_format = "#,##0"
+    for c in "ABC": ws[f"{c}{r}"].font = Font(bold=True)
+    r += 1
+
+    r = block(r + 1, "FUNNEL", ("leads", "ágio (R$)"))
+    for s in STATUSES:
+        ws[f"A{r}"] = s; ws[f"B{r}"] = f'=COUNTIF({S},"{s}")'; ws[f"C{r}"] = f'=SUMIF({S},"{s}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
+
+    r = block(r + 1, "DEBTOR BAND", ("leads", "ágio (R$)"))
+    B = rng("DEBTOR BAND")
+    for b, _, _, _, note in BANDS:
+        ws[f"A{r}"] = f"{b} — {note[:28]}"; ws[f"B{r}"] = f'=COUNTIF({B},"{b}")'; ws[f"C{r}"] = f'=SUMIF({B},"{b}",{A})'
+        ws[f"C{r}"].number_format = "#,##0"; ws[f"A{r}"].fill = PatternFill("solid", fgColor=BAND_FILL[b]); r += 1
+
+    r = block(r + 1, "SELLER FIT", ("leads", "ágio (R$)"))
+    F2 = rng("Seller fit")
+    for fit in ("MID-MARKET", "SMALL", "LARGE CORP"):
+        ws[f"A{r}"] = fit + (" — rarely sells" if fit == "LARGE CORP" else ""); ws[f"B{r}"] = f'=COUNTIF({F2},"{fit}")'
+        ws[f"C{r}"] = f'=SUMIF({F2},"{fit}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
+
+    ws[f"A{r + 1}"] = "How to use: work each call tab top-down (both are sorted by our ágio). Set STATUS and NEXT DATE on every touch; this tab updates itself."
+    ws[f"A{r + 2}"] = "Bands: A plan approved · B live · C stale · D avoid. Quotes are a model off the Assumptions tab; the FACE VALUE and the PROOF link are court data."
+    ws[f"A{r + 3}"] = "FINANCIAL CREDITORS are banks, FIDCs, securitizers and credit co-operatives. Same class III paper, but they sell through a desk, not an owner."
+
+    # top 15 across both books
+    ws["E4"] = "TOP 15 BY OUR ÁGIO"; ws["F4"] = "Debtor"; ws["G4"] = "Ágio (R$)"; ws["H4"] = "Band"; ws["I4"] = "Status"; ws["J4"] = "Next date"; ws["K4"] = "Where to find it"
+    for c in "EFGHIJK": ws[f"{c}4"].font = WHITE; ws[f"{c}4"].fill = HEAD
     for k in range(1, 16):
-        r = 4 + k
-        ws[f"G{r}"] = f"=IFERROR(LARGE({A},{k}),\"\")"; ws[f"G{r}"].number_format = "#,##0"
-        mrow = f"MATCH(G{r},{A},0)"
-        for col, h in (("E", "CREDITOR — company owed money"), ("F", "DEBTOR — company in RJ"), ("H", "DEBTOR BAND"), ("I", "STATUS"), ("J", "NEXT DATE")):
-            ws[f"{col}{r}"] = f'=IFERROR(INDEX({rng(h)},{mrow}),"")'
-        ws[f"J{r}"].number_format = "yyyy-mm-dd"
-    # case ownership: top debtors by lead count (names precomputed, counts live)
+        rr = 4 + k
+        ws[f"G{rr}"] = f'=IFERROR(LARGE({A},{k}),"")'; ws[f"G{rr}"].number_format = "#,##0"
+        mrow = f"MATCH(G{rr},{A},0)"
+        for col, h in (("E", "CREDITOR — company owed money"), ("F", "DEBTOR — company in RJ"), ("H", "DEBTOR BAND"), ("I", "STATUS"), ("J", "NEXT DATE"), ("K", "Where")):
+            ws[f"{col}{rr}"] = f'=IFERROR(INDEX({rng(h)},{mrow}),"")'
+        ws[f"J{rr}"].number_format = "yyyy-mm-dd"
+
     from collections import Counter, defaultdict
     cnt = Counter(Ld["debtor"] for Ld in leads if Ld["debtor"]); agio = defaultdict(float)
     for Ld in leads: agio[Ld["debtor"]] += Ld["fund"] * (1 - DEFAULT_SHARE)
@@ -273,16 +320,13 @@ def _dashboard(ws, leads, n):
     for i, (deb, _) in enumerate(top, start=r2 + 1):
         d = deb.replace('"', '""')
         ws[f"E{i}"] = deb; ws[f"F{i}"] = f'=COUNTIF({D},"{d}")'; ws[f"G{i}"] = f'=SUMIF({D},"{d}",{A})'; ws[f"G{i}"].number_format = "#,##0"
-        ws[f"H{i}"] = f'=COUNTIFS({D},"{d}",{rng("STATUS")},"<>NEW")'; ws[f"I{i}"] = f'=COUNTIFS({D},"{d}",{rng("STATUS")},"INTERESTED")+COUNTIFS({D},"{d}",{rng("STATUS")},"DEAL")'
-    # by state
+        ws[f"H{i}"] = f'=COUNTIFS({D},"{d}",{S},"<>NEW")'; ws[f"I{i}"] = f'=COUNTIFS({D},"{d}",{S},"INTERESTED")+COUNTIFS({D},"{d}",{S},"DEAL")'
     r3 = r2 + len(top) + 2
     ws[f"E{r3}"] = "BY STATE"; ws[f"F{r3}"] = "leads"; ws[f"G{r3}"] = "ágio (R$)"
     for c in "EFG": ws[f"{c}{r3}"].font = WHITE; ws[f"{c}{r3}"].fill = HEAD
-    ufs = Counter(Ld["uf"] for Ld in leads if Ld["uf"]).most_common(10)
-    for i, (uf, _) in enumerate(ufs, start=r3 + 1):
-        ws[f"E{i}"] = uf; ws[f"F{i}"] = f'=COUNTIF({rng("UF")},"{uf}")'; ws[f"G{i}"] = f'=SUMIF({rng("UF")},"{uf}",{A})'; ws[f"G{i}"].number_format = "#,##0"
-    ws[f"A{r1 + len(BANDS) + 2}"] = "How to use: work the CALL SHEET top-down (it is sorted by our ágio). Set STATUS and NEXT DATE on every touch; this tab updates itself."
-    ws[f"A{r1 + len(BANDS) + 3}"] = "Bands: A plan approved · B live · C stale · D avoid. Quotes are a model off the Assumptions tab; the FACE VALUE and the PROOF link are court data."
+    U = rng("UF")
+    for i, (uf, _) in enumerate(Counter(Ld["uf"] for Ld in leads if Ld["uf"]).most_common(10), start=r3 + 1):
+        ws[f"E{i}"] = uf; ws[f"F{i}"] = f'=COUNTIF({U},"{uf}")'; ws[f"G{i}"] = f'=SUMIF({U},"{uf}",{A})'; ws[f"G{i}"].number_format = "#,##0"
 
 
 def export_callsheet(db, run_id, path, hide_assumptions=True):
@@ -291,13 +335,14 @@ def export_callsheet(db, run_id, path, hide_assumptions=True):
     fin = [l for l in every if l["financial"]]
     wb = Workbook()
     dash = wb.active
-    cs = wb.create_sheet(); n = _call_sheet(cs, leads)
-    _dashboard(dash, leads, n)
-    if fin:   # banks, FIDCs, securitizers, credit co-ops: same layout, separate tab, not counted on the dashboard
-        _call_sheet(wb.create_sheet(), fin, title="FINANCIAL CREDITORS")
+    books = [("CALL SHEET", _call_sheet(wb.create_sheet(), leads))]
+    if fin:   # banks, FIDCs, securitizers, credit co-ops: same layout, own tab, same dashboard
+        books.append(("FINANCIAL CREDITORS", _call_sheet(wb.create_sheet(), fin, title="FINANCIAL CREDITORS")))
+    nrows = _book(wb.create_sheet(), books)
+    _dashboard(dash, every, nrows, books)
     _assumptions(wb.create_sheet(), hidden=hide_assumptions)
     wb.save(path)
     from collections import Counter
-    return {"leads": len(leads), "financial": len(fin), "bands": dict(Counter(l["band"] for l in leads)), "with_email": sum(1 for l in leads if l["primary"]["email"]),
-            "with_mobile": sum(1 for l in leads if l["primary"]["mobile"]), "with_backup": sum(1 for l in leads if l["backup"]["name"]),
-            "fit": dict(Counter(l["fit"] for l in leads))}
+    tally = lambda rows: {"n": len(rows), "bands": dict(Counter(l["band"] for l in rows)), "with_email": sum(1 for l in rows if l["primary"]["email"]),
+                          "with_mobile": sum(1 for l in rows if l["primary"]["mobile"]), "with_backup": sum(1 for l in rows if l["backup"]["name"])}
+    return {"trade": tally(leads), "financial": tally(fin), "book": tally(every), "fit": dict(Counter(l["fit"] for l in every))}
