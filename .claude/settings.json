@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Apollo_io__apollo_mixed_people_api_search",
+      "mcp__Apollo_io__apollo_people_bulk_match"
+    ]
+  }
+}
