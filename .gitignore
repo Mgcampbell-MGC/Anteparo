@@ -6,3 +6,5 @@ data/*.sqlite
 .DS_Store
 data/out/claims.csv
 data/*.log
+data/*.sqlite-wal
+data/*.sqlite-shm
