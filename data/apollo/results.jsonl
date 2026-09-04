@@ -1,0 +1,462 @@
+{"root": "76483726", "kw": "DM Construtora", "search_n": 41, "picks": [{"id": "5d62bc3ea3ae616731f4023b", "title": "VP", "note": "has_email, direct phone"}]}
+{"root": "19256534", "kw": "Ibipora", "search_n": 0, "picks": []}
+{"root": null, "kw": "Adlim", "search_n": 130, "picks": [{"id": "5d536a0980f93e01f271430c", "title": "Analyst", "note": "has_email"}]}
+{"root": null, "kw": "Dreymoor", "search_n": 0, "picks": []}
+{"root": null, "kw": "SPC Brasil", "search_n": 493, "picks": [{"id": "6030b42d19281e000170fe6a", "title": "Controladoria"}, {"id": "6598db2c701ffc0001c40469", "title": "Head Comercial Sul"}, {"id": "651801d0c08432000138e281", "title": "Superintendent"}]}
+{"root": null, "kw": "Fresenius", "search_n": 2, "picks": [{"id": "6558721f4adda00001c6936e", "title": "Gerente Comunicação"}]}
+{"root": null, "kw": "Hypera", "search_n": 2, "picks": [{"id": "611be227484bb50001862ad7", "title": "Diretora Marketing"}]}
+{"root": "08467115", "kw": "CEEE Distribuição", "search_n": 14, "picks": [], "note": "large corp/utility; only technicians in plain search — needs seniority pass"}
+{"root": "92802784", "kw": "Corsan", "search_n": 2186, "picks": [], "note": "large corp; needs seniority pass"}
+{"root": "98521909", "kw": "Vinícola Campestre", "search_n": 14, "picks": [{"id": "5e7d1d1b6bf4270001d447c1", "title": "Commercial Director", "note": "has_email, phone Yes"}, {"id": "6480ad06f211350001b4cde9", "title": "Financial Analyst", "note": "backup, no email"}]}
+{"root": "11516861", "kw": "Águia Serviços de Vigilância", "search_n": 0, "picks": []}
+{"root": "03519135", "kw": "Gree Electric Appliances Brasil", "search_n": 402, "picks": [{"id": "55bef52d736964201b27b100", "title": "Executive Sales Manager", "note": "has_email; large corp, needs seniority pass"}]}
+{"root": "00831373", "kw": "Louis Dreyfus Company Sucos", "search_n": 6, "picks": [{"id": "6125e4fc1434bf00011ed1ae", "title": "Gerente Adm Controladoria - Originação Sucos", "note": "has_email"}, {"id": "664d30e7d9066d0001d2cbd3", "title": "Gerente Executivo Engenharia & Projetos - Sucos", "note": "backup, has_email, phone Yes"}]}
+{"root": "09402999", "kw": "Tableros Brasil", "search_n": 0, "picks": []}
+{"root": "24785274", "kw": "Graneles Brasil", "search_n": 10, "picks": [{"id": "54a4f36c7468692cf0c9a870", "title": "CMO", "note": "has_email, phone Yes"}, {"id": "63e116ad7f55ef00019be07f", "title": "Financial Analyst", "note": "backup, has_email"}]}
+{"root": "01789121", "kw": "Albaugh Agro Brasil", "search_n": 0, "picks": [], "note": "seniority-filtered search 0; retry plain"}
+{"root": "09036221", "kw": "DC Comércio Representações", "search_n": 0, "picks": []}
+{"root": "05855974", "kw": "Baston Aerossol", "search_n": 375, "picks": [{"id": "5f4ff5509ae8060001622805", "title": "Sales Representative", "note": "weak; has_email; needs finance-title pass"}]}
+{"root": "11486977", "kw": "Envtech Brasil", "search_n": 0, "picks": []}
+{"root": "10509915", "kw": "Mineração Aurora", "search_n": 14, "picks": [{"id": "653bf988c0100800019d75a5", "title": "Administrator", "note": "org match low-confidence, no email"}, {"id": "5660db4ba6da986efe00468f", "title": "Sales Manager", "note": "backup"}]}
+{"root": "05607230", "kw": "Ipesa do Brasil", "search_n": 7, "picks": [{"id": "64330fe0305449000121654f", "title": "Director", "note": "no email flag"}, {"id": "54a3a11a7468693676551206", "title": "Financial Analyst", "note": "backup"}]}
+{"root": "04222931", "kw": "Climazon Industrial", "search_n": 57, "picks": [], "note": "needs finance-title pass"}
+{"root": "92802784", "kw": "Corsan", "search_n": 11, "picks": [{"id": "57d8ae03a6da9859b537a5f1", "title": "Financial Planning Manager", "note": "phone Yes"}, {"id": "63598af95de7ca0001c243b2", "title": "Especialista de Tesouraria", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "01789121", "kw": "Albaugh Agro Brasil", "search_n": 0, "picks": [], "pass": "plain"}
+{"root": "05855974", "kw": "Baston Aerossol", "search_n": 16, "picks": [{"id": "63093b344fb90f00012c977b", "title": "Chief Financial Officer", "note": "phone Yes, no email flag"}, {"id": "54a4b6df7468692fa26fdc5d", "title": "Vice Presidente Comercial", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "04222931", "kw": "Climazon", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "03519135", "kw": "Gree Electric Appliances do Brasil", "search_n": 1, "picks": [{"id": "613adabc4947a20001147120", "title": "Commercial Director", "note": "no email flag, phone Yes"}, {"id": "55bef52d736964201b27b100", "title": "Executive Sales Manager", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "08467115", "kw": "CEEE Equatorial", "search_n": 2, "picks": [{"id": "54a3a17974686938acf15606", "title": "Gerente de Planejamento e Controle Financeiro - CEEE Equatorial", "note": "has_email, phone Yes"}, {"id": "665d246cc83edf0001595d60", "title": "Controller IOP", "note": "backup"}], "pass": "finance-titles"}
+{"root": "54366547", "kw": "Coplacana", "search_n": 544, "picks": [{"id": "57dd88a0a6da987aec212908", "title": "Administrative Director", "note": "phone Yes"}, {"id": "5b1cf4f3a6da9807356dc03f", "title": "Commercial Manager", "note": "backup"}]}
+{"root": "05044984", "kw": "Legrand Pharma", "search_n": 285, "picks": [{"id": "6706010dba2ea2000136c775", "title": "Gerente Nacional de Distribuição", "note": "weak; EMS group large corp; has_email"}]}
+{"root": "12447077", "kw": "Brasil Asfaltos", "search_n": 0, "picks": []}
+{"root": "11385941", "kw": "Titan Pneus do Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "10956258", "kw": "Federação Pernambucana de Futebol", "search_n": 16, "picks": [{"id": "6481da4090f0be0001da1585", "title": "Diretor de Governança e Compliance"}, {"id": "68c1c06dc1e77400010fb507", "title": "Member of the Management Team", "note": "backup"}]}
+{"root": "48430290", "kw": "Addiante", "search_n": 73, "picks": [{"id": "60d4ec812156a1000195526b", "title": "CEO", "note": "has_email, phone Yes"}, {"id": "685af035f6f3770001215f97", "title": "Gerente de Crédito e Cobrança", "note": "backup, has_email, phone Yes"}]}
+{"root": "21203489", "kw": "Solus do Brasil", "search_n": 128, "picks": [], "note": "needs finance-title pass"}
+{"root": "41324359", "kw": "Rações Bem Bom", "search_n": 0, "picks": []}
+{"root": "61615191", "kw": "Mistras South America", "search_n": 101, "picks": [{"id": "55c9c79ff3e5bb693a003a10", "title": "Head of Finance", "note": "has_email, phone Yes"}, {"id": "603d7df3a4ca910001ac8e4e", "title": "CEO Mistras South America", "note": "backup, has_email, phone Yes"}]}
+{"root": "06284974", "kw": "Agrofield Assessoria", "search_n": 0, "picks": []}
+{"root": "15626673", "kw": "Nortesul Agro", "search_n": 8, "picks": [{"id": "68766ce4718c4a0001c90e9b", "title": "Administrative Manager", "note": "phone Yes"}, {"id": "67a60e4439285500018a9a9b", "title": "Financial Analyst", "note": "backup"}]}
+{"root": "18871750", "kw": "Invista Loteadora", "search_n": 0, "picks": []}
+{"root": "10775286", "kw": "Lojas Cattan", "search_n": 0, "picks": []}
+{"root": "03981899", "kw": "JF Pasqua Condutores Elétricos", "search_n": 1, "picks": [{"id": "5e5d8ddc26b7c20001ef6e0d", "title": "(owner - title is company name)", "note": "phone Yes"}]}
+{"root": "19709369", "kw": "Transportadora Marcan", "search_n": 0, "picks": []}
+{"root": "21998451", "kw": "Pro Nova Distribuidora Cosméticos", "search_n": 0, "picks": []}
+{"root": "52311347", "kw": "Baldan Implementos Agrícolas", "search_n": 12, "picks": [{"id": "610c33264e92dc0001ab59e0", "title": "Chief Financial Officer", "note": "has_email, phone Yes"}, {"id": "60ff49f60563520001dec170", "title": "Financial Manager", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "05399071", "kw": "Nortebag Embalagens", "search_n": 0, "picks": []}
+{"root": "32851823", "kw": "Serrinha Ambiental", "search_n": 0, "picks": []}
+{"root": "19907274", "kw": "Bacupari Agroindústria", "search_n": 0, "picks": []}
+{"root": "18331491", "kw": "Ceanne Neurologia", "search_n": 0, "picks": []}
+{"root": "13829957", "kw": "Brasquimica", "search_n": 31, "picks": [{"id": "5e76a525e5c317000143b0f1", "title": "Technical Manager", "note": "weak"}]}
+{"root": "33845322", "kw": "A Geradora Aluguel de Máquinas", "search_n": 0, "picks": []}
+{"root": "05784234", "kw": "Akiyoshi Jeans", "search_n": 1, "picks": []}
+{"root": "08785522", "kw": "Divina Indústria de Couro", "search_n": 0, "picks": []}
+{"root": "10505803", "kw": "Lorotti Empreendimentos", "search_n": 0, "picks": []}
+{"root": "02524216", "kw": "Alfani Confecções", "search_n": 0, "picks": []}
+{"root": "30278428", "kw": "L'Oréal Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "16404287", "kw": "Suzano", "search_n": 27, "picks": [{"id": "5aaf0753a6da98c3b4313abb", "title": "Analista Contas a Receber Sênior - CSC", "note": "phone Yes"}, {"id": "5fcd0aa00475650001f3430a", "title": "Analista de Contas a Receber Jr", "note": "backup, has_email"}], "pass": "finance-titles", "note": "large corp"}
+{"root": "92660604", "kw": "Yara Brasil", "search_n": 4, "picks": [{"id": "66017196d7f06e0007100949", "title": "CFO Yara Brazil", "note": "has_email, phone Yes"}, {"id": "5cd7aebba3ae61cce9359554", "title": "Crédito", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles", "note": "large corp"}
+{"root": "61286647", "kw": "Sandoz Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "23643315", "kw": "Danone Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "03237583", "kw": "Copa Energia", "search_n": 17, "picks": [{"id": "5e5df5225d107800016a3528", "title": "Gerente de Crédito e Cobrança", "note": "has_email, phone Yes"}, {"id": "54a70b3f7468696220061210", "title": "Treasury Manager", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "02932074", "kw": "Hypera Pharma", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp; only marketing found earlier"}
+{"root": "01440590", "kw": "Fresenius Medical Care Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "01631022", "kw": "Vianmaq Equipamentos", "search_n": 2, "picks": [{"id": "54a5dcc87468692fa2150faf", "title": "Vendedor Equipamentos", "note": "weak, has_email"}]}
+{"root": "05429994", "kw": "Vegetal Agronegócios", "search_n": 118, "picks": [{"id": "60fe1dd3b6b72c0001cc67e6", "title": "Commercial Manager", "note": "has_email; no finance found"}, {"id": "57d7f0d0a6da9809e555f812", "title": "Gerente Comercial Filial Cristalina", "note": "backup, has_email, phone Yes"}]}
+{"root": "88305859", "kw": "Nutrien Soluções Agrícolas", "search_n": 24, "picks": [{"id": "6111e55c8eb9ea000143aba7", "title": "Gerente Contas a Receber e CSC", "note": "has_email, phone Yes"}, {"id": "61fcbcd7d012ef00019b14ad", "title": "Gerente de Tesouraria", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles", "also_roots": ["36854495"]}
+{"root": "53943098", "kw": "Bracell", "search_n": 9, "picks": [{"id": "54a523b57468693442a80c80", "title": "Financial Director", "note": "has_email, phone Yes"}, {"id": "54aa985674686906309d7e0d", "title": "Coordenadora de Tesouraria", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "47320705", "kw": "Irany Comércio Exterior", "search_n": 0, "picks": []}
+{"root": "40910399", "kw": "NNC Norte Nordeste Commodities", "search_n": 0, "picks": []}
+{"root": "61902722", "kw": "Sport Club Corinthians Paulista", "search_n": 5, "picks": [{"id": "66bc1e6e7ab8c900018d30ab", "title": "Gerente Sênior Financeiro e Administrativo", "note": "has_email, phone Yes"}, {"id": "54aaa02674686908c8b1000f", "title": "Encarregado de Tesouraria", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "60498706", "kw": "Cargill Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "08992890", "kw": "Maxlift Locadora", "search_n": 4, "picks": [{"id": "55711d187369643971550700", "title": "Operational Manager"}, {"id": "5e79faff9fb2be00015b1282", "title": "Sales Department", "note": "backup, has_email, phone Yes"}]}
+{"root": "09422727", "kw": "Galvani Engenharia", "search_n": 33, "picks": [{"id": "68713c488683c80001b15731", "title": "Financial Coordinator", "note": "has_email, phone Yes"}, {"id": "60c0d25f29078800011e6e36", "title": "Analista/Assistente", "note": "backup, has_email, phone Yes"}]}
+{"root": "03076832", "kw": "Flexível Indústria e Comércio", "search_n": 0, "picks": []}
+{"root": "31281962", "kw": "Cromo Química", "search_n": 35, "picks": [{"id": "626b583c0de0ff0001b8c091", "title": "Coordenadora de FP&A", "note": "has_email"}, {"id": "5e812d63e8083a0001648b28", "title": "Technical Sales Representative", "note": "backup, has_email"}]}
+{"root": "15660513", "kw": "Tresbomm", "search_n": 24, "picks": [{"id": "64b7d940a4745e000184b38e", "title": "Coordenadora de Controladoria", "note": "has_email, phone Yes"}, {"id": "6128465f271a23000184ddfb", "title": "Gerente de Agropecuária", "note": "backup"}]}
+{"root": "61352050", "kw": "ITM Latin America", "search_n": 144, "picks": [{"id": "60788c8a5e61a50001849154", "title": "Business Specialist", "note": "weak, has_email, phone Yes"}], "note": "needs finance-title pass"}
+{"root": "50595271", "kw": "Biotronik Brasil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "33453598", "kw": "Raízen", "search_n": 15, "picks": [{"id": "5b33f904a6da98711530c8f4", "title": "Coordenador de Contas a Receber", "note": "has_email"}, {"id": "54a2c90a746869331815843c", "title": "Gestão de Contas a Receber", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles", "note": "large corp"}
+{"root": "44246528", "kw": "Ask Crios", "search_n": 0, "picks": []}
+{"root": "02948030", "kw": "Esmaltec", "search_n": 3, "picks": [{"id": "66c48f48a9dfcc0001de38da", "title": "Financial Administrative Manager", "note": "has_email, phone Yes"}, {"id": "6601760d96ae7f0007e20ef7", "title": "Diretor Superintendente | CEO", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "23191831", "kw": "Falcon Distribuição Armazenamento", "search_n": 0, "picks": []}
+{"root": "17417928", "kw": "Ventisol", "search_n": 2, "picks": [{"id": "5d4ced02f6512598d93f4058", "title": "Financial Manager", "note": "has_email, phone Yes"}, {"id": "6074aca0d72ee10001590758", "title": "Commercial Director", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "05554669", "kw": "SRJ Confecções", "search_n": 0, "picks": []}
+{"root": "02003402", "kw": "ADM do Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "94813102", "kw": "3tentos", "search_n": 6, "picks": [{"id": "683cfb0341ba3a000117b66f", "title": "CFO", "note": "has_email, phone Yes"}, {"id": "64188d7e43bfcc0001e45af7", "title": "Analista de Crédito e Cobrança - Pleno", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "09536120", "kw": "Sempre Agtech", "search_n": 241, "picks": [{"id": "54a2d9d174686935be115a41", "title": "Production Director", "note": "has_email, phone Yes; no finance found"}]}
+{"root": "05571228", "kw": "Fertilizantes Tocantins", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "71799001", "kw": "Reichenbach Equipamentos", "search_n": 23, "picks": [{"id": "54a6004c74686934425c30ba", "title": "General Manager (family name = company)", "note": "has_email, phone Yes"}, {"id": "54a72e3974686965d9b5b51c", "title": "Business Development Manager", "note": "backup, has_email, phone Yes"}]}
+{"root": "29652131", "kw": "Nutrihorto", "search_n": 20, "picks": [{"id": "6705469557ed6900016c774a", "title": "Director"}, {"id": "65106318f15c23000198aaec", "title": "Logistics Manager", "note": "backup"}]}
+{"root": "14325185", "kw": "Protego Brasil", "search_n": 37, "picks": [{"id": "5fcf4e1f67d55b0001503bd5", "title": "CEO Protego Brasil", "note": "has_email, phone Yes"}, {"id": "651860f7786a6300018fba65", "title": "Financial Assistant", "note": "backup, has_email"}]}
+{"root": "03485572", "kw": "Geolab Indústria Farmacêutica", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "02748323", "kw": "Olinda Colchões", "search_n": 0, "picks": []}
+{"root": "07651282", "kw": "Beck Aços Manufaturados", "search_n": 0, "picks": []}
+{"root": "61750345", "kw": "Sociedade Esportiva Palmeiras", "search_n": 1, "picks": [{"id": "669249c8b73e46000171a309", "title": "Diretor Executivo Administrativo", "note": "has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "43237254", "kw": "Tecelagem Jolitex", "search_n": 76, "picks": [{"id": "5e7281839ac3860001fdb9ba", "title": "Purchasing Coordinator", "note": "weak, has_email; no finance found"}]}
+{"root": "43587344", "kw": "BS Distribuidora Produtos de Higiene", "search_n": 0, "picks": []}
+{"root": "04136367", "kw": "FMC Química do Brasil", "search_n": 1, "picks": [{"id": "54a4d6a87468692abf8d7767", "title": "Treasury", "note": "no email flag"}], "pass": "finance-titles", "note": "large corp"}
+{"root": "61088894", "kw": "Cambuci Penalty", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "05056082", "kw": "Cereais Rio Elias", "search_n": 0, "picks": []}
+{"root": "33676928", "kw": "Parque das Estrelas Empreendimentos", "search_n": 0, "picks": []}
+{"root": "45992062", "kw": "Germed Farmacêutica", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "59850115", "kw": "Venturoso Valentini", "search_n": 271, "picks": [{"id": "57dfdea4a6da980af0ee7992", "title": "Coordenador de Desenvolvimento de Produtos", "note": "weak, has_email, phone Yes"}], "note": "needs finance-title pass"}
+{"root": "47827332", "kw": "Agro Safra Adubos", "search_n": 10, "picks": [{"id": "5eb30a6225b0d500ced004ab", "title": "Manager", "note": "has_email"}, {"id": "60d3f06239dbc50001479714", "title": "Industrial Manager", "note": "backup, phone Yes"}]}
+{"root": "61150348", "kw": "Nitro Química", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "20286415", "kw": "Deflor Bioengenharia", "search_n": 52, "picks": [{"id": "63e38cee7701cd00015c2f7e", "title": "Financial Analyst", "note": "phone Yes"}, {"id": "54a2e8b47468693fda0be045", "title": "Production Manager", "note": "backup"}]}
+{"root": "62143847", "kw": "Dacarto", "search_n": 208, "picks": [{"id": "5e7552602a6f180001d86774", "title": "Analista de Tesouraria Sênior", "note": "has_email"}, {"id": "60fdd0fde869c20001d2abaa", "title": "Gerente de Contas Pleno", "note": "backup, has_email, phone Yes"}]}
+{"root": "21759758", "kw": "Farmax", "search_n": 9, "picks": [{"id": "605e419de24bc600012dc7dd", "title": "Head de Tesouraria e Controladoria", "note": "phone Yes"}, {"id": "626a34bf5a47a30001a44277", "title": "Analista Crédito e Cobrança", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "23552212", "kw": "Roche Diabetes Care Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "34274233", "kw": "Vibra Energia", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "59717553", "kw": "Multilaser", "search_n": 13, "picks": [{"id": "661d2d880a9fea00061e45d7", "title": "Gerente de Crédito e Cobrança", "note": "has_email, phone Yes"}, {"id": "68b99388814bed00013615b0", "title": "Coordenador de Contas a Receber", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "01494867", "kw": "PU Espumas do Brasil", "search_n": 0, "picks": []}
+{"root": "51254159", "kw": "Karina Plásticos", "search_n": 475, "picks": [], "note": "needs finance-title pass"}
+{"root": "23141884", "kw": "Recycle Bag Indústria", "search_n": 0, "picks": []}
+{"root": "75724070", "kw": "FML Incorporadora", "search_n": 0, "picks": []}
+{"root": "21132562", "kw": "MOJ Consultoria e Negócios", "search_n": 0, "picks": []}
+{"root": "02588815", "kw": "Bellota Brasil", "search_n": 35, "picks": [{"id": "54a2475374686935be67571c", "title": "Operations Manager", "note": "phone Yes"}, {"id": "684a80f74c663200010d12ca", "title": "Cost Analyst", "note": "backup"}]}
+{"root": "03213075", "kw": "Leggett & Platt Brasil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "02456955", "kw": "Natulab", "search_n": 7, "picks": [{"id": "676176aa9648af000172396a", "title": "CFO | Diretor Financeiro", "note": "has_email, phone Yes"}, {"id": "5f4c9e80a2a0e40001570ba8", "title": "Analista de Crédito e Cobrança Sênior", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "03119889", "kw": "Ferronorte Industrial", "search_n": 164, "picks": [{"id": "636a9dd715f3b200014a6600", "title": "Analyst", "note": "weak, has_email, phone Yes"}], "note": "needs finance-title pass"}
+{"root": "05013050", "kw": "JBT Marel Brasil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "31158176", "kw": "BBR Agro Suplementos", "search_n": 0, "picks": []}
+{"root": "56643018", "kw": "Eucatex", "search_n": 1, "picks": [{"id": "6768841089ff40000191b820", "title": "Supervisor de Crédito e Contas a Receber", "note": "phone Yes"}], "pass": "finance-titles"}
+{"root": "07944839", "kw": "Pamparafia Embalagens", "search_n": 0, "picks": []}
+{"root": "05696101", "kw": "Agroquímica Brasinha", "search_n": 0, "picks": []}
+{"root": "06294126", "kw": "Soma RS Produtos Hospitalares", "search_n": 38, "picks": [{"id": "635564138370a40001e53a4f", "title": "Farmacêutica RT - Representante da Diretoria", "note": "weak, phone Yes"}, {"id": "57d9df67a6da98765c1d5eab", "title": "IT Infrastructure Coordinator", "note": "backup, has_email, phone Yes"}]}
+{"root": "02770062", "kw": "Ephoxal", "search_n": 6, "picks": []}
+{"root": "06936357", "kw": "Inter Telecom Locação", "search_n": 0, "picks": []}
+{"root": "33233778", "kw": "TAG Indústria e Laminação", "search_n": 0, "picks": []}
+{"root": "36635483", "kw": "Thunder Tools", "search_n": 0, "picks": []}
+{"root": "17159229", "kw": "Laboratório Teuto", "search_n": 2, "picks": [{"id": "6102b45dc1f68d0001f9191b", "title": "Financial Director", "note": "has_email, phone Yes"}, {"id": "684d544e59e04f000197b992", "title": "Controller", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "01790923", "kw": "Terramaq Peças", "search_n": 0, "picks": []}
+{"root": "10345462", "kw": "Omron Healthcare Brasil", "search_n": 1, "picks": [{"id": "54a8fc0074686933997b2d0a", "title": "Gerente de Análise de Planejamento Financeiro", "note": "phone Yes"}], "pass": "finance-titles"}
+{"root": "21203489", "kw": "Solus do Brasil", "search_n": 2, "picks": [{"id": "5aa6094da6da98fe7d32501e", "title": "Financial Director", "note": "VERIFY org: Apollo lists 'Pro Solus do Brasil S/A'; phone Yes"}, {"id": "626b6d99d55eee0001e1d416", "title": "CEO", "note": "backup, VERIFY org"}], "pass": "finance-titles"}
+{"root": "51254159", "kw": "Karina Plásticos", "search_n": 5, "picks": [{"id": "67aa2d98bed7b10001d9be76", "title": "Coordenadora de Crédito e Cobrança", "note": "phone Yes"}, {"id": "665f77795dbe2d0001291bbc", "title": "Director", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "59850115", "kw": "Venturoso Valentini", "search_n": 4, "picks": [{"id": "57dccd92a6da987d4464bb07", "title": "Administrative and Financial Manager (owner family)", "note": "has_email, phone Yes"}, {"id": "61648b0e9058ef00013a0dd3", "title": "CEO", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "61352050", "kw": "ITM Latin America", "search_n": 3, "picks": [{"id": "63d967c4fc59b000018f399c", "title": "Director of Finance and Administration", "note": "has_email, phone Yes"}, {"id": "60ed77dab62b2b0001ea94fe", "title": "CEO", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "27703265", "kw": "Bem Bom Pescados", "search_n": 0, "picks": []}
+{"root": "11230832", "kw": "Plásticos Tangará", "search_n": 0, "picks": []}
+{"root": "21877243", "kw": "Arruda & Melo Distribuição", "search_n": 0, "picks": []}
+{"root": "04547784", "kw": "Alpha Motion do Brasil", "search_n": 14, "picks": []}
+{"root": "49802148", "kw": "Milium", "search_n": 6, "picks": [{"id": "5ac0819aa6da98ce9125ddb8", "title": "Diretor Conselheiro", "note": "phone Yes"}, {"id": "65a54494d8c3cf0001162192", "title": "Legal Director", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "73174377", "kw": "Farmabase Saúde Animal", "search_n": 139, "picks": [{"id": "5e7677f30f0adb000154a30f", "title": "Coordenadora Jurídica LatAm", "note": "has_email, phone Yes"}, {"id": "650f0b2b3601eb0001a03a96", "title": "Commercial Coordinator", "note": "backup, has_email, phone Yes"}]}
+{"root": "04756153", "kw": "GFE Equipamentos Elétricos", "search_n": 0, "picks": []}
+{"root": "59105999", "kw": "Whirlpool Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "28109395", "kw": "Agroceres PIC", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "31443324", "kw": "Truckpag", "search_n": 134, "picks": [{"id": "64300c6050a70300019bc77b", "title": "Business Manager", "note": "weak, has_email, phone Yes"}]}
+{"root": "03119889", "kw": "Ferronorte Industrial", "search_n": 2, "picks": [{"id": "610027363ca2ea000162ed97", "title": "Industrial Director", "note": "has_email, phone Yes"}, {"id": "5c5eee7a80f93eddb3b7c73c", "title": "Industrial Director", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "13829957", "kw": "Brasquimica", "search_n": 1, "picks": [{"id": "54a393087468692abfd63803", "title": "Commercial Director"}, {"id": "5e76a525e5c317000143b0f1", "title": "Technical Manager", "note": "backup"}], "pass": "finance-titles"}
+{"root": "05429994", "kw": "Vegetal Agronegócios", "search_n": 2, "picks": [{"id": "6214664def3ca30001368a24", "title": "Administrative and Financial Manager", "note": "has_email, phone Yes"}, {"id": "60469e5438926e000129f84e", "title": "Gestora de Crédito e Cobrança", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "43237254", "kw": "Jolitex", "search_n": 8, "picks": [{"id": "57e1f343a6da980926c85b6c", "title": "Coordenadora Financeira – Crédito e Cobrança", "note": "has_email, phone Yes"}, {"id": "606ef73b8bdbf500018c3616", "title": "Gerente Financeiro & Planejamento de Custos", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "03380763", "kw": "Refrescos Bandeirantes", "search_n": 16, "picks": [{"id": "5f61f57dd9afe60001a2d8f7", "title": "Gerente Adm. e Financeiro", "note": "has_email, phone Yes"}, {"id": "65683b9971d3e600013f0118", "title": "Coordenador Contas a Receber", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "65697260", "kw": "Repom", "search_n": 5, "picks": [{"id": "60b7ccbce957440001cf4195", "title": "Business Controller (Edenred Repom)", "note": "has_email, phone Yes"}, {"id": "54ec2dec746869444ccdda5f", "title": "Diretor de BU - Edenred Frete", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "60500246", "kw": "Goodyear do Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "72096100", "kw": "Micromazza", "search_n": 45, "picks": [{"id": "67ce4a94d3995300010ed012", "title": "Senior Accounting Analyst", "note": "weak, has_email"}, {"id": "54abbec87468692a6b8b6a0a", "title": "Especialista em Melhoria de Processos", "note": "backup, has_email, phone Yes"}]}
+{"root": "32847622", "kw": "Bioresult Agro", "search_n": 0, "picks": []}
+{"root": "08509682", "kw": "Nazca Distribuidora de Cosméticos", "search_n": 0, "picks": []}
+{"root": "53877627", "kw": "Dow Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "58099458", "kw": "AT Plan Assistência Técnica", "search_n": 0, "picks": []}
+{"root": "05528196", "kw": "Cooperativa Agroindustrial Tradição", "search_n": 0, "picks": []}
+{"root": "08886407", "kw": "Caltins Mineração Xambioá", "search_n": 0, "picks": []}
+{"root": "83195628", "kw": "Pillares Projetos e Construções", "search_n": 0, "picks": []}
+{"root": "82683376", "kw": "Mirante Distribuidora", "search_n": 13, "picks": [{"id": "68e02dc52742f50001cd0e8e", "title": "Commercial Director", "note": "has_email, phone Yes"}, {"id": "68e02d992db1210001090d8a", "title": "Commercial Manager", "note": "backup"}]}
+{"root": "32184798", "kw": "Creative Propaganda e Marketing", "search_n": 8, "picks": [{"id": "54a322e57468693825741d57", "title": "Business Consultant", "note": "weak, phone Yes"}]}
+{"root": "13333090", "kw": "Nipro Medical Brasil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "02965637", "kw": "Veja Serviços", "search_n": 0, "picks": []}
+{"root": "12889035", "kw": "Inovamed Hospitalar", "search_n": 63, "picks": [{"id": "66a6202b3b372f0001f0d672", "title": "Financial", "note": "has_email"}, {"id": "642ff2bbb4bdcc00014801c3", "title": "Analista Fiscal e Contábil", "note": "backup, has_email"}]}
+{"root": "10424098", "kw": "K-DU Confecções", "search_n": 0, "picks": []}
+{"root": "19770372", "kw": "Neomar Artigos Infantis", "search_n": 0, "picks": []}
+{"root": "00939873", "kw": "Brusinox", "search_n": 22, "picks": [{"id": "660d02803743570007319ac7", "title": "Assistente Financeiro / Endomarketing", "note": "weak, has_email, phone Yes"}, {"id": "57dd4920a6da987ae490d71b", "title": "(no title)", "note": "backup, has_email"}]}
+{"root": "21044682", "kw": "RG Copper", "search_n": 0, "picks": []}
+{"root": "67729178", "kw": "Comercial Cirúrgica Rioclarense", "search_n": 393, "picks": [{"id": "55705e5973696478eef86d00", "title": "Farmacêutica Responsável Técnica", "note": "weak, has_email"}], "note": "needs finance-title pass"}
+{"root": "28152650", "kw": "EDP Espírito Santo", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp/utility"}
+{"root": "11069316", "kw": "Tubos Tigre-ADS", "search_n": 9, "picks": []}
+{"root": "07175357", "kw": "Terra Nova Agroindústria", "search_n": 0, "picks": []}
+{"root": "67959015", "kw": "NP Brasil Serviços e Projetos", "search_n": 0, "picks": []}
+{"root": "04088208", "kw": "Sem Parar", "search_n": 14, "picks": [{"id": "6421e1ef8938d80001d234fb", "title": "Coordenador de Tesouraria", "note": "has_email"}, {"id": "54a3817b74686938ac7d9a00", "title": "Analista de Crédito e Cobrança", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "00763251", "kw": "Rafitec", "search_n": 364, "picks": [{"id": "682b6b2b2430a700011f88f7", "title": "Regional Sales Manager", "note": "weak, has_email, phone Yes"}], "note": "needs finance-title pass"}
+{"root": "68755545", "kw": "CTS Ambiental", "search_n": 0, "picks": []}
+{"root": "03727941", "kw": "Citrotec", "search_n": 121, "picks": [{"id": "642478cf0f782400012cb66d", "title": "Gerente Comercial Técnico", "note": "weak, has_email"}], "note": "needs finance-title pass"}
+{"root": "40887838", "kw": "Móveis São Carlos", "search_n": 12, "picks": [{"id": "5f5b5393bf9e7800015de8fd", "title": "Administrative Director", "note": "has_email, phone Yes"}, {"id": "57de3339a6da987b2ca3021d", "title": "Financial Assistant", "note": "backup"}]}
+{"root": "17875154", "kw": "Medquímica", "search_n": 3, "picks": [{"id": "54a4687f7468692abf09d244", "title": "CFO & Head of IT, Sourcing, Legal & Compliance", "note": "has_email"}, {"id": "5f108c8d77ed0e0001bcd5db", "title": "Controller", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "02149075", "kw": "Fersul Usinagem", "search_n": 0, "picks": []}
+{"root": "32126501", "kw": "Rakki Pescados", "search_n": 0, "picks": []}
+{"root": "26910194", "kw": "Atan Distribuidor", "search_n": 0, "picks": []}
+{"root": "13620193", "kw": "Pax Brazil Agroindústria", "search_n": 0, "picks": []}
+{"root": "17312448", "kw": "Tracbel", "search_n": 8, "picks": [{"id": "5d5f91f7f65125e651cef582", "title": "CFO", "note": "has_email, phone Yes"}, {"id": "65f0be055b29a30007b31a68", "title": "Coordenadora de Contas a Receber", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "67729178", "kw": "Comercial Cirúrgica Rioclarense", "search_n": 2, "picks": [{"id": "659ff4d6e7eadf000150c6a7", "title": "Financial Director", "note": "has_email, phone Yes"}, {"id": "642c6bd6b519700001130533", "title": "Director", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "13477127", "kw": "Portal do Aeroporto Logística", "search_n": 0, "picks": []}
+{"root": "25331521", "kw": "Itatiaia Eletro e Móveis", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "78242849", "kw": "Atlas Eletrodomésticos", "search_n": 3, "picks": [{"id": "54a4f87f7468692cf0265b72", "title": "Dir. Adm/Financeiro", "note": "phone Yes"}, {"id": "604e1a996edc6900010b7f5b", "title": "Financial Manager", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "48833163", "kw": "Centenaro Pneus", "search_n": 0, "picks": []}
+{"root": "21577893", "kw": "Paradox Jeans", "search_n": 0, "picks": []}
+{"root": "30080657", "kw": "F Parts Franchising", "search_n": 0, "picks": []}
+{"root": "00210633", "kw": "Unipetro Distribuidora", "search_n": 9, "picks": [{"id": "6a7996d576b3bd0001ce8400", "title": "General Manager", "note": "VERIFY org: Apollo lists Unipetro Prudente (SP), target is Unipetro Nova Andradina (MS); has_email"}]}
+{"root": "02802419", "kw": "Fricon Mercofricon", "search_n": 0, "picks": []}
+{"root": "57497539", "kw": "Bridgestone Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "01838723", "kw": "BRF", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "94868742", "kw": "Improtec Material Cirúrgico", "search_n": 0, "picks": []}
+{"root": "07790530", "kw": "SH Indústria Têxtil", "search_n": 0, "picks": []}
+{"root": "19362088", "kw": "RDF Consultoria Empresarial", "search_n": 0, "picks": []}
+{"root": "08226396", "kw": "CG Locação de Guindastes", "search_n": 0, "picks": []}
+{"root": "11436813", "kw": "Adlim", "search_n": 130, "picks": [{"id": "5d536a0980f93e01f271430c", "title": "Analyst", "note": "weak, has_email"}]}
+{"root": "29341643", "kw": "SPC Brasil", "search_n": 493, "picks": [{"id": "6030b42d19281e000170fe6a", "title": "Analista de Controladoria e Pricing Sênior", "note": "has_email"}, {"id": "6598db2c701ffc0001c40469", "title": "Head Comercial Sul", "note": "backup"}]}
+{"root": "26419229", "kw": "Dreymoor Brasil Fertilizantes", "search_n": 0, "picks": []}
+{"root": "33000167", "kw": "Petrobras", "search_n": null, "picks": [], "note": "LARGE CORP / state-controlled: not a seller, RFB officers only"}
+{"root": "00802235", "kw": "First S/A", "search_n": null, "picks": [], "note": "name too generic to search"}
+{"root": "07108742", "kw": "Lifecor Produtos Hospitalares", "search_n": 13, "picks": []}
+{"root": "09454490", "kw": "Lotex Têxtil", "search_n": 0, "picks": []}
+{"root": "09236766", "kw": "João de Deus Transportes", "search_n": 0, "picks": []}
+{"root": "11679253", "kw": "Itabox Móveis", "search_n": 0, "picks": []}
+{"root": "48539407", "kw": "BASF Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "41024712", "kw": "Saraiva Equipamentos", "search_n": 302, "picks": [{"id": "5570907f7369646647042d00", "title": "Commercial Director", "note": "phone Yes"}, {"id": "607eed5425c6ae0001a65678", "title": "IT Manager", "note": "backup, has_email, phone Yes"}]}
+{"root": "02271463", "kw": "Cromex", "search_n": 1, "picks": [{"id": "687e3fed4447690001be1ad7", "title": "Financial Controller", "note": "has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "00474973", "kw": "Ecad", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "18548852", "kw": "Transneto Transporte", "search_n": 0, "picks": []}
+{"root": "07666567", "kw": "MK Eletrodomésticos", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "00912882", "kw": "Kappesberg", "search_n": 3, "picks": [{"id": "54a4575874686932098a2040", "title": "Administrative Director", "note": "has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "12067326", "kw": "Priori Sementes", "search_n": 22, "picks": [{"id": "565579dda6da982685013301", "title": "(owner family name)", "note": "phone Yes"}, {"id": "54a483be7468692cf0a0724d", "title": "Commercial Manager", "note": "backup, has_email, phone Yes"}]}
+{"root": "67943738", "kw": "Unicap Renovadora de Pneus", "search_n": 14, "picks": [{"id": "54a49ff974686936769c0a56", "title": "Gerente de Desenvolvimento de Negócios", "note": "weak, has_email"}, {"id": "64295ccd1861dc0001efce54", "title": "Project Administrator", "note": "backup, has_email"}]}
+{"root": "11198594", "kw": "Trisoft Mantas", "search_n": 0, "picks": []}
+{"root": "00417145", "kw": "Discomed Produtos Hospitalares", "search_n": 49, "picks": [{"id": "54aabaf47468690b751b4415", "title": "Financial Coordinator", "note": "has_email, phone Yes"}, {"id": "5ab94000a6da9815b2968d46", "title": "Financial", "note": "backup, has_email"}]}
+{"root": "20366728", "kw": "Casa Bugre", "search_n": 77, "picks": [{"id": "5bec2e5680f93e36f88c0dc0", "title": "Partner", "note": "has_email"}, {"id": "6851695645620f0001d06663", "title": "Supply Specialist", "note": "backup, has_email, phone Yes"}]}
+{"root": "60846599", "kw": "Ibrame Indústria Brasileira de Metais", "search_n": 0, "picks": []}
+{"root": "07159913", "kw": "Multisaúde Farmacêutica", "search_n": 0, "picks": []}
+{"root": "19684286", "kw": "Stonex Comércio e Exportação de Commodities", "search_n": 0, "picks": []}
+{"root": "01608488", "kw": "Hohl Máquinas Agrícolas", "search_n": 0, "picks": []}
+{"root": "28622744", "kw": "Agroceres Multimix", "search_n": 2, "picks": [{"id": "640f021cf23a4a000167f67d", "title": "Analista de Crédito e Cobrança Sênior", "note": "has_email"}, {"id": "63595ca21bc2bb0001edc966", "title": "Analista de Crédito e Cobrança Jr", "note": "backup"}], "pass": "finance-titles"}
+{"root": "00052803", "kw": "Pedreira Araguaia", "search_n": 12, "picks": []}
+{"root": "00474698", "kw": "Caminero Óleos", "search_n": 0, "picks": []}
+{"root": "19357388", "kw": "Goiás Rendering", "search_n": 0, "picks": []}
+{"root": "90251109", "kw": "Dimaci Material Cirúrgico", "search_n": 2, "picks": [{"id": "57d81f64a6da9809ce71d176", "title": "Sales Coordinator", "note": "weak"}]}
+{"root": "85070068", "kw": "GTFoods", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "04686964", "kw": "Mecmetal", "search_n": 4, "picks": []}
+{"root": "22261093", "kw": "EMC Tecnologia", "search_n": 60, "picks": [{"id": "64ed1057102738000159ed62", "title": "Diretora Administrativo Financeira", "note": "has_email, phone Yes"}, {"id": "54a31a7674686930c288df54", "title": "Diretor Geral", "note": "backup, has_email, phone Yes"}]}
+{"root": "20120709", "kw": "MTM Burger Life Box", "search_n": 0, "picks": []}
+{"root": "24073694", "kw": "Nagem", "search_n": 6, "picks": [{"id": "57e1ffe3a6da9808c63f7018", "title": "Gerente Administrativo / Financeiro", "note": "has_email, phone Yes"}, {"id": "5d3889b780f93ea488143244", "title": "Coordenador de Crédito e Cobrança", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "20431395", "kw": "Norteagri", "search_n": 1, "picks": [{"id": "57dd2a91a6da987b0d8ad2e3", "title": "Manager", "note": "weak"}]}
+{"root": "19108689", "kw": "Agrosul Indústria Agrícola", "search_n": 0, "picks": []}
+{"root": "37031044", "kw": "Charrua Comercial Agrícola", "search_n": 84, "picks": [{"id": "57d5bdb0a6da9853b6b315e9", "title": "Analista Financeiro Contas a Pagar", "note": "has_email, phone Yes"}, {"id": "5e6c64ccd02fa20001bee1ef", "title": "Executiva de Recursos Humanos", "note": "backup, has_email, phone Yes"}]}
+{"root": "00029372", "kw": "GE HealthCare Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "08078241", "kw": "Campo Bom Insumos Agrícolas", "search_n": 0, "picks": []}
+{"root": "02494715", "kw": "Unimed Central RS", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "10288920", "kw": "Cairu Bicicletas", "search_n": 25, "picks": [{"id": "642c2036189ef1000122713d", "title": "Manager", "note": "weak"}]}
+{"root": "01424397", "kw": "Bandup Fan Store", "search_n": 0, "picks": []}
+{"root": "43876960", "kw": "Maccaferri Brasil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "15129010", "kw": "Cimar Cimentos do Maranhão", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "39452556", "kw": "Maxinutri", "search_n": 200, "picks": [], "note": "needs finance-title pass"}
+{"root": "05858780", "kw": "ITW PPF Brasil", "search_n": 1, "picks": [{"id": "5b5fc621060cd4662b7d9c1e", "title": "General Manager", "note": "has_email"}], "pass": "finance-titles"}
+{"root": "02410500", "kw": "Sueca Rolamentos", "search_n": 44, "picks": [{"id": "54a323d474686935bebd2957", "title": "Encarregado de Compras", "note": "weak, has_email, phone Yes"}]}
+{"root": "57576274", "kw": "KSPG Automotive Brazil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "87156352", "kw": "Incoterm Soluções em Medição", "search_n": 0, "picks": []}
+{"root": "19403406", "kw": "Magnum Tires", "search_n": 17, "picks": [{"id": "57d54914a6da9853d629dbc7", "title": "Coordenadora de Câmbio e Tesouraria"}, {"id": "60d4bfeb48f08500015bf989", "title": "Analista Financeiro Contas a Receber", "note": "backup, has_email"}], "pass": "finance-titles"}
+{"root": "77941490", "kw": "Gazin", "search_n": 17, "picks": [{"id": "54c27b3474686916394bff9c", "title": "Gerente de Crédito e Cobrança PJ", "note": "has_email, phone Yes"}, {"id": "602d03fc6eb84c000113a134", "title": "Controller", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "04454667", "kw": "Vereda Alimentos", "search_n": 21, "picks": [{"id": "677fdf890d8b230001051318", "title": "Sales Manager", "note": "weak, has_email"}]}
+{"root": "07243854", "kw": "Everton FPS", "search_n": 1, "picks": []}
+{"root": "71800296", "kw": "Waldman Comércio Importação", "search_n": 0, "picks": []}
+{"root": "06089521", "kw": "Link Comercial Importadora", "search_n": 0, "picks": []}
+{"root": "17186172", "kw": "Algar Aviation", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "04273385", "kw": "Biotipo Jeans", "search_n": 22, "picks": [{"id": "54a3fef774686938acdf2624", "title": "Key Account Manager", "note": "weak, phone Yes"}, {"id": "640106628370770001117916", "title": "HR Supervisor", "note": "backup, has_email, phone Yes"}]}
+{"root": "07911181", "kw": "Totalclean", "search_n": 2, "picks": []}
+{"root": "03882840", "kw": "RBG Produtos Therapeuticos", "search_n": 14, "picks": [{"id": "66f1b1958edae300014f1e85", "title": "Manager", "note": "has_email, phone Yes"}, {"id": "6860e8f8d3b58200016176f6", "title": "Advogada Compliance e DPO", "note": "backup, has_email"}]}
+{"root": "01466091", "kw": "Ciapetro", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "04253854", "kw": "Rosina Alimentos", "search_n": 8, "picks": [{"id": "651f8fd0340b110001246e06", "title": "Financial", "note": "weak, phone Yes"}]}
+{"root": "38733545", "kw": "Sotin Soluções Técnicas", "search_n": 14, "picks": [{"id": "5d468f13a3ae61b2ff4c39c8", "title": "Commercial Manager", "note": "has_email, phone Yes"}]}
+{"root": "11065453", "kw": "Cobremack", "search_n": 92, "picks": []}
+{"root": "33337122", "kw": "Ipiranga Produtos de Petróleo", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "05399862", "kw": "Ativa Empreendimentos Alagoas", "search_n": 0, "picks": []}
+{"root": "04954155", "kw": "Alumínio São José", "search_n": 3, "picks": [{"id": "5fe7f1835d3df10001959c3e", "title": "Supervisor de Finanças", "note": "has_email"}, {"id": "57e0701ca6da981c6db8a7ed", "title": "(no title)", "note": "backup, has_email"}]}
+{"root": "44412435", "kw": "Tessin Indústria", "search_n": 0, "picks": []}
+{"root": "08582585", "kw": "Supra Embalagens", "search_n": 0, "picks": []}
+{"root": "53113791", "kw": "TOTVS", "search_n": 3, "picks": [{"id": "61437ed948ac1b000199978d", "title": "Gerente de Contas a Receber, Crédito e Cobrança", "note": "has_email, phone Yes"}], "pass": "finance-titles", "note": "large corp"}
+{"root": "40777556", "kw": "Licht Comércio Importação", "search_n": 0, "picks": []}
+{"root": "35473014", "kw": "Telefônica Cloud e Tecnologia", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "07120505", "kw": "Vértice Construtora e Incorporadora", "search_n": 0, "picks": []}
+{"root": "05216859", "kw": "Biobase Indústria", "search_n": 44, "picks": []}
+{"root": "47365763", "kw": "Log Goiânia", "search_n": 0, "picks": []}
+{"root": "84229889", "kw": "Brandili", "search_n": 9, "picks": [{"id": "60cd43d88d690b0001603b2b", "title": "Chief Financial Officer", "note": "has_email, phone Yes"}, {"id": "5dd74390ac3a8a0001037cd7", "title": "Analista de Crédito e Cobrança Sênior", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "05134355", "kw": "Santin Equipamentos Transportes", "search_n": 19, "picks": []}
+{"root": "07954091", "kw": "MSD Saúde Animal", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "12272084", "kw": "Equatorial Alagoas", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp/utility"}
+{"root": "83011460", "kw": "Sul Brasil Acessórios", "search_n": 7, "picks": [{"id": "62bf5512161fe80001e23ae2", "title": "Purchasing Manager", "note": "weak, has_email, phone Yes"}]}
+{"root": "90316407", "kw": "Romar F Mann", "search_n": 5, "picks": []}
+{"root": "08953848", "kw": "Confecções Tendenza", "search_n": 0, "picks": []}
+{"root": "33157312", "kw": "iFood Benefícios", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "12927088", "kw": "Cia do Jeans", "search_n": 36, "picks": [{"id": "54c181bd74686916393d6d18", "title": "Manager of Sales", "note": "weak"}]}
+{"root": "00749526", "kw": "Superfine Steel", "search_n": 36, "picks": [{"id": "60b7adf16ac97a0001f638ce", "title": "(no title)", "note": "weak, has_email, phone Yes"}]}
+{"root": "07746756", "kw": "Portolog Transportes", "search_n": 7, "picks": [{"id": "616ecd47a6fed800013785d3", "title": "Administrative Manager", "note": "has_email, phone Yes"}, {"id": "60942643af972500013a2962", "title": "Diretor Administrativo", "note": "backup, has_email"}]}
+{"root": "07851247", "kw": "Agroindustrial Irmãos Dalla Costa", "search_n": 0, "picks": []}
+{"root": "07426908", "kw": "TTL Brazil Trust Importação", "search_n": 0, "picks": []}
+{"root": "01791741", "kw": "Asfaltos Nordeste", "search_n": 31, "picks": [{"id": "5f0e3a305771a900017bfac2", "title": "General Manager", "note": "has_email, phone Yes"}, {"id": "54a9e9f97468692d1c4b711a", "title": "Industrial Manager", "note": "backup, has_email, phone Yes"}]}
+{"root": "07358761", "kw": "Gerdau", "search_n": 2, "picks": [{"id": "5d5894d4f6512579abb800c2", "title": "Coordenador de Crédito e Cobrança", "note": "has_email, phone Yes"}, {"id": "624e852dd3705b0001ae0ee9", "title": "Chefe de Crédito", "note": "backup, phone Yes"}], "pass": "finance-titles", "note": "large corp"}
+{"root": "20247322", "kw": "Allied Tecnologia", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "01802541", "kw": "Tuboarte Móveis", "search_n": 2, "picks": [{"id": "6862074559645b0001434488", "title": "Advogado e Fundador (Móveis Home)", "note": "weak, has_email, phone Yes"}]}
+{"root": "10962529", "kw": "Calmap Calcário", "search_n": 21, "picks": [{"id": "5ee3dd628a75f30001242107", "title": "Administrative Supervisor", "note": "has_email"}, {"id": "695ad35308511e0001bb0b04", "title": "Analista Financeiro II", "note": "backup"}]}
+{"root": "11225183", "kw": "GSV Montagens Industriais", "search_n": 21, "picks": []}
+{"root": "10917212", "kw": "Cereais Martini Formiguense", "search_n": 0, "picks": []}
+{"root": "39362161", "kw": "EJF Cobranças", "search_n": 0, "picks": []}
+{"root": "03070981", "kw": "Maringá Park Shopping", "search_n": 20, "picks": [{"id": "56aee46df3e5bb2e5b00b1df", "title": "Superintendent"}, {"id": "614ebcf593dc2300013c9f39", "title": "Human Resources Manager", "note": "backup, has_email, phone Yes"}]}
+{"root": "04712017", "kw": "Cereal Ouro Sementes", "search_n": 6, "picks": [{"id": "5d4c76f6a3ae61444d7f61a4", "title": "Gerente Produção Sementes Soja", "note": "weak, has_email, phone Yes"}]}
+{"root": "83610790", "kw": "Medal Metalúrgica Dalla Lana", "search_n": 0, "picks": []}
+{"root": "10409614", "kw": "Alta América Latina Tecnologia Agrícola", "search_n": 0, "picks": []}
+{"root": "01358125", "kw": "World Blue Confecções", "search_n": 0, "picks": []}
+{"root": "45990181", "kw": "Robert Bosch Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "29067113", "kw": "Polimix Concreto", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "02501297", "kw": "Pharlab", "search_n": 3, "picks": [{"id": "606b257e867b510001f46e0c", "title": "CFO", "note": "has_email, phone Yes"}, {"id": "62149d6d6e03af000167ae15", "title": "Controller Analyst", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "12554601", "kw": "Anjuu", "search_n": 3, "picks": [{"id": "5b34c5f6a6da98b349dbfa6a", "title": "Consultant", "note": "weak, has_email"}]}
+{"root": "10431349", "kw": "GBF Negócios Imobiliários", "search_n": 0, "picks": []}
+{"root": "61196119", "kw": "Giannini Instrumentos", "search_n": 0, "picks": []}
+{"root": "00327501", "kw": "Guaianas Transportes Mineração", "search_n": 0, "picks": []}
+{"root": "07671092", "kw": "TBM Têxtil Bezerra de Menezes", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "00466591", "kw": "Cobb-Vantress Brasil", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "47747969", "kw": "Color Visão do Brasil", "search_n": 0, "picks": []}
+{"root": "08439087", "kw": "Cael Atacado", "search_n": 2, "picks": []}
+{"root": "26401815", "kw": "Green Place Comércio e Distribuição", "search_n": 0, "picks": []}
+{"root": "00974731", "kw": "Frangos Pioneiro", "search_n": 384, "picks": [], "note": "needs finance-title pass"}
+{"root": "19631376", "kw": "Mega Pack Plásticos", "search_n": 52, "picks": []}
+{"root": "03387396", "kw": "São Salvador Alimentos", "search_n": 5, "picks": [{"id": "610071297b866c0001d39b57", "title": "CFO / IRO", "note": "has_email, phone Yes"}, {"id": "67d1c843c197df0001b7ebbc", "title": "Analista Financeiro - Contas a Receber - Sênior", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "30494410", "kw": "A3Agro", "search_n": 1, "picks": [{"id": "5ae04a39a6da984c8d448561", "title": "Administrator", "note": "weak"}]}
+{"root": "00974731", "kw": "Frangos Pioneiro", "search_n": 5, "picks": [{"id": "54a1b2597468695860573109", "title": "Gerente Financeiro e Gestão de Resultados", "note": "has_email, phone Yes"}, {"id": "54ec30fb7468694311379a62", "title": "Director", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "03784035", "kw": "Quaker Têxtil do Brasil", "search_n": 0, "picks": []}
+{"root": "77991552", "kw": "Móveis Albatroz Paludetto", "search_n": 1, "picks": [{"id": "54a448cd7468692fa2fe7b3b", "title": "Commercial Director (owner family)", "note": "has_email, phone Yes"}]}
+{"root": "26233064", "kw": "Microvet Microbiologia Veterinária", "search_n": 1, "picks": []}
+{"root": "34230979", "kw": "Supermix Concreto", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "11841434", "kw": "Liber Empreendimentos Imobiliários", "search_n": 0, "picks": []}
+{"root": "38081947", "kw": "Agrofoods Brasil Alimento", "search_n": 1, "picks": [{"id": "60d1df4165bd1700017ccfcf", "title": "Gerente Industrial", "note": "weak, has_email, phone Yes"}]}
+{"root": "18373437", "kw": "Cropfert Fertilizantes", "search_n": 0, "picks": []}
+{"root": "29958527", "kw": "Top50 Locadora de Equipamentos", "search_n": 0, "picks": []}
+{"root": "08307549", "kw": "Altomax Meias", "search_n": 0, "picks": []}
+{"root": "75293662", "kw": "Altenburg", "search_n": 4, "picks": [{"id": "60f813a24f8c4a0001f90a91", "title": "Administrative and Financial Director", "note": "has_email, phone Yes"}, {"id": "6710b976c6a4cc0001e49d78", "title": "Controller Sr", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "88065321", "kw": "FCC Ciência dos Materiais", "search_n": 0, "picks": []}
+{"root": "01449930", "kw": "Siemens Healthineers Brasil", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "17205148", "kw": "Maid Óleos e Gorduras", "search_n": 0, "picks": []}
+{"root": "02565876", "kw": "Huesker Brasil", "search_n": 4, "picks": [{"id": "6480e7fccfbbe30001c783a1", "title": "Commercial Director", "note": "has_email, phone Yes"}, {"id": "67487f31f1e6ef0001573e67", "title": "Director", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "00399857", "kw": "Codevasf", "search_n": null, "picks": [], "note": "federal public company (empresa pública) — not a seller; RFB officers only"}
+{"root": "46710597", "kw": "FS Indústria de Etanol", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "83158824", "kw": "Copercampos", "search_n": 2, "picks": [{"id": "6272d67728c20b0001289ac0", "title": "Executive Director", "note": "has_email, phone Yes"}, {"id": "65681ea6e5e11100014bb076", "title": "Diretor Insumos / Dpto Técnico", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "76495209", "kw": "Imaca", "search_n": 0, "picks": []}
+{"root": "00714387", "kw": "Brasmo Indústria", "search_n": 2, "picks": []}
+{"root": "07378783", "kw": "Cerâmica Serra Azul", "search_n": 0, "picks": []}
+{"root": "91830836", "kw": "Olfar Alimento e Energia", "search_n": 0, "picks": [], "pass": "finance-titles"}
+{"root": "24227491", "kw": "TCL SEMP", "search_n": 7, "picks": [{"id": "6838cc38e727d500018ef5c2", "title": "Chief Financial Officer", "note": "has_email, phone Yes"}, {"id": "63d51603969cf60001c32062", "title": "Analista de Crédito e Cobrança Sênior", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "05236060", "kw": "Alcatec Produtos Sintéticos", "search_n": 26, "picks": []}
+{"root": "08259544", "kw": "Tópico Locações de Galpões", "search_n": 0, "picks": []}
+{"root": "59128553", "kw": "Stratura Asfaltos", "search_n": 9, "picks": []}
+{"root": "67070268", "kw": "Roland Brasil", "search_n": 2, "picks": [{"id": "54a13b1169702d267a7d6401", "title": "Finance Director Latam", "note": "has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "08048078", "kw": "CCP Compostos de PVC", "search_n": 36, "picks": [{"id": "5d6d66a9a3ae61615551ec11", "title": "Controller", "note": "has_email, phone Yes"}, {"id": "63dce51b251ae20001bbe2ac", "title": "Financial Analyst", "note": "backup, has_email"}]}
+{"root": "29588019", "kw": "Comary Indústria de Bebidas", "search_n": 1, "picks": [{"id": "673c485d33b2d600016915a4", "title": "(title is company name — likely owner)", "note": "weak"}]}
+{"root": "00073757", "kw": "Getti Química", "search_n": 1, "picks": [{"id": "57db7dd5a6da9868cb30de48", "title": "Contador", "note": "has_email"}]}
+{"root": "28485746", "kw": "Docelar Móveis", "search_n": 3, "picks": [{"id": "642469385e60ac00010cb1b0", "title": "Gestor Administrativo Financeiro"}, {"id": "54a462a07468692fa26b9843", "title": "Financial Analyst", "note": "backup"}]}
+{"root": "05378317", "kw": "Cristal Master", "search_n": 177, "picks": [], "note": "needs finance-title pass"}
+{"root": "12095666", "kw": "Unidade Revendedora de Bebidas", "search_n": 5, "picks": [{"id": "6a50b391cb2c8800013a3fcc", "title": "Financial Administrative Manager"}, {"id": "68677d9aad8d5a00015aee5b", "title": "Financial Supervisor", "note": "backup"}]}
+{"root": "05039208", "kw": "Coopergrão", "search_n": 0, "picks": []}
+{"root": "05860157", "kw": "EPE Produtos Agropecuários", "search_n": 0, "picks": []}
+{"root": "85462471", "kw": "Ibiporã Implementos Rodoviários", "search_n": 0, "picks": []}
+{"root": "01637668", "kw": "São Luís Shopping Administradora", "search_n": 0, "picks": []}
+{"root": "02525961", "kw": "Hemoprot", "search_n": 39, "picks": [{"id": "61d5602b5b3a560001b8ac52", "title": "Contador", "note": "has_email"}, {"id": "54a455eb746869320948a43f", "title": "Sales Manager Latam", "note": "backup, has_email, phone Yes"}]}
+{"root": "41687757", "kw": "Guindastes Triângulo", "search_n": 23, "picks": []}
+{"root": "02017233", "kw": "Proger Comércio Importação", "search_n": 12, "picks": [{"id": "6167b570fec8dd0001c68c7e", "title": "Administrative Manager"}, {"id": "54a5562374686938ac6a2e90", "title": "Commercial Manager", "note": "backup, phone Yes"}]}
+{"root": "13259183", "kw": "Monforte Alimentos", "search_n": 0, "picks": []}
+{"root": "02291660", "kw": "Indama", "search_n": 6, "picks": [{"id": "66cc6f94fd224800013cc26c", "title": "Administrative Manager"}, {"id": "60c67af91a66f0000110e301", "title": "Administrative Supervisor", "note": "backup, has_email"}]}
+{"root": "04335788", "kw": "Cerealista Santo Expedito", "search_n": 0, "picks": []}
+{"root": "02291660", "kw": "Indama", "search_n": 6, "picks": [{"id": "60c67af91a66f0000110e301", "title": "Administrative Supervisor", "note": "VERIFY org: Apollo 'Indama' profile is São Luís/MA, target is L D Nunes (Indama) RN; has_email"}], "note": "overrides earlier Indama line; Matheus Nunes dropped (Argentine company)"}
+{"root": "05378317", "kw": "Cristal Master", "search_n": 2, "picks": [{"id": "5e60345d642e97000111382f", "title": "Controller", "note": "has_email, phone Yes"}, {"id": "60119826034718000114d515", "title": "Director", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "18933677", "kw": "Citol Tratamento", "search_n": 0, "picks": []}
+{"root": "13217111", "kw": "Porto Telhas CC Telhas", "search_n": 0, "picks": []}
+{"root": "04904042", "kw": "R Cell Siri Comércio", "search_n": 0, "picks": []}
+{"root": "02576794", "kw": "Acoplation Andaimes", "search_n": 0, "picks": []}
+{"root": "61074506", "kw": "Belgo Bekaert Arames", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp"}
+{"root": "02135888", "kw": "Produsi Metalúrgica", "search_n": 0, "picks": []}
+{"root": "00153282", "kw": "Cesde Indústria", "search_n": 0, "picks": []}
+{"root": "13726078", "kw": "Cauana Indústria Representações", "search_n": 0, "picks": []}
+{"root": "16978251", "kw": "Ravato Distribuidora de Combustíveis", "search_n": 0, "picks": []}
+{"root": "28151363", "kw": "Cesan Saneamento Espírito Santo", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "state utility"}
+{"root": "59274316", "kw": "Alpha Marktec Materiais Elétricos", "search_n": 46, "picks": [{"id": "5ad08363a6da98841d4ee212", "title": "Commercial", "note": "weak, has_email, phone Yes"}]}
+{"root": "60874724", "kw": "Química Anastacio", "search_n": 8, "picks": [{"id": "60261631fc42a10001202b7a", "title": "Treasury Manager", "note": "has_email, phone Yes"}, {"id": "54a591f47468693209ede29b", "title": "Supervisora Crédito e Cobrança", "note": "backup, phone Yes"}], "pass": "finance-titles"}
+{"root": "43998509", "kw": "Betunel", "search_n": 7, "picks": [{"id": "57d95129a6da98721eb47662", "title": "CFO", "note": "has_email, phone Yes"}, {"id": "6568f3ae89e6670001e0bda7", "title": "Head de Crédito e Cobrança", "note": "backup, has_email, phone Yes"}], "pass": "finance-titles"}
+{"root": "05936089", "kw": "Lev Termoplásticos", "search_n": 100, "picks": [{"id": "62fff22b638d3a000186b9cd", "title": "Financial Manager", "note": "has_email, phone Yes"}, {"id": "57d41586a6da98536ed6e57f", "title": "Gerente de Compras e Negócios Internacionais", "note": "backup, has_email, phone Yes"}]}
+{"root": "01858973", "kw": "Airela Farmacêutica", "search_n": 2, "picks": []}
+{"root": "84229624", "kw": "Metalúrgica Fey", "search_n": 5, "picks": []}
+{"root": "17986477", "kw": "TRR Pegoraro", "search_n": 0, "picks": []}
+{"root": "03266537", "kw": "Trans Falls", "search_n": 16, "picks": [{"id": "64da8c5faf4bdd0001b984b4", "title": "(no title)", "note": "weak, has_email"}]}
+{"root": "10835932", "kw": "Neoenergia Pernambuco", "search_n": 0, "picks": [], "pass": "finance-titles", "note": "large corp/utility"}
+{"root": "04431548", "kw": "PMSM Publicidade e Comunicação", "search_n": 0, "picks": []}
+{"root": "34635991", "kw": "Bioresult Agronegócios", "search_n": 0, "picks": []}
+{"root": "07752236", "kw": "Medilar Medlive", "search_n": 0, "picks": []}
+{"root": "40422448", "kw": "Núcleo Saúde Pernambuco", "search_n": 0, "picks": []}
+{"root": "32902452", "kw": "Trevo Alimentos", "search_n": 22, "picks": []}
+{"root": "14492564", "kw": "Polyexcel Compostos Poliméricos", "search_n": 0, "picks": []}
+{"root": "08578161", "kw": "Engaste Projetos Construções", "search_n": 0, "picks": []}
+{"root": "10159120", "kw": "Farinha Jaguá", "search_n": 0, "picks": []}
+{"root": "33449007", "kw": "Caju", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "43464332", "kw": "Iron Comex", "search_n": 2, "picks": [{"id": "54a4becd7468693442b74c60", "title": "Responsável Financeiro", "note": "DM"}, {"id": "668c30eff7d9d9000101f4a7", "title": "Diretor Desenvolvimento Negócios", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "28809368", "kw": "GJM", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "21421785", "kw": "Perfilages", "search_n": 3, "picks": [], "pass": "kw", "note": "assistants only"}
+{"root": "06222722", "kw": "Logika", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "75400903", "kw": "Moval", "search_n": 2, "picks": [], "pass": "kw", "note": "no finance/exec"}
+{"root": "04432327", "kw": "Incofios", "search_n": 112, "picks": [], "pass": "kw", "note": "needs finance-title pass"}
+{"root": "02558157", "kw": "Telefônica Vivo", "search_n": 25, "picks": [{"id": "6833170800f6ab00012a9279", "title": "Gerente Sênior de Cobrança B2B", "note": "DM"}, {"id": "65448b7ec1387200015fc3ba", "title": "Cobrança", "note": "backup"}], "pass": "titles", "note": "LARGE CORP"}
+{"root": "43214055", "kw": "Armazéns Martins", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "00331788", "kw": "Air Liquide", "search_n": 0, "picks": [], "pass": "titles", "note": "no finance titles in Brazil"}
+{"root": "43672716", "kw": "Camesa", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "04647810", "kw": "Urtigão", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "35820448", "kw": "White Martins", "search_n": 25, "picks": [{"id": "5e74477fb94cf000015c69eb", "title": "Supervisor Contas a Receber", "note": "DM"}, {"id": "6153d8934352bd0001c08947", "title": "Contas a Receber", "note": "backup"}], "pass": "titles", "note": "LARGE CORP"}
+{"root": "04603630", "kw": "Boi Brasil", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "33284522", "kw": "Bosch Home Comfort", "search_n": 3, "picks": [{"id": "5e379ffed49c0e000194579a", "title": "Finance Director Latam", "note": "DM"}, {"id": "54a5805574686938ac701f99", "title": "Gerente de Tesouraria, Finanças e Compliance", "note": "backup"}, {"id": "56427679a6da987b93004505", "title": "Plant Controller", "note": "backup2"}], "pass": "titles", "note": "LARGE CORP (Hitachi/Bosch Home Comfort)"}
+{"root": "09123654", "kw": "Cagepa", "search_n": 342, "picks": [{"id": "54a55acd7468693676b52d91", "title": "Subgerencia de Cobranças de Órg. Públicos", "note": "DM (state-owned water co)"}, {"id": "54a550887468693b8c623e8e", "title": "Técnico em Contabilidade", "note": "backup"}], "pass": "kw", "note": "state-owned utility; sale needs board approval"}
+{"root": "01080512", "kw": "Salesforce", "search_n": 24, "picks": [{"id": "5b2d513ba6da9888e6510427", "title": "Controller Director", "note": "DM"}, {"id": "54c2b17f7468697af7864dbb", "title": "Finance Controller", "note": "backup"}, {"id": "614d46b508646600013dc2d8", "title": "Collections Associate Analyst", "note": "backup2"}], "pass": "titles", "note": "LARGE CORP"}
+{"root": "02535864", "kw": "VR Benefícios", "search_n": 0, "picks": [], "pass": "titles", "note": "no finance titles found"}
+{"root": "10394384", "kw": "MMB Sports", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "75007385", "kw": "Agrocete", "search_n": 187, "picks": [{"id": "60d2690363a97c000193c630", "title": "Analista de Crédito e Cobrança PL", "note": "DM-ish"}, {"id": "66f7fe1dd40b120001c000b8", "title": "Controller Assistant", "note": "backup"}, {"id": "6597e62440317b00016ff301", "title": "Gerente de Operações Comerciais Brasil", "note": "backup2"}], "pass": "kw", "note": "needs finance-title pass for CFO"}
+{"root": "02274615", "kw": "Usecar Locadora", "search_n": 2, "picks": [{"id": "54a2807b74686930c288c427", "title": "Supervisora de Marketing e CX", "note": "only named person; VERIFY"}], "pass": "kw", "note": ""}
+{"root": "02924249", "kw": "Rancheiro", "search_n": 288, "picks": [{"id": "61b47b5a94d6f800011498eb", "title": "Credit and Collection Analyst", "note": "DM"}, {"id": "632c5120a4a1c900012e5441", "title": "Senior tax Analyst", "note": "backup"}], "pass": "kw", "note": "Cafe Rancheiro"}
+{"root": "43718469", "kw": "GSI Creos", "search_n": 8, "picks": [{"id": "5e7e5e36904fab000144b453", "title": "Financial Analyst", "note": "DM"}, {"id": "627beb14a8c3970001aa8654", "title": "Operations Director", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "19966141", "kw": "Pro-Color Química", "search_n": 1, "picks": [], "pass": "kw", "note": "assistant only (Nordeste entity)"}
+{"root": "43342153", "kw": "Texmar", "search_n": 5, "picks": [{"id": "5e592ba8145f0c00016bd6b7", "title": "Financial Analyst", "note": "DM"}, {"id": "5f56c35908d112000173f1de", "title": "Supervisor Fiscal", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "07153791", "kw": "Rentalbras", "search_n": 2, "picks": [{"id": "5b58765a060cd423d11a0648", "title": "Business Manager", "note": "DM"}], "pass": "kw", "note": ""}
+{"root": "44151413", "kw": "Caldex", "search_n": 68, "picks": [{"id": "5b2a573ca6da988a7941511c", "title": "Industrial Director", "note": "DM"}, {"id": "5651fd2da6da98183d006ce8", "title": "Gerente/Coordenador", "note": "backup"}], "pass": "kw", "note": "no finance titles visible"}
+{"root": "04432327", "kw": "Incofios", "search_n": 0, "picks": [], "pass": "titles", "note": "finance pass: 0"}
+{"root": "83201111", "kw": "MC-JU Confecções", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "08934225", "kw": "Ventisol Nordeste", "search_n": 215, "picks": [{"id": "5f4eef326bab620001fae042", "title": "Administrative Manager", "note": "DM"}, {"id": "5f6051c7b27f7e000181a73d", "title": "Sales Supervisor", "note": "backup"}, {"id": "5dd84633012bd30001e88c51", "title": "Departamento Contábil (Ventisol matriz)", "note": "backup2"}], "pass": "kw", "note": ""}
+{"root": "82270281", "kw": "Polijuta", "search_n": 109, "picks": [{"id": "57d34a5ca6da9865b15e0772", "title": "Gestora Administrativa Financeira", "note": "DM"}, {"id": "6032a85e33ccc4000104fde3", "title": "Supervisora Contábil e Fiscal", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "46495282", "kw": "Horus do Brasil", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "61773646", "kw": "Graxaria Bem Bom", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "70494828", "kw": "Delicious Fish", "search_n": 25, "picks": [{"id": "54eba8b97468694311e52a08", "title": "Comptroller", "note": "DM"}, {"id": "64a46f02b66b1d000173ae9d", "title": "Financial", "note": "backup"}, {"id": "6087944dcc071200016ce859", "title": "Director", "note": "backup2"}], "pass": "kw", "note": ""}
+{"root": "04422548", "kw": "Laponia Sudeste", "search_n": 58, "picks": [{"id": "6876520c9c25950001eff76a", "title": "Administrative Coordinator", "note": "DM (weak)"}, {"id": "57d6e6c4a6da985472f0d072", "title": "Administrative Analyst", "note": "backup"}], "pass": "kw", "note": "no finance titles; Scania dealer"}
+{"root": "50378389", "kw": "Martins Cruz Soluções Agrícolas", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "08228146", "kw": "Parvi", "search_n": 54, "picks": [{"id": "68961f7589e80600016c0165", "title": "Diretora Financeira/Gerente de Tesouraria", "note": "DM"}, {"id": "5f53b5c315e52900019ac10d", "title": "Supervisora de Crédito e Cobrança", "note": "backup"}, {"id": "66827c3802bbcf00012cf313", "title": "Controller", "note": "backup2"}], "pass": "titles", "note": "GRUPO PARVI"}
+{"root": "49644505", "kw": "Dalmolin Construtora", "search_n": 1, "picks": [], "pass": "kw", "note": "only unrelated hit"}
+{"root": "01911761", "kw": "Nativa Produtos Agrícolas", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "33647553", "kw": "Fluminense Football Club", "search_n": 2, "picks": [{"id": "56af48d6f3e5bb3d43007352", "title": "Diretor Executivo Financeiro - CFO", "note": "DM"}], "pass": "titles", "note": ""}
+{"root": "12749549", "kw": "MTC Incorporações", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "75007385", "kw": "Agrocete", "search_n": 2, "picks": [{"id": "5f50e46602c36f00011dc531", "title": "Controller Analyst", "note": "finance DM"}], "pass": "titles", "note": "finance pass"}
+{"root": "56228356", "kw": "CRBS", "search_n": 0, "picks": [], "pass": "titles", "note": "Ambev subsidiary; no collections titles found"}
+{"root": "20520367", "kw": "Madson Eletrometalúrgica", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "05603186", "kw": "Megateam Consultoria", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "02905110", "kw": "GRSA Compass Group", "search_n": 0, "picks": [], "pass": "titles", "note": "no finance titles found"}
+{"root": "33150053", "kw": "Açotubo", "search_n": 6, "picks": [{"id": "68ef9cff830e320001665594", "title": "Financial Director", "note": "DM"}, {"id": "54a518407468692fa271df7c", "title": "Financial Manager", "note": "backup"}, {"id": "635987cf0448bb00013a272e", "title": "Controller Analyst", "note": "backup2"}], "pass": "titles", "note": "Grupo Açotubo"}
+{"root": "10758022", "kw": "I. F. dos Santos", "search_n": 2, "picks": [{"id": "6429a4e45e89b70001fff82f", "title": "Office Assistant", "note": "only person listed"}], "pass": "kw", "note": "weak"}
+{"root": "01644931", "kw": "Eldorado Distribuição ASE", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "07174869", "kw": "FTI Consulting", "search_n": 11, "picks": [{"id": "660bcf4823f55a0007f57cd4", "title": "Senior Managing Director, Corporate Finance | Restructuring", "note": "DM"}, {"id": "57d797b4a6da9809deef35ac", "title": "Corporate Finance & Restructuring Director", "note": "backup"}], "pass": "titles", "note": "LARGE CORP"}
+{"root": "11324540", "kw": "J Confort", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "92185008", "kw": "Erplasti", "search_n": 66, "picks": [{"id": "61673aa342bd3e00015450b4", "title": "Financial Manager", "note": "DM"}, {"id": "619866a2a8d8a90001105302", "title": "Administradora (owner family)", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "08516950", "kw": "Eteno", "search_n": 16, "picks": [{"id": "62e12f812afe4a0001018707", "title": "Financial Coordinator", "note": "DM"}, {"id": "61997bc13b3fae0001837597", "title": "Director", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "84046101", "kw": "Bunge", "search_n": 22, "picks": [{"id": "615dda70115d550001c5c5ce", "title": "Senior Credit Manager", "note": "DM"}, {"id": "54a77b7274686968291bc338", "title": "Coordenadora de Crédito", "note": "backup"}, {"id": "60ce3760d6f82d00018064ac", "title": "Analista de Recuperação de Crédito Pleno", "note": "backup2"}], "pass": "titles", "note": "LARGE CORP"}
+{"root": "60933017", "kw": "Tecflux", "search_n": 79, "picks": [{"id": "54a406ce7468692cf0bb3626", "title": "Head of F&A", "note": "DM"}, {"id": "54a22c0c74686933185ddf12", "title": "Operations General Manager", "note": "backup"}], "pass": "kw", "note": "Swagelok Brasil - Tecflux"}
+{"root": "03645772", "kw": "Dock", "search_n": 10, "picks": [{"id": "5adab1aea6da98626cda6ec1", "title": "Chief Financial Officer", "note": "DM"}, {"id": "54a21daf74686930c22ed60d", "title": "Analista de Cobrança Pleno", "note": "backup"}, {"id": "57d3d5d0a6da9853becb791e", "title": "Financial Ops Manager", "note": "backup2"}], "pass": "titles", "note": ""}
+{"root": "92306257", "kw": "MV Informática Nordeste", "search_n": 12, "picks": [{"id": "61418bb822f100000189b96b", "title": "Gerente de Departamento Jurídico", "note": "DM (legal handles RJ claims)"}, {"id": "68a2f194f63a2b0001ed01cb", "title": "Administrative Analyst", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "01144076", "kw": "MAB Serviços Administrativos", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "49870173", "kw": "Têxtil J. Serrano", "search_n": 2, "picks": [], "pass": "kw", "note": "shop-floor only"}
+{"root": "24649441", "kw": "AXM Administração e Participações", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "24221282", "kw": "GG Administradora de Bens", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "40887879", "kw": "Magno Móveis", "search_n": 13, "picks": [], "pass": "kw", "note": "name collisions only"}
+{"root": "05052443", "kw": "Plaskem Embalagens", "search_n": 24, "picks": [{"id": "60ccd7178d136b0001cc031f", "title": "Credit and Collection Analyst", "note": "DM"}, {"id": "6199b95428e3810001844b4b", "title": "Manager", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "47180625", "kw": "Corteva", "search_n": 26, "picks": [{"id": "5b309ea8a6da98eb7f9c2daa", "title": "Credit Manager", "note": "DM"}, {"id": "54c26e797468697af70eaa98", "title": "Supervisora de Contas a Receber e Cobrança", "note": "backup"}, {"id": "67232a3a6011120001e1c293", "title": "Supervisora de Cobrança", "note": "backup2"}], "pass": "titles", "note": "LARGE CORP (CTVA Proteção de Cultivos)"}
+{"root": "03413865", "kw": "Quintal Têxtil", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "20203358", "kw": "Alirio Confecções", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "90108283", "kw": "Contatti Medical", "search_n": 32, "picks": [{"id": "64a80fd7a286230001763d83", "title": "Financial Analyst", "note": "DM"}, {"id": "60d49b7da0e0ea000165efd7", "title": "Controller Analyst", "note": "backup"}], "pass": "kw", "note": ""}
+{"root": "11516792", "kw": "Brandt Brasil", "search_n": 224, "picks": [{"id": "54a47b627468692cf028cc4a", "title": "Operations | Supply Chain Manager", "note": "backup"}, {"id": "54a3b0f67468693209d5260b", "title": "Commercial Manager", "note": "backup2"}], "pass": "kw", "note": "needs finance-title pass"}
+{"root": "86559960", "kw": "RCA Construtora", "search_n": 9, "picks": [], "pass": "kw", "note": "engineers only; company itself in RJ"}
+{"root": "08627082", "kw": "Lojas Cattan", "search_n": 0, "picks": [], "pass": "kw", "note": "no results"}
+{"root": "16620321", "kw": "Athletic Soccer", "search_n": 1, "picks": [], "pass": "kw", "note": "no results"}

@@ -22,7 +22,7 @@ MIN_INTERVAL = 0.7  # seconds between calls, per host — these are free public 
 
 class RFB:
     def __init__(self, db_path: str):
-        self.db = sqlite3.connect(db_path)
+        self.db = sqlite3.connect(db_path, timeout=120)
         self.db.execute("""CREATE TABLE IF NOT EXISTS rfb_cache(
             cnpj TEXT PRIMARY KEY, source TEXT, fetched_at TEXT, status INTEGER, json TEXT)""")
         self.db.commit()

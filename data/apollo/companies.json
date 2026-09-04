@@ -1,0 +1,5392 @@
+[
+{
+"i": 1,
+"root": "33000167",
+"razao": "PETROLEO BRASILEIRO S A PETROBRAS",
+"fantasia": "PETROBRAS - EDISE",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 330054762.86,
+"kw": "Petrobras Edise"
+},
+{
+"i": 2,
+"root": "76483726",
+"razao": "DM CONSTRUTORA DE OBRAS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 178052183.86,
+"kw": "Dm Construtora Obras"
+},
+{
+"i": 3,
+"root": "19256534",
+"razao": "IBIPORA NEGOCIOS IMOBILIARIOS S.A.",
+"fantasia": "",
+"uf": "MG",
+"city": "NOVA LIMA",
+"face": 45075482.57,
+"kw": "Ibipora Negocios Imobiliarios"
+},
+{
+"i": 4,
+"root": "08467115",
+"razao": "COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE-D",
+"fantasia": "CEEE DISTRIBUICAO",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 31446843.91,
+"kw": "Ceee Distribuicao"
+},
+{
+"i": 5,
+"root": "02932074",
+"razao": "HYPERA S.A.",
+"fantasia": "HYPERA PHARMA",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 25912507.68,
+"kw": "Hypera Pharma"
+},
+{
+"i": 6,
+"root": "11436813",
+"razao": "ADLIM-TERCEIRIZACAO EM SERVICOS LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "PE",
+"city": "BEZERROS",
+"face": 20647588.14,
+"kw": "Adlim Terceirizacao Em Servicos"
+},
+{
+"i": 7,
+"root": "29341643",
+"razao": "SPC BRASIL S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "BARUERI",
+"face": 18875473.82,
+"kw": "Spc Brasil"
+},
+{
+"i": 8,
+"root": "92802784",
+"razao": "COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN",
+"fantasia": "CORSAN EST UNIF",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 18555954.55,
+"kw": "Corsan Est Unif"
+},
+{
+"i": 9,
+"root": "26419229",
+"razao": "DREYMOOR BRASIL COMERCIO DE FERTILIZANTES LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 15134865.1,
+"kw": "Dreymoor Brasil Fertilizantes"
+},
+{
+"i": 10,
+"root": "01440590",
+"razao": "FRESENIUS MEDICAL CARE LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "JAGUARIUNA",
+"face": 14567733.99,
+"kw": "Fresenius Medical Care"
+},
+{
+"i": 11,
+"root": "98521909",
+"razao": "VINICOLA CAMPESTRE LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "CAMPESTRE DA SERRA",
+"face": 13980345.5,
+"kw": "Vinicola Campestre"
+},
+{
+"i": 12,
+"root": "11516861",
+"razao": "AGUIA SERVICOS DE VIGILANCIA LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "AGUIA",
+"uf": "PE",
+"city": "RECIFE",
+"face": 13645091.92,
+"kw": "Aguia"
+},
+{
+"i": 13,
+"root": "03519135",
+"razao": "GREE ELECTRIC APPLIANCES DO BRASIL LTDA.",
+"fantasia": "",
+"uf": "AM",
+"city": "MANAUS",
+"face": 13499976.37,
+"kw": "Gree Electric Appliances Brasil"
+},
+{
+"i": 14,
+"root": "00831373",
+"razao": "LOUIS DREYFUS COMPANY SUCOS S.A",
+"fantasia": "LOUIS DREYFUS COMPANY SUCOS",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 13129217.8,
+"kw": "Louis Dreyfus Company Sucos"
+},
+{
+"i": 15,
+"root": "09402999",
+"razao": "TABLEROS IND. E COM. DE PAINEIS LTDA",
+"fantasia": "TABLEROS DO BRASIL",
+"uf": "PR",
+"city": "PALMAS",
+"face": 12966349.62,
+"kw": "Tableros Brasil"
+},
+{
+"i": 16,
+"root": "24785274",
+"razao": "GRANELES BRASIL COMERCIAL IMPORTADORA EXPORTADORA AGRICOLA S.A EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 11676960.19,
+"kw": "Graneles Brasil Comercial Importadora Exportadora Agricola"
+},
+{
+"i": 17,
+"root": "01789121",
+"razao": "ALBAUGH AGRO BRASIL LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 11525550.26,
+"kw": "Albaugh Agro Brasil"
+},
+{
+"i": 18,
+"root": "09036221",
+"razao": "DC COMERCIO, REPRESENTACOES, INVESTIMENTOS E PARTICIPACOES LTDA.",
+"fantasia": "DC COMERCIO",
+"uf": "PE",
+"city": "RECIFE",
+"face": 11125000.0,
+"kw": "Dc , Representacoes, Investimentos Participacoes"
+},
+{
+"i": 19,
+"root": "61286647",
+"razao": "SANDOZ DO BRASIL INDUSTRIA FARMACEUTICA LTDA.",
+"fantasia": "",
+"uf": "PR",
+"city": "CAMBE",
+"face": 10696833.99,
+"kw": "Sandoz Brasil Farmaceutica"
+},
+{
+"i": 20,
+"root": "05855974",
+"razao": "BASTON INDUSTRIA DE AEROSSOIS LTDA",
+"fantasia": "BASTON AEROSSOL",
+"uf": "PR",
+"city": "PALMEIRA",
+"face": 10636330.31,
+"kw": "Baston Aerossol"
+},
+{
+"i": 21,
+"root": "11486977",
+"razao": "ENVTECH DO BRASIL DESCONTAMINACOES INDUSTRIAIS LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "PETROPOLIS",
+"face": 10310428.56,
+"kw": "Envtech Brasil Descontaminacoes Industriais"
+},
+{
+"i": 22,
+"root": "23643315",
+"razao": "DANONE LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 9093937.71,
+"kw": "Danone"
+},
+{
+"i": 23,
+"root": "03237583",
+"razao": "COPA ENERGIA S.A.",
+"fantasia": "COPA ENERGIA",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 9000000.0,
+"kw": "Copa Energia"
+},
+{
+"i": 24,
+"root": "10509915",
+"razao": "MINERACAO AURORA LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "JABOATAO DOS GUARARAPES",
+"face": 8433590.01,
+"kw": "Mineracao Aurora"
+},
+{
+"i": 25,
+"root": "00802235",
+"razao": "FIRST S/A",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 8354815.13,
+"kw": "First"
+},
+{
+"i": 26,
+"root": "05607230",
+"razao": "IPESA DO BRASIL COMERCIO DE PRODUTOS PLASTICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 8353250.0,
+"kw": "Ipesa Brasil Produtos Plasticos"
+},
+{
+"i": 27,
+"root": "04222931",
+"razao": "CLIMAZON INDUSTRIAL LTDA",
+"fantasia": "CLIMAZON",
+"uf": "AM",
+"city": "MANAUS",
+"face": 8012248.57,
+"kw": "Climazon"
+},
+{
+"i": 28,
+"root": "54366547",
+"razao": "COOPERATIVA DOS PLANTADORES DE CANA DO ESTADO SAO PAULO",
+"fantasia": "COPLACANA",
+"uf": "SP",
+"city": "PIRACICABA",
+"face": 8000000.0,
+"kw": "Coplacana"
+},
+{
+"i": 29,
+"root": "05044984",
+"razao": "LEGRAND PHARMA INDUSTRIA FARMACEUTICA LTDA",
+"fantasia": "OFTA VISION HEALTH",
+"uf": "SP",
+"city": "HORTOLANDIA",
+"face": 7715049.72,
+"kw": "Ofta Vision Health"
+},
+{
+"i": 30,
+"root": "12447077",
+"razao": "BRASIL ASFALTOS LTDA",
+"fantasia": "BRASIL ASFALTOS LTDA",
+"uf": "BA",
+"city": "CANDEIAS",
+"face": 7707516.4,
+"kw": "Brasil Asfaltos"
+},
+{
+"i": 31,
+"root": "11385941",
+"razao": "TITAN PNEUS DO BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 7525940.0,
+"kw": "Titan Pneus Brasil"
+},
+{
+"i": 32,
+"root": "10956258",
+"razao": "FEDERACAO PERNAMBUCANA DE FUTEBOL",
+"fantasia": "",
+"uf": "PE",
+"city": "RECIFE",
+"face": 7251967.09,
+"kw": "Federacao Pernambucana Futebol"
+},
+{
+"i": 33,
+"root": "48430290",
+"razao": "ADDIANTE S.A",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 7135516.97,
+"kw": "Addiante"
+},
+{
+"i": 34,
+"root": "21203489",
+"razao": "SOLUS DO BRASIL LTDA",
+"fantasia": "SOLUS DO BRASIL",
+"uf": "PR",
+"city": "APUCARANA",
+"face": 7058181.5,
+"kw": "Solus Brasil"
+},
+{
+"i": 35,
+"root": "41324359",
+"razao": "COMERCIO RACOES BEM BOM LTDA",
+"fantasia": "RACOES BEM BOM",
+"uf": "GO",
+"city": "GOIANESIA",
+"face": 6642118.99,
+"kw": "Racoes Bem Bom"
+},
+{
+"i": 36,
+"root": "61615191",
+"razao": "MISTRAS SOUTH AMERICA COMERCIO E SERVICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 6623625.24,
+"kw": "Mistras South America Servicos"
+},
+{
+"i": 37,
+"root": "06284974",
+"razao": "AGROFIELD ASSESSORIA ADMINISTRATIVA LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "RECIFE",
+"face": 6434083.18,
+"kw": "Agrofield Assessoria Administrativa"
+},
+{
+"i": 38,
+"root": "15626673",
+"razao": "NORTESUL COMERCIAL AGRICOLA LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "NORTESUL AGRO",
+"uf": "TO",
+"city": "PALMAS",
+"face": 6258845.34,
+"kw": "Nortesul Agro"
+},
+{
+"i": 39,
+"root": "30278428",
+"razao": "L'OREAL BRASIL COMERCIAL DE COSMETICOS LTDA",
+"fantasia": "L'OREAL BRASIL",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 5955264.1,
+"kw": "L'Oreal Brasil"
+},
+{
+"i": 40,
+"root": "18871750",
+"razao": "INVISTA LOTEADORA E INCORPORADORA LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "HORIZONTINA",
+"face": 5875236.13,
+"kw": "Invista Loteadora Incorporadora"
+},
+{
+"i": 41,
+"root": "10775286",
+"razao": "CATAO CONFECCOES LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "LOJAS CATTAN",
+"uf": "PE",
+"city": "RECIFE",
+"face": 5843155.75,
+"kw": "Lojas Cattan"
+},
+{
+"i": 42,
+"root": "16404287",
+"razao": "SUZANO S.A.",
+"fantasia": "SUZANO PAPEL E CELULOSE",
+"uf": "BA",
+"city": "SALVADOR",
+"face": 5686333.34,
+"kw": "Suzano Papel Celulose"
+},
+{
+"i": 43,
+"root": "33284522",
+"razao": "BOSCH HOME COMFORT DO BRASIL LTDA",
+"fantasia": "HITACHI",
+"uf": "AM",
+"city": "MANAUS",
+"face": 5064633.83,
+"kw": "Hitachi"
+},
+{
+"i": 44,
+"root": "03981899",
+"razao": "JF PASQUA CONDUTORES ELETRICOS LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "GUAXUPE",
+"face": 4940520.91,
+"kw": "Jf Pasqua Condutores Eletricos"
+},
+{
+"i": 45,
+"root": "19709369",
+"razao": "TRANSPORTADORA MARCAN LTDA.",
+"fantasia": "MY BUS",
+"uf": "PE",
+"city": "IGARASSU",
+"face": 4757312.99,
+"kw": "My Bus"
+},
+{
+"i": 46,
+"root": "21998451",
+"razao": "PRO NOVA DISTRIBUIDORA E COMERCIO DE COSMETICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "JANDIRA",
+"face": 4694462.47,
+"kw": "Pro Nova Distribuidora Cosmeticos"
+},
+{
+"i": 47,
+"root": "52311347",
+"razao": "BALDAN IMPLEMENTOS AGRICOLAS S A",
+"fantasia": "BIA",
+"uf": "SP",
+"city": "MATAO",
+"face": 4681142.41,
+"kw": "Baldan Implementos Agricolas S A"
+},
+{
+"i": 48,
+"root": "05399071",
+"razao": "NORTEBAG INDUSTRIA DE EMBALAGENS S.A.",
+"fantasia": "NORTEBAG EMBALAGENS",
+"uf": "AM",
+"city": "MANAUS",
+"face": 4680282.82,
+"kw": "Nortebag Embalagens"
+},
+{
+"i": 49,
+"root": "32851823",
+"razao": "SERRINHA AMBIENTAL TRANSPORTES LTDA",
+"fantasia": "SERRINHA AMBIENTAL TRANSPORTES",
+"uf": "SC",
+"city": "CHAPECO",
+"face": 4672725.1,
+"kw": "Serrinha Ambiental Transportes"
+},
+{
+"i": 50,
+"root": "92660604",
+"razao": "YARA BRASIL FERTILIZANTES S/A",
+"fantasia": "",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 4591380.0,
+"kw": "Yara Brasil Fertilizantes"
+},
+{
+"i": 51,
+"root": "19907274",
+"razao": "BACUPARI AGROINDUSTRIA LTDA",
+"fantasia": "BACUPARI AGROINDUSTRIA",
+"uf": "DF",
+"city": "BRASILIA",
+"face": 4500000.0,
+"kw": "Bacupari Agroindustria"
+},
+{
+"i": 52,
+"root": "18331491",
+"razao": "CENTRO AVANCADO DE NEUROLOGIA E NEUROCIRURGIA S/S",
+"fantasia": "CEANNE",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 3947275.5,
+"kw": "Ceanne"
+},
+{
+"i": 53,
+"root": "13829957",
+"razao": "BRASQUIMICA PRODUTOS ASFALTICOS LTDA",
+"fantasia": "BRASQUIMICA",
+"uf": "BA",
+"city": "SALVADOR",
+"face": 3879789.49,
+"kw": "Brasquimica"
+},
+{
+"i": 54,
+"root": "09123654",
+"razao": "COMPANHIA DE AGUA E ESGOTOS DA PARAIBA CAGEPA",
+"fantasia": "",
+"uf": "PB",
+"city": "JOAO PESSOA",
+"face": 3641949.67,
+"kw": "Agua Esgotos Paraiba Cagepa"
+},
+{
+"i": 55,
+"root": "33845322",
+"razao": "A GERADORA ALUGUEL DE MAQUINAS S.A.",
+"fantasia": "",
+"uf": "BA",
+"city": "SALVADOR",
+"face": 3379805.88,
+"kw": "A Geradora Aluguel Maquinas"
+},
+{
+"i": 56,
+"root": "01080512",
+"razao": "SALESFORCE TECNOLOGIA LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 3349893.45,
+"kw": "Salesforce Tecnologia"
+},
+{
+"i": 57,
+"root": "05784234",
+"razao": "M.K. GALONE CONFECCOES E COMERCIO DE ROUPAS LTDA",
+"fantasia": "AKIYOSHI JEANS",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 3309751.29,
+"kw": "Akiyoshi Jeans"
+},
+{
+"i": 58,
+"root": "08785522",
+"razao": "DIVINA INDUSTRIA DE COURO LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "DIVINA",
+"uf": "PE",
+"city": "FLORESTA",
+"face": 3206338.81,
+"kw": "Divina"
+},
+{
+"i": 59,
+"root": "10505803",
+"razao": "LOROTTI EMPREENDIMENTOS IMOBILIARIOS LTDA",
+"fantasia": "LOROTTI EMPREENDIMENTOS IMOBILIARIOS",
+"uf": "DF",
+"city": "BRASILIA",
+"face": 3159739.59,
+"kw": "Lorotti Empreendimentos Imobiliarios"
+},
+{
+"i": 60,
+"root": "02524216",
+"razao": "ALFANI CONFECCOES E COMERCIO LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "PE",
+"city": "RECIFE",
+"face": 3140000.0,
+"kw": "Alfani Confeccoes"
+},
+{
+"i": 61,
+"root": "01631022",
+"razao": "VIANMAQ EQUIPAMENTOS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CAMPO LARGO",
+"face": 3083893.62,
+"kw": "Vianmaq Equipamentos"
+},
+{
+"i": 62,
+"root": "05429994",
+"razao": "VEGETAL AGRONEGOCIOS LTDA",
+"fantasia": "VEGETAL",
+"uf": "DF",
+"city": "BRASILIA",
+"face": 3014807.2,
+"kw": "Vegetal"
+},
+{
+"i": 63,
+"root": "88305859",
+"razao": "NUTRIEN SOLUCOES AGRICOLAS LTDA",
+"fantasia": "NUTRIEN SOLUCOES AGRICOLAS",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 3009813.42,
+"kw": "Nutrien Solucoes Agricolas"
+},
+{
+"i": 64,
+"root": "53943098",
+"razao": "BRACELL SP CELULOSE LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "LENCOIS PAULISTA",
+"face": 3000000.0,
+"kw": "Bracell Sp Celulose"
+},
+{
+"i": 65,
+"root": "47320705",
+"razao": "IRANY COMERCIO EXTERIOR LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "ITAPOA",
+"face": 2916553.74,
+"kw": "Irany Exterior"
+},
+{
+"i": 66,
+"root": "40910399",
+"razao": "NNC NORTE E NORDESTE COMMODITIES LTDA",
+"fantasia": "NNC NORTE E NORDESTE COMMODITIES",
+"uf": "MA",
+"city": "BALSAS",
+"face": 2859701.32,
+"kw": "Nnc Norte Nordeste Commodities"
+},
+{
+"i": 67,
+"root": "61902722",
+"razao": "SPORT CLUB CORINTHIANS PAULISTA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 2823611.8,
+"kw": "Sport Club Corinthians Paulista"
+},
+{
+"i": 68,
+"root": "60498706",
+"razao": "CARGILL AGRICOLA S A",
+"fantasia": "SEDE ADMINISTRATIVA DA EMPRESA",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 2748939.47,
+"kw": "Sede Administrativa Empresa"
+},
+{
+"i": 69,
+"root": "02535864",
+"razao": "VR BENEFICIOS E SERVICOS DE PROCESSAMENTO INSTITUICAO DE PAGAMENTO S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 2731258.45,
+"kw": "Vr Beneficios Servicos Processamento Instituicao Pagamento"
+},
+{
+"i": 70,
+"root": "08992890",
+"razao": "MAXLIFT LOCADORA DE EQUIPAMENTOS LTDA.",
+"fantasia": "MAXLIFT",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 2680302.42,
+"kw": "Maxlift"
+},
+{
+"i": 71,
+"root": "09422727",
+"razao": "GALVANI ENGENHARIA E PARTICIPACOES LTDA",
+"fantasia": "GALVANI ENGENHARIA LTDA.",
+"uf": "SP",
+"city": "PAULINIA",
+"face": 2654550.86,
+"kw": "Galvani Engenharia"
+},
+{
+"i": 72,
+"root": "03076832",
+"razao": "FLEXIVEL INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "JARAGUA DO SUL",
+"face": 2550639.65,
+"kw": "Flexivel"
+},
+{
+"i": 73,
+"root": "31281962",
+"razao": "CROMO INDUSTRIA QUIMICA S.A.",
+"fantasia": "",
+"uf": "RS",
+"city": "ESTRELA",
+"face": 2406485.64,
+"kw": "Cromo Quimica"
+},
+{
+"i": 74,
+"root": "15660513",
+"razao": "TRESBOMM COMERCIO E EXPORTACAO DE GRAOS LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "PR",
+"city": "PALOTINA",
+"face": 2398511.33,
+"kw": "Tresbomm Exportacao Graos"
+},
+{
+"i": 75,
+"root": "61352050",
+"razao": "ITM LATIN AMERICA INDUSTRIA DE PECAS PARA TRATORES LTDA.",
+"fantasia": "ITM LATIN AMERICA LTDA.",
+"uf": "SP",
+"city": "ATIBAIA",
+"face": 2360226.69,
+"kw": "Itm Latin America"
+},
+{
+"i": 76,
+"root": "50595271",
+"razao": "BIOTRONIK COMERCIAL MEDICA LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 2311648.44,
+"kw": "Biotronik Comercial Medica"
+},
+{
+"i": 77,
+"root": "33453598",
+"razao": "RAIZEN S.A.",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 2280760.72,
+"kw": "Raizen"
+},
+{
+"i": 78,
+"root": "44246528",
+"razao": "ASK CRIOS PRODUTOS QUIMICOS DO BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "RIO CLARO",
+"face": 2270274.68,
+"kw": "Ask Crios Produtos Quimicos Brasil"
+},
+{
+"i": 79,
+"root": "02948030",
+"razao": "ESMALTEC S/A",
+"fantasia": "",
+"uf": "CE",
+"city": "FORTALEZA",
+"face": 2210242.75,
+"kw": "Esmaltec"
+},
+{
+"i": 80,
+"root": "23191831",
+"razao": "FALCON DISTRIBUICAO, ARMAZENAMENTO E TRANSPORTES S.A.",
+"fantasia": "",
+"uf": "GO",
+"city": "GOIANIA",
+"face": 2199541.23,
+"kw": "Falcon Distribuicao Armazenamento Transportes"
+},
+{
+"i": 81,
+"root": "17417928",
+"razao": "VENTISOL DA AMAZONIA INDUSTRIA DE APARELHOS ELETRICOS LTDA",
+"fantasia": "VENTISOL",
+"uf": "AM",
+"city": "MANAUS",
+"face": 2121705.89,
+"kw": "Ventisol"
+},
+{
+"i": 82,
+"root": "36854495",
+"razao": "FRONTEIRA COMERCIO E REPRESENTACAO DE PRODUTOS AGROPECUARIOS LTDA",
+"fantasia": "NUTRIEN SOLUCOES AGRICOLAS",
+"uf": "GO",
+"city": "RIO VERDE",
+"face": 2120225.1,
+"kw": "Nutrien Solucoes Agricolas"
+},
+{
+"i": 83,
+"root": "05554669",
+"razao": "SRJ INDUSTRIA COMERCIO E EXPORTACAO DE CONFECCOES LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "CARUARU",
+"face": 2113920.0,
+"kw": "Srj Exportacao Confeccoes"
+},
+{
+"i": 84,
+"root": "02003402",
+"razao": "ADM DO BRASIL LTDA",
+"fantasia": "A D M",
+"uf": "ES",
+"city": "VITORIA",
+"face": 2086675.04,
+"kw": "A D M"
+},
+{
+"i": 85,
+"root": "94813102",
+"razao": "TRES TENTOS AGROINDUSTRIAL S/A",
+"fantasia": "3 TENTOS",
+"uf": "RS",
+"city": "SANTA BARBARA DO SUL",
+"face": 2076705.8,
+"kw": "3 Tentos"
+},
+{
+"i": 86,
+"root": "09536120",
+"razao": "SEMPRE AGTECH LTDA",
+"fantasia": "SEMPRE",
+"uf": "SC",
+"city": "CHAPECO",
+"face": 2037616.99,
+"kw": "Sempre"
+},
+{
+"i": 87,
+"root": "05571228",
+"razao": "FERTILIZANTES TOCANTINS S.A",
+"fantasia": "EUROCHEM FERTILIZANTES TOCANTINS",
+"uf": "TO",
+"city": "PORTO NACIONAL",
+"face": 2016948.56,
+"kw": "Eurochem Fertilizantes Tocantins"
+},
+{
+"i": 88,
+"root": "71799001",
+"razao": "REICHENBACH EQUIPAMENTOS INDUSTRIA E COMERCIO LTDA",
+"fantasia": "REICHENBACH",
+"uf": "SP",
+"city": "CARAPICUIBA",
+"face": 2002544.34,
+"kw": "Reichenbach"
+},
+{
+"i": 89,
+"root": "29652131",
+"razao": "AGRO INDUSTRIA NUTRIHORTO LTDA",
+"fantasia": "NUTRIHORTO",
+"uf": "SP",
+"city": "MONTE MOR",
+"face": 1993755.38,
+"kw": "Nutrihorto"
+},
+{
+"i": 90,
+"root": "14325185",
+"razao": "PROTEGO BRASIL VALVULAS E CORTA CHAMAS LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 1955788.12,
+"kw": "Protego Brasil Valvulas Corta Chamas"
+},
+{
+"i": 91,
+"root": "03485572",
+"razao": "GEOLAB INDUSTRIA FARMACEUTICA S/A",
+"fantasia": "GEOLAB",
+"uf": "GO",
+"city": "ANAPOLIS",
+"face": 1918724.72,
+"kw": "Geolab"
+},
+{
+"i": 92,
+"root": "02748323",
+"razao": "OLINDA INDUSTRIA E COMERCIO DE COLCHOES LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "OLINDA",
+"face": 1902217.38,
+"kw": "Olinda Colchoes"
+},
+{
+"i": 93,
+"root": "07651282",
+"razao": "BECK ACOS MANUFATURADOS LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "VESPASIANO",
+"face": 1886828.69,
+"kw": "Beck Acos Manufaturados"
+},
+{
+"i": 94,
+"root": "61750345",
+"razao": "SOCIEDADE ESPORTIVA PALMEIRAS",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1867912.24,
+"kw": "Sociedade Esportiva Palmeiras"
+},
+{
+"i": 95,
+"root": "43237254",
+"razao": "TECELAGEM JOLITEX LTDA",
+"fantasia": "JOLITEX",
+"uf": "SP",
+"city": "AMERICANA",
+"face": 1828397.18,
+"kw": "Jolitex"
+},
+{
+"i": 96,
+"root": "43587344",
+"razao": "B S DISTRIBUIDORA DE PRODUTOS DE HIGIENE LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1819744.46,
+"kw": "B S Distribuidora Produtos Higiene"
+},
+{
+"i": 97,
+"root": "04136367",
+"razao": "FMC QUIMICA DO BRASIL LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "CAMPINAS",
+"face": 1785400.0,
+"kw": "Fmc Quimica Brasil"
+},
+{
+"i": 98,
+"root": "61088894",
+"razao": "CAMBUCI S/A",
+"fantasia": "PENALTY",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1782661.24,
+"kw": "Penalty"
+},
+{
+"i": 99,
+"root": "05056082",
+"razao": "COMERCIO E EXPORTACAO DE CEREAIS RIO ELIAS LTDA.",
+"fantasia": "CEREAIS RIO ELIAS",
+"uf": "PR",
+"city": "BOM SUCESSO DO SUL",
+"face": 1771559.5,
+"kw": "Cereais Rio Elias"
+},
+{
+"i": 100,
+"root": "33676928",
+"razao": "PARQUE DAS ESTRELAS EMPREENDIMENTOS IMOBILIARIOS LTDA",
+"fantasia": "",
+"uf": "GO",
+"city": "GOIANESIA",
+"face": 1701742.63,
+"kw": "Parque Estrelas Empreendimentos Imobiliarios"
+},
+{
+"i": 101,
+"root": "45992062",
+"razao": "GERMED FARMACEUTICA LTDA",
+"fantasia": "BRACE PHARMA _ U.SK UNDER SKIN",
+"uf": "SP",
+"city": "HORTOLANDIA",
+"face": 1695831.1,
+"kw": "Brace Pharma _ U Sk Under Skin"
+},
+{
+"i": 102,
+"root": "59850115",
+"razao": "VENTUROSO, VALENTINI & CIA LTDA",
+"fantasia": "V.V",
+"uf": "SP",
+"city": "SAO JOAQUIM DA BARRA",
+"face": 1687942.83,
+"kw": "Venturoso Valentini &"
+},
+{
+"i": 103,
+"root": "47827332",
+"razao": "AGRO SAFRA INDUSTRIA E COMERCIO DE ADUBOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "OSASCO",
+"face": 1685996.32,
+"kw": "Agro Safra Adubos"
+},
+{
+"i": 104,
+"root": "61150348",
+"razao": "COMPANHIA NITRO QUIMICA BRASILEIRA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1666504.92,
+"kw": "Nitro Quimica Brasileira"
+},
+{
+"i": 105,
+"root": "20286415",
+"razao": "DEFESA FLORESTAL LTDA",
+"fantasia": "DEFLOR BIOENGENHARIA",
+"uf": "MG",
+"city": "VICOSA",
+"face": 1645536.0,
+"kw": "Deflor Bioengenharia"
+},
+{
+"i": 106,
+"root": "62143847",
+"razao": "DACARTO INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "OSASCO",
+"face": 1624039.19,
+"kw": "Dacarto Plasticos"
+},
+{
+"i": 107,
+"root": "21759758",
+"razao": "FARMAX S.A.",
+"fantasia": "FARMAX",
+"uf": "MG",
+"city": "DIVINOPOLIS",
+"face": 1610365.54,
+"kw": "Farmax"
+},
+{
+"i": 108,
+"root": "23552212",
+"razao": "ROCHE DIABETES CARE BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1608447.77,
+"kw": "Roche Diabetes Care Brasil"
+},
+{
+"i": 109,
+"root": "34274233",
+"razao": "VIBRA ENERGIA S.A",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 1607742.88,
+"kw": "Vibra Energia"
+},
+{
+"i": 110,
+"root": "59717553",
+"razao": "GRUPO MULTILASER S.A.",
+"fantasia": "MULTILASER",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1603580.85,
+"kw": "Multilaser"
+},
+{
+"i": 111,
+"root": "01494867",
+"razao": "P.U. ESPUMAS DO BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1560300.64,
+"kw": "P U Espumas Brasil"
+},
+{
+"i": 112,
+"root": "51254159",
+"razao": "KARINA PLASTICOS LTDA",
+"fantasia": "KARINA PLASTICOS",
+"uf": "SP",
+"city": "GUARULHOS",
+"face": 1557723.71,
+"kw": "Karina Plasticos"
+},
+{
+"i": 113,
+"root": "23141884",
+"razao": "RECYCLE BAG INDUSTRIA E SERVICOS LTDA",
+"fantasia": "RECYCLE BAG",
+"uf": "MG",
+"city": "MANHUACU",
+"face": 1547270.31,
+"kw": "Recycle Bag"
+},
+{
+"i": 114,
+"root": "75724070",
+"razao": "FML INCORPORADORA LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 1535860.08,
+"kw": "Fml Incorporadora"
+},
+{
+"i": 115,
+"root": "21132562",
+"razao": "MOJ CONSULTORIA E NEGOCIOS S/A",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 1528248.6,
+"kw": "Moj Consultoria Negocios"
+},
+{
+"i": 116,
+"root": "02588815",
+"razao": "BELLOTA BRASIL LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "INDAIAL",
+"face": 1492675.94,
+"kw": "Bellota Brasil"
+},
+{
+"i": 117,
+"root": "03213075",
+"razao": "LEGGETT & PLATT DO BRASIL LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "CAMANDUCAIA",
+"face": 1488789.48,
+"kw": "Leggett & Platt Brasil"
+},
+{
+"i": 118,
+"root": "02456955",
+"razao": "NATULAB LABORATORIO S.A",
+"fantasia": "NATULAB MEDICAMENTOS",
+"uf": "BA",
+"city": "SANTO ANTONIO DE JESUS",
+"face": 1481337.86,
+"kw": "Natulab Medicamentos"
+},
+{
+"i": 119,
+"root": "03119889",
+"razao": "FERRONORTE INDUSTRIAL LTDA",
+"fantasia": "",
+"uf": "PI",
+"city": "TERESINA",
+"face": 1452323.08,
+"kw": "Ferronorte Industrial"
+},
+{
+"i": 120,
+"root": "05013050",
+"razao": "JBT MAREL BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "CAMPINAS",
+"face": 1444276.42,
+"kw": "Jbt Marel Brasil"
+},
+{
+"i": 121,
+"root": "31158176",
+"razao": "BBR AGRO SUPLEMENTOS LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "BBR AGRO NUTRICAO",
+"uf": "PR",
+"city": "APUCARANA",
+"face": 1437303.0,
+"kw": "Bbr Agro Nutricao"
+},
+{
+"i": 122,
+"root": "56643018",
+"razao": "EUCATEX S A INDUSTRIA E COMERCIO",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1400000.0,
+"kw": "Eucatex S A"
+},
+{
+"i": 123,
+"root": "00417145",
+"razao": "DISCOMED COMERCIO DE PRODUTOS HOSPITALARES LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 1372648.38,
+"kw": "Discomed Produtos Hospitalares"
+},
+{
+"i": 124,
+"root": "20366728",
+"razao": "CASA BUGRE GOIAS COMERCIO E REPRESENTACAO LTDA",
+"fantasia": "CASA BUGRE GOIAS",
+"uf": "GO",
+"city": "ANAPOLIS",
+"face": 1367817.98,
+"kw": "Casa Bugre Goias"
+},
+{
+"i": 125,
+"root": "60846599",
+"razao": "IBRAME INDUSTRIA BRASILEIRA DE METAIS S/A",
+"fantasia": "",
+"uf": "ES",
+"city": "VITORIA",
+"face": 1359881.3,
+"kw": "Ibrame Brasileira Metais"
+},
+{
+"i": 126,
+"root": "07159913",
+"razao": "MULTISAUDE FARMACEUTICA E NUTRICIONAL S/A",
+"fantasia": "",
+"uf": "PE",
+"city": "GOIANA",
+"face": 1349574.1,
+"kw": "Multisaude Farmaceutica Nutricional"
+},
+{
+"i": 127,
+"root": "19684286",
+"razao": "STONEX COMERCIO E EXPORTACAO DE COMMODITIES LTDA.",
+"fantasia": "CDI",
+"uf": "SP",
+"city": "CAMPINAS",
+"face": 1343951.77,
+"kw": "Stonex Exportacao Commodities"
+},
+{
+"i": 128,
+"root": "01608488",
+"razao": "HOHL MAQUINAS AGRICOLAS LTDA",
+"fantasia": "HOHL",
+"uf": "GO",
+"city": "GOIANIA",
+"face": 1324133.99,
+"kw": "Hohl"
+},
+{
+"i": 129,
+"root": "28622744",
+"razao": "AGROCERES MULTIMIX NUTRICAO ANIMAL LTDA",
+"fantasia": "AGROCERES",
+"uf": "SP",
+"city": "RIO CLARO",
+"face": 1268978.32,
+"kw": "Agroceres"
+},
+{
+"i": 130,
+"root": "00052803",
+"razao": "PEDREIRA ARAGUAIA LTDA",
+"fantasia": "PEDREIRA ARAGUAIA",
+"uf": "GO",
+"city": "APARECIDA DE GOIANIA",
+"face": 1261848.82,
+"kw": "Pedreira Araguaia"
+},
+{
+"i": 131,
+"root": "00474698",
+"razao": "CAMINERO INDUSTRIA E COMERCIO DE OLEOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "BARIRI",
+"face": 1251475.5,
+"kw": "Caminero Oleos"
+},
+{
+"i": 132,
+"root": "19357388",
+"razao": "GOIAS RENDERING S/A",
+"fantasia": "GOIAS RENDERING",
+"uf": "GO",
+"city": "TRINDADE",
+"face": 1227904.0,
+"kw": "Goias Rendering"
+},
+{
+"i": 133,
+"root": "90251109",
+"razao": "DIMACI MATERIAL CIRURGICO LTDA",
+"fantasia": "DIMACI",
+"uf": "RS",
+"city": "ELDORADO DO SUL",
+"face": 1222974.01,
+"kw": "Dimaci"
+},
+{
+"i": 134,
+"root": "85070068",
+"razao": "GONCALVES & TORTOLA S/A",
+"fantasia": "GRUPO GTFOODS",
+"uf": "PR",
+"city": "MARINGA",
+"face": 1218354.25,
+"kw": "Grupo Gtfoods"
+},
+{
+"i": 135,
+"root": "04686964",
+"razao": "MECMETAL INDUSTRIA E COMERCIO DE TRANSFORMADORES LTDA",
+"fantasia": "MECMETAL",
+"uf": "SC",
+"city": "INDAIAL",
+"face": 1213121.27,
+"kw": "Mecmetal"
+},
+{
+"i": 136,
+"root": "22261093",
+"razao": "EMC TECNOLOGIA LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 1200491.42,
+"kw": "Emc Tecnologia"
+},
+{
+"i": 137,
+"root": "20120709",
+"razao": "MTM BURGER COMERCIO DE ALIMENTOS LTDA",
+"fantasia": "LIFE BOX",
+"uf": "GO",
+"city": "GOIANIA",
+"face": 1200000.0,
+"kw": "Life Box"
+},
+{
+"i": 138,
+"root": "24073694",
+"razao": "CIL - COMERCIO DE INFORMATICA LTDA",
+"fantasia": "NAGEM",
+"uf": "PE",
+"city": "RECIFE",
+"face": 1166163.86,
+"kw": "Nagem"
+},
+{
+"i": 139,
+"root": "20431395",
+"razao": "NORTEAGRI COMERCIO E REPRESENTACOES DE INSUMOS AGROPECUARIOS LTDA",
+"fantasia": "NORTEAGRI",
+"uf": "PA",
+"city": "REDENCAO",
+"face": 1155000.0,
+"kw": "Norteagri"
+},
+{
+"i": 140,
+"root": "19108689",
+"razao": "AGROSUL INDUSTRIA AGRICOLA LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "AGROSUL INDUSTRIA AGRICOLA",
+"uf": "SC",
+"city": "GUATAMBU",
+"face": 1153122.7,
+"kw": "Agrosul Agricola"
+},
+{
+"i": 141,
+"root": "07944839",
+"razao": "PAMPARAFIA-INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+"fantasia": "PAMPARAFIA-INDUSTRIA DE EMBALAGENS",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 1139759.72,
+"kw": "Pamparafia Embalagens"
+},
+{
+"i": 142,
+"root": "05696101",
+"razao": "AGROQUIMICA BRASINHA LTDA",
+"fantasia": "AGROQUIMICA BRASINHA",
+"uf": "PR",
+"city": "NOVA ESPERANCA",
+"face": 1138844.0,
+"kw": "Agroquimica Brasinha"
+},
+{
+"i": 143,
+"root": "06294126",
+"razao": "SOMA/RS PRODUTOS HOSPITALARES LTDA.",
+"fantasia": "",
+"uf": "RS",
+"city": "ELDORADO DO SUL",
+"face": 1137831.84,
+"kw": "Soma Rs Produtos Hospitalares"
+},
+{
+"i": 144,
+"root": "02770062",
+"razao": "EPHOXAL DO BRASIL INDUSTRIA E COMERCIO LTDA",
+"fantasia": "EPHOXAL",
+"uf": "SP",
+"city": "EMBU DAS ARTES",
+"face": 1130990.79,
+"kw": "Ephoxal"
+},
+{
+"i": 145,
+"root": "06936357",
+"razao": "INTER TELECOM - COMERCIO E LOCACAO DE EQUIPAMENTOS DE COMUNICACAO LTDA",
+"fantasia": "INTER TELECOM",
+"uf": "SP",
+"city": "SAO CAETANO DO SUL",
+"face": 1125816.11,
+"kw": "Inter Telecom"
+},
+{
+"i": 146,
+"root": "33233778",
+"razao": "TAG INDUSTRIA E LAMINACAO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1122336.63,
+"kw": "Tag Laminacao"
+},
+{
+"i": 147,
+"root": "36635483",
+"razao": "THUNDER TOOLS COMERCIO DE MATERIAIS PARA CONSTRUCAO LTDA",
+"fantasia": "THUNDER TOOLS",
+"uf": "SP",
+"city": "DIADEMA",
+"face": 1114761.56,
+"kw": "Thunder Tools"
+},
+{
+"i": 148,
+"root": "17159229",
+"razao": "LABORATORIO TEUTO BRASILEIRO S/A",
+"fantasia": "",
+"uf": "GO",
+"city": "ANAPOLIS",
+"face": 1105911.24,
+"kw": "Laboratorio Teuto Brasileiro"
+},
+{
+"i": 149,
+"root": "01790923",
+"razao": "TERRAMAQ PECAS E SERVICOS LTDA",
+"fantasia": "TERRAMAQ",
+"uf": "PE",
+"city": "RECIFE",
+"face": 1091422.69,
+"kw": "Terramaq"
+},
+{
+"i": 150,
+"root": "10345462",
+"razao": "OMRON HEALTHCARE BRASIL COMERCIO E DISTRIBUICAO DE PRODUTOS MEDICOS LTDA",
+"fantasia": "OMRON HEALTHCARE BRASIL",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1077222.82,
+"kw": "Omron Healthcare Brasil"
+},
+{
+"i": 151,
+"root": "27703265",
+"razao": "BEM BOM PESCADOS LTDA",
+"fantasia": "BEM BOM PESCADOS",
+"uf": "GO",
+"city": "GOIANESIA",
+"face": 1077136.54,
+"kw": "Bem Bom Pescados"
+},
+{
+"i": 152,
+"root": "11230832",
+"razao": "PLASTICOS TANGARA LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "TANGARA",
+"face": 1070557.39,
+"kw": "Plasticos Tangara"
+},
+{
+"i": 153,
+"root": "21877243",
+"razao": "ARRUDA & MELO COMERCIO E DISTRIBUICAO DE ALIMENTOS E BEBIDAS LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "ARRUDA E MELO DISTRIBUICAO",
+"uf": "PE",
+"city": "RECIFE",
+"face": 1068252.89,
+"kw": "Arruda Melo Distribuicao"
+},
+{
+"i": 154,
+"root": "04547784",
+"razao": "ALPHA MOTION DO BRASIL LTDA",
+"fantasia": "ALPHA MOTION",
+"uf": "MS",
+"city": "APARECIDA DO TABOADO",
+"face": 1059494.57,
+"kw": "Alpha Motion"
+},
+{
+"i": 155,
+"root": "49802148",
+"razao": "MILIUM GO1 LTDA",
+"fantasia": "",
+"uf": "GO",
+"city": "RIO VERDE",
+"face": 1057681.86,
+"kw": "Milium Go1"
+},
+{
+"i": 156,
+"root": "73174377",
+"razao": "FARMABASE SAUDE ANIMAL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "JAGUARIUNA",
+"face": 1057231.29,
+"kw": "Farmabase Saude Animal"
+},
+{
+"i": 157,
+"root": "04756153",
+"razao": "GFE EQUIPAMENTOS ELETRICOS LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "INDAIAL",
+"face": 1054854.54,
+"kw": "Gfe Equipamentos Eletricos"
+},
+{
+"i": 158,
+"root": "59105999",
+"razao": "WHIRLPOOL S.A",
+"fantasia": "WHIRLPOOL SA",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1044824.45,
+"kw": "Whirlpool"
+},
+{
+"i": 159,
+"root": "28109395",
+"razao": "AGROCERES PIC SUINOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "RIO CLARO",
+"face": 1029654.77,
+"kw": "Agroceres Pic Suinos"
+},
+{
+"i": 160,
+"root": "31443324",
+"razao": "TRUCKPAG MEIOS DE PAGAMENTO S/A",
+"fantasia": "",
+"uf": "SP",
+"city": "SANTANA DE PARNAIBA",
+"face": 1021319.46,
+"kw": "Truckpag Meios Pagamento"
+},
+{
+"i": 161,
+"root": "03380763",
+"razao": "REFRESCOS BANDEIRANTES INDUSTRIA E COMERCIO LTDA",
+"fantasia": "REFRESCOS BANDEIRANTES",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1020958.23,
+"kw": "Refrescos Bandeirantes"
+},
+{
+"i": 162,
+"root": "65697260",
+"razao": "REPOM INSTITUICAO DE PAGAMENTO HUSA S.A",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 1008821.27,
+"kw": "Repom Instituicao Pagamento Husa"
+},
+{
+"i": 163,
+"root": "60500246",
+"razao": "GOODYEAR DO BRASIL PRODUTOS DE BORRACHA LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SANTA BARBARA D'OESTE",
+"face": 1007717.64,
+"kw": "Goodyear Brasil Produtos Borracha"
+},
+{
+"i": 164,
+"root": "72096100",
+"razao": "MICROMAZZA INDUSTRIA DE VALVULAS LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "VILA FLORES",
+"face": 1006062.4,
+"kw": "Micromazza Valvulas"
+},
+{
+"i": 165,
+"root": "32847622",
+"razao": "INDUSTRIA E COMERCIO DE PRODUTOS AGRICOLAS NEWFERT LTDA",
+"fantasia": "BIORESULT AGRO",
+"uf": "MG",
+"city": "PIRAJUBA",
+"face": 1002340.0,
+"kw": "Bioresult Agro"
+},
+{
+"i": 166,
+"root": "08509682",
+"razao": "NAZCA DISTRIBUIDORA DE COSMETICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "DIADEMA",
+"face": 999930.72,
+"kw": "Nazca Distribuidora Cosmeticos"
+},
+{
+"i": 167,
+"root": "53877627",
+"razao": "DOW BRASIL SUDESTE INDUSTRIAL LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 994732.16,
+"kw": "Dow Brasil Sudeste Industrial"
+},
+{
+"i": 168,
+"root": "58099458",
+"razao": "AT PLAN ASSISTENCIA TECNICA PLANEJ E MONTAGENS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SANTANA DE PARNAIBA",
+"face": 980241.47,
+"kw": "At Plan Assistencia Tecnica Planej Montagens"
+},
+{
+"i": 169,
+"root": "05528196",
+"razao": "COOPERATIVA AGROINDUSTRIAL TRADICAO",
+"fantasia": "",
+"uf": "PR",
+"city": "PATO BRANCO",
+"face": 979566.0,
+"kw": "Cooperativa Agroindustrial Tradicao"
+},
+{
+"i": 170,
+"root": "08886407",
+"razao": "MINERAX - MINERACAO XAMBIOA LTDA",
+"fantasia": "CALTINS XAMBIOA-I",
+"uf": "TO",
+"city": "XAMBIOA",
+"face": 962991.9,
+"kw": "Caltins Xambioa I"
+},
+{
+"i": 171,
+"root": "83195628",
+"razao": "PILLARES PROJETOS E CONSTRUCOES LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "CONCORDIA",
+"face": 950000.0,
+"kw": "Pillares Projetos Construcoes"
+},
+{
+"i": 172,
+"root": "82683376",
+"razao": "MIRANTE DISTRIBUIDORA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CASCAVEL",
+"face": 949499.8,
+"kw": "Mirante Distribuidora"
+},
+{
+"i": 173,
+"root": "32184798",
+"razao": "CREATIVE PROPAGANDA E MARKETING LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 935547.55,
+"kw": "Creative Propaganda Marketing"
+},
+{
+"i": 174,
+"root": "13333090",
+"razao": "NIPRO MEDICAL CORPORATION PRODUTOS MEDICOS LTDA.",
+"fantasia": "NIPRO MEDICAL CORPORATION DO BRASIL",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 928406.79,
+"kw": "Nipro Medical Corporation Brasil"
+},
+{
+"i": 175,
+"root": "02965637",
+"razao": "VEJA SERVICOS LTDA",
+"fantasia": "VEJA SERVICOS",
+"uf": "CE",
+"city": "FORTALEZA",
+"face": 915348.93,
+"kw": "Veja Servicos"
+},
+{
+"i": 176,
+"root": "12889035",
+"razao": "INOVAMED HOSPITALAR LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "ERECHIM",
+"face": 908703.23,
+"kw": "Inovamed Hospitalar"
+},
+{
+"i": 177,
+"root": "10424098",
+"razao": "INDUSTRIA DE CONFECCOES K-DU LTDA",
+"fantasia": "KDU CONFECCOES",
+"uf": "PR",
+"city": "SANTO ANTONIO DO SUDOESTE",
+"face": 908132.39,
+"kw": "Kdu Confeccoes"
+},
+{
+"i": 178,
+"root": "19770372",
+"razao": "NEOMAR ARTIGOS INFANTIS EM GERAL LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 875418.05,
+"kw": "Neomar Artigos Infantis Em Geral"
+},
+{
+"i": 179,
+"root": "00939873",
+"razao": "BRUSINOX INDUSTRIA COMERCIO MAQUINAS EQUIPAMENTOS LTDA.",
+"fantasia": "",
+"uf": "SC",
+"city": "BRUSQUE",
+"face": 870843.88,
+"kw": "Brusinox Maquinas Equipamentos"
+},
+{
+"i": 180,
+"root": "21044682",
+"razao": "RG COPPER INDUSTRIA E COMERCIO DE CONDUTORES ELETRICOS LTDA",
+"fantasia": "RG COPPER",
+"uf": "SP",
+"city": "JARDINOPOLIS",
+"face": 864147.01,
+"kw": "Rg Copper"
+},
+{
+"i": 181,
+"root": "67729178",
+"razao": "COMERCIAL CIRURGICA RIOCLARENSE LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "RIO CLARO",
+"face": 857146.93,
+"kw": "Comercial Cirurgica Rioclarense"
+},
+{
+"i": 182,
+"root": "28152650",
+"razao": "EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA S.A.",
+"fantasia": "EDP ESPIRITO SANTO",
+"uf": "ES",
+"city": "VITORIA",
+"face": 850547.08,
+"kw": "Edp Espirito Santo"
+},
+{
+"i": 183,
+"root": "11069316",
+"razao": "TUBOS TIGRE-ADS DO BRASIL LIMITADA",
+"fantasia": "",
+"uf": "SP",
+"city": "RIO CLARO",
+"face": 840995.94,
+"kw": "Tubos Tigre Ads Brasil"
+},
+{
+"i": 184,
+"root": "07175357",
+"razao": "TERRA NOVA AGROINDUSTRIA LTDA",
+"fantasia": "",
+"uf": "MT",
+"city": "VARZEA GRANDE",
+"face": 837280.86,
+"kw": "Terra Nova Agroindustria"
+},
+{
+"i": 185,
+"root": "67959015",
+"razao": "NP BRASIL SERVICOS E PROJETOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "FRANCO DA ROCHA",
+"face": 830950.06,
+"kw": "Np Brasil Servicos Projetos"
+},
+{
+"i": 186,
+"root": "04088208",
+"razao": "SEM PARAR INSTITUICAO DE PAGAMENTO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 825597.87,
+"kw": "Sem Parar Instituicao Pagamento"
+},
+{
+"i": 187,
+"root": "00763251",
+"razao": "RAFITEC SOLUCOES EM PLASTICOS LTDA",
+"fantasia": "RAFITEC",
+"uf": "SC",
+"city": "XAXIM",
+"face": 824696.62,
+"kw": "Rafitec"
+},
+{
+"i": 188,
+"root": "68755545",
+"razao": "CTS - COMERCIO DE APARAS LTDA",
+"fantasia": "CTS AMBIENTAL",
+"uf": "RS",
+"city": "CANOAS",
+"face": 820372.25,
+"kw": "Cts Ambiental"
+},
+{
+"i": 189,
+"root": "03727941",
+"razao": "CITROTEC INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "ARARAQUARA",
+"face": 820000.0,
+"kw": "Citrotec"
+},
+{
+"i": 190,
+"root": "40887838",
+"razao": "MOVEIS SAO CARLOS LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "AFOGADOS DA INGAZEIRA",
+"face": 813501.86,
+"kw": "Moveis Sao Carlos"
+},
+{
+"i": 191,
+"root": "17875154",
+"razao": "MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA.",
+"fantasia": "",
+"uf": "MG",
+"city": "JUIZ DE FORA",
+"face": 801264.79,
+"kw": "Medquimica Farmaceutica"
+},
+{
+"i": 192,
+"root": "02149075",
+"razao": "SOLUS PECAS AGRICOLAS LTDA",
+"fantasia": "FERSUL USINAGEM",
+"uf": "PR",
+"city": "PATO BRANCO",
+"face": 798077.09,
+"kw": "Fersul Usinagem"
+},
+{
+"i": 193,
+"root": "32126501",
+"razao": "PESCADO CENTRAL LTDA",
+"fantasia": "RAKKI PESCADOS",
+"uf": "MG",
+"city": "IPIACU",
+"face": 793333.33,
+"kw": "Rakki Pescados"
+},
+{
+"i": 194,
+"root": "26910194",
+"razao": "A2 COMERCIO ATACADISTA DE ELETRONICOS LTDA",
+"fantasia": "ATAN DISTRIBUIDOR",
+"uf": "PB",
+"city": "CAMPINA GRANDE",
+"face": 788981.82,
+"kw": "Atan Distribuidor"
+},
+{
+"i": 195,
+"root": "13620193",
+"razao": "PAX BRAZIL AGROINDUSTRIA LTDA",
+"fantasia": "PAX BRAZIL",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 788640.0,
+"kw": "Pax Brazil"
+},
+{
+"i": 196,
+"root": "17312448",
+"razao": "TRACBEL SA",
+"fantasia": "",
+"uf": "MG",
+"city": "CONTAGEM",
+"face": 786462.95,
+"kw": "Tracbel"
+},
+{
+"i": 197,
+"root": "13477127",
+"razao": "PORTAL DO AEROPORTO LOGISTICA LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "SAO JOSE DOS PINHAIS",
+"face": 780881.58,
+"kw": "Portal Aeroporto Logistica"
+},
+{
+"i": 198,
+"root": "25331521",
+"razao": "ITATIAIA ELETRO E MOVEIS S/A",
+"fantasia": "ITATIAIA",
+"uf": "MG",
+"city": "UBA",
+"face": 780425.22,
+"kw": "Itatiaia"
+},
+{
+"i": 199,
+"root": "78242849",
+"razao": "ATLAS INDUSTRIA DE ELETRODOMESTICOS LTDA.",
+"fantasia": "ATLAS ELETRODOMESTICOS",
+"uf": "PR",
+"city": "PATO BRANCO",
+"face": 779392.23,
+"kw": "Atlas Eletrodomesticos"
+},
+{
+"i": 200,
+"root": "48833163",
+"razao": "CENTENARO PNEUS LTDA",
+"fantasia": "CENTENARO PNEUS",
+"uf": "MS",
+"city": "CAMPO GRANDE",
+"face": 770043.0,
+"kw": "Centenaro Pneus"
+},
+{
+"i": 201,
+"root": "21577893",
+"razao": "PARADOX JEANS CONFECCOES DE ROUPAS E TECIDOS LTDA",
+"fantasia": "PARADOX",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 769232.88,
+"kw": "Paradox"
+},
+{
+"i": 202,
+"root": "30080657",
+"razao": "RSG GESTAO DE ATIVOS LTDA",
+"fantasia": "F.PARTS FRANCHISING",
+"uf": "SC",
+"city": "ITAJAI",
+"face": 760513.79,
+"kw": "F Parts Franchising"
+},
+{
+"i": 203,
+"root": "00210633",
+"razao": "UNIPETRO NOVA ANDRADINA DISTRIBUIDORA DE PETROLEO LTDA",
+"fantasia": "",
+"uf": "MS",
+"city": "NOVA ANDRADINA",
+"face": 753950.0,
+"kw": "Unipetro Nova Andradina Distribuidora Petroleo"
+},
+{
+"i": 204,
+"root": "02802419",
+"razao": "MERCOFRICON S/A",
+"fantasia": "FRICON",
+"uf": "PE",
+"city": "PAULISTA",
+"face": 744752.65,
+"kw": "Fricon"
+},
+{
+"i": 205,
+"root": "57497539",
+"razao": "BRIDGESTONE DO BRASIL INDUSTRIA E COMERCIO LTDA.",
+"fantasia": "BRIDGESTONE",
+"uf": "SP",
+"city": "SANTO ANDRE",
+"face": 741870.48,
+"kw": "Bridgestone"
+},
+{
+"i": 206,
+"root": "01838723",
+"razao": "BRF S.A.",
+"fantasia": "",
+"uf": "SC",
+"city": "ITAJAI",
+"face": 741289.9,
+"kw": "Brf"
+},
+{
+"i": 207,
+"root": "94868742",
+"razao": "IMPROTEC COMERCIO DE MATERIAL CIRURGICO SA",
+"fantasia": "IMPROTEC",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 730000.0,
+"kw": "Improtec"
+},
+{
+"i": 208,
+"root": "07790530",
+"razao": "SH INDUSTRIA TEXTIL LTDA.",
+"fantasia": "",
+"uf": "RJ",
+"city": "PETROPOLIS",
+"face": 723908.0,
+"kw": "Sh Textil"
+},
+{
+"i": 209,
+"root": "19362088",
+"razao": "RDF CONSULTORIA EMPRESARIAL LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 709622.12,
+"kw": "Rdf Consultoria Empresarial"
+},
+{
+"i": 210,
+"root": "08226396",
+"razao": "CG LOCACAO DE GUINDASTES LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 706167.48,
+"kw": "Cg Locacao Guindastes"
+},
+{
+"i": 211,
+"root": "37031044",
+"razao": "CHARRUA COMERCIAL AGRICOLA LTDA",
+"fantasia": "",
+"uf": "GO",
+"city": "FORMOSA",
+"face": 704080.0,
+"kw": "Charrua Comercial Agricola"
+},
+{
+"i": 212,
+"root": "00029372",
+"razao": "GE HEALTHCARE DO BRASIL COMERCIO E SERVICOS PARA EQUIPAMENTOS MEDICO-HOSPITALARES LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 693357.04,
+"kw": "Ge Healthcare Brasil Servicos Para Equipamentos Medico Hospitalares"
+},
+{
+"i": 213,
+"root": "08078241",
+"razao": "CAMPO BOM INSUMOS AGRICOLAS LTDA",
+"fantasia": "CAMPO BOM INSUMOS AGRICOLAS",
+"uf": "GO",
+"city": "JATAI",
+"face": 691120.0,
+"kw": "Campo Bom Insumos Agricolas"
+},
+{
+"i": 214,
+"root": "02494715",
+"razao": "COOPERATIVA UNIMED CENTRAL DE COOPERATIVAS UNIMED DO RIO GRANDE DO SUL LTDA",
+"fantasia": "UNIMED CENTRAL DE SERVICOS",
+"uf": "RS",
+"city": "CANOAS",
+"face": 686964.09,
+"kw": "Unimed Central Servicos"
+},
+{
+"i": 215,
+"root": "10394384",
+"razao": "MMB SPORTS PARTICIPACOES LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 680417.28,
+"kw": "Mmb Sports Participacoes"
+},
+{
+"i": 216,
+"root": "10288920",
+"razao": "CAIRU INDUSTRIA DE BICICLETAS LTDA",
+"fantasia": "CAIRU INDUSTRIA DE BICICLETAS",
+"uf": "RO",
+"city": "PIMENTA BUENO",
+"face": 680366.63,
+"kw": "Cairu Bicicletas"
+},
+{
+"i": 217,
+"root": "01424397",
+"razao": "FAN STORE ENTRETENIMENTO S.A",
+"fantasia": "BANDUP!",
+"uf": "SP",
+"city": "BARRA BONITA",
+"face": 677400.38,
+"kw": "Bandup"
+},
+{
+"i": 218,
+"root": "43876960",
+"razao": "MACCAFERRI DO BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "JUNDIAI",
+"face": 676208.62,
+"kw": "Maccaferri Brasil"
+},
+{
+"i": 219,
+"root": "15129010",
+"razao": "CIMAR - CIMENTOS DO MARANHAO S.A.",
+"fantasia": "CIMAR",
+"uf": "MA",
+"city": "SAO LUIS",
+"face": 675124.95,
+"kw": "Cimar"
+},
+{
+"i": 220,
+"root": "39452556",
+"razao": "MAXINUTRI SUPLEMENTOS NUTRICIONAIS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 664358.44,
+"kw": "Maxinutri Suplementos Nutricionais"
+},
+{
+"i": 221,
+"root": "05858780",
+"razao": "ITW PPF BRASIL ADESIVOS LTDA.",
+"fantasia": "GYMCOL BRASIL",
+"uf": "SP",
+"city": "VALINHOS",
+"face": 662505.99,
+"kw": "Gymcol Brasil"
+},
+{
+"i": 222,
+"root": "02410500",
+"razao": "SUECA ROLAMENTOS E SOLUCOES INDUSTRIAIS LTDA",
+"fantasia": "SUECA SOLUCOES INDUSTRIAIS",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 657691.6,
+"kw": "Sueca Solucoes Industriais"
+},
+{
+"i": 223,
+"root": "57576274",
+"razao": "KSPG AUTOMOTIVE BRAZIL LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "NOVA ODESSA",
+"face": 651861.65,
+"kw": "Kspg Automotive Brazil"
+},
+{
+"i": 224,
+"root": "87156352",
+"razao": "INCOTERM SOLUCOES EM MEDICAO LTDA",
+"fantasia": "INCOTERM",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 650761.62,
+"kw": "Incoterm"
+},
+{
+"i": 225,
+"root": "19403406",
+"razao": "MAGNUM DISTRIBUIDORA DE PNEUS S/A",
+"fantasia": "MAGNUM TIRES",
+"uf": "PE",
+"city": "JABOATAO DOS GUARARAPES",
+"face": 644893.08,
+"kw": "Magnum Tires"
+},
+{
+"i": 226,
+"root": "77941490",
+"razao": "GAZIN INDUSTRIA E COMERCIO DE MOVEIS E ELETRODOMESTICOS S.A",
+"fantasia": "GAZIN S.A.",
+"uf": "PR",
+"city": "DOURADINA",
+"face": 641648.34,
+"kw": "Gazin"
+},
+{
+"i": 227,
+"root": "04454667",
+"razao": "VEREDA ALIMENTOS LTDA",
+"fantasia": "ABATEDOURO VEREDA",
+"uf": "GO",
+"city": "GOIANESIA",
+"face": 634021.16,
+"kw": "Abatedouro Vereda"
+},
+{
+"i": 228,
+"root": "07243854",
+"razao": "EVERTON FPS INDUSTRIA E COMERCIO DE PECAS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "COTIA",
+"face": 632893.59,
+"kw": "Everton Fps Pecas"
+},
+{
+"i": 229,
+"root": "71800296",
+"razao": "WALDMAN COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "BARUERI",
+"face": 628894.45,
+"kw": "Waldman Importacao Exportacao"
+},
+{
+"i": 230,
+"root": "06089521",
+"razao": "LINK COMERCIAL IMPORTADORA E EXPORTADORA LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "POMERODE",
+"face": 622086.4,
+"kw": "Link Comercial Importadora Exportadora"
+},
+{
+"i": 231,
+"root": "17186172",
+"razao": "ALGAR AVIATION TAXI AEREO S/A",
+"fantasia": "ALGAR AVIATION",
+"uf": "MG",
+"city": "UBERLANDIA",
+"face": 620879.43,
+"kw": "Algar Aviation"
+},
+{
+"i": 232,
+"root": "04273385",
+"razao": "CONFECCOES ALTA MODA LTDA",
+"fantasia": "BIOTIPO JEANS",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 619038.56,
+"kw": "Biotipo Jeans"
+},
+{
+"i": 233,
+"root": "07911181",
+"razao": "TOTALCLEAN - COMERCIO DE PRODUTOS DE HIGIENE E LIMPEZA LTDA",
+"fantasia": "TOTALCLEAN",
+"uf": "RS",
+"city": "PELOTAS",
+"face": 617079.91,
+"kw": "Totalclean"
+},
+{
+"i": 234,
+"root": "03882840",
+"razao": "RBG PRODUTOS THERAPEUTICOS S/A",
+"fantasia": "",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 616054.5,
+"kw": "Rbg Produtos Therapeuticos"
+},
+{
+"i": 235,
+"root": "01466091",
+"razao": "CIAPETRO DISTRIBUIDORA DE COMBUSTIVEIS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CIANORTE",
+"face": 614493.12,
+"kw": "Ciapetro Distribuidora Combustiveis"
+},
+{
+"i": 236,
+"root": "04253854",
+"razao": "ROSINA ALIMENTOS LTDA",
+"fantasia": "ROSINA ALIMENTOS",
+"uf": "RS",
+"city": "SERTAO SANTANA",
+"face": 614157.33,
+"kw": "Rosina Alimentos"
+},
+{
+"i": 237,
+"root": "38733545",
+"razao": "SOTIN SOLUCOES TECNICAS, INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "JUNDIAI",
+"face": 611207.1,
+"kw": "Sotin Solucoes Tecnicas"
+},
+{
+"i": 238,
+"root": "11065453",
+"razao": "COBREMACK INDUSTRIA DE CONDUTORES ELETRICOS LIMITADA EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL",
+"fantasia": "COBREMACK",
+"uf": "BA",
+"city": "LAURO DE FREITAS",
+"face": 611009.25,
+"kw": "Cobremack"
+},
+{
+"i": 239,
+"root": "47365763",
+"razao": "LOG GOIANIA II",
+"fantasia": "LOG GO II",
+"uf": "GO",
+"city": "HIDROLANDIA",
+"face": 610696.38,
+"kw": "Log Go Ii"
+},
+{
+"i": 240,
+"root": "33337122",
+"razao": "IPIRANGA PRODUTOS DE PETROLEO S.A.",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 608385.4,
+"kw": "Ipiranga Produtos Petroleo"
+},
+{
+"i": 241,
+"root": "05399862",
+"razao": "ATIVA EMPREENDIMENTOS LTDA",
+"fantasia": "ATIVA EMPREENDIMENTOS",
+"uf": "AL",
+"city": "MACEIO",
+"face": 605635.32,
+"kw": "Ativa Empreendimentos"
+},
+{
+"i": 242,
+"root": "04954155",
+"razao": "ALUMINIO SAO JOSE LTDA.",
+"fantasia": "ALUMINIO SAO JOSE",
+"uf": "SC",
+"city": "SAO JOSE",
+"face": 596077.15,
+"kw": "Aluminio Sao Jose"
+},
+{
+"i": 243,
+"root": "44412435",
+"razao": "TESSIN INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SUZANO",
+"face": 588544.67,
+"kw": "Tessin"
+},
+{
+"i": 244,
+"root": "08582585",
+"razao": "SUPRA EMBALAGENS LTDA",
+"fantasia": "SUPRA",
+"uf": "PR",
+"city": "GUARAPUAVA",
+"face": 587814.25,
+"kw": "Supra"
+},
+{
+"i": 245,
+"root": "53113791",
+"razao": "TOTVS S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 584334.68,
+"kw": "Totvs"
+},
+{
+"i": 246,
+"root": "40777556",
+"razao": "LICHT COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "LICHT COMERCIO",
+"uf": "SP",
+"city": "RIBEIRAO PRETO",
+"face": 583200.0,
+"kw": "Licht"
+},
+{
+"i": 247,
+"root": "35473014",
+"razao": "TELEFONICA CLOUD E TECNOLOGIA DO BRASIL S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "SANTANA DE PARNAIBA",
+"face": 581750.48,
+"kw": "Telefonica Cloud Tecnologia Brasil"
+},
+{
+"i": 248,
+"root": "07120505",
+"razao": "VERTICE CONSTRUTORA E INCORPORADORA LTDA",
+"fantasia": "VERTICE CONSTRUTORA E INCORPORADORA",
+"uf": "SC",
+"city": "CHAPECO",
+"face": 580000.0,
+"kw": "Vertice Construtora Incorporadora"
+},
+{
+"i": 249,
+"root": "05216859",
+"razao": "BIOBASE INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "POUSO ALEGRE",
+"face": 569654.02,
+"kw": "Biobase"
+},
+{
+"i": 250,
+"root": "84229889",
+"razao": "BRANDILI TEXTIL LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "APIUNA",
+"face": 567952.01,
+"kw": "Brandili Textil"
+},
+{
+"i": 251,
+"root": "05134355",
+"razao": "SANTIN - EQUIPAMENTOS, TRANSPORTES, IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "SANTIN EQUIPAMENTOS E TRANSPORTES",
+"uf": "SP",
+"city": "AMERICO BRASILIENSE",
+"face": 565326.29,
+"kw": "Santin Equipamentos Transportes"
+},
+{
+"i": 252,
+"root": "07954091",
+"razao": "MERCK SHARP & DOHME SAUDE ANIMAL LTDA",
+"fantasia": "MSD SAUDE ANIMAL",
+"uf": "SP",
+"city": "CRUZEIRO",
+"face": 564684.01,
+"kw": "Msd Saude Animal"
+},
+{
+"i": 253,
+"root": "12272084",
+"razao": "EQUATORIAL ALAGOAS DISTRIBUIDORA DE ENERGIA S.A.",
+"fantasia": "EQUATORIAL ENERGIA ALAGOAS",
+"uf": "AL",
+"city": "MACEIO",
+"face": 558539.73,
+"kw": "Equatorial Energia Alagoas"
+},
+{
+"i": 254,
+"root": "83011460",
+"razao": "SUL BRASIL IND E COM DE ACESSORIOS PLASTICOS E METALICOS S/A",
+"fantasia": "SUL BRASIL",
+"uf": "SC",
+"city": "CACADOR",
+"face": 555381.14,
+"kw": "Sul Brasil"
+},
+{
+"i": 255,
+"root": "90316407",
+"razao": "ROMAR F MANN & CIA. LTDA.",
+"fantasia": "",
+"uf": "RS",
+"city": "INDEPENDENCIA",
+"face": 549424.82,
+"kw": "Romar F Mann &"
+},
+{
+"i": 256,
+"root": "08953848",
+"razao": "CONFECCOES TENDENZA LTDA",
+"fantasia": "CONFECCOES TENDENZA",
+"uf": "SP",
+"city": "LINDOIA",
+"face": 545994.16,
+"kw": "Confeccoes Tendenza"
+},
+{
+"i": 257,
+"root": "33157312",
+"razao": "IFOOD BENEFICIOS E SERVICOS LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "OSASCO",
+"face": 545456.1,
+"kw": "Ifood Beneficios Servicos"
+},
+{
+"i": 258,
+"root": "12927088",
+"razao": "CIA DO JEANS INDUSTRIA, COMERCIO E IMPORTACAO S/A",
+"fantasia": "CIA DO JEANS",
+"uf": "ES",
+"city": "COLATINA",
+"face": 541970.0,
+"kw": "Jeans"
+},
+{
+"i": 259,
+"root": "00749526",
+"razao": "SUPERFINE STEEL ACOS INOXIDAVEIS LTDA",
+"fantasia": "SUPERFINE STEEL",
+"uf": "SP",
+"city": "SANTA BARBARA D'OESTE",
+"face": 540317.62,
+"kw": "Superfine Steel"
+},
+{
+"i": 260,
+"root": "07746756",
+"razao": "PORTOLOG TRANSPORTES LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "ITAJAI",
+"face": 540028.76,
+"kw": "Portolog Transportes"
+},
+{
+"i": 261,
+"root": "07851247",
+"razao": "AGROINDUSTRIAL IRMAOS DALLA COSTA S.A",
+"fantasia": "AGRO DALLA COSTA",
+"uf": "SP",
+"city": "RANCHARIA",
+"face": 535652.0,
+"kw": "Agro Dalla Costa"
+},
+{
+"i": 262,
+"root": "07426908",
+"razao": "TRUST - IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "TTL BRAZIL",
+"uf": "SC",
+"city": "ITAJAI",
+"face": 533171.81,
+"kw": "Ttl Brazil"
+},
+{
+"i": 263,
+"root": "01791741",
+"razao": "ASFALTOS NORDESTE LTDA",
+"fantasia": "",
+"uf": "CE",
+"city": "MARACANAU",
+"face": 531958.59,
+"kw": "Asfaltos Nordeste"
+},
+{
+"i": 264,
+"root": "07358761",
+"razao": "GERDAU ACOS LONGOS S.A.",
+"fantasia": "GERDAU COSIGUA",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 530847.44,
+"kw": "Gerdau Cosigua"
+},
+{
+"i": 265,
+"root": "20247322",
+"razao": "ALLIED TECNOLOGIA S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "JUNDIAI",
+"face": 529483.15,
+"kw": "Allied Tecnologia"
+},
+{
+"i": 266,
+"root": "01802541",
+"razao": "TUBOARTE INDUSTRIA E COMERCIO LTDA",
+"fantasia": "TUBOARTE MOVEIS",
+"uf": "CE",
+"city": "JAGUARIBE",
+"face": 527489.5,
+"kw": "Tuboarte Moveis"
+},
+{
+"i": 267,
+"root": "10962529",
+"razao": "CALMAP INDUSTRIA DE CALCARIO LTDA",
+"fantasia": "CALMAP CALCARIO DO PARA",
+"uf": "PA",
+"city": "SAO GERALDO DO ARAGUAIA",
+"face": 526042.93,
+"kw": "Calmap Calcario Para"
+},
+{
+"i": 268,
+"root": "11225183",
+"razao": "GSV MONTAGENS INDUSTRIAIS LTDA",
+"fantasia": "GSV MONTAGENS",
+"uf": "GO",
+"city": "GOIANESIA",
+"face": 525000.0,
+"kw": "Gsv Montagens"
+},
+{
+"i": 269,
+"root": "10917212",
+"razao": "CEREAIS FORMIGUENSE LTDA",
+"fantasia": "CEREAIS DE MARTINI",
+"uf": "RS",
+"city": "GETULIO VARGAS",
+"face": 525000.0,
+"kw": "Cereais Martini"
+},
+{
+"i": 270,
+"root": "39362161",
+"razao": "EJF COBRANCAS LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "BLUMENAU",
+"face": 513802.19,
+"kw": "Ejf Cobrancas"
+},
+{
+"i": 271,
+"root": "03070981",
+"razao": "CONDOMINIO DO ASPEN PARK SHOPPING CENTER II",
+"fantasia": "MARINGA PARK SHOPPING CENTER",
+"uf": "PR",
+"city": "MARINGA",
+"face": 511325.79,
+"kw": "Maringa Park Shopping Center"
+},
+{
+"i": 272,
+"root": "04712017",
+"razao": "CEREAL OURO SEMENTES LTDA",
+"fantasia": "CEREAL OURO SEMENTES",
+"uf": "GO",
+"city": "RIO VERDE",
+"face": 509576.07,
+"kw": "Cereal Ouro Sementes"
+},
+{
+"i": 273,
+"root": "83610790",
+"razao": "MEDAL METALURGICA DALLA LANA LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "LUZERNA",
+"face": 508918.34,
+"kw": "Medal Metalurgica Dalla Lana"
+},
+{
+"i": 274,
+"root": "10409614",
+"razao": "ALTA - AMERICA LATINA TECNOLOGIA AGRICOLA LTDA.",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 505000.0,
+"kw": "Alta America Latina Tecnologia Agricola"
+},
+{
+"i": 275,
+"root": "01358125",
+"razao": "WORLD BLUE INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "BRUSQUE",
+"face": 504580.74,
+"kw": "World Blue Confeccoes"
+},
+{
+"i": 276,
+"root": "45990181",
+"razao": "ROBERT BOSCH LIMITADA",
+"fantasia": "",
+"uf": "SP",
+"city": "CAMPINAS",
+"face": 503949.11,
+"kw": "Robert Bosch"
+},
+{
+"i": 277,
+"root": "29067113",
+"razao": "POLIMIX CONCRETO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SANTANA DE PARNAIBA",
+"face": 502157.63,
+"kw": "Polimix Concreto"
+},
+{
+"i": 278,
+"root": "02501297",
+"razao": "PHARLAB INDUSTRIA FARMACEUTICA S.A",
+"fantasia": "MERRELL LEPETIT",
+"uf": "MG",
+"city": "LAGOA DA PRATA",
+"face": 501630.38,
+"kw": "Merrell Lepetit"
+},
+{
+"i": 279,
+"root": "12554601",
+"razao": "ANJUU IMPORTACAO, EXPORTACAO E COMERCIO DE CONFECCOES LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "ARAQUARI",
+"face": 500703.44,
+"kw": "Anjuu Importacao Exportacao Confeccoes"
+},
+{
+"i": 280,
+"root": "10431349",
+"razao": "GBF NEGOCIOS IMOBILIARIOS LTDA",
+"fantasia": "GBF NEGOCIOS IMOBILIARIOS",
+"uf": "MT",
+"city": "CUIABA",
+"face": 499600.0,
+"kw": "Gbf Negocios Imobiliarios"
+},
+{
+"i": 281,
+"root": "61196119",
+"razao": "GIANNINI S/A EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "SP",
+"city": "SALTO",
+"face": 498422.0,
+"kw": "Giannini"
+},
+{
+"i": 282,
+"root": "00327501",
+"razao": "GUAIANAS - TRANSPORTES, MINERACAO, TRATAMENTO E REFINO DE OLEO LTDA",
+"fantasia": "GUAIANAS TRANSPORTES",
+"uf": "PR",
+"city": "NOVA ESPERANCA",
+"face": 498000.0,
+"kw": "Guaianas Transportes"
+},
+{
+"i": 283,
+"root": "07671092",
+"razao": "TBM - TEXTIL BEZERRA DE MENEZES S/A",
+"fantasia": "",
+"uf": "CE",
+"city": "FORTALEZA",
+"face": 497707.51,
+"kw": "Tbm Textil Bezerra Menezes"
+},
+{
+"i": 284,
+"root": "00466591",
+"razao": "COBB-VANTRESS BRASIL LTDA",
+"fantasia": "COBB PEDIGREE SG",
+"uf": "SP",
+"city": "GUAPIACU",
+"face": 497078.85,
+"kw": "Cobb Pedigree Sg"
+},
+{
+"i": 285,
+"root": "47747969",
+"razao": "COLOR VISAO DO BRASIL INDUSTRIA ACRILICA LIMITADA",
+"fantasia": "COLOR VISAO DO BRASIL",
+"uf": "SP",
+"city": "ARACATUBA",
+"face": 491209.57,
+"kw": "Color Visao Brasil"
+},
+{
+"i": 286,
+"root": "08439087",
+"razao": "CAEL ATACADO LTDA",
+"fantasia": "CAEL ATACADO",
+"uf": "PE",
+"city": "CARUARU",
+"face": 489038.37,
+"kw": "Cael Atacado"
+},
+{
+"i": 287,
+"root": "26401815",
+"razao": "GREEN PLACE COMERCIO E DISTRIBUICAO LTDA",
+"fantasia": "GREEN PLACE",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 488225.0,
+"kw": "Green Place"
+},
+{
+"i": 288,
+"root": "00974731",
+"razao": "FRANGOS PIONEIRO INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
+"fantasia": "FRANGOS PIONEIRO",
+"uf": "PR",
+"city": "JOAQUIM TAVORA",
+"face": 484066.19,
+"kw": "Frangos Pioneiro"
+},
+{
+"i": 289,
+"root": "19631376",
+"razao": "MEGA PACK PLASTICOS S.A",
+"fantasia": "MEGA PACK",
+"uf": "AM",
+"city": "MANAUS",
+"face": 484000.0,
+"kw": "Mega Pack"
+},
+{
+"i": 290,
+"root": "03387396",
+"razao": "SAO SALVADOR ALIMENTOS S/A",
+"fantasia": "SSA",
+"uf": "GO",
+"city": "ITABERAI",
+"face": 483031.1,
+"kw": "Sao Salvador Alimentos"
+},
+{
+"i": 291,
+"root": "30494410",
+"razao": "A3AGRO COMERCIAL AGRICOLA LTDA",
+"fantasia": "A3AGRO",
+"uf": "BA",
+"city": "LUIS EDUARDO MAGALHAES",
+"face": 480000.0,
+"kw": "A3Agro"
+},
+{
+"i": 292,
+"root": "03784035",
+"razao": "QUAKER TEXTIL DO BRASIL LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 479105.31,
+"kw": "Quaker Textil Brasil"
+},
+{
+"i": 293,
+"root": "77991552",
+"razao": "PALUDETTO & CIA LTDA",
+"fantasia": "MOVEIS ALBATROZ",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 475452.0,
+"kw": "Moveis Albatroz"
+},
+{
+"i": 294,
+"root": "26233064",
+"razao": "MICROVET-MICROBIOLOGIA VETERINARIA ESPECIAL LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "VICOSA",
+"face": 475385.92,
+"kw": "Microvet Microbiologia Veterinaria Especial"
+},
+{
+"i": 295,
+"root": "34230979",
+"razao": "SUPERMIX CONCRETO S/A",
+"fantasia": "SUPERMIX",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 470287.72,
+"kw": "Supermix"
+},
+{
+"i": 296,
+"root": "11841434",
+"razao": "LIBER EMPREENDIMENTOS IMOBILIARIOS LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "RECIFE",
+"face": 470000.0,
+"kw": "Liber Empreendimentos Imobiliarios"
+},
+{
+"i": 297,
+"root": "38081947",
+"razao": "AGROFOODS BRASIL ALIMENTO S/A",
+"fantasia": "",
+"uf": "SP",
+"city": "ORLANDIA",
+"face": 469262.66,
+"kw": "Agrofoods Brasil Alimento"
+},
+{
+"i": 298,
+"root": "18373437",
+"razao": "CROPFERT INDUSTRIA DE FERTILIZANTES E AGROQUIMICOS LTDA",
+"fantasia": "CROPFERT",
+"uf": "PR",
+"city": "JANDAIA DO SUL",
+"face": 467392.0,
+"kw": "Cropfert"
+},
+{
+"i": 299,
+"root": "29958527",
+"razao": "TOP50 LOCADORA DE EQUIPAMENTOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "GUARULHOS",
+"face": 462152.49,
+"kw": "Top50 Locadora Equipamentos"
+},
+{
+"i": 300,
+"root": "08307549",
+"razao": "ALTOMAX COMERCIO DE MEIAS E COBERTORES, IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "ALTOMAX",
+"uf": "PR",
+"city": "FOZ DO IGUACU",
+"face": 460120.8,
+"kw": "Altomax"
+},
+{
+"i": 301,
+"root": "07108742",
+"razao": "LIFECOR COMERCIO DE PRODUTOS HOSPITALARES LTDA",
+"fantasia": "LIFECOR",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 459688.97,
+"kw": "Lifecor"
+},
+{
+"i": 302,
+"root": "09454490",
+"razao": "LOTEX TEXTIL LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "JARAGUA DO SUL",
+"face": 459317.41,
+"kw": "Lotex Textil"
+},
+{
+"i": 303,
+"root": "09236766",
+"razao": "JOAO DE DEUS TRANSPORTES E COMERCIO LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 458601.25,
+"kw": "Joao Deus Transportes"
+},
+{
+"i": 304,
+"root": "11679253",
+"razao": "ITABOX INDUSTRIA E COMERCIO DE MOVEIS DE MADEIRA LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "ITAPETININGA",
+"face": 456074.41,
+"kw": "Itabox Moveis Madeira"
+},
+{
+"i": 305,
+"root": "48539407",
+"razao": "BASF SA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 455966.74,
+"kw": "Basf"
+},
+{
+"i": 306,
+"root": "41024712",
+"razao": "SARAIVA EQUIPAMENTOS LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "RECIFE",
+"face": 455807.91,
+"kw": "Saraiva Equipamentos"
+},
+{
+"i": 307,
+"root": "02271463",
+"razao": "CROMEX S/A",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 453843.0,
+"kw": "Cromex"
+},
+{
+"i": 308,
+"root": "00474973",
+"razao": "ESCRITORIO CENTRAL DE ARRECADACAO E DISTRIBUICAO ECAD",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 453771.76,
+"kw": "Escritorio Central Arrecadacao Distribuicao Ecad"
+},
+{
+"i": 309,
+"root": "18548852",
+"razao": "TRANSNETO TRANSPORTE LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "MARINGA",
+"face": 452000.03,
+"kw": "Transneto Transporte"
+},
+{
+"i": 310,
+"root": "07666567",
+"razao": "MK BR S.A",
+"fantasia": "M K ELETRODOMESTICOS",
+"uf": "BA",
+"city": "CONCEICAO DO JACUIPE",
+"face": 450760.99,
+"kw": "M K Eletrodomesticos"
+},
+{
+"i": 311,
+"root": "00912882",
+"razao": "GRUPO K1 S.A.",
+"fantasia": "MOVEIS KAPPESBERG",
+"uf": "RS",
+"city": "TUPANDI",
+"face": 449678.5,
+"kw": "Moveis Kappesberg"
+},
+{
+"i": 312,
+"root": "12067326",
+"razao": "PRIORI SEMENTES E DEFENSIVOS AGRICOLAS LTDA",
+"fantasia": "",
+"uf": "GO",
+"city": "JATAI",
+"face": 449000.0,
+"kw": "Priori Sementes Defensivos Agricolas"
+},
+{
+"i": 313,
+"root": "67943738",
+"razao": "UNICAP RENOVADORA DE PNEUS LTDA",
+"fantasia": "UNICAP",
+"uf": "SP",
+"city": "NOVA ODESSA",
+"face": 448731.0,
+"kw": "Unicap"
+},
+{
+"i": 314,
+"root": "11198594",
+"razao": "TRISOFT MANTAS DE POLIESTER LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "ITAPEVI",
+"face": 445884.94,
+"kw": "Trisoft Mantas Poliester"
+},
+{
+"i": 315,
+"root": "75293662",
+"razao": "ALTENBURG TEXTIL S.A.",
+"fantasia": "",
+"uf": "SC",
+"city": "BLUMENAU",
+"face": 439839.22,
+"kw": "Altenburg Textil"
+},
+{
+"i": 316,
+"root": "88065321",
+"razao": "FCC CIENCIA DOS MATERIAIS LTDA.",
+"fantasia": "",
+"uf": "RS",
+"city": "CAMPO BOM",
+"face": 439222.79,
+"kw": "Fcc Ciencia Materiais"
+},
+{
+"i": 317,
+"root": "01449930",
+"razao": "SIEMENS HEALTHCARE DIAGNOSTICOS LTDA.",
+"fantasia": "SIEMENS HEALTHINEERS",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 438000.0,
+"kw": "Siemens Healthineers"
+},
+{
+"i": 318,
+"root": "17205148",
+"razao": "MAID OLEOS E GORDURAS LTDA",
+"fantasia": "MAID OLEOS E GORDURAS",
+"uf": "PR",
+"city": "PARANACITY",
+"face": 434952.0,
+"kw": "Maid Oleos Gorduras"
+},
+{
+"i": 319,
+"root": "02565876",
+"razao": "HUESKER LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO JOSE DOS CAMPOS",
+"face": 429201.75,
+"kw": "Huesker"
+},
+{
+"i": 320,
+"root": "46710597",
+"razao": "FS I INDUSTRIA DE ETANOL S.A",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 425717.6,
+"kw": "Fs I Etanol"
+},
+{
+"i": 321,
+"root": "83158824",
+"razao": "COOPERATIVA REGIONAL AGROPECUARIA DE CAMPOS NOVOS - COPERCAMPOS",
+"fantasia": "COPERCAMPOS",
+"uf": "SC",
+"city": "CAMPOS NOVOS",
+"face": 418883.74,
+"kw": "Copercampos"
+},
+{
+"i": 322,
+"root": "76495209",
+"razao": "IMACA LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 417212.12,
+"kw": "Imaca"
+},
+{
+"i": 323,
+"root": "00714387",
+"razao": "BRASMO INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "CHAPECO",
+"face": 416585.1,
+"kw": "Brasmo"
+},
+{
+"i": 324,
+"root": "07378783",
+"razao": "CERAMICA SERRA AZUL LTDA",
+"fantasia": "",
+"uf": "SE",
+"city": "NOSSA SENHORA DO SOCORRO",
+"face": 414186.52,
+"kw": "Ceramica Serra Azul"
+},
+{
+"i": 325,
+"root": "91830836",
+"razao": "OLFAR S/A - ALIMENTO E ENERGIA",
+"fantasia": "",
+"uf": "RS",
+"city": "ERECHIM",
+"face": 414186.16,
+"kw": "Olfar Alimento Energia"
+},
+{
+"i": 326,
+"root": "24227491",
+"razao": "TCL SEMP INDUSTRIA E COMERCIO DE ELETROELETRONICOS S.A",
+"fantasia": "",
+"uf": "AM",
+"city": "MANAUS",
+"face": 412477.83,
+"kw": "Tcl Semp Eletroeletronicos"
+},
+{
+"i": 327,
+"root": "05236060",
+"razao": "ALCATEC PRODUTOS SINTETICOS LTDA",
+"fantasia": "ALCATEC",
+"uf": "BA",
+"city": "TERRA NOVA",
+"face": 410794.0,
+"kw": "Alcatec"
+},
+{
+"i": 328,
+"root": "00399857",
+"razao": "COMPANHIA DE DESENVOLVIMENTO DOS VALES DO SAO FRANCISCO E DO PARNAIBA",
+"fantasia": "CODEVASF",
+"uf": "DF",
+"city": "BRASILIA",
+"face": 410504.45,
+"kw": "Codevasf"
+},
+{
+"i": 329,
+"root": "08259544",
+"razao": "TOPICO LOCACOES DE GALPOES E EQUIPAMENTOS PARA INDUSTRIAS S.A",
+"fantasia": "",
+"uf": "SP",
+"city": "EMBU DAS ARTES",
+"face": 408816.48,
+"kw": "Topico Locacoes Galpoes Equipamentos Para Industrias"
+},
+{
+"i": 330,
+"root": "59128553",
+"razao": "STRATURA ASFALTOS LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 408408.17,
+"kw": "Stratura Asfaltos"
+},
+{
+"i": 331,
+"root": "67070268",
+"razao": "ROLAND BRASIL IMPORTACAO, EXPORTACAO, COMERCIO, REPRESENTACAO E SERVICOS LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 407763.63,
+"kw": "Roland Brasil Importacao Exportacao Representacao Servicos"
+},
+{
+"i": 332,
+"root": "08048078",
+"razao": "CCP - INDUSTRIA E COMERCIO DE COMPOSTOS DE PVC LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "ARAQUARI",
+"face": 407429.66,
+"kw": "Ccp Compostos Pvc"
+},
+{
+"i": 333,
+"root": "29588019",
+"razao": "COMARY INDUSTRIA DE BEBIDAS LTDA",
+"fantasia": "COMARY",
+"uf": "RJ",
+"city": "TERESOPOLIS",
+"face": 407241.98,
+"kw": "Comary"
+},
+{
+"i": 334,
+"root": "75007385",
+"razao": "AGROCETE INDUSTRIA DE FERTILIZANTES LTDA",
+"fantasia": "AGROCETE BRASIL",
+"uf": "PR",
+"city": "PONTA GROSSA",
+"face": 406921.95,
+"kw": "Agrocete Brasil"
+},
+{
+"i": 335,
+"root": "00073757",
+"razao": "GETTI QUIMICA LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "NOVO HAMBURGO",
+"face": 406720.75,
+"kw": "Getti Quimica"
+},
+{
+"i": 336,
+"root": "28485746",
+"razao": "DOCELAR MOVEIS LTDA",
+"fantasia": "",
+"uf": "ES",
+"city": "LINHARES",
+"face": 406451.0,
+"kw": "Docelar Moveis"
+},
+{
+"i": 337,
+"root": "05378317",
+"razao": "CRISTAL MASTER INDUSTRIA E COMERCIO LTDA",
+"fantasia": "CRISTAL MASTER",
+"uf": "SC",
+"city": "JOINVILLE",
+"face": 403317.43,
+"kw": "Cristal Master"
+},
+{
+"i": 338,
+"root": "12095666",
+"razao": "UNIDADE REVENDEDORA DE BEBIDAS LTDA",
+"fantasia": "UNIDADE",
+"uf": "GO",
+"city": "PORANGATU",
+"face": 402999.19,
+"kw": "Unidade"
+},
+{
+"i": 339,
+"root": "05039208",
+"razao": "COOPERATIVA DE PRODUTORES DE GRAOS DO ALTO URUGUAI LTDA",
+"fantasia": "COOPERGRAO",
+"uf": "RS",
+"city": "ESTACAO",
+"face": 401745.93,
+"kw": "Coopergrao"
+},
+{
+"i": 340,
+"root": "05860157",
+"razao": "EPE - PRODUTOS AGROPECUARIOS LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "GARANHUNS",
+"face": 399413.94,
+"kw": "Epe Produtos Agropecuarios"
+},
+{
+"i": 341,
+"root": "85462471",
+"razao": "INDUSTRIA DE CARROCERIAS METALICAS IBIPORA LTDA",
+"fantasia": "IBIPORA IMPLEMENTOS RODOVIARIOS",
+"uf": "PR",
+"city": "IBIPORA",
+"face": 398969.08,
+"kw": "Ibipora Implementos Rodoviarios"
+},
+{
+"i": 342,
+"root": "01637668",
+"razao": "SAO LUIS ADMINISTRADORA DE SHOPPING CENTER LTDA",
+"fantasia": "SAO LUIS ADMINISTRADORA",
+"uf": "MA",
+"city": "SAO LUIS",
+"face": 398428.76,
+"kw": "Sao Luis Administradora"
+},
+{
+"i": 343,
+"root": "02525961",
+"razao": "HEMOPROT INDUSTRIA E COMERCIO DE PRODUTOS FRIGORIFICOS LTDA",
+"fantasia": "HEMOPROT",
+"uf": "MS",
+"city": "MUNDO NOVO",
+"face": 398000.0,
+"kw": "Hemoprot"
+},
+{
+"i": 344,
+"root": "41687757",
+"razao": "GUINDASTES TRIANGULO LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "UBERLANDIA",
+"face": 397947.39,
+"kw": "Guindastes Triangulo"
+},
+{
+"i": 345,
+"root": "02017233",
+"razao": "PROGER-COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "PROGER",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 397886.19,
+"kw": "Proger"
+},
+{
+"i": 346,
+"root": "13259183",
+"razao": "MONFORTE ALIMENTOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "TUPA",
+"face": 390793.75,
+"kw": "Monforte Alimentos"
+},
+{
+"i": 347,
+"root": "02291660",
+"razao": "L D NUNES",
+"fantasia": "INDAMA",
+"uf": "RN",
+"city": "MACAIBA",
+"face": 390081.0,
+"kw": "Indama"
+},
+{
+"i": 348,
+"root": "04335788",
+"razao": "CEREALISTA SANTO EXPEDITO LTDA",
+"fantasia": "TRANSPORTADORA SANTO EXPEDITO",
+"uf": "PR",
+"city": "BARRACAO",
+"face": 387589.91,
+"kw": "Transportadora Santo Expedito"
+},
+{
+"i": 349,
+"root": "18933677",
+"razao": "CITOL INDUSTRIA DE TRATAMENTO DE OLEO S.A.",
+"fantasia": "CITOL",
+"uf": "SP",
+"city": "MOGI GUACU",
+"face": 385787.79,
+"kw": "Citol"
+},
+{
+"i": 350,
+"root": "13217111",
+"razao": "CC TELHAS LTDA",
+"fantasia": "PORTO TELHAS",
+"uf": "PE",
+"city": "IPOJUCA",
+"face": 384596.09,
+"kw": "Porto Telhas"
+},
+{
+"i": 351,
+"root": "04904042",
+"razao": "SIRI COMERCIO E SERVICOS LTDA.",
+"fantasia": "R.CELL",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 383787.51,
+"kw": "R Cell"
+},
+{
+"i": 352,
+"root": "02576794",
+"razao": "ACOPLATION ANDAIMES LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "MG",
+"city": "BALDIM",
+"face": 379730.78,
+"kw": "Acoplation Andaimes"
+},
+{
+"i": 353,
+"root": "61074506",
+"razao": "BELGO BEKAERT ARAMES LTDA",
+"fantasia": "BELGO ARAMES",
+"uf": "MG",
+"city": "CONTAGEM",
+"face": 377941.88,
+"kw": "Belgo Arames"
+},
+{
+"i": 354,
+"root": "02135888",
+"razao": "PRODUSI METALURGICA LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "LONDRINA",
+"face": 376976.74,
+"kw": "Produsi Metalurgica"
+},
+{
+"i": 355,
+"root": "00153282",
+"razao": "CESDE INDUSTRIA E COMERCIO DE ELETRODOMESTICOS LTDA",
+"fantasia": "CESDE LTDA",
+"uf": "CE",
+"city": "MARANGUAPE",
+"face": 376130.35,
+"kw": "Cesde"
+},
+{
+"i": 356,
+"root": "13726078",
+"razao": "CAUANA INDUSTRIA COMERCIO E REPRESENTACOES LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "NOVA LIMA",
+"face": 374949.0,
+"kw": "Cauana Representacoes"
+},
+{
+"i": 357,
+"root": "16978251",
+"razao": "RAVATO DISTRIBUIDORA DE COMBUSTIVEIS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "SAO MATEUS DO SUL",
+"face": 373976.81,
+"kw": "Ravato Distribuidora Combustiveis"
+},
+{
+"i": 358,
+"root": "28151363",
+"razao": "COMPANHIA ESPIRITO SANTENSE DE SANEAMENTO CESAN",
+"fantasia": "CESAN",
+"uf": "ES",
+"city": "VITORIA",
+"face": 370928.52,
+"kw": "Cesan"
+},
+{
+"i": 359,
+"root": "43998509",
+"razao": "AGAE TRANSPORTES E COMERCIO S/A",
+"fantasia": "BETUNEL",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 368662.26,
+"kw": "Betunel"
+},
+{
+"i": 360,
+"root": "59274316",
+"razao": "ALPHA MARKTEC MATERIAIS ELETRICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 368324.26,
+"kw": "Alpha Marktec Materiais Eletricos"
+},
+{
+"i": 361,
+"root": "60874724",
+"razao": "INDUSTRIA QUIMICA ANASTACIO S A",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 367145.2,
+"kw": "Quimica Anastacio S A"
+},
+{
+"i": 362,
+"root": "05936089",
+"razao": "LEV TERMOPLASTICOS LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "PARA DE MINAS",
+"face": 362990.37,
+"kw": "Lev Termoplasticos"
+},
+{
+"i": 363,
+"root": "01858973",
+"razao": "AIRELA INDUSTRIA FARMACEUTICA LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "PEDRAS GRANDES",
+"face": 362247.54,
+"kw": "Airela Farmaceutica"
+},
+{
+"i": 364,
+"root": "84229624",
+"razao": "METALURGICA FEY LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "INDAIAL",
+"face": 360769.13,
+"kw": "Metalurgica Fey"
+},
+{
+"i": 365,
+"root": "17986477",
+"razao": "TRR PEGORARO LTDA",
+"fantasia": "TRR PEGORARO",
+"uf": "MS",
+"city": "COXIM",
+"face": 358250.0,
+"kw": "Trr Pegoraro"
+},
+{
+"i": 366,
+"root": "03266537",
+"razao": "TRANS FALLS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "FOZ DO IGUACU",
+"face": 354400.0,
+"kw": "Trans Falls"
+},
+{
+"i": 367,
+"root": "10835932",
+"razao": "COMPANHIA ENERGETICA DE PERNAMBUCO",
+"fantasia": "NEOENERGIA PERNAMBUCO",
+"uf": "PE",
+"city": "RECIFE",
+"face": 354296.22,
+"kw": "Neoenergia Pernambuco"
+},
+{
+"i": 368,
+"root": "04431548",
+"razao": "PMSM PUBLICIDADE E COMUNICACAO LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "NITEROI",
+"face": 351926.88,
+"kw": "Pmsm Publicidade Comunicacao"
+},
+{
+"i": 369,
+"root": "34635991",
+"razao": "BIORESULT AGRONEGOCIOS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "TOLEDO",
+"face": 351079.81,
+"kw": "Bioresult Agronegocios"
+},
+{
+"i": 370,
+"root": "07752236",
+"razao": "MEDILAR IMPORTACAO E DISTRIBUICAO DE PRODUTOS MEDICO HOSPITALARES S/A",
+"fantasia": "MEDLIVE",
+"uf": "RS",
+"city": "VERA CRUZ",
+"face": 346408.09,
+"kw": "Medlive"
+},
+{
+"i": 371,
+"root": "40422448",
+"razao": "COOPERATIVA DE TRABALHO EM SAUDE E QUALIDADE - NUCLEO SAUDE PERNAMBUCO",
+"fantasia": "NUCLEO SAUDE PERNAMBUCO",
+"uf": "PE",
+"city": "RECIFE",
+"face": 341713.1,
+"kw": "Nucleo Saude Pernambuco"
+},
+{
+"i": 372,
+"root": "32902452",
+"razao": "TREVO ALIMENTOS LTDA",
+"fantasia": "TREVO ALIMENTOS",
+"uf": "GO",
+"city": "ITAUCU",
+"face": 341398.88,
+"kw": "Trevo Alimentos"
+},
+{
+"i": 373,
+"root": "14492564",
+"razao": "POLYEXCEL INDUSTRIA E COMERCIO DE COMPOSTOS POLIMERICOS LTDA",
+"fantasia": "POLYEXCEL COMPOSTOS POLIMERICOS",
+"uf": "SP",
+"city": "BARUERI",
+"face": 341250.0,
+"kw": "Polyexcel Compostos Polimericos"
+},
+{
+"i": 374,
+"root": "08578161",
+"razao": "ENGASTE PROJETOS, CONSTRUCOES E INCORPORACOES LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "CONCORDIA",
+"face": 340000.0,
+"kw": "Engaste Projetos Construcoes Incorporacoes"
+},
+{
+"i": 375,
+"root": "10159120",
+"razao": "INDUSTRIA E COMERCIO DE FARINHA JAGUA LTDA.",
+"fantasia": "FARINHA JAGUA",
+"uf": "PR",
+"city": "JAGUAPITA",
+"face": 339668.0,
+"kw": "Farinha Jagua"
+},
+{
+"i": 376,
+"root": "33449007",
+"razao": "EMPRESA BRASILEIRA DE BENEFICIOS E PAGAMENTOS INSTITUICAO DE PAGAMENTO LTDA",
+"fantasia": "CAJU",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 336951.3,
+"kw": "Caju"
+},
+{
+"i": 377,
+"root": "43464332",
+"razao": "IRON COMEX LTDA",
+"fantasia": "IRON COMEX",
+"uf": "PE",
+"city": "RECIFE",
+"face": 334279.01,
+"kw": "Iron Comex"
+},
+{
+"i": 378,
+"root": "28809368",
+"razao": "GJM INDUSTRIA DE COUROS LTDA",
+"fantasia": "GJM INDUSTRIA",
+"uf": "BA",
+"city": "ALAGOINHAS",
+"face": 332923.32,
+"kw": "Gjm Couros"
+},
+{
+"i": 379,
+"root": "21421785",
+"razao": "PERFILAGES COMERCIO VAREJISTA E ATACADISTA DE ALUMINIO LTDA",
+"fantasia": "PERFILAGES",
+"uf": "SC",
+"city": "LAGES",
+"face": 332469.93,
+"kw": "Perfilages"
+},
+{
+"i": 380,
+"root": "06222722",
+"razao": "LOGIKA DISTRIBUIDORA DE COSMETICOS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "SAO JOSE DOS PINHAIS",
+"face": 332242.27,
+"kw": "Logika Distribuidora Cosmeticos"
+},
+{
+"i": 381,
+"root": "75400903",
+"razao": "MOVAL MOVEIS ARAPONGAS LTDA",
+"fantasia": "MOVAL",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 331696.27,
+"kw": "Moval"
+},
+{
+"i": 382,
+"root": "04432327",
+"razao": "INCOFIOS INDUSTRIA E COMERCIO DE FIOS LTDA",
+"fantasia": "INCOFIOS",
+"uf": "SC",
+"city": "INDAIAL",
+"face": 330759.56,
+"kw": "Incofios"
+},
+{
+"i": 383,
+"root": "02558157",
+"razao": "TELEFONICA BRASIL S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 330264.64,
+"kw": "Telefonica Brasil"
+},
+{
+"i": 384,
+"root": "43214055",
+"razao": "MARTINS COMERCIO E SERVICOS DE DISTRIBUICAO S/A",
+"fantasia": "ARMAZENS MARTINS",
+"uf": "MG",
+"city": "UBERLANDIA",
+"face": 329842.98,
+"kw": "Armazens Martins"
+},
+{
+"i": 385,
+"root": "00331788",
+"razao": "AIR LIQUIDE BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 329122.66,
+"kw": "Air Liquide Brasil"
+},
+{
+"i": 386,
+"root": "43672716",
+"razao": "CAMESA INDUSTRIA TEXTIL LTDA",
+"fantasia": "CAMESA",
+"uf": "SP",
+"city": "GUARULHOS",
+"face": 328879.9,
+"kw": "Camesa"
+},
+{
+"i": 387,
+"root": "04647810",
+"razao": "URTIGAO COMERCIO REPRESENTACOES E TRANSPORTES LTDA",
+"fantasia": "URTIGAO COMERCIO REPRESENTACOES E TRANSPORTES",
+"uf": "MS",
+"city": "CAARAPO",
+"face": 328800.0,
+"kw": "Urtigao Representacoes Transportes"
+},
+{
+"i": 388,
+"root": "35820448",
+"razao": "WHITE MARTINS GASES INDUSTRIAIS LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 328667.29,
+"kw": "White Martins Gases Industriais"
+},
+{
+"i": 389,
+"root": "04603630",
+"razao": "INDUSTRIA E COMERCIO DE CARNES E DERIVADOS BOI BRASIL LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "BOI BRASIL",
+"uf": "GO",
+"city": "APARECIDA DE GOIANIA",
+"face": 327994.4,
+"kw": "Boi Brasil"
+},
+{
+"i": 390,
+"root": "02274615",
+"razao": "USECAR LOCADORA DE VEICULOS S/A",
+"fantasia": "USE CAR",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 326730.53,
+"kw": "Use Car"
+},
+{
+"i": 391,
+"root": "02924249",
+"razao": "RANCHEIRO S.A.",
+"fantasia": "RANCHEIRO",
+"uf": "GO",
+"city": "ANAPOLIS",
+"face": 326527.45,
+"kw": "Rancheiro"
+},
+{
+"i": 392,
+"root": "43718469",
+"razao": "GSI CREOS BRASIL LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 325850.6,
+"kw": "Gsi Creos Brasil"
+},
+{
+"i": 393,
+"root": "19966141",
+"razao": "PRO-COLOR QUIMICA SUL LTDA",
+"fantasia": "PRO-COLOR",
+"uf": "SC",
+"city": "JARAGUA DO SUL",
+"face": 325517.44,
+"kw": "Pro Color"
+},
+{
+"i": 394,
+"root": "43342153",
+"razao": "TEXMAR CONFECCOES E MALHAS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 324707.0,
+"kw": "Texmar Confeccoes Malhas"
+},
+{
+"i": 395,
+"root": "07153791",
+"razao": "RENTALBRAS LOCACAO DE BENS MOVEIS PARA CONSTRUCAO CIVIL LTDA",
+"fantasia": "RENTALBRAS",
+"uf": "SP",
+"city": "CAMPINAS",
+"face": 324549.2,
+"kw": "Rentalbras"
+},
+{
+"i": 396,
+"root": "44151413",
+"razao": "CALDEX CONEXOES E EQUIPAMENTOS LTDA",
+"fantasia": "CALDEX",
+"uf": "SP",
+"city": "DIADEMA",
+"face": 322964.99,
+"kw": "Caldex"
+},
+{
+"i": 397,
+"root": "83201111",
+"razao": "MC-JU INDUSTRIA E COMERCIO DE CONFECCOES LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "SC",
+"city": "GUABIRUBA",
+"face": 322411.79,
+"kw": "Mc Ju Confeccoes"
+},
+{
+"i": 398,
+"root": "08934225",
+"razao": "VENTISOL NORDESTE INDUSTRIA E COMERCIO DE VENTILADORES LTDA",
+"fantasia": "VENTISOL NORDESTE INDUSTRIA E COMERCIO",
+"uf": "PE",
+"city": "VITORIA DE SANTO ANTAO",
+"face": 321724.2,
+"kw": "Ventisol Nordeste"
+},
+{
+"i": 399,
+"root": "82270281",
+"razao": "POLIJUTA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "GUARAPUAVA",
+"face": 321041.01,
+"kw": "Polijuta Embalagens"
+},
+{
+"i": 400,
+"root": "46495282",
+"razao": "HORUS DO BRASIL INDUSTRIA DE IMPLEMENTOS E PECAS AGRICOLAS LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "SANTA ROSA",
+"face": 320280.42,
+"kw": "Horus Brasil Implementos Pecas Agricolas"
+},
+{
+"i": 401,
+"root": "61773646",
+"razao": "GRAXARIA BB LTDA",
+"fantasia": "GRAXARIA BEM BOM",
+"uf": "GO",
+"city": "NIQUELANDIA",
+"face": 319660.2,
+"kw": "Graxaria Bem Bom"
+},
+{
+"i": 402,
+"root": "70494828",
+"razao": "DELICIOUS FISH AGROINDUSTRIA E COMERCIO DE PESCADOS LTDA",
+"fantasia": "DELICIOUS FISH",
+"uf": "MT",
+"city": "SORRISO",
+"face": 318000.0,
+"kw": "Delicious Fish"
+},
+{
+"i": 403,
+"root": "04422548",
+"razao": "LAPONIA SUDESTE LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "ITU",
+"face": 316198.79,
+"kw": "Laponia Sudeste"
+},
+{
+"i": 404,
+"root": "50378389",
+"razao": "MARTINS CRUZ SOLUCOES AGRICOLAS LTDA",
+"fantasia": "MAQUINAS AGRICOLAS CRUZ",
+"uf": "SP",
+"city": "JABOTICABAL",
+"face": 314029.75,
+"kw": "Maquinas Agricolas Cruz"
+},
+{
+"i": 405,
+"root": "08228146",
+"razao": "PARVI LOCADORA S.A",
+"fantasia": "",
+"uf": "PE",
+"city": "RECIFE",
+"face": 311892.18,
+"kw": "Parvi Locadora"
+},
+{
+"i": 406,
+"root": "49644505",
+"razao": "DALMOLIN CONSTRUTORA E ADMINISTRADORA DE BENS PROPRIOS LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "CONCORDIA",
+"face": 311424.0,
+"kw": "Dalmolin Construtora Administradora Bens Proprios"
+},
+{
+"i": 407,
+"root": "01911761",
+"razao": "NATIVA PRODUTOS AGRICOLAS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "PATO BRANCO",
+"face": 310314.83,
+"kw": "Nativa Produtos Agricolas"
+},
+{
+"i": 408,
+"root": "16620321",
+"razao": "ALBUQUERQUE SOCCER ATIVIDADES ESPORTIVAS LTDA",
+"fantasia": "ATHLETIC SOCCER ESPORTES E MARKETING",
+"uf": "PE",
+"city": "OLINDA",
+"face": 310000.0,
+"kw": "Athletic Soccer Esportes Marketing"
+},
+{
+"i": 409,
+"root": "33647553",
+"razao": "FLUMINENSE FOOTBALL CLUB",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 309484.78,
+"kw": "Fluminense Football Club"
+},
+{
+"i": 410,
+"root": "12749549",
+"razao": "MTC INCORPORACOES IMOBILIARIAS LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "CAXIAS DO SUL",
+"face": 309000.0,
+"kw": "Mtc Incorporacoes Imobiliarias"
+},
+{
+"i": 411,
+"root": "56228356",
+"razao": "CRBS S/A",
+"fantasia": "CRBS",
+"uf": "SP",
+"city": "JAGUARIUNA",
+"face": 308761.42,
+"kw": "Crbs"
+},
+{
+"i": 412,
+"root": "20520367",
+"razao": "MADSON ELETROMETALURGICA LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 308189.05,
+"kw": "Madson Eletrometalurgica"
+},
+{
+"i": 413,
+"root": "05603186",
+"razao": "MEGATEAM CONSULTORIA LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 307262.69,
+"kw": "Megateam Consultoria"
+},
+{
+"i": 414,
+"root": "02905110",
+"razao": "GR SERVICOS E ALIMENTACAO LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 306115.81,
+"kw": "Gr Servicos Alimentacao"
+},
+{
+"i": 415,
+"root": "33150053",
+"razao": "ACOTUBO SOLUCOES EM ACOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "GUARULHOS",
+"face": 303544.67,
+"kw": "Acotubo Solucoes Em Acos"
+},
+{
+"i": 416,
+"root": "10758022",
+"razao": "I. F. DOS SANTOS & CIA LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "JOAO ALFREDO",
+"face": 301720.99,
+"kw": "I F Santos &"
+},
+{
+"i": 417,
+"root": "01644931",
+"razao": "A.S.E. DISTRIBUICAO LTDA.",
+"fantasia": "ELDORADO DISTRIBUICAO",
+"uf": "GO",
+"city": "ANAPOLIS",
+"face": 301633.9,
+"kw": "Eldorado Distribuicao"
+},
+{
+"i": 418,
+"root": "07174869",
+"razao": "FTI CONSULTORIA LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 301076.07,
+"kw": "Fti Consultoria"
+},
+{
+"i": 419,
+"root": "11324540",
+"razao": "J. CONFORT FABRICACAO DE MOVEIS E ESTOFADOS LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "JOAO ALFREDO",
+"face": 300559.34,
+"kw": "J Confort Fabricacao Moveis Estofados"
+},
+{
+"i": 420,
+"root": "03645772",
+"razao": "DOCK TECNOLOGIA S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "BARUERI",
+"face": 300283.06,
+"kw": "Dock Tecnologia"
+},
+{
+"i": 421,
+"root": "92185008",
+"razao": "ERPLASTI INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "MONTENEGRO",
+"face": 299861.9,
+"kw": "Erplasti Plasticos"
+},
+{
+"i": 422,
+"root": "08516950",
+"razao": "EMPRESA DE TERMOPLASTICOS DO NORDESTE ETENO LTDA",
+"fantasia": "******",
+"uf": "PE",
+"city": "RECIFE",
+"face": 296123.94,
+"kw": "Empresa Termoplasticos Nordeste Eteno"
+},
+{
+"i": 423,
+"root": "84046101",
+"razao": "BUNGE ALIMENTOS S/A",
+"fantasia": "",
+"uf": "SC",
+"city": "GASPAR",
+"face": 295774.65,
+"kw": "Bunge Alimentos"
+},
+{
+"i": 424,
+"root": "60933017",
+"razao": "TECFLUX LTDA.",
+"fantasia": "TECFLUX",
+"uf": "SP",
+"city": "CARAPICUIBA",
+"face": 291540.68,
+"kw": "Tecflux"
+},
+{
+"i": 425,
+"root": "92306257",
+"razao": "MV INFORMATICA NORDESTE LTDA",
+"fantasia": "MV",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 290787.94,
+"kw": "Mv Informatica Nordeste"
+},
+{
+"i": 426,
+"root": "01144076",
+"razao": "MAB - SP SERVICOS ADMINISTRATIVOS LTDA",
+"fantasia": "MAB SERVICOS",
+"uf": "SP",
+"city": "BARUERI",
+"face": 288822.7,
+"kw": "Mab Servicos"
+},
+{
+"i": 427,
+"root": "49870173",
+"razao": "TEXTIL J SERRANO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 288472.7,
+"kw": "Textil J Serrano"
+},
+{
+"i": 428,
+"root": "24649441",
+"razao": "A X M ADMINISTRACAO E PARTICIPACOES LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 288256.26,
+"kw": "A X M Administracao Participacoes"
+},
+{
+"i": 429,
+"root": "24221282",
+"razao": "GG ADMINISTRADORA DE BENS S/A",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 288256.26,
+"kw": "Gg Administradora Bens"
+},
+{
+"i": 430,
+"root": "40887879",
+"razao": "MAGNO MOVEIS LTDA",
+"fantasia": "MAGNO MOVEIS",
+"uf": "PE",
+"city": "AFOGADOS DA INGAZEIRA",
+"face": 287455.47,
+"kw": "Magno Moveis"
+},
+{
+"i": 431,
+"root": "05052443",
+"razao": "PLASKEM EMBALAGENS LTDA",
+"fantasia": "PLASKEM",
+"uf": "BA",
+"city": "LAURO DE FREITAS",
+"face": 286961.94,
+"kw": "Plaskem"
+},
+{
+"i": 432,
+"root": "47180625",
+"razao": "CTVA PROTECAO DE CULTIVOS LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "BARUERI",
+"face": 286835.99,
+"kw": "Ctva Protecao Cultivos"
+},
+{
+"i": 433,
+"root": "03413865",
+"razao": "QUINTAL TEXTIL AMERICANA LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "AMERICANA",
+"face": 285719.32,
+"kw": "Quintal Textil Americana"
+},
+{
+"i": 434,
+"root": "20203358",
+"razao": "ALIRIO COMERCIO DE CONFECCOES LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "ARAQUARI",
+"face": 284189.67,
+"kw": "Alirio Confeccoes"
+},
+{
+"i": 435,
+"root": "90108283",
+"razao": "CONTATTI COMERCIO E REPRESENTACOES LTDA",
+"fantasia": "CONTATTI MEDICAL",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 283293.5,
+"kw": "Contatti Medical"
+},
+{
+"i": 436,
+"root": "11516792",
+"razao": "BRANDT SOLUCOES EM AGRICULTURA LTDA",
+"fantasia": "BRANDT BRASIL",
+"uf": "PR",
+"city": "CAMBE",
+"face": 282047.0,
+"kw": "Brandt Brasil"
+},
+{
+"i": 437,
+"root": "86559960",
+"razao": "RCA CONSTRUTORA LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "MG",
+"city": "UBERABA",
+"face": 280030.53,
+"kw": "Rca Construtora"
+},
+{
+"i": 438,
+"root": "08627082",
+"razao": "DANTAS CONFECCOES E COMERCIO LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "LOJAS CATTAN",
+"uf": "PE",
+"city": "RECIFE",
+"face": 280000.0,
+"kw": "Lojas Cattan"
+},
+{
+"i": 439,
+"root": "04230984",
+"razao": "STARSPRINGS DO BRASIL LTDA.",
+"fantasia": "",
+"uf": "PR",
+"city": "ARAUCARIA",
+"face": 279092.97,
+"kw": "Starsprings Brasil"
+},
+{
+"i": 440,
+"root": "54516661",
+"razao": "JOHNSON & JOHNSON DO BRASIL INDUSTRIA E COMERCIO DE PRODUTOS PARA SAUDE LTDA.",
+"fantasia": "JOHNSON & JOHNSON MEDICAL BRASIL",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 278216.77,
+"kw": "Johnson & Johnson Medical Brasil"
+},
+{
+"i": 441,
+"root": "02212918",
+"razao": "BELCAR CAMINHOES E MAQUINAS LTDA",
+"fantasia": "BELCAR CAMINHOES",
+"uf": "GO",
+"city": "GOIANIA",
+"face": 277586.31,
+"kw": "Belcar Caminhoes"
+},
+{
+"i": 442,
+"root": "79460192",
+"razao": "KIT S PARANA-INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+"fantasia": "KITS PARANA",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 277283.04,
+"kw": "Kits Parana"
+},
+{
+"i": 443,
+"root": "04196935",
+"razao": "GOLDEN DISTRIBUIDORA LTDA.",
+"fantasia": "GOLDEN / SHARPENER",
+"uf": "ES",
+"city": "SERRA",
+"face": 271484.12,
+"kw": "Golden Sharpener"
+},
+{
+"i": 444,
+"root": "84683408",
+"razao": "DOHLER S.A.",
+"fantasia": "",
+"uf": "SC",
+"city": "JOINVILLE",
+"face": 268521.81,
+"kw": "Dohler"
+},
+{
+"i": 445,
+"root": "02709992",
+"razao": "CRISTAL ALIMENTOS LTDA",
+"fantasia": "ARROZ CRISTAL",
+"uf": "GO",
+"city": "APARECIDA DE GOIANIA",
+"face": 268352.18,
+"kw": "Arroz Cristal"
+},
+{
+"i": 446,
+"root": "10925045",
+"razao": "OPTIMUM CONSULTORIA EM GESTAO PUBLICA E EMPRESARIAL LTDA",
+"fantasia": "OPTIMUM",
+"uf": "PB",
+"city": "CAMPINA GRANDE",
+"face": 267635.55,
+"kw": "Optimum"
+},
+{
+"i": 447,
+"root": "07478963",
+"razao": "ECOPNEUS COMERCIO DE PNEUMATICOS E SERVICOS LTDA",
+"fantasia": "ECOPNEUS",
+"uf": "PA",
+"city": "BARCARENA",
+"face": 265611.35,
+"kw": "Ecopneus"
+},
+{
+"i": 448,
+"root": "02676351",
+"razao": "SOAGRO - SOCIEDADE AGRO-PECUARIA LTDA",
+"fantasia": "",
+"uf": "GO",
+"city": "RIO VERDE",
+"face": 264931.98,
+"kw": "Soagro Sociedade Agro Pecuaria"
+},
+{
+"i": 449,
+"root": "12656690",
+"razao": "DISTRITO DE IRRIGACAO DO PERIMETRO SENADOR NILO COELHO",
+"fantasia": "DISTRITO",
+"uf": "PE",
+"city": "PETROLINA",
+"face": 264882.79,
+"kw": "Distrito"
+},
+{
+"i": 450,
+"root": "50221019",
+"razao": "HNK BR INDUSTRIA DE BEBIDAS LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "ITU",
+"face": 263157.28,
+"kw": "Hnk Br Bebidas"
+},
+{
+"i": 451,
+"root": "05701847",
+"razao": "MOMENTIVE PERFORMANCE MATERIALS INDUSTRIA DE SILICONES LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "ITATIBA",
+"face": 262038.21,
+"kw": "Momentive Performance Materials Silicones"
+},
+{
+"i": 452,
+"root": "01257995",
+"razao": "GOIASMINAS INDUSTRIA DE LATICINIOS LTDA",
+"fantasia": "ITALAC",
+"uf": "GO",
+"city": "CORUMBAIBA",
+"face": 261853.71,
+"kw": "Italac"
+},
+{
+"i": 453,
+"root": "16820052",
+"razao": "PRIMA FOODS S.A.",
+"fantasia": "MATABOI ALIMENTOS",
+"uf": "MG",
+"city": "ARAGUARI",
+"face": 260820.7,
+"kw": "Mataboi Alimentos"
+},
+{
+"i": 454,
+"root": "05113942",
+"razao": "SALUX - INFORMATIZACAO EM SAUDE S.A.",
+"fantasia": "",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 260799.62,
+"kw": "Salux Informatizacao Em Saude"
+},
+{
+"i": 455,
+"root": "04868412",
+"razao": "AUTO POSTO PRA FRENTE BRASIL LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CASCAVEL",
+"face": 260175.73,
+"kw": "Auto Posto Pra Frente Brasil"
+},
+{
+"i": 456,
+"root": "20750654",
+"razao": "GOIAS DISTRIBUIDORA DE ALIMENTOS LTDA",
+"fantasia": "DISDAL DISTRIBUIDORA",
+"uf": "GO",
+"city": "APARECIDA DE GOIANIA",
+"face": 260082.71,
+"kw": "Disdal Distribuidora"
+},
+{
+"i": 457,
+"root": "47254545",
+"razao": "SELENE INDUSTRIA TEXTIL S A",
+"fantasia": "",
+"uf": "SP",
+"city": "CERQUILHO",
+"face": 259498.98,
+"kw": "Selene Textil S A"
+},
+{
+"i": 458,
+"root": "04214651",
+"razao": "PACKDUQUE INDUSTRIA DE PLASTICOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "VALINHOS",
+"face": 258953.37,
+"kw": "Packduque Plasticos"
+},
+{
+"i": 459,
+"root": "18773359",
+"razao": "AGROBRASILCHEMICAL INDUSTRIA E COMERCIO LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "AGROBRASILCHEMICAL",
+"uf": "PR",
+"city": "MANDAGUARI",
+"face": 257434.5,
+"kw": "Agrobrasilchemical"
+},
+{
+"i": 460,
+"root": "07094272",
+"razao": "NOVA TRIGO RESINAS TERMOPLASTICAS LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO BERNARDO DO CAMPO",
+"face": 257394.62,
+"kw": "Nova Trigo Resinas Termoplasticas"
+},
+{
+"i": 461,
+"root": "46167507",
+"razao": "3- PLASTIC SOLUCOES EM COMERCIO DE POLIMEROS LTDA",
+"fantasia": "3-PLASTIC SOLUCOES EM RESINAS",
+"uf": "SP",
+"city": "AMERICANA",
+"face": 256709.29,
+"kw": "3 Plastic Solucoes Em Resinas"
+},
+{
+"i": 462,
+"root": "12863297",
+"razao": "LOGOMAR COMERCIO, IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "LOGOMAR COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+"uf": "SC",
+"city": "ITAJAI",
+"face": 256557.88,
+"kw": "Logomar Importacao Exportacao"
+},
+{
+"i": 463,
+"root": "16629296",
+"razao": "CASA NOVA EMPREENDIMENTOS IMOBILIARIOS LTDA",
+"fantasia": "CASA NOVA EMPREENDIMENTOS",
+"uf": "PE",
+"city": "OLINDA",
+"face": 255115.32,
+"kw": "Casa Nova Empreendimentos"
+},
+{
+"i": 464,
+"root": "62173620",
+"razao": "SERASA S.A.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 254832.18,
+"kw": "Serasa"
+},
+{
+"i": 465,
+"root": "12420164",
+"razao": "CM HOSPITALAR S.A.",
+"fantasia": "MAFRA HOSPITALAR",
+"uf": "SP",
+"city": "RIBEIRAO PRETO",
+"face": 254179.99,
+"kw": "Mafra Hospitalar"
+},
+{
+"i": 466,
+"root": "86205416",
+"razao": "KASPER INDUSTRIA DE MOVEIS LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "SAO JOSE DO CEDRO",
+"face": 253853.5,
+"kw": "Kasper Moveis"
+},
+{
+"i": 467,
+"root": "75205831",
+"razao": "SANTOS ANDIRA INDUSTRIA DE MOVEIS LTDA",
+"fantasia": "SANTOS ANDIRA",
+"uf": "PR",
+"city": "ANDIRA",
+"face": 252798.81,
+"kw": "Santos Andira"
+},
+{
+"i": 468,
+"root": "30222814",
+"razao": "VITAMEDIC INDUSTRIA FARMACEUTICA LTDA",
+"fantasia": "",
+"uf": "GO",
+"city": "ANAPOLIS",
+"face": 250921.84,
+"kw": "Vitamedic Farmaceutica"
+},
+{
+"i": 469,
+"root": "80959513",
+"razao": "CATIVA TEXTIL INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "POMERODE",
+"face": 249899.16,
+"kw": "Cativa Textil"
+},
+{
+"i": 470,
+"root": "02513526",
+"razao": "CICLO CAIRU LTDA",
+"fantasia": "",
+"uf": "RO",
+"city": "PIMENTA BUENO",
+"face": 249307.74,
+"kw": "Ciclo Cairu"
+},
+{
+"i": 471,
+"root": "60182904",
+"razao": "TEXTILNOVA FIACAO LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "MG",
+"city": "GUAXUPE",
+"face": 248330.45,
+"kw": "Textilnova Fiacao"
+},
+{
+"i": 472,
+"root": "43026198",
+"razao": "TERTO TRANSPORTES LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "APUCARANA",
+"face": 247935.21,
+"kw": "Terto Transportes"
+},
+{
+"i": 473,
+"root": "95758330",
+"razao": "SOMAR INDUSTRIAL DE EMBALAGENS LTDA -",
+"fantasia": "",
+"uf": "SC",
+"city": "CACADOR",
+"face": 246969.59,
+"kw": "Somar Industrial Embalagens"
+},
+{
+"i": 474,
+"root": "02513991",
+"razao": "DE HEUS INDUSTRIA E COMERCIO DE NUTRICAO ANIMAL LTDA",
+"fantasia": "DE HEUS",
+"uf": "SP",
+"city": "RIO CLARO",
+"face": 246779.9,
+"kw": "Heus"
+},
+{
+"i": 475,
+"root": "02339308",
+"razao": "GPS EMPREENDIMENTOS LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "GPS EMPREENDIMENTOS",
+"uf": "AL",
+"city": "MACEIO",
+"face": 245892.54,
+"kw": "Gps Empreendimentos"
+},
+{
+"i": 476,
+"root": "37350519",
+"razao": "MASUT COMBUSTIVEIS LTDA",
+"fantasia": "MASUT-TRR",
+"uf": "GO",
+"city": "SENADOR CANEDO",
+"face": 245850.0,
+"kw": "Masut Trr"
+},
+{
+"i": 477,
+"root": "12286944",
+"razao": "CONSTRUTORA HUMBERTO LOBO LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "AL",
+"city": "MACEIO",
+"face": 244838.03,
+"kw": "Construtora Humberto Lobo"
+},
+{
+"i": 478,
+"root": "08981590",
+"razao": "OGAN SERVICOS ADMINISTRATIVOS LTDA",
+"fantasia": "OGAN",
+"uf": "SP",
+"city": "SAO BERNARDO DO CAMPO",
+"face": 244053.12,
+"kw": "Ogan"
+},
+{
+"i": 479,
+"root": "12995199",
+"razao": "TECNOPLAST S.A - INDUSTRIA E COMERCIO DE PLASTICOS",
+"fantasia": "TECNOPLAST S.A.",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 243641.39,
+"kw": "Tecnoplast"
+},
+{
+"i": 480,
+"root": "22962737",
+"razao": "GAZIN ATACADO CENTRO-OESTE LTDA",
+"fantasia": "GAZIN ATACADO CENTRO-OESTE LTDA",
+"uf": "GO",
+"city": "IPAMERI",
+"face": 242126.42,
+"kw": "Gazin Atacado Centro Oeste"
+},
+{
+"i": 481,
+"root": "35474405",
+"razao": "MDG INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+"fantasia": "MDG INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+"uf": "AM",
+"city": "MANAUS",
+"face": 241458.9,
+"kw": "Mdg Plasticos"
+},
+{
+"i": 482,
+"root": "85335487",
+"razao": "H J MALHAS LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "BRUSQUE",
+"face": 240337.28,
+"kw": "H J Malhas"
+},
+{
+"i": 483,
+"root": "28929686",
+"razao": "PELOZATO HENRIQUE SOCIEDADE INDIVIDUAL DE ADVOCACIA",
+"fantasia": "",
+"uf": "SP",
+"city": "BARUERI",
+"face": 240000.0,
+"kw": "Pelozato Henrique Sociedade Individual Advocacia"
+},
+{
+"i": 484,
+"root": "50290329",
+"razao": "CARGILL NOVOS HORIZONTES LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 239695.0,
+"kw": "Cargill Novos Horizontes"
+},
+{
+"i": 485,
+"root": "17958615",
+"razao": "BCR - COMERCIO E DISTRIBUICAO DE IMPLANTES CIRURGICOS LTDA.",
+"fantasia": "BCR",
+"uf": "RS",
+"city": "PORTO ALEGRE",
+"face": 239412.95,
+"kw": "Bcr Distribuicao Implantes Cirurgicos"
+},
+{
+"i": 486,
+"root": "15640226",
+"razao": "EMPREENDIMENTO IMOBILIARIO IB GATTO SPE LTDA - EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "AL",
+"city": "MACEIO",
+"face": 239311.13,
+"kw": "Empreendimento Imobiliario Ib Gatto Spe"
+},
+{
+"i": 487,
+"root": "08810422",
+"razao": "GUARARAPES PAINEIS S/A",
+"fantasia": "GUARARAPES PAINEIS S/A",
+"uf": "SC",
+"city": "CACADOR",
+"face": 238085.39,
+"kw": "Guararapes Paineis"
+},
+{
+"i": 488,
+"root": "04301024",
+"razao": "CALOI NORTE SA",
+"fantasia": "CALOI SA",
+"uf": "AM",
+"city": "MANAUS",
+"face": 237701.23,
+"kw": "Caloi"
+},
+{
+"i": 489,
+"root": "60752763",
+"razao": "IRMAOS D AGOSTO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 236603.51,
+"kw": "Irmaos D Agosto"
+},
+{
+"i": 490,
+"root": "18304707",
+"razao": "INDUSTRIA DE MOVEIS NESHER LTDA",
+"fantasia": "",
+"uf": "ES",
+"city": "LINHARES",
+"face": 236423.0,
+"kw": "Moveis Nesher"
+},
+{
+"i": 491,
+"root": "02162259",
+"razao": "MWM - TUPY DO BRASIL LTDA.",
+"fantasia": "MWM MOTORES E GERADORES",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 236192.33,
+"kw": "Mwm Motores Geradores"
+},
+{
+"i": 492,
+"root": "54289830",
+"razao": "DOREMUS ALIMENTOS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "GUARULHOS",
+"face": 235792.34,
+"kw": "Doremus Alimentos"
+},
+{
+"i": 493,
+"root": "04327273",
+"razao": "LT QUIMICA LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "ESTANCIA VELHA",
+"face": 235156.14,
+"kw": "Lt Quimica"
+},
+{
+"i": 494,
+"root": "02520829",
+"razao": "DIMASTER - COMERCIO DE PRODUTOS HOSPITALARES LTDA.",
+"fantasia": "DIMASTER",
+"uf": "RS",
+"city": "BARAO DE COTEGIPE",
+"face": 232250.7,
+"kw": "Dimaster"
+},
+{
+"i": 495,
+"root": "46991618",
+"razao": "ALUMAQ LOCACAO E COMERCIO DE MAQUINAS DE SOLDA LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "CAMPINAS",
+"face": 231035.6,
+"kw": "Alumaq Locacao Maquinas Solda"
+},
+{
+"i": 496,
+"root": "13884068",
+"razao": "UNICHARM DO BRASIL INDUSTRIA E COMERCIO DE PRODUTOS DE HIGIENE LTDA.,",
+"fantasia": "",
+"uf": "SP",
+"city": "JAGUARIUNA",
+"face": 228249.92,
+"kw": "Unicharm Brasil Produtos Higiene"
+},
+{
+"i": 497,
+"root": "02624729",
+"razao": "MADETEC MOVEIS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 228237.0,
+"kw": "Madetec Moveis"
+},
+{
+"i": 498,
+"root": "06990590",
+"razao": "GOOGLE BRASIL INTERNET LTDA.",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 228215.86,
+"kw": "Google Brasil Internet"
+},
+{
+"i": 499,
+"root": "57378542",
+"razao": "IOSEI PARTICIPACOES LTDA",
+"fantasia": "IOSEI SMART SCAN",
+"uf": "GO",
+"city": "GOIANIA",
+"face": 226966.22,
+"kw": "Iosei Smart Scan"
+},
+{
+"i": 500,
+"root": "03071894",
+"razao": "VALGROUP AM INDUSTRIA DE MASTERBATCH LTDA.",
+"fantasia": "VALGROUP",
+"uf": "AM",
+"city": "MANAUS",
+"face": 226655.0,
+"kw": "Valgroup"
+},
+{
+"i": 501,
+"root": "65947236",
+"razao": "WGM SISTEMAS IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "WGM EQUIPAMENTOS",
+"uf": "SP",
+"city": "BARUERI",
+"face": 226506.99,
+"kw": "Wgm Equipamentos"
+},
+{
+"i": 502,
+"root": "95387569",
+"razao": "LINEA BRASIL IND E COM DE MOVEIS LTDA",
+"fantasia": "LINEA BRASIL",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 224015.98,
+"kw": "Linea Brasil"
+},
+{
+"i": 503,
+"root": "09373468",
+"razao": "USINA DE VENDAS SOLUCOES COMERCIAIS EM DISTRIBUICAO LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 223400.0,
+"kw": "Usina Vendas Solucoes Comerciais Em Distribuicao"
+},
+{
+"i": 504,
+"root": "03498812",
+"razao": "EBEG EMBALAGENS E DESCARTAVEIS LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "RIBEIRAO PRETO",
+"face": 222911.78,
+"kw": "Ebeg Embalagens Descartaveis"
+},
+{
+"i": 505,
+"root": "17469701",
+"razao": "ARCELORMITTAL BRASIL S.A.",
+"fantasia": "",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 222839.19,
+"kw": "Arcelormittal Brasil"
+},
+{
+"i": 506,
+"root": "12613484",
+"razao": "POTENCIAL AGRO S/A",
+"fantasia": "PB-BIOS",
+"uf": "PR",
+"city": "LAPA",
+"face": 222764.53,
+"kw": "Pb Bios"
+},
+{
+"i": 507,
+"root": "09260643",
+"razao": "RECORD PARTICIPACOES LTDA",
+"fantasia": "",
+"uf": "AL",
+"city": "MACEIO",
+"face": 222369.09,
+"kw": "Record Participacoes"
+},
+{
+"i": 508,
+"root": "42470088",
+"razao": "GEOQUEST BRASIL LTDA",
+"fantasia": "",
+"uf": "RJ",
+"city": "RIO DE JANEIRO",
+"face": 220382.08,
+"kw": "Geoquest Brasil"
+},
+{
+"i": 509,
+"root": "91062497",
+"razao": "MOVEIS RODIAL LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "LAGOA VERMELHA",
+"face": 219780.0,
+"kw": "Moveis Rodial"
+},
+{
+"i": 510,
+"root": "30177427",
+"razao": "DXS GESTAO E CONSULTORIA EMPRESARIAL LTDA",
+"fantasia": "DXS GESTAO E CONSULTORIA EMPRESARIAL",
+"uf": "SP",
+"city": "SAO PAULO",
+"face": 219405.51,
+"kw": "Dxs Gestao Consultoria Empresarial"
+},
+{
+"i": 511,
+"root": "47799028",
+"razao": "EDENTEC INDUSTRIA E COMERCIO LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "SOROCABA",
+"face": 219345.95,
+"kw": "Edentec"
+},
+{
+"i": 512,
+"root": "46645768",
+"razao": "LINHASITA INDUSTRIA DE LINHAS PARA COSER LTDA",
+"fantasia": "",
+"uf": "SP",
+"city": "ITATIBA",
+"face": 218971.2,
+"kw": "Linhasita Linhas Para Coser"
+},
+{
+"i": 513,
+"root": "04310390",
+"razao": "APC DO BRASIL LTDA.",
+"fantasia": "",
+"uf": "SC",
+"city": "CHAPECO",
+"face": 218400.0,
+"kw": "Apc Brasil"
+},
+{
+"i": 514,
+"root": "10811586",
+"razao": "TETO PLANEJAMENTO E INCORPORACOES LTDA",
+"fantasia": "TETO",
+"uf": "AL",
+"city": "MACEIO",
+"face": 217484.26,
+"kw": "Teto"
+},
+{
+"i": 515,
+"root": "17799898",
+"razao": "POLYBRAS - POLIMEROS BRASILEIROS LTDA",
+"fantasia": "POLYBRAS",
+"uf": "RN",
+"city": "MOSSORO",
+"face": 217457.66,
+"kw": "Polybras"
+},
+{
+"i": 516,
+"root": "17115437",
+"razao": "LABORATORIO GLOBO SA",
+"fantasia": "GLOBO PHARMA",
+"uf": "MG",
+"city": "SAO JOSE DA LAPA",
+"face": 216418.96,
+"kw": "Globo Pharma"
+},
+{
+"i": 517,
+"root": "77215606",
+"razao": "ARAPLAC INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+"fantasia": "MOVEIS ARAPLAC",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 216381.53,
+"kw": "Moveis Araplac"
+},
+{
+"i": 518,
+"root": "08718921",
+"razao": "T & T COMERCIO E REPRESENTACAO LTDA",
+"fantasia": "T & T REPRESENTACAO",
+"uf": "GO",
+"city": "APARECIDA DE GOIANIA",
+"face": 216279.12,
+"kw": "T & T Representacao"
+},
+{
+"i": 519,
+"root": "07206989",
+"razao": "UZ3 INDUSTRIA TEXTIL LTDA",
+"fantasia": "",
+"uf": "SC",
+"city": "INDAIAL",
+"face": 215699.34,
+"kw": "Uz3 Textil"
+},
+{
+"i": 520,
+"root": "87651345",
+"razao": "G GOTUZZO E CIA LTDA",
+"fantasia": "",
+"uf": "RS",
+"city": "PELOTAS",
+"face": 213107.83,
+"kw": "G Gotuzzo"
+},
+{
+"i": 521,
+"root": "02694691",
+"razao": "CANADA LOCADORA DE EQUIPAMENTOS LIMITADA",
+"fantasia": "",
+"uf": "MG",
+"city": "NOVA LIMA",
+"face": 212769.31,
+"kw": "Canada Locadora Equipamentos"
+},
+{
+"i": 522,
+"root": "21233373",
+"razao": "TRADESTAR IMPORTACAO E EXPORTACAO LTDA",
+"fantasia": "PVC TRADE",
+"uf": "SC",
+"city": "GARUVA",
+"face": 210630.0,
+"kw": "Pvc Trade"
+},
+{
+"i": 523,
+"root": "08584931",
+"razao": "RADICAL STYLE INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+"fantasia": "******",
+"uf": "SC",
+"city": "TIJUCAS",
+"face": 210265.38,
+"kw": "Radical Style Confeccoes"
+},
+{
+"i": 524,
+"root": "05949989",
+"razao": "REISTAR INDUSTRIA E COMERCIO DE ELETRONICOS LTDA EM RECUPERACAO JUDICIAL",
+"fantasia": "AMVOX",
+"uf": "BA",
+"city": "CAMACARI",
+"face": 210200.14,
+"kw": "Amvox"
+},
+{
+"i": 525,
+"root": "15102098",
+"razao": "COMPANHIA VALENCA INDUSTRIAL",
+"fantasia": "",
+"uf": "BA",
+"city": "VALENCA",
+"face": 209967.04,
+"kw": "Valenca Industrial"
+},
+{
+"i": 526,
+"root": "01792254",
+"razao": "L. J. MOVEIS LTDA",
+"fantasia": "",
+"uf": "MG",
+"city": "SAO GERALDO",
+"face": 209470.24,
+"kw": "L J Moveis"
+},
+{
+"i": 527,
+"root": "62859128",
+"razao": "EMBALARTE EMBALAGENS LTDA",
+"fantasia": "EMBALARTE EMBALAGENS",
+"uf": "GO",
+"city": "GOIANIA",
+"face": 209405.66,
+"kw": "Embalarte Embalagens"
+},
+{
+"i": 528,
+"root": "08464282",
+"razao": "WAL CONSULTORIA AERONAUTICA LTDA",
+"fantasia": "WAL AVIATION",
+"uf": "MG",
+"city": "BELO HORIZONTE",
+"face": 208303.18,
+"kw": "Wal Aviation"
+},
+{
+"i": 529,
+"root": "69975530",
+"razao": "CONSULTAR ASSIST TEC EM DOCUMENTACAO E INFORMACAO LTDA",
+"fantasia": "CONSULTAR",
+"uf": "AL",
+"city": "MACEIO",
+"face": 207006.28,
+"kw": "Consultar"
+},
+{
+"i": 530,
+"root": "66471517",
+"razao": "DPC DISTRIBUIDOR ATACADISTA S/A",
+"fantasia": "",
+"uf": "MG",
+"city": "CARATINGA",
+"face": 206466.35,
+"kw": "Dpc Distribuidor Atacadista"
+},
+{
+"i": 531,
+"root": "75655720",
+"razao": "SEPAC SERRADOS E PASTA DE CELULOSE LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "MALLET",
+"face": 206015.81,
+"kw": "Sepac Serrados Pasta Celulose"
+},
+{
+"i": 532,
+"root": "02721927",
+"razao": "POLIMAN INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "ARAPONGAS",
+"face": 205935.56,
+"kw": "Poliman Moveis"
+},
+{
+"i": 533,
+"root": "03609434",
+"razao": "AEROMECANICA LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 205080.7,
+"kw": "Aeromecanica"
+},
+{
+"i": 534,
+"root": "13177802",
+"razao": "SAFEGOLD GERENCIAMENTO DE CAPITAL LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "CURITIBA",
+"face": 203501.15,
+"kw": "Safegold Gerenciamento Capital"
+},
+{
+"i": 535,
+"root": "14898243",
+"razao": "CONSENCO EDIFICACOES E INCORPORACOES TUCCI CAVALCANTE LTDA",
+"fantasia": "",
+"uf": "AL",
+"city": "MACEIO",
+"face": 203452.29,
+"kw": "Consenco Edificacoes Incorporacoes Tucci Cavalcante"
+},
+{
+"i": 536,
+"root": "86765971",
+"razao": "LAMINADOS PROGRESSO LTDA",
+"fantasia": "",
+"uf": "PR",
+"city": "IMBITUVA",
+"face": 203412.12,
+"kw": "Laminados Progresso"
+},
+{
+"i": 537,
+"root": "04591114",
+"razao": "NUTRANE NUTRICAO ANIMAL LTDA",
+"fantasia": "",
+"uf": "PE",
+"city": "PESQUEIRA",
+"face": 201080.88,
+"kw": "Nutrane Nutricao Animal"
+},
+{
+"i": 538,
+"root": "06314327",
+"razao": "JC DISTRIBUICAO LOGISTICA IMPORTACAO E EXPORTACAO DE PRODUTOS INDUSTRIALIZADOS S/A",
+"fantasia": "JC DISTRIBUICAO",
+"uf": "GO",
+"city": "APARECIDA DE GOIANIA",
+"face": 200738.49,
+"kw": "Jc Distribuicao"
+},
+{
+"i": 539,
+"root": "10885321",
+"razao": "WEG LINHARES EQUIPAMENTOS ELETRICOS S/A",
+"fantasia": "",
+"uf": "ES",
+"city": "LINHARES",
+"face": 200577.9,
+"kw": "Weg Linhares Equipamentos Eletricos"
+}
+]

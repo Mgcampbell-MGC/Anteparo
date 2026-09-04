@@ -1,10 +1,10 @@
 # ANTEPARO index — Phase 1 report
-run `20260903T230425Z-e7c9a7` · 2026-09-04 00:09Z
+run `20260903T230425Z-e7c9a7` · 2026-09-04 14:07Z
 
 ## Call sheet
 - **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1063 name-only rows ≥ R$200k on *Needs CNPJ*
 - excluded from the Call List by registry data: banks 95 · public 1 · inactive 48; by name pre-filter: 151
-- 1199 documents ingested · 534 cases with a document · 209 of 534 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
+- 1199 documents ingested · 531 cases with a document · 209 of 531 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
 
 ## Documents by status
 - ERROR: 34
