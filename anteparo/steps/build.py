@@ -107,11 +107,13 @@ def build_targets(db, run_id, log=print):
     return n_targets, n_pool
 
 
-def enrich(db, run_id, db_path, log=print, limit=None):
+def enrich(db, run_id, db_path, log=print, limit=None, include_by_name=False):
+    """RFB record for every target root without one. Roots flagged financial/public BY NAME are skipped by default (the phase-1 budget);
+    include_by_name=True looks them up too — the FINANCIAL / STATE-OWNED tabs need their registry phone, status, CNAE and porte."""
     rfb = RFB(db_path)
-    roots = [r[0] for r in db.execute("""SELECT DISTINCT cnpj_basico FROM targets WHERE run_id=? AND cnpj_basico NOT IN
-                                         (SELECT cnpj_basico FROM companies) AND flags NOT LIKE '%LIKELY_FINANCIAL_BY_NAME%'
-                                         AND flags NOT LIKE '%LIKELY_PUBLIC_BY_NAME%' ORDER BY CAST(class_iii_face_sum AS REAL) DESC""", (run_id,)).fetchall()]
+    skip = "" if include_by_name else "AND flags NOT LIKE '%LIKELY_FINANCIAL_BY_NAME%' AND flags NOT LIKE '%LIKELY_PUBLIC_BY_NAME%'"
+    roots = [r[0] for r in db.execute(f"""SELECT DISTINCT cnpj_basico FROM targets WHERE run_id=? AND cnpj_basico NOT IN
+                                         (SELECT cnpj_basico FROM companies) {skip} ORDER BY CAST(class_iii_face_sum AS REAL) DESC""", (run_id,)).fetchall()]
     if limit:
         roots = roots[:limit]
     log(f"enrich: {len(roots)} companies to look up (throttled)")

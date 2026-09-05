@@ -4,7 +4,8 @@
    and never a CNPJ that is itself a creditor row on the same document.
 2. RFB enrichment of the debtor; accepted only when the registry name matches the printed debtor name, or when the
    registry name itself carries the "EM RECUPERAÇÃO JUDICIAL" suffix and the page-title hint was not a company name.
-3. Band A–D per case from stage, plan document, registry status, age and dormancy.
+3. Band A–D per case from stage, grant/plan documents (doc_type or portal title), registry status, age (>2 y without a grant → C) and dormancy;
+   proceeding FALENCIA/EXTINCT (reader, portal category, or falência wording) → D.
 4. Verified names: ingest data/state/debtor_read/final.json (two independent readers + adjudicator recorded the
    recuperanda exactly as printed on each PDF head) → display_name / verified_cnpj / group_members / administrator,
    re-enrich verified CNPJs at RFB, then re-band.
@@ -116,31 +117,48 @@ def enrich(rows, target_col="debtor_cnpj"):
 
 
 # --- 3. bands ---
+PLAN_SIGNAL = re.compile(r"plano[-_ ]de[-_ ]recupera|\bPRJ\b|plano[-_ ]recupera|\bplano\b", re.I)
+GRANT_SIGNAL = re.compile(r"homolog|concess[aã]o", re.I)
+
+
+def plan_filed_signal(case):
+    """A plan was at least FILED (art. 53) when a plan document was ingested or a document on the case is named as the plan on the portal."""
+    if db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type='PLAN'", (run, case)).fetchone()[0]: return True
+    for url, title, link in db.execute("""SELECT d.source_url, r.page_title, r.link_text FROM documents d LEFT JOIN raw_documents r ON r.url=d.source_url
+                                          WHERE d.run_id=? AND d.case_number=?""", (run, case)):
+        blob = " ".join(x or "" for x in (url, title, link))
+        if PLAN_SIGNAL.search(blob) and not GRANT_SIGNAL.search(blob): return True
+    return False
+
+
 def band_for(case):
     reasons = []
     stage, last_mv, filing = (db.execute("SELECT stage, last_movement, filing_date FROM cases WHERE case_number=?", (case,)).fetchone() or (None, None, None))
     m = re.match(r"\d{7}-\d{2}\.(\d{4})\.", case or "")
     year = int(filing[:4]) if filing else (int(m.group(1)) if m else None)
     granted = db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type='HOMOLOG'", (run, case)).fetchone()[0]
-    plan_filed = db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type='PLAN'", (run, case)).fetchone()[0]
+    plan_filed = plan_filed_signal(case)
     rj_granted = (db.execute("SELECT rj_granted_signal FROM cases WHERE case_number=?", (case,)).fetchone() or (0,))[0]
     plan = granted or rj_granted   # band A needs the GRANT (art. 58); a filed plan (art. 53) is band B
-    sit = db.execute("SELECT situacao, rfb_source, proceeding, COALESCE(display_name, razao_social, debtor_name) FROM debtors WHERE case_number=?", (case,)).fetchone() or (None, None, None, None)
+    sit = db.execute("SELECT situacao, rfb_source, proceeding, COALESCE(display_name, razao_social, debtor_name), verified_evidence FROM debtors WHERE case_number=?", (case,)).fetchone() or (None, None, None, None, None)
     age = (2026 - year) if year else None
     dormant = bool(last_mv) and last_mv < "2025-09-01"
     accepted = sit[1] and sit[1] not in ("NOT_IN_RFB", "NAME_MISMATCH", "CREDITOR_CNPJ")
     falida = bool(re.search(r"MASSA FALIDA|\bFALID[AO]\b", sit[3] or "", re.I))
     if stage == "CONVERTED_TO_BANKRUPTCY" or sit[2] == "FALENCIA" or falida:
-        reasons.append("falência decreed (DataJud)" if stage == "CONVERTED_TO_BANKRUPTCY" else "falência proceeding (list/name says falida)"); band = "D"
+        band = "D"
+        reasons.append("falência decreed (DataJud)" if stage == "CONVERTED_TO_BANKRUPTCY" else ("falência proceeding (list/name says falida)" if falida else "falência proceeding (AJ portal category / reader)"))
         if year and year < 2005: reasons.append("pre-Lei 11.101 proceeding (DL 7.661/45)")
+    elif sit[2] == "EXTINCT":
+        band = "D"; reasons.append("RJ extinguished" + (f" — {sit[4]}" if sit[4] else ""))
     elif accepted and sit[0] == "08":
         reasons.append("debtor closed at RFB (baixada)"); band = "D"
     elif plan and stage != "CLOSED":
-        reasons.append("recovery granted (art. 58): grant document or DataJud grant movement"); band = "A"
+        reasons.append("recovery granted (art. 58): grant decision on file" if granted else "recovery granted (art. 58): DataJud grant movement"); band = "A"
         if age is not None and age > 8: reasons.append(f"but case is {age}y old"); band = "B"
-    elif (age is not None and age > 4) or dormant or stage == "CLOSED" or (accepted and sit[0] in ("03", "04")):
+    elif (age is not None and age > 2) or dormant or stage == "CLOSED" or (accepted and sit[0] in ("03", "04")):
         band = "C"
-        if age is not None and age > 4: reasons.append(f"{age}y since filing; plan not in our documents")
+        if age is not None and age > 2: reasons.append(f"filed {age}y ago; " + ("plan filed (art. 53) but no grant seen" if plan_filed else "plan not in our documents"))
         if dormant: reasons.append(f"no movement since {last_mv}")
         if stage == "CLOSED": reasons.append("case closed/archived (DataJud)")
         if accepted and sit[0] in ("03", "04"): reasons.append(f"debtor {'SUSPENSA' if sit[0]=='03' else 'INAPTA'} at RFB")
@@ -192,12 +210,16 @@ def step4():
         hints = [h for (h,) in db.execute("SELECT COALESCE(NULLIF(dd.debtor,''), d.debtor_name_hint) FROM documents d LEFT JOIN doc_debtor dd ON dd.doc_id=d.doc_id WHERE d.case_number=? AND d.run_id=?", (case, run))]
         hints += [t for (t,) in db.execute("SELECT r.page_title FROM raw_documents r JOIN documents d ON d.source_url=r.url WHERE d.case_number=? AND d.run_id=?", (case, run))]
         # the portal slug ('recuperacao-judicial_<name>__id') names the debtor more reliably than the page title
+        slug_proc = None
         for (pu,) in db.execute("SELECT r.page_url FROM raw_documents r JOIN documents d ON d.source_url=r.url WHERE d.case_number=? AND d.run_id=?", (case, run)):
-            mm = re.search(r"recuperacao-judicial_([^/]+?)__\d+$", pu or "")
-            if mm: hints.insert(0, re.sub(r"\s+", " ", mm.group(1).replace("+", ".").replace("-", " ")).strip().upper())
+            mm = re.search(r"/(recuperacao-judicial|falencia|recuperacao-extrajudicial)_([^/]+?)__\d+$", pu or "")
+            if mm:
+                hints.insert(0, re.sub(r"\s+", " ", mm.group(2).replace("+", ".").replace("-", " ")).strip().upper())
+                slug_proc = slug_proc or {"falencia": "FALENCIA", "recuperacao-extrajudicial": "RE"}.get(mm.group(1))
         if not db.execute("SELECT proceeding FROM debtors WHERE case_number=?", (case,)).fetchone()[0]:
             blob = " ".join(h for h in hints if h) + " " + (razao or "")
-            if re.search(r"MASSA FALIDA|\bFALID[AO]\b|FAL[ÊE]NCIA D[EAO]", blob, re.I): db.execute("UPDATE debtors SET proceeding='FALENCIA' WHERE case_number=?", (case,))
+            if slug_proc: db.execute("UPDATE debtors SET proceeding=? WHERE case_number=?", (slug_proc, case))
+            elif re.search(r"MASSA FALIDA|\bFALID[AO]\b|FAL[ÊE]NCIA D[EAO]", blob, re.I): db.execute("UPDATE debtors SET proceeding='FALENCIA' WHERE case_number=?", (case,))
             elif re.search(r"EXTRAJUDICIAL", blob, re.I): db.execute("UPDATE debtors SET proceeding='RE' WHERE case_number=?", (case,))
         if vname:
             disp, srcname = vname, "pdf-read"

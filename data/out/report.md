@@ -1,11 +1,11 @@
 # ANTEPARO index — Phase 1 report
-run `20260903T230425Z-e7c9a7` · 2026-09-04 20:34Z
+run `20260903T230425Z-e7c9a7` · 2026-09-05 12:44Z
 
 ## Call sheet
-- **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1068 name-only rows ≥ R$200k on *Needs CNPJ*
-- closer workbook (ANTEPARO_CALL_SHEET.xlsx): trade creditors on CALL SHEET; banks/FIDCs/co-ops (95 companies by CNAE) on FINANCIAL CREDITORS; state-owned creditors on STATE-OWNED CREDITORS; public bodies (1) and inactive companies (48) on EXCLUDED (review); name pre-filter hits: 151
+- **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1082 name-only rows ≥ R$200k on *Needs CNPJ*
+- closer workbook (ANTEPARO_CALL_SHEET.xlsx): trade creditors on CALL SHEET; banks/FIDCs/co-ops (209 companies by CNAE) on FINANCIAL CREDITORS; state-owned creditors on STATE-OWNED CREDITORS; public bodies (1) and inactive companies (55) on EXCLUDED (review); name pre-filter hits: 151
 - rows from QUARANTINED documents whose class III subtotal reconciled are kept and labelled PARTIAL in PROOF QUALITY; rows from lists that print no totals are labelled NO TOTALS; nothing is silently dropped
-- 1199 documents ingested · 531 cases with a document · 209 of 531 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
+- 1199 documents ingested · 527 cases with a document · 210 of 527 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
 
 ## Documents by status
 - ERROR: 34
@@ -36,7 +36,7 @@ run `20260903T230425Z-e7c9a7` · 2026-09-04 20:34Z
 - class III rows with a value but no printed document number: 35965 (Phase 2: name → CNPJ with an RFB name match)
 
 ## RFB releases used (via mirror)
-- minhareceita: 943 companies, fetched 2026-09-03T22:31:00Z … 2026-09-04T00:06:42Z
+- minhareceita: 1074 companies, fetched 2026-09-03T22:31:00Z … 2026-09-05T12:36:38Z
 
 ## Coverage by court (DataJud RJ cases since 2020 → cases with ≥1 usable creditor list)
 - TJRJ: 2963 cases · 3 with a usable list (0%)
@@ -46,7 +46,7 @@ run `20260903T230425Z-e7c9a7` · 2026-09-04 20:34Z
 - TJRS: 627 cases · 18 with a usable list (2%)
 - TJPR: 494 cases · 21 with a usable list (4%)
 - TJMT: 476 cases · 3 with a usable list (0%)
-- TJSC: 368 cases · 13 with a usable list (3%)
+- TJSC: 368 cases · 14 with a usable list (3%)
 - TJPE: 247 cases · 21 with a usable list (8%)
 - TJAM: 148 cases · 0 with a usable list (0%)
 - TJMS: 139 cases · 4 with a usable list (2%)
