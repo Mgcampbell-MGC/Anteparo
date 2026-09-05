@@ -107,8 +107,8 @@ def _phone(p):
     if not d or set(d) == {"0"}: return ""
     if d.startswith(("0800", "0300", "0500", "0900")):
         return f"{d[:4]} {d[4:7]} {d[7:]}" if len(d) == 11 else f"{d[:4]} {d[4:]}"
+    while d.startswith("0") and len(d) > 8: d = d[1:]     # trunk prefix ('0xx'), '00' international prefix or padding zeros
     if len(d) in (12, 13) and d.startswith("55"): d = d[2:]
-    while d.startswith("0") and len(d) > 8: d = d[1:]     # trunk prefix ('0xx') or padding zeros
     if len(d) == 10 and d[:2] in DDD: return f"({d[:2]}) {d[2:6]}-{d[6:]}"
     if len(d) == 11 and d[:2] in DDD: return f"({d[:2]}) {d[2:7]}-{d[7:]}"
     if len(d) == 8: return f"{d[:4]}-{d[4:]}" + ("" if d.startswith(NONGEO) else " (no DDD)")
@@ -146,7 +146,8 @@ MEDICA MEDICOS FARMACIA DROGARIA COSMETICOS PERFUMARIA HIGIENE LIMPEZA SANEAMENT
 GRANITOS MARMORES MADEIREIRA SERRARIA FLORESTAL CELULOSE GRAFICA EDITORA PUBLICIDADE PROPAGANDA EVENTOS PROMOCOES PROMOCOES MARKETING COMUNICACAO
 SHOPPING CENTER EMPREENDIMENTOS IMOVEIS PARTICIPACOES PATRIMONIAL FAMILIA IRMAOS FILHOS FILHO NETO JUNIOR SOBRINHO
 RESPONSABILIDADE NAO PADRONIZADOS PADRONIZADO MULTISSETORIAL MULTISETORIAL SENIOR MEZANINO COTAS CLASSE CREDITORIOS UNICA FUNDOS ABERTO FECHADO
-COOPERATIVO COOPERATIVAS LIVRE ADMISSAO ASSOCIADOS POUPANCA RURAL EMPRESARIOS MICROEMPRESARIOS PROFISSIONAIS MEDICOS DEMAIS SAUDE PROF EMP CONT""".split())
+COOPERATIVO COOPERATIVAS LIVRE ADMISSAO ASSOCIADOS POUPANCA RURAL EMPRESARIOS MICROEMPRESARIOS PROFISSIONAIS MEDICOS DEMAIS SAUDE PROF EMP CONT
+FECHADA ABERTA CONDOMINIO RESPONSABILIDADE LIMITADA FILIAL""".split())
 
 
 GEO = set("""ACRE ALAGOAS AMAPA AMAZONAS BAHIA CEARA ESPIRITO GOIAS MARANHAO MATO GROSSO MINAS GERAIS PARA PARAIBA PARANA PERNAMBUCO PIAUI RIO JANEIRO GRANDE NORTE SUL
@@ -160,7 +161,8 @@ NATAL JOAO PESSOA MACEIO ARACAJU TERESINA LUIS PALMAS VELHO BRANCO BOA VISTA MAC
 CIDADE ESTADO MUNICIPIO PREFEITURA REGIAO REGIONAL NACIONAL UNIAO UNIDOS UNIVERSAL GLOBAL MUNDIAL MODERNA MASTER PLUS PRIME REAL CRISTAL BEM BOM MAX TOP
 GRAOS CANA PLANTADORES PRODUTORES AGRICULTORES CONDUTORES ELETRICOS CABOS FIOS""".split())
 _NOT_NAME = re.compile(r"^(SIM|NAO|N A|PENDENTE.*|TITULARES.*|CLASSE .*|QUIROGRAF.*|CREDORES.*|VALOR.*|TOTAL.*)$|"
-                       r"\b(AV|AVENIDA|RUA|ROD|RODOVIA|ALAMEDA|AL|PRACA|PCA|PC|QUADRA|SETOR|KM|CEP|ANDAR|SALA|CONJ|CJ|LOTE|BLOCO|BL|ESTRADA|TRAVESSA|NUC|BAIRRO|CENTRO|N)\b")
+                       r"\b(AV|AVENIDA|RUA|ROD|RODOVIA|ALAMEDA|PRACA|PCA|QUADRA|SETOR|KM|CEP|ANDAR|SALA|CONJ|LOTE|BLOCO|ESTRADA|TRAVESSA|BAIRRO|"
+                       r"CIDADE|MUNICIPIO|FONE|TELEFONE|EMAIL|CNPJ|CPF|ENDERECO|VALOR|TOTAL|CLASSE|CREDOR|CREDORES)\b")
 
 
 def _tokens(s):
@@ -179,14 +181,20 @@ def name_mismatch(printed, razao, generic, fantasia=""):
     if not razao or not _is_name(printed): return ""
     pt = _tokens(printed); pt_dist = [t for t in pt if t not in generic]
     ns = lambda x: re.sub(r"\s+", "", _norm(x))
+    acronym = lambda x: "".join(w[0] for w in _norm(x).split() if w not in ("DE", "DA", "DO", "DAS", "DOS", "E", "EM"))
     for reg in (razao, fantasia or ""):
         if not reg: continue
-        rt = [t for t in _tokens(reg) if t not in generic]
-        if not rt: return ""
+        if len(ns(printed)) >= 12 and ns(printed) in ns(reg): return ""      # the list truncated the registry name
+        rt = [t for t in _tokens(reg) if t not in generic]; regt = _tokens(reg)
+        if not rt:                                                           # registry name made of generic words only ('UNIDADE REVENDEDORA DE BEBIDAS')
+            if pt_dist and not any(t in regt for t in pt_dist): continue
+            return ""
         if any(t in pt or any(len(q) >= 3 and (t.startswith(q) or q.startswith(t)) for q in pt) for t in rt): return ""
         if pt_dist and fuzz.partial_ratio(ns(printed), ns(reg)) >= 80: return ""
         initials = "".join(w[0] for w in _norm(printed).split() if len(w) == 1)
         if initials and initials in rt: return ""
+        if len(acronym(printed)) >= 3 and acronym(printed) in regt: return ""   # 'Empresa Mineira de Computadores' = EMC
+        if any(len(t) >= 3 and t == acronym(reg) for t in pt): return ""
     return f"list prints '{str(printed).strip()[:40]}' but the printed CNPJ is registered to {razao[:45]}" + (f" (fantasia {fantasia[:30]})" if fantasia else "")
 
 
@@ -195,7 +203,7 @@ def _seller_fit(razao, capital, porte):
     if not razao: return "UNKNOWN"
     try: cap = float(capital or 0)
     except ValueError: cap = 0
-    if not capital: return "UNKNOWN"
+    if not capital or cap == 0: return "NO CAPITAL ON FILE"
     if cap >= 1_000_000_000 or (re.search(r"\bS\.?A\.?\s*$|\bS/A\s*$|\bS\.A\.\b", razao) and cap >= 300_000_000):
         return "LARGE CORP"
     if porte and ("MICRO" in porte.upper() or "PEQUENO" in porte.upper()):
@@ -208,7 +216,8 @@ def _seller_status(razao, name_printed, situacao, situacao_desc):
     blob = f"{razao or ''} {name_printed or ''}"
     if re.search(r"MASSA FALIDA|\bFALID[AO]\b", blob, re.I): return "FALIDA — only its AJ can sell (court authorisation)"
     if re.search(r"LIQUIDA[CÇ][AÃ]O", blob, re.I): return "EM LIQUIDAÇÃO — only the liquidante (BCB/court) can sell"
-    if re.search(r"RECUPERA[CÇ][AÃ]O (JUDICIAL|EXTRAJUDICIAL)", blob, re.I): return "IN RJ ITSELF — its own judge/AJ must authorise the sale (art. 66)"
+    if re.search(r"RECUPERA[CÇ][AÃ]O (JUDICIAL|EXTRAJUDICIAL)", blob, re.I): return "IN RJ ITSELF — its own judge must authorise the sale (art. 66; AJ/Comitê heard)"
+    if re.search(r"FUNDO DE INVESTIMENTO|\bFIDC\b|\bFIM\b|SECURITIZADORA", blob, re.I): return "FUND / SECURITISER — the administrator or gestora signs; check the fund regulation"
     if not razao: return "no RFB record — status unknown"
     if situacao and situacao != "02": return f"RFB {situacao_desc or situacao} — confirm who signs"
     return "ATIVA"
@@ -267,7 +276,7 @@ def _related(root, cred_names, debtor_root, member_roots, debtor_names, cred_par
     """Why the creditor is (probably) the debtor's own family. '' when nothing links them."""
     if debtor_root and root == debtor_root: return "creditor has the debtor's own CNPJ (intercompany)"
     if root in member_roots: return "creditor CNPJ is listed among the recuperandas (group member)"
-    cred_names = [n for n in cred_names if n and (_is_name(n) or n == cred_names[0])]
+    cred_names = [cred_names[0]] if cred_names and cred_names[0] else [n for n in cred_names if n and _is_name(n)]   # registry name only when there is one
     dist = lambda n: [t for t in _tokens(n) if t not in generic and t not in GEO]
     heads = {d[0] for d in (dist(n) for n in cred_names) if d}          # the first distinctive word of the creditor's name
     cred_tok = {t for n in cred_names for t in dist(n)}
@@ -312,18 +321,19 @@ _H_OTHER = re.compile(r"CLASSE I\b(?! ?I)|CLASSE I [-–—:]|TRABALHIST|CLASSE 
 def heading_verdict(heading, class3_reconciled, set_by="SECTION_HEADING"):
     """'' when the row may stay; otherwise why a row under this printed heading is not tradeable class III paper.
     set_by = how the extractor fixed the row's class: SECTION_HEADING (inherited from this heading), COLUMN / INLINE_HEADER (printed on the row itself,
-    so a contradicting heading is a carry-over and is ignored)."""
+    so a contradicting class I/II/IV heading is a carry-over and is ignored). SUBORDINADO / not-subject headings apply whatever set_by says:
+    a row printed under 'não sujeitos' is outside the RJ even if it prints 'quirografário'."""
     h = _norm(heading)
     if not h: return ""
     if len(set(_H_LEGEND.findall(h))) >= 3: return ""          # a column legend naming every class, not a section heading
     rowlike = bool(re.search(r"\d{1,3}(?:\.\d{3})+,\d{2}", heading or "")) and not re.search(r"TOTAL|CREDOR", h)   # a creditor row carried as heading
     if rowlike or len(h) > 160: return ""
-    if _H_SUB.search(h) and "PRIVILEGIO" not in h: return "listed under a SUBORDINADO heading (art. 83 VIII: partners' and insiders' claims, paid last) — not tradeable class III"
+    if _H_SUB.search(h) and "PRIVILEGIO" not in h and "QUIROGRAF" not in h: return "listed under a SUBORDINADO heading (subordinated within class III, art. 41 III — partners' and insiders' claims, paid last, art. 83 VIII) — not tradeable paper"
     if _H_OUT.search(h): return f"listed under a heading that is not concursal class III ({heading.strip()[:60]})"
     if set_by == "SECTION_HEADING" and _H_OTHER.search(h):
         # the class was inherited from this heading; when the heading is the class III TOTAL line the row sits in the next section,
         # whatever any per-section sum says (a section total can match the next class's own total)
-        if re.search(r"TOTAL", h): return f"row printed below the class III total line ({heading.strip()[:50]}) — belongs to the next class"
+        if re.search(r"TOTAL", h): return f"row printed below the class III total line ({heading.strip()[:50]}) — belongs to the next list on the document (e.g. obrigações de fazer/entregar), not class III"
         if not class3_reconciled: return f"listed under a class I / II / IV heading on the source list ({heading.strip()[:50]}) — not class III"
     return ""
 
@@ -336,8 +346,10 @@ def list_kind(dtype, url, title, link):
     if re.search(r"HOMOLOG|CONCESS", blob) and not re.search(r"QGC|QUADRO", blob): return LIST_KIND["HOMOLOG"]
     if re.search(r"PROVIS", blob) and re.search(r"QGC|QUADRO", blob): return "Provisional QGC (AJ consolidation, not homologated)"
     if re.search(r"HOMOLOG", blob) and re.search(r"QGC|QUADRO", blob): return "QGC homologated (art. 18)"
-    if re.search(r"\bART(?:IGO)? ?7\b|7 ?[O°º] ?(?:PARAGRAFO|§)|2 ?[A°º] ?(?:LISTA|RELACAO)|SEGUNDA (?:LISTA|RELACAO)|LISTA DO ADMINISTRADOR|RELACAO DO ADMINISTRADOR|\bAJ\b.*(?:LISTA|RELACAO)", blob): return LIST_KIND["AJ_LIST"]
-    if re.search(r"\bART(?:IGO)? ?51\b|RELACAO DE CREDORES DA RECUPERANDA|APRESENTADA PELA RECUPERANDA|LISTA DA RECUPERANDA|RELACAO DE CREDORES DA DEVEDORA", blob): return LIST_KIND["DEBTOR_LIST"]
+    if re.search(r"\bART(?:IGO)? ?7\b|7 ?[O°º] ?(?:PARAGRAFO|§)|\b2 ?[A°º]? ?(?:LISTA|RELACAO)|SEGUNDA (?:LISTA|RELACAO)|(?:LISTA|RELACAO)[A-Z ]{0,25}(?:DO|DA) ADMINISTRADOR", blob): return LIST_KIND["AJ_LIST"]
+    if re.search(r"\bART(?:IGO)? ?52\b|EDITAL DO PROCESSAMENTO|EDITAL DE PROCESSAMENTO|DEFERIMENTO DO PROCESSAMENTO", blob): return "Edital do processamento (art. 52 §1) — debtor's list as published"
+    if re.search(r"\bART(?:IGO)? ?51\b|RELACAO DE CREDORES DA RECUPERANDA|APRESENTADA PELA RECUPERANDA|LISTA (?:DE CREDORES )?DAS? RECUPERANDAS?|RELACAO DE CREDORES DA DEVEDORA|"
+                 r"\b1 ?[A°º]? ?(?:LISTA|RELACAO)|PRIMEIRA (?:LISTA|RELACAO)|RECUPERANDAS?(?: |$)", blob): return LIST_KIND["DEBTOR_LIST"]
     if re.search(r"MASSA FALIDA|\bFALIDA\b|\bART(?:IGO)? ?99\b|CREDORES DA FALENCIA", blob): return LIST_KIND["FALENCIA_LIST"]
     return LIST_KIND.get(dtype or "UNKNOWN", dtype or "")
 
@@ -347,13 +359,19 @@ def _recon(rj):
     try: j = json.loads(rj or "{}")
     except Exception: j = {}
     chs = [c for c in j.get("checks", []) if str(c.get("class", "")).startswith("III/BRL")]   # one check per printed section ('III/BRL#s3')
-    if not chs: return None, None, ""
-    tot = Decimal(0)
+    if not chs: return None, None, "", []
+    tot = Decimal(0); sections = []
     for c in chs:
-        try: tot += Decimal(str(c.get("printed_total")))
-        except Exception: pass
+        try: pt = Decimal(str(c.get("printed_total"))); tot += pt
+        except Exception: pt = None
+        sections.append((c.get("page") or 0, pt))
+    missing = sum(int(c.get("value_missing") or 0) for c in chs)
+    no_total = any(c.get("printed_total") in (None, "") for c in chs)
     deltas = [str(c.get("delta")) for c in chs if c.get("delta") not in (None, "0.00")]
-    return all(c.get("pass") for c in chs), (tot if tot > 0 else None), (f"delta R$ {'; '.join(deltas)}" if deltas else "")
+    ok = all(c.get("pass") for c in chs) and missing == 0 and not no_total
+    why = "; ".join(x for x in [(f"delta R$ {'; '.join(deltas)}" if deltas else ""), (f"{missing} row values missing on the list" if missing else ""),
+                                ("class III total not printed (count only)" if no_total else "")] if x)
+    return ok, (tot if tot > 0 else None), why, sorted(sections)
 
 
 def _partners(qsa_json):
@@ -374,7 +392,7 @@ def _leads(db, run_id):
     df = Counter()
     for (rz,) in db.execute("SELECT razao_social FROM companies WHERE razao_social IS NOT NULL"):
         df.update(set(_tokens(rz)))
-    generic = GENERIC | {t for t, n in df.items() if n >= 6}
+    generic = GENERIC | {t for t, n in df.items() if n >= 6}   # kinship test only: brand words that recur (SICOOB, BRADESCO) must stay distinctive for the identity test
     rfb_qsa = {}
     def debtor_qsa(cnpj):
         if not cnpj: return set()
@@ -422,10 +440,9 @@ def _leads(db, run_id):
             excluded.append({**base, "reason": "public body (administração pública) — not a seller" if public else "public by name, no RFB record — verify before calling"}); continue
         if is_inactive:
             excluded.append({**base, "reason": f"creditor company not ATIVA at RFB ({situacao_desc or situacao or 'status unknown'})"}); continue
-        if porte and re.search(r"MICRO|PEQUENO", porte.upper()):
-            excluded.append({**base, "reason": f"creditor is {porte.title()} at RFB — an ME/EPP creditor votes in class IV (art. 41 IV), so this is class IV paper even if the list prints it under class III; verify class before quoting"}); continue
-        accepted_cnpj = dcnpj if dsrc not in REJECTED_RFB else ""
-        debtor_root = (vcnpj or accepted_cnpj or "")[:8]
+        me_epp = bool(porte and re.search(r"MICRO|PEQUENO", porte.upper())) and (proceeding or "") != "RE"
+        accepted_cnpj = vcnpj or (dcnpj if dsrc not in REJECTED_RFB else "")   # the readers' CNPJ outranks the extractor's; fix_audit nulls the reader errors
+        debtor_root = (accepted_cnpj or "")[:8]
         members = json.loads(gmembers) if gmembers else []
         member_roots = {"".join(m.groups()) for mm in members for m in _ROOT_IN_TEXT.finditer(mm or "")}
         cred_partners = _partners(qsa_json)
@@ -434,17 +451,16 @@ def _leads(db, run_id):
         cred_in_rj = bool(re.search(r"RECUPERA[CÇ][AÃ]O JUDICIAL", razao or "", re.I))
         if rel:
             excluded.append({**base, "reason": f"related party: {rel}"}); continue
-        claims = db.execute("""SELECT page, row_index, value_as_printed, value_brl, section_heading, flags, all_documents, debtor_as_printed, class_set_by FROM claims
+        claims = db.execute("""SELECT page, row_index, value_as_printed, value_brl, section_heading, flags, all_documents, debtor_as_printed, class_set_by, creditor_name_as_printed FROM claims
                                WHERE doc_id=? AND run_id=? AND class='III' AND currency='BRL' AND superseded_by IS NULL AND document_number IN (%s) ORDER BY page,row_index"""
                             % ",".join("?" * len(ests_l)), (doc_id, run_id, *ests_l)).fetchall()
-        iii_pass, iii_total, iii_delta = _recon(recon_json)
-        class3_reconciled = (dstatus == "OK") or bool(iii_pass)
+        iii_pass, iii_total, iii_delta, iii_sections = _recon(recon_json)
+        class3_reconciled = (dstatus == "OK" and iii_pass is not False) or bool(iii_pass)
         verdict = next((v for v in (heading_verdict(c[4], class3_reconciled, c[8]) for c in claims) if v), "")
         if verdict:
             excluded.append({**base, "reason": verdict}); continue
-        other_roots = {x[:8] for c in claims for x in (c[6] or "").split("|") if x and x[:8] != root}
-        if any("MULTI_ROOT" in (c[5] or "") for c in claims) or other_roots:
-            excluded.append({**base, "reason": "printed value sits in a prose line naming another CNPJ — may belong to a neighbouring creditor; re-extract before quoting"}); continue
+        other_roots = sorted({x[:8] for c in claims for x in (c[6] or "").split("|") if x and x[:8] != root})
+        multi_root = any("MULTI_ROOT" in (c[5] or "") for c in claims)   # a prose line naming several CNPJs: the value may be a neighbour's, or the line names an assignor — hold, not exclude
         # --- classification / banding ---
         if not case or case[16:17] != "8":   # RJ cases live in state courts (J=8); anything else is a creditor-side number picked off the page
             case = ""; band = "U"; breason = "RJ case number not identified on the document"; stage = stage or ""
@@ -454,6 +470,7 @@ def _leads(db, run_id):
             why = {"FALENCIA": "falência: claims rank under art. 83 and are paid from the liquidation — not RJ class III paper",
                    "EXTINCT": "the RJ was extinguished — there is no plan to buy into"}.get(proc, "debtor closed (baixada) at RFB / falência decreed")
             excluded.append({**base, "reason": f"{why}; {breason or ''}".rstrip("; ")}); continue
+        if me_epp: breason = ((breason + "; ") if breason else "") + f"creditor is {porte.title()} at RFB: it votes in class IV (art. 41 IV) and the plan may give class IV its own tranche — confirm the class IV condition before quoting"
         if proc == "RE": breason = ((breason + "; ") if breason else "") + "recuperação extrajudicial (art. 161): plan is a private agreement"
         if _ATYPICAL.search(debtor or ""): breason = ((breason + "; ") if breason else "") + "atypical debtor (associação/clube/hospital/produtor rural): admissibility or claim subjection may be contested"
         if "CASE_FROM_PORTAL" in flags or "CASE_FROM_PAGE" in (dnotes or ""): breason = ((breason + "; ") if breason else "") + "case no. from the portal record, not printed on the list"
@@ -465,31 +482,54 @@ def _leads(db, run_id):
         plan = plan_terms.get(case) if case else None
         # --- proof ---
         kind = list_kind(dtype, url, ptitle, plink)
+        if proc == "RE" and kind == LIST_KIND["QUORUM_LIST"]: kind = "RE adherence / quorum list (art. 163) — the list filed with the extrajudicial plan"
         listed = sum(float(c[3]) for c in claims if c[3] is not None)
-        if dstatus == "OK": proof = "OK — totals reconciled"
+        if dstatus == "OK" and iii_pass: proof = "OK — totals reconciled"
+        elif dstatus == "OK" and iii_pass is None: proof = "OK — other classes reconciled; class III prints no total"
+        elif dstatus == "OK": proof = f"CHECK — class III did not fully reconcile ({iii_delta})"
         elif dstatus == "OK_NO_TOTALS": proof = "NO TOTALS — list prints none; check page"
         elif dstatus == "QUARANTINED": proof = "PARTIAL — class III reconciled, other classes not" if iii_pass else f"CHECK — class III total did not reconcile ({iii_delta or 'no class III total found'})"
         else: proof = dstatus or ""
         if kind in NOT_STATUTORY_KINDS: proof = "CHECK — source is not a statutory creditor list"
-        vals = []
-        for pg, ri, v, vb, hd, cf, ad, dp, sb in claims:
+        if kind.startswith("RE adherence"): proof = "CHECK — RE adherence list; confirm the claim against the homologated plan (art. 163)"
+        vals = []; two_values = False
+        num = lambda x: float(re.sub(r"[^\d,]", "", str(x)).replace(".", "").replace(",", ".") or 0) if re.search(r"\d", str(x or "")) else None
+        for pg, ri, v, vb, hd, cf, ad, dp, sb, cn in claims:
             if v is None: continue
             alt = re.search(r"ALT_VALUE:([^|]+)", cf or "")
-            vals.append(f"p{pg}: R$ {v}" + (f" (also printed: R$ {alt.group(1).strip()})" if alt else ""))
+            differs = bool(alt) and num(alt.group(1)) is not None and abs((num(alt.group(1)) or 0) - float(vb or 0)) > 0.005
+            two_values = two_values or differs
+            vals.append(f"p{pg}: R$ {v}" + (f" (also printed: R$ {alt.group(1).strip()})" if differs else ""))
         vals_printed = "; ".join(vals)
-        two_values = any("ALT_VALUE" in (c[5] or "") for c in claims)
         if claims and abs(listed - float(face_d)) > 0.01 * float(face_d): vals_printed = f"[rows shown ≠ face] {vals_printed}"
         headings = [c[4].strip() for c in claims if c[4]]
         recup_rows = sorted({(c[7] or "").strip() for c in claims if c[7]})
-        mismatch = name_mismatch(name_printed, razao, generic, fantasia)
-        share = (float(face_d) / float(iii_total)) if iii_total else None
+        # the CNPJ printed on a row is only as good as the list: when one row's printed name is another company's, that row's
+        # value is left out of the face and said so; when every named row disagrees with the registry, the row goes on hold
+        per_claim = [(c, name_mismatch(c[9], razao, GENERIC, fantasia) if _is_name(c[9]) else None) for c in claims]
+        named = [x for x in per_claim if x[1] is not None]
+        wrong = [x for x in named if x[1]]
+        left_out = ""
+        if named and wrong and len(wrong) < len(named):
+            dropped = sum(float(c[3] or 0) for c, _ in wrong)
+            face_d = face_d - Decimal(str(round(dropped, 2)))
+            left_out = f"R$ {dropped:,.2f} printed under this CNPJ but with another creditor's name ({'; '.join((c[9] or '')[:30] for c, _ in wrong)}) left out of the face"
+        mismatch = wrong[0][1] if (named and len(wrong) == len(named)) else ("" if named else name_mismatch(name_printed, razao, GENERIC, fantasia))
+        share = (float(face_d) / float(iii_total)) if iii_total else None; extra_share_note = ""
+        if iii_sections and len(iii_sections) > 1 and claims:
+            # a multi-recuperanda list prints one class III total per debtor section (the check carries the page of the total line);
+            # the claim belongs to the first section whose total line is printed at or after the claim's page
+            pg0 = min(c[0] for c in claims); idx = next((i for i, (pgt, _) in enumerate(iii_sections) if pgt and pgt >= pg0), None)
+            if idx is not None and iii_sections[idx][1]:
+                share = float(face_d) / float(iii_sections[idx][1]); iii_total = iii_sections[idx][1]
+                extra_share_note = f"share measured against class III section {idx + 1} of {len(iii_sections)} on this list (one per recuperanda; voting is per debtor absent substantive consolidation, art. 69-J)"
         if share is not None and share > 1.001: share = None; extra_share_note = "face exceeds the printed class III total — the printed total covers a section, not the class"
-        else: extra_share_note = ""
         hold = []
         if kind in NOT_STATUTORY_KINDS: hold.append("source is not a statutory creditor list — find the art. 7 §2 / art. 51 list first")
         if band == "U": hold.append("RJ case not identified — cannot place the claim in a proceeding")
         if not debtor and not case: hold.append("debtor and case unknown")
-        if mismatch: hold.append(f"printed name ≠ registry name for the printed CNPJ: {mismatch} — confirm who the creditor is")
+        if mismatch: hold.append(f"printed name ≠ registry name for the printed CNPJ: {mismatch} — a trade name or a renamed company, or the list printed someone else's CNPJ; the creditor is whoever the printed name says, so confirm before using the phone/contact here")
+        if other_roots or multi_root: hold.append(f"the printed line also carries CNPJ root(s) {', '.join(other_roots) or '(several)'} — the value may belong to that party, or the line names an assignor/guarantor; confirm on the page before quoting")
         rec = 0.0 if hold else (plan[0] if plan else BAND_MAP[band][0] * (DEFAULT_FIN_MULT if fin else 1.0))
         fund = float(face_d) * rec / (1 + DEFAULT_IRR) ** _years(band, ysf, plan)
         # --- contacts: Apollo first (ranked), RFB partners (QSA) as fallback; a non-finance Apollo pick yields the DM slot to a registered partner ---
@@ -522,11 +562,15 @@ def _leads(db, run_id):
         if no_route: flags = (flags + " NO_ROUTE_IN").strip(); notes.append("NO ROUTE IN: no phone or email on file")
         extra_flags = []
         if two_values: extra_flags.append("TWO VALUES PRINTED — confirm which figure the creditor recognises")
-        if share is not None and share >= 0.5: extra_flags.append(f"CONTROL POSITION: {share:.0%} of class III by value — carries the class vote (art. 45 §1)")
-        elif share is not None and share > 1 / 3: extra_flags.append(f"BLOCKING POSITION: {share:.0%} of class III — can defeat a cram-down (art. 58 §1)")
+        if share is not None and share >= 2 / 3: extra_flags.append(f"BLOCKING POSITION: {share:.0%} of class III by value — its NO alone defeats the class vote and the cram-down value test (arts. 45 §1, 58 §1 III)")
+        elif share is not None and share >= 0.5: extra_flags.append(f"CONTROL POSITION: {share:.0%} of class III by value — carries the value leg of the class vote (art. 45 §1; the head-count leg still needs a majority of creditors present)")
+        elif share is not None and share > 1 / 3: extra_flags.append(f"SWING POSITION: {share:.0%} of class III by value — its YES alone satisfies the value leg of the cram-down test in a rejecting class (art. 58 §1 III)")
         if mismatch: extra_flags.append("VERIFY creditor identity")
         if extra_share_note: extra_flags.append(extra_share_note)
+        if left_out: extra_flags.append(left_out)
         if cred_in_rj and not rel: extra_flags.append("seller is in RJ (art. 66)")
+        if me_epp: extra_flags.append(f"ME/EPP creditor — class IV vote (art. 41 IV)")
+        if not accepted_cnpj: extra_flags.append("related-party partner check not run (no debtor CNPJ)")
         court_txt = court if court and court != "UNKNOWN" else (("TJ" + TR.get(case[18:20], "")) if case else "")
         stage_txt = {"ACTIVE": "DataJud: live (no closure/falência movement)", "CONVERTED_TO_BANKRUPTCY": "DataJud: falência decreed", "CLOSED": "DataJud: closed/archived"}.get(
             stage or dstage or "", stage or dstage or ("not in DataJud (RJ-class pull only)" if case else ""))
@@ -537,7 +581,8 @@ def _leads(db, run_id):
                 "pub": pub, "proof": proof, "court": court_txt, "stage": stage_txt, "year": year, "ysf": ysf, "debtor": debtor,
                 "debtor_cnpj": vcnpj or accepted_cnpj or "", "band": band, "breason": breason or "", "pstatus": plan_ev,
                 "fund": fund, "primary": primary, "backup": backup, "note": "; ".join(notes), "claims": claims, "vals_printed": vals_printed,
-                "flags": " · ".join([FLAG_TEXT.get(f, f) for f in flags.replace("|", " ").split() if not f.startswith(("ROWS:", "VALUE_COL:"))] + extra_flags),
+                "flags": " · ".join([FLAG_TEXT.get(f, f) for f in flags.replace("|", " ").split() if not f.startswith(("ROWS:", "VALUE_COL:", "ALT_VALUE:"))
+                                     and not (razao and f in ("LIKELY_FINANCIAL_BY_NAME", "LIKELY_PUBLIC_BY_NAME"))] + extra_flags),
                 "fit": _seller_fit(razao, capital, porte), "book": book, "ctype": ctype, "sstatus": sstatus, "plan": plan, "hold": "; ".join(hold),
                 "ests": ests_l, "headings": headings, "recup_rows": recup_rows, "share": share, "iii_total": iii_total,
                 "dsource": DEBTOR_SOURCE.get((dsource if ddisplay else None) or (None if not debtor else ("rfb" if debtor == drazao else "hint")), "not identified"),
@@ -566,12 +611,13 @@ def _assumptions(ws, hidden=False):
         "Fund price = face × recovery% ÷ (1+IRR)^(years to payment). Our quote = fund price × share. Our ágio = fund price − quote.",
         "A row with text in PRICING HOLD prices at zero on purpose: the source is not a statutory list, the case is not identified, or the printed name does not match the CNPJ. Clear the hold (delete the text) once the point is verified and the row prices like any other.",
         "Where a plan PDF was read (columns 'Plan: class III recovery / grace / term'), the plan's own class III general condition replaces the band's recovery, grace and term, and the financial multiplier is not applied on top.",
+        "ME/EPP creditors stay in the book at the class III band but are flagged: art. 41 IV puts them in class IV for voting (enquadramento at the list date; RFB porte is an approximation) and plans often give class IV its own tranche — confirm before quoting.",
         "Years to payment — band A (recovery granted, art. 58): max(1, grace + term/2 − years already elapsed under the plan), where the grant is assumed 'plan lag' years after filing.",
-        "Years to payment — bands B, C, U: plan lag (years from today until a plan is granted) + grace + term/2. Band D is not priced: those rows sit on EXCLUDED (review).",
+        "Years to payment — bands B, C, U: plan lag (years from today until a plan is granted) + grace + term/2. Band D is not priced: those rows sit on EXCLUDED (review). Band B = filed within the last two years (by filing date); older cases without a grant are band C.",
         "So an old case with no granted plan prices LOWER than a fresh one, never higher. Band recovery % is an assumption, not a term read from any plan, unless the Plan columns are filled.",
         "Terminology: a plan is FILED by the debtor (art. 53), APPROVED by the creditors (AGC, art. 45) and the recovery is GRANTED by the court (art. 58). Only the grant starts the payment clock.",
         "Financial creditors (banks, FIDCs, co-ops) usually get worse class III terms than trade suppliers; the multiplier in B5 haircuts their recovery wherever the 'Creditor type' column says FINANCIAL.",
-        "A cessão de crédito is not done when the creditor says yes: it needs a written instrument (art. 288 CC, registered to bind third parties), notification of the debtor (art. 290 CC), and the assignee's substitution in the creditor list by the AJ (art. 7/18 LRF). The STATUS chain on the call tabs follows those steps. A seller that is itself in RJ needs its own judge's authorisation (art. 66).",
+        "A cessão de crédito is not done when the creditor says yes: it needs a written instrument (art. 288 CC, registered to bind third parties), notification of the debtor (art. 290 CC), and the assignee's substitution in the creditor list by petition to the court (arts. 8-10 / 18-19 LRF; the AJ cannot alter the list on its own). The STATUS chain on the call tabs follows those steps. A seller that is itself in RJ needs its own judge's authorisation for a non-current asset (art. 66; AJ and Comitê are heard).",
         "Everything on this tab is a MODEL. The face value, the page/row and the source document are court data; the quote is ours.",
     ]
     for i, t in enumerate(lines, start=14): ws[f"A{i}"] = t
@@ -623,12 +669,12 @@ def _call_sheet(ws, leads, title="CALL SHEET"):
             "Quote ¢/R$": f'=IF({face}=0,"",ROUND({quote_}/{face}*100,1))',
             "OUR ÁGIO (model, R$)": f"={fund}-{quote_}", "Ágio pts of face": f'=IF({face}=0,"",ROUND(({fund}-{quote_})/{face}*100,1))',
             "PROOF QUALITY": Ld["proof"], "PROOF: source document": Ld["url"] or "", "Page / row (extractor index)": "; ".join(f"p{pg} r{ri}" for pg, ri, *_ in Ld["claims"]),
-            "Value as printed": Ld["vals_printed"], "Creditor name as printed": Ld["name_printed"] or "", "Creditor CNPJ(s) as printed": "; ".join(_cnpj(e) for e in Ld["ests"] if e),
+            "Value as printed": Ld["vals_printed"], "Creditor name as printed": (Ld["name_printed"] or "") if _is_name(Ld["name_printed"]) else f"(name not captured — list cell holds: {(Ld['name_printed'] or '')[:40]})", "Creditor CNPJ(s) as printed": "; ".join(_cnpj(e) for e in Ld["ests"] if e),
             "Printed section heading": " | ".join(dict.fromkeys(h[:70] for h in Ld["headings"])), "Recuperanda on the row (if printed)": "; ".join(Ld["recup_rows"]),
             "Share of class III on this list": (Ld["share"] if Ld["share"] is not None else ""), "Class III total on list (R$)": (float(Ld["iii_total"]) if Ld["iii_total"] is not None else ""),
             "Which list": Ld["dtype"], "List date": _date(Ld["pub"]), "Plan evidence": Ld["pstatus"],
             "Case number": Ld["case"] or "(not printed)", "Court": Ld["court"], "Proceeding": Ld["proceeding"], "Stage (DataJud)": Ld["stage"], "Filed": Ld["year"] or "", "Band reason": Ld["breason"],
-            "Debtor CNPJ (lead entity)": _cnpj(Ld["debtor_cnpj"]), "Debtor source": Ld["dsource"], "Plan terms source": (plan[3] if plan else ""),
+            "Debtor CNPJ (lead entity)": _cnpj(Ld["debtor_cnpj"]) or "(not identified — partner check not run)", "Debtor source": Ld["dsource"], "Plan terms source": (plan[3] if plan else ""),
             "Creditor type": Ld["ctype"], "Seller status": Ld["sstatus"],
             "City": Ld["city"] or "", "UF": Ld["uf"] or "", "Sector": Ld["cnae"] or "", "Size": {"DEMAIS": "não ME/EPP"}.get(Ld["porte"] or "", Ld["porte"] or ""),
             "Capital (R$)": (float(Ld["capital"]) if Ld["capital"] not in (None, "") else ""), "Seller fit": Ld["fit"],
@@ -731,7 +777,7 @@ def _dashboard(ws, leads, nrows, books, stamp):
             ("Model fund price pipeline (R$)", f'=SUM({rng("FUND PRICE @ IRR (model, R$)")})', "#,##0"),
             ("Model ÁGIO pipeline (R$)", f"=SUM({A})", "#,##0"),
             ("Rows on PRICING HOLD (zero quote until cleared)", f'=SUMPRODUCT(--({HO}<>""))', "0"),
-            ("Face on pricing hold (R$)", f'=SUMIF({HO},"<>",{F})', "#,##0"),
+            ("Face on pricing hold (R$)", f'=SUMPRODUCT(--({HO}<>""),{F})', "#,##0"),
             ("Untouched (NEW)", f'=COUNTIF({S},"NEW")', "0"),
             ("Calls due today", f'=COUNTIF({rng("NEXT DATE")},TODAY())', "0"),
             ("Overdue follow-ups", f'=COUNTIFS({rng("NEXT DATE")},"<"&TODAY(),{rng("NEXT DATE")},"<>",{S},"<>DEAD",{S},"<>SETTLED")', "0"),
@@ -744,6 +790,16 @@ def _dashboard(ws, leads, nrows, books, stamp):
     r = block(5, "PIPELINE", ("", ""))
     for lab, f, fmt in kpis:
         ws[f"A{r}"] = lab; ws[f"B{r}"] = f; ws[f"B{r}"].number_format = fmt; ws[f"B{r}"].font = Font(bold=True, size=12); r += 1
+    # concentration: the two numbers a fund analyst asks for first
+    case_agio = defaultdict(float); row_agio = []
+    for Ld in leads:
+        if Ld["case"]: case_agio[Ld["case"]] += Ld["fund"] * (1 - DEFAULT_SHARE)
+        row_agio.append((Ld["fund"] * (1 - DEFAULT_SHARE), Ld["razao"] or Ld["name_printed"], Ld["debtor"]))
+    big_case = max(case_agio.items(), key=lambda kv: kv[1]) if case_agio else ("", 0.0); big_row = max(row_agio) if row_agio else (0.0, "", "")
+    CN0 = rng("Case number")
+    ws[f"A{r}"] = f"Largest case share of model ágio ({(leads and next((Ld['debtor'] for Ld in leads if Ld['case'] == big_case[0]), '')) or ''}, {big_case[0]})"
+    ws[f"B{r}"] = f'=IFERROR(SUMIF({CN0},"{big_case[0]}",{A})/SUM({A}),"")'; ws[f"B{r}"].number_format = "0.0%"; ws[f"B{r}"].font = Font(bold=True, size=12); r += 1
+    ws[f"A{r}"] = f"Largest single row share of model ágio ({(big_row[1] or '')[:30]})"; ws[f"B{r}"] = f'=IFERROR(MAX({A})/SUM({A}),"")'; ws[f"B{r}"].number_format = "0.0%"; ws[f"B{r}"].font = Font(bold=True, size=12); r += 1
 
     r = block(r + 1, "BOOK", ("leads", "ágio (R$)"))
     for lab, key in (("TRADE — CALL SHEET tab", "TRADE"), ("FINANCIAL — banks, FIDCs, co-ops", "FINANCIAL"), ("STATE-OWNED — public banks & companies", "STATE-OWNED")):
@@ -764,8 +820,8 @@ def _dashboard(ws, leads, nrows, books, stamp):
 
     r = block(r + 1, "SELLER FIT", ("leads", "ágio (R$)"))
     F2 = rng("Seller fit")
-    for fit in ("MID-MARKET", "SMALL", "LARGE CORP", "UNKNOWN"):
-        ws[f"A{r}"] = fit + (" — sells through a desk, if at all" if fit == "LARGE CORP" else (" — no RFB record" if fit == "UNKNOWN" else "")); ws[f"B{r}"] = f'=COUNTIF({F2},"{fit}")'
+    for fit in ("MID-MARKET", "SMALL", "LARGE CORP", "NO CAPITAL ON FILE", "UNKNOWN"):
+        ws[f"A{r}"] = fit + {"LARGE CORP": " — sells through a desk, if at all", "UNKNOWN": " — no RFB record", "NO CAPITAL ON FILE": " — co-op / association / foreign", "SMALL": " — ME/EPP (class IV vote)"}.get(fit, ""); ws[f"B{r}"] = f'=COUNTIF({F2},"{fit}")'
         ws[f"C{r}"] = f'=SUMIF({F2},"{fit}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
 
     r = block(r + 1, "PROOF QUALITY", ("leads", "ágio (R$)"))
@@ -774,13 +830,13 @@ def _dashboard(ws, leads, nrows, books, stamp):
         ws[f"A{r}"] = lab; ws[f"B{r}"] = f'=COUNTIF({PQ},"{pat}")'; ws[f"C{r}"] = f'=SUMIF({PQ},"{pat}",{A})'; ws[f"C{r}"].number_format = "#,##0"; r += 1
 
     notes = ["How to use: work each call tab top-down (sorted by model ágio). Set STATUS and NEXT DATE on every touch; this tab updates itself. Do not delete rows (mark DEAD); sorting and filtering are fine.",
-             "STATUS chain after a yes: TERMS AGREED → CESSÃO SIGNED (written instrument, art. 288 CC) → SUBSTITUTED IN LIST (debtor notified, art. 290 CC; AJ updates the list) → SETTLED (fund pays). Ágio counts as in-progress until then.",
+             "STATUS chain after a yes: TERMS AGREED → CESSÃO SIGNED (written instrument, art. 288 CC) → SUBSTITUTED IN LIST (debtor notified, art. 290 CC; substitution by petition to the court, arts. 8-10 / 18-19 LRF) → SETTLED (fund pays). Ágio counts as in-progress until then.",
              "Bands: A recovery granted (art. 58) · B live case filed ≤2 y ago, plan pending · C older case, grant not seen · U unresolved (on hold). Band D (falência / extinguished / closed) is not in the book: see EXCLUDED (review).",
              "PRICING HOLD: rows kept in the book at a zero quote because the source is not a statutory list, the case is not identified, or the printed name does not match the printed CNPJ. Clear the hold text once verified.",
              "PROOF QUALITY: OK = the list's own printed totals reconcile; NO TOTALS = the list prints none, so the value stands on its row alone; PARTIAL = class III reconciled but another class did not; CHECK = not an art. 7/51 list, or the class III total did not reconcile.",
              "FINANCIAL CREDITORS = banks, FIDCs, securitizers, credit co-ops: same class III paper, sold through a desk; plans usually give them worse terms (Assumptions B5, applied wherever Creditor type says FINANCIAL). STATE-OWNED = public banks and state companies: sell by auction/desk only, if at all.",
-             "Flags to read before dialling: CONTROL / BLOCKING POSITION (the creditor's share of class III on that list), TWO VALUES PRINTED, VERIFY creditor identity, seller is in RJ (art. 66). 'Seller status' says who can actually sign for the seller.",
-             "EXCLUDED (review) lists rows kept out of the book and why (intercompany / group member, subordinated or class I-II-IV headings, ME/EPP creditors, falência or extinguished proceedings, prose lines naming another CNPJ, public bodies, inactive creditors).",
+             "Flags to read before dialling: BLOCKING / CONTROL / SWING POSITION (the creditor's share of class III on that list, per recuperanda section where the list has several), TWO VALUES PRINTED, VERIFY creditor identity, ME/EPP creditor (class IV vote, art. 41 IV — the plan may give class IV its own tranche), seller is in RJ (art. 66). 'Seller status' says who can actually sign for the seller.",
+             "EXCLUDED (review) lists rows kept out of the book and why (intercompany / group member, subordinated or class I-II-IV headings, falência or extinguished proceedings, public bodies, creditors not ATIVA at RFB — with the RFB reason, e.g. baixada por incorporação: the successor holds the claim).",
              "Mobile numbers are empty: Apollo direct-dial credits reset on 21 Sep 2026; company switchboards and work emails are filled where found. 'Debtor source' says whether the debtor name was printed on the list (read twice) or taken from the portal page."]
     for i, t in enumerate(notes, start=r + 1): ws[f"A{i}"] = t
 
@@ -806,6 +862,9 @@ def _dashboard(ws, leads, nrows, books, stamp):
     for i, (case, _) in enumerate(top, start=r2 + 1):
         ws[f"E{i}"] = name[case]; ws[f"F{i}"] = case; ws[f"G{i}"] = f'=COUNTIF({CN},"{case}")'; ws[f"I{i}"] = f'=SUMIF({CN},"{case}",{A})'; ws[f"I{i}"].number_format = "#,##0"
         ws[f"J{i}"] = f'=COUNTIFS({CN},"{case}",{S},"<>NEW")'; ws[f"K{i}"] = "=" + "+".join(f'COUNTIFS({CN},"{case}",{S},"{s}")' for s in PIPELINE)
+    ws[f"L{r2}"] = "share of ágio"; ws[f"L{r2}"].font = WHITE; ws[f"L{r2}"].fill = HEAD; ws.column_dimensions["L"].width = 12
+    for i in range(r2 + 1, r2 + 1 + len(top)):
+        ws[f"L{i}"] = f'=IFERROR(I{i}/SUM({A}),"")'; ws[f"L{i}"].number_format = "0.0%"
     r3 = r2 + len(top) + 2
     ws[f"E{r3}"] = "BY CREDITOR STATE — top 10 by leads (RFB seat)"; ws[f"F{r3}"] = "leads"; ws[f"G{r3}"] = "ágio (R$)"
     for c in "EFG": ws[f"{c}{r3}"].font = WHITE; ws[f"{c}{r3}"].fill = HEAD
@@ -815,7 +874,7 @@ def _dashboard(ws, leads, nrows, books, stamp):
     for i, uf in enumerate(top_uf, start=r3 + 1):
         ws[f"E{i}"] = uf; ws[f"F{i}"] = f'=COUNTIF({U},"{uf}")'; ws[f"G{i}"] = f'=SUMIF({U},"{uf}",{A})'; ws[f"G{i}"].number_format = "#,##0"
     others = "-".join(f'COUNTIF({U},"{uf}")' for uf in top_uf); others_a = "-".join(f'SUMIF({U},"{uf}",{A})' for uf in top_uf)
-    ws[f"E{i + 1}"] = "other states"; ws[f"F{i + 1}"] = f'=SUMPRODUCT(--({U}<>""))-{others}'; ws[f"G{i + 1}"] = f'=SUMIF({U},"<>",{A})-{others_a}'; ws[f"G{i + 1}"].number_format = "#,##0"
+    ws[f"E{i + 1}"] = "other states"; ws[f"F{i + 1}"] = f'=SUMPRODUCT(--({U}<>""))-{others}'; ws[f"G{i + 1}"] = f'=SUMPRODUCT(--({U}<>""),{A})-{others_a}'; ws[f"G{i + 1}"].number_format = "#,##0"
     ws[f"E{i + 2}"] = "no RFB seat (no RFB record)"; ws[f"F{i + 2}"] = f'=SUMPRODUCT(--({U}=""),--({rng("CREDITOR — company owed money")}<>""))'; ws[f"G{i + 2}"] = f'=SUMPRODUCT(--({U}=""),{A})'; ws[f"G{i + 2}"].number_format = "#,##0"
     ws[f"E{i + 3}"] = "all rows"; ws[f"F{i + 3}"] = f'=SUM(F{r3 + 1}:F{i + 2})'; ws[f"G{i + 3}"] = f'=SUM(G{r3 + 1}:G{i + 2})'; ws[f"G{i + 3}"].number_format = "#,##0"
     for c in "EFG": ws[f"{c}{i + 3}"].font = Font(bold=True)

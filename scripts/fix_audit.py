@@ -89,6 +89,8 @@ log(f"debtor CNPJs rejected because they are creditor rows on the same case: {re
 plans = [
     ("5341375-33.2026.8.09.0049", 0.12, 2.0, 13.0, "Plano de Recuperação Judicial Grupo 3E v2.0 (Métis), mov. 321, pp.24-25",
      "Subclasse III-A: deságio 88%, carência 24 meses da homologação, 13 parcelas anuais SAC anos 3-15, TR + 1% a.a. Subclasse III-B (fornecedores parceiros que assinam termo de adesão e mantêm fornecimento): deságio 70%, carência 12 meses, 48 parcelas mensais — not available to a fund buyer."),
+    ("1009827-02.2024.8.26.0576", 0.25, 2.0, 10.0, "PRJ Frigorífico Alfa / CTX (Aragos, af394a20), p.6 items f-g (fls. 1086) — homologated 11/11/2024, definitive 10/03/2025",
+     "Class III > R$100k (item f) and bank credits (item g): deságio 75%, carência 24 meses da homologação, 120 parcelas mensais, 6% a.a. + TR, Tabela Price. 1º Modificativo (on disk, no text layer) and AGC amendments not read — confirm the voted version before quoting."),
 ]
 for case, rec, g, t, src, note in plans:
     db.execute("INSERT OR REPLACE INTO plan_terms VALUES(?,?,?,?,?,?,?)", (case, rec, g, t, src, note, now))
@@ -127,12 +129,27 @@ db.execute("""UPDATE debtors SET proceeding='FALENCIA', debtor_name=COALESCE(NUL
 db.execute("UPDATE debtors SET proceeding='FALENCIA' WHERE case_number='0003232-89.2024.8.16.0185'")
 log("proceedings set from the AJ portal: JOB (EXTINCT), Agimax (FALENCIA), Visão (FALENCIA, encerrada)")
 
+# 7b. reader errors on the verified debtor CNPJ (verification round): the CNPJ resolves to an unrelated company / a creditor on the page
+for case, why in (("0002484-82.2022.8.17.2001", "reader CNPJ resolves to R W Construções, not Grupo Cattan"),
+                  ("0000206-69.2013.8.17.1340", "reader CNPJ resolves to AEGRO, a creditor on the same page")):
+    db.execute("UPDATE debtors SET verified_cnpj=NULL, debtor_cnpj=NULL, rfb_source=NULL, razao_social=NULL, situacao=NULL, name_match=NULL, verified_evidence=COALESCE(verified_evidence,'')||? WHERE case_number=? AND verified_cnpj IS NOT NULL", (f" | verified_cnpj dropped: {why} ({now})", case))
+# a verified CNPJ whose registry name carries the RJ suffix was rejected on a group-name mismatch: re-enrich under the new accept rule
+n = db.execute("UPDATE debtors SET rfb_source=NULL, razao_social=NULL, name_match=NULL WHERE rfb_source='NAME_MISMATCH' AND verified_cnpj IS NOT NULL AND razao_social LIKE '%RECUPERACAO JUDICIAL%'").rowcount
+log(f"verified debtor CNPJs queued for re-enrichment (RJ suffix): {n}")
+# Grupo Rech: recuperação extrajudicial (portal: plan homologated 06/05/2026, 62.8% adesão, under appeal)
+db.execute("UPDATE debtors SET proceeding='RE' WHERE case_number='5057720-48.2025.8.24.0023'")
+
 # 8. case notes the closer must see
 NOTES = [("5014104-85.2021.8.21.0010", "eproc header prints 'RECUPERAÇÃO EXTRAJUDICIAL', the edital body invokes arts. 7 §2 and 55 (RJ-only) — confirm the case class in eproc before quoting", "verification reader, p1 of 84c58636"),
          ("0003232-89.2024.8.16.0185", "falência ENCERRADA by sentença of 01/08/2025 (art. 156 edital on file); debtor BAIXADA at RFB — nothing left to habilitate", "bbsadvogados.com.br edital, 7b043ed69346e1b5.pdf"),
          ("0005010-50.2013.8.24.0026", "falência label rests on the AJ portal category and the file name 'relacao-de-credores-da-falida.pdf'; the list itself is headed 'recuperanda' — confirm on the docket", "verification critic"),
          ("5003439-20.2020.8.24.0282", "falência label rests on the AJ portal category — confirm on the docket", "verification critic"),
-         ("0873061-47.2023.8.19.0001", "list prints two 'Valor' columns per creditor (updates of 05/06/2023 and 18/07/2025); the face is the 18/07/2025 figure and the list uses art. 83 class labels", "verification spot-check, 8eb5d0d64353bf5f.pdf p1")]
+         ("0873061-47.2023.8.19.0001", "list prints two 'Valor' columns per creditor (updates of 05/06/2023 and 18/07/2025); the face is the 18/07/2025 figure and the list uses art. 83 class labels", "verification spot-check, 8eb5d0d64353bf5f.pdf p1"),
+         ("0001639-09.2026.8.17.2810", "the edital (p13) strips 'BANCO' from bank names and prints CNPJs that belong to other entities ('BRASIL S.A.' carries SPC Brasil's CNPJ 29.341.643; 'DANCOVAL' = Daycoval) — identify each bank by name, not by the printed CNPJ", "verification reader, GLP edital p13"),
+         ("0000721-61.2024.8.17.2620", "the AJ list prints wrong CNPJs on several rows (p2: Sicoob with Bradesco's CNPJ, Sofisa with Caixa's, BASF with Sicoob's) — identify creditors by the printed name; rows printed under another creditor's name were left out of the face and are flagged", "verification reader, 38f0c15b p2"),
+         ("5088952-81.2025.8.13.0024", "priced off the debtor's undated art. 51 list; the AJ's art. 7 §2 list of 06/10/2025 is on file but did not parse — values may differ; DataJud holds only 40 of 839 movements and an art. 53 plan has very probably been filed — check the docket (TJMG) before quoting", "verification reader"),
+         ("5057720-48.2025.8.24.0023", "recuperação EXTRAJUDICIAL (art. 161): plan homologated 06/05/2026 with 62.8% adesão (AJ portal), under appeal; the list is the adherence/quorum list and non-adherent quirografários are bound by the homologated plan (art. 163) — read the plan's terms before quoting", "verification reader (Credibilità portal)"),
+         ("0000206-69.2013.8.17.1340", "two-column DJ-PR edital: the recuperandas' caption bleeds into creditor cells on p1 — identify creditors by CNPJ", "verification reader")]
 for case, note, src in NOTES:
     db.execute("INSERT OR REPLACE INTO case_notes VALUES(?,?,?,?)", (case, note, src, now))
 log(f"case_notes rows: {db.execute('SELECT COUNT(*) FROM case_notes').fetchone()[0]}")
@@ -147,4 +164,30 @@ if "--no-enrich" not in sys.argv:
         db.commit()
         enrich(db, run, DB_PATH, log, include_by_name=True)
         db.commit()
+    # 10. 'not ATIVA' was judged on the /0001 establishment; when the establishment PRINTED on the list (or the RFB matriz) is ATIVA the seller is alive.
+    #     Otherwise keep the RFB reason (e.g. 'INCORPORAÇÃO': the successor holds the claim) so the EXCLUDED tab says why.
+    from anteparo.sources.rfb import RFB, normalise
+    rfb = RFB(DB_PATH); revived = 0; reasons = 0
+    for root, ests in db.execute("""SELECT DISTINCT t.cnpj_basico, t.establishment_cnpjs FROM targets t JOIN companies c ON c.cnpj_basico=t.cnpj_basico
+                                    WHERE t.run_id=? AND t.band='FLOOR' AND c.is_inactive=1""", (run,)).fetchall():
+        db.commit()
+        alive = None; motivo = None
+        for cnpj in [e for e in (ests or "").split("|") if len(e) == 14]:
+            d = rfb.get(cnpj)
+            if not d: continue
+            n = normalise(d)
+            if n["situacao_cadastral"] == "02": alive = (cnpj, n); break
+            motivo = motivo or d.get("descricao_motivo_situacao_cadastral") or d.get("motivo_situacao_cadastral")
+        if not alive:
+            row = db.execute("SELECT json FROM rfb_cache WHERE cnpj=(SELECT cnpj_matriz FROM companies WHERE cnpj_basico=?)", (root,)).fetchone()
+            try: motivo = motivo or (json.loads(row[0]).get("descricao_motivo_situacao_cadastral") if row else None)
+            except Exception: pass
+        if alive:
+            cnpj, n = alive
+            db.execute("""UPDATE companies SET is_inactive=0, situacao_cadastral='02', situacao_desc=?, phone=COALESCE(NULLIF(phone,''),?), phone2=COALESCE(NULLIF(phone2,''),?), email=COALESCE(NULLIF(email,''),?),
+                          rfb_source=rfb_source||' (ATIVA at printed establishment '||?||')' WHERE cnpj_basico=?""", (n["situacao_desc"] or "ATIVA", n["phone"], n["phone2"], n["email"], cnpj, root)); revived += 1
+        elif motivo:
+            db.execute("UPDATE companies SET situacao_desc=situacao_desc||' — motivo: '||? WHERE cnpj_basico=? AND situacao_desc NOT LIKE '%motivo:%'", (motivo, root)); reasons += 1
+    db.commit()
+    log(f"inactive creditors re-checked on the printed establishment: {revived} ATIVA (kept in the book), {reasons} with the RFB reason recorded")
 log("FIX_AUDIT DONE")

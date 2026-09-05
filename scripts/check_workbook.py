@@ -25,7 +25,7 @@ else:
     asm = wb["Assumptions"]
     check(all(asm[f"A{i}"].value not in ("?", "*", "~") for i in range(8, 13)), "Assumptions band code is an Excel wildcard")
     bands = {b for b, *_ in BANDS}
-    total = 0; agio_sum = 0.0; holds = 0
+    total = 0; agio_sum = 0.0; holds = 0; face_hold = 0.0
     for title in ("CALL SHEET", "FINANCIAL CREDITORS", "STATE-OWNED CREDITORS"):
         if title not in wb.sheetnames: continue
         ws = wb[title]; H = [c.value for c in ws[1]]; ix = {h: i for i, h in enumerate(H)}
@@ -39,11 +39,11 @@ else:
             fund = g("FUND PRICE @ IRR (model, R$)")
             check(isinstance(fund, (int, float)) and 0 <= fund <= g("FACE VALUE (as printed)"), f"{title} r{k}: fund price outside [0, face]")
             if g("PRICING HOLD (why unpriced)"):
-                holds += 1; check(fund == 0, f"{title} r{k}: on hold but priced")
+                holds += 1; face_hold += float(g("FACE VALUE (as printed)") or 0); check(fund == 0, f"{title} r{k}: on hold but priced")
             else:
                 check(fund > 0, f"{title} r{k}: not on hold but fund price is 0")
             check(g("Proceeding") not in ("Falência", "RJ extinguished"), f"{title} r{k}: falência/extinct proceeding on a call tab")
-            check(not re.search(r"MICRO|PEQUENO", str(g("Size") or ""), re.I), f"{title} r{k}: ME/EPP creditor on a call tab")
+            check(not re.search(r"MICRO|PEQUENO", str(g("Size") or ""), re.I) or "ME/EPP" in str(g("Flags") or "") or g("Proceeding", ).startswith("Recuperação extrajudicial"), f"{title} r{k}: ME/EPP creditor without the class IV flag")
             for ph in ("Company phone 1", "Company phone 2", "Backup phone", "Mobile (Apollo; reveal pending)"):
                 check(not g(ph) or PHONE.match(str(g(ph))), f"{title} r{k}: phone not dialable as printed: {g(ph)!r}")
             check(not g("Backup phone") or g("Backup phone") not in (g("Company phone 1"), g("Company phone 2")), f"{title} r{k}: backup phone repeats the switchboard")
@@ -63,6 +63,7 @@ else:
     kv = {d[f"A{i}"].value: d[f"B{i}"].value for i in range(1, 90) if d[f"A{i}"].value}
     check(kv.get("Leads in book (all tabs)") == total, f"dashboard leads {kv.get('Leads in book (all tabs)')} != rows {total}")
     check(kv.get("Rows on PRICING HOLD (zero quote until cleared)") == holds, f"dashboard holds {kv.get('Rows on PRICING HOLD (zero quote until cleared)')} != {holds}")
+    check(abs(float(kv.get("Face on pricing hold (R$)") or 0) - face_hold) < 1, f"dashboard face on hold {kv.get('Face on pricing hold (R$)')} != {face_hold}")
     check(abs(float(kv.get("Model ÁGIO pipeline (R$)") or 0) - agio_sum) < 1, "dashboard ágio != sum of tabs")
     band_rows = {d[f"A{i}"].value: d[f"B{i}"].value for i in range(1, 90) if isinstance(d[f"A{i}"].value, str) and re.match(r"^[ABCDU] — ", d[f"A{i}"].value)}
     check(sum(band_rows.values()) == total, f"band block {sum(band_rows.values())} != rows {total}")

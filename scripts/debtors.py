@@ -104,7 +104,7 @@ def enrich(rows, target_col="debtor_cnpj"):
         n = normalise(d)
         hint = clean_hint(dname)
         match = fuzz.token_set_ratio((hint or dname or "").upper(), (n["razao_social"] or "").upper()) / 100 if (hint or dname) else None
-        accept = match is None or match >= 0.55 or (not hint and RJ_SUFFIX.search(n["razao_social"] or ""))
+        accept = match is None or match >= 0.55 or bool(RJ_SUFFIX.search(n["razao_social"] or ""))   # a registry name carrying the RJ suffix is a recuperanda (group member) even when the group name differs
         if not accept:
             rej += 1
             db.execute("UPDATE debtors SET rfb_source='NAME_MISMATCH', razao_social=?, name_match=?, updated_at=? WHERE case_number=?", (n["razao_social"], match, now(), case)); continue
@@ -135,13 +135,19 @@ def band_for(case):
     reasons = []
     stage, last_mv, filing = (db.execute("SELECT stage, last_movement, filing_date FROM cases WHERE case_number=?", (case,)).fetchone() or (None, None, None))
     m = re.match(r"\d{7}-\d{2}\.(\d{4})\.", case or "")
-    year = int(filing[:4]) if filing else (int(m.group(1)) if m else None)
+    cnj_year = int(m.group(1)) if m else None
+    year = min([y for y in (int(filing[:4]) if filing else None, cnj_year) if y]) if (filing or cnj_year) else None   # the CNJ number carries the filing year; DataJud's date can be a redistribution
     granted = db.execute("SELECT COUNT(*) FROM documents WHERE run_id=? AND case_number=? AND doc_type='HOMOLOG'", (run, case)).fetchone()[0]
     plan_filed = plan_filed_signal(case)
     rj_granted = (db.execute("SELECT rj_granted_signal FROM cases WHERE case_number=?", (case,)).fetchone() or (0,))[0]
     plan = granted or rj_granted   # band A needs the GRANT (art. 58); a filed plan (art. 53) is band B
     sit = db.execute("SELECT situacao, rfb_source, proceeding, COALESCE(display_name, razao_social, debtor_name), verified_evidence FROM debtors WHERE case_number=?", (case,)).fetchone() or (None, None, None, None, None)
-    age = (2026 - year) if year else None
+    from datetime import date as _date
+    filed_on = None
+    if filing and year and int(filing[:4]) == year:
+        try: filed_on = _date.fromisoformat(filing[:10])
+        except ValueError: filed_on = None
+    age = ((_date.today() - (filed_on or _date(year, 7, 1))).days / 365.25) if year else None   # fractional years since filing (mid-year when only the CNJ year is known)
     dormant = bool(last_mv) and last_mv < "2025-09-01"
     accepted = sit[1] and sit[1] not in ("NOT_IN_RFB", "NAME_MISMATCH", "CREDITOR_CNPJ")
     falida = bool(re.search(r"MASSA FALIDA|\bFALID[AO]\b", sit[3] or "", re.I))
@@ -155,10 +161,10 @@ def band_for(case):
         reasons.append("debtor closed at RFB (baixada)"); band = "D"
     elif plan and stage != "CLOSED":
         reasons.append("recovery granted (art. 58): grant decision on file" if granted else "recovery granted (art. 58): DataJud grant movement"); band = "A"
-        if age is not None and age > 8: reasons.append(f"but case is {age}y old"); band = "B"
+        if age is not None and age > 8: reasons.append(f"but case is {age:.0f}y old"); band = "B"
     elif (age is not None and age > 2) or dormant or stage == "CLOSED" or (accepted and sit[0] in ("03", "04")):
         band = "C"
-        if age is not None and age > 2: reasons.append(f"filed {age}y ago; " + ("plan filed (art. 53) but no grant seen" if plan_filed else "plan not in our documents"))
+        if age is not None and age > 2: reasons.append(f"filed {age:.1f}y ago; " + ("plan filed (art. 53) but no grant seen" if plan_filed else "plan not in our documents"))
         if dormant: reasons.append(f"no movement since {last_mv}")
         if stage == "CLOSED": reasons.append("case closed/archived (DataJud)")
         if accepted and sit[0] in ("03", "04"): reasons.append(f"debtor {'SUSPENSA' if sit[0]=='03' else 'INAPTA'} at RFB")

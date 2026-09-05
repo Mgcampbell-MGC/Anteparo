@@ -1,9 +1,9 @@
 # ANTEPARO index — Phase 1 report
-run `20260903T230425Z-e7c9a7` · 2026-09-05 12:44Z
+run `20260903T230425Z-e7c9a7` · 2026-09-05 13:19Z
 
 ## Call sheet
-- **559 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1082 name-only rows ≥ R$200k on *Needs CNPJ*
-- closer workbook (ANTEPARO_CALL_SHEET.xlsx): trade creditors on CALL SHEET; banks/FIDCs/co-ops (209 companies by CNAE) on FINANCIAL CREDITORS; state-owned creditors on STATE-OWNED CREDITORS; public bodies (1) and inactive companies (55) on EXCLUDED (review); name pre-filter hits: 151
+- **564 leads ≥ R$200k** on the Call List · 236 pooling (R$100–200k) · 1082 name-only rows ≥ R$200k on *Needs CNPJ*
+- closer workbook (ANTEPARO_CALL_SHEET.xlsx): trade creditors on CALL SHEET; banks/FIDCs/co-ops (209 companies by CNAE) on FINANCIAL CREDITORS; state-owned creditors on STATE-OWNED CREDITORS; public bodies (1) and inactive companies (50) on EXCLUDED (review); name pre-filter hits: 151
 - rows from QUARANTINED documents whose class III subtotal reconciled are kept and labelled PARTIAL in PROOF QUALITY; rows from lists that print no totals are labelled NO TOTALS; nothing is silently dropped
 - 1199 documents ingested · 527 cases with a document · 210 of 527 document cases matched to DataJud (rest are pre-2020 or unmatched numbers)
 
@@ -36,7 +36,12 @@ run `20260903T230425Z-e7c9a7` · 2026-09-05 12:44Z
 - class III rows with a value but no printed document number: 35965 (Phase 2: name → CNPJ with an RFB name match)
 
 ## RFB releases used (via mirror)
-- minhareceita: 1074 companies, fetched 2026-09-03T22:31:00Z … 2026-09-05T12:36:38Z
+- minhareceita: 1069 companies, fetched 2026-09-03T22:31:00Z … 2026-09-05T12:36:38Z
+- minhareceita (ATIVA at printed establishment 02036483000614): 1 companies, fetched 2026-09-03T23:40:03Z … 2026-09-03T23:40:03Z
+- minhareceita (ATIVA at printed establishment 10588595001092): 1 companies, fetched 2026-09-03T23:37:58Z … 2026-09-03T23:37:58Z
+- minhareceita (ATIVA at printed establishment 33173097000436): 1 companies, fetched 2026-09-03T23:42:27Z … 2026-09-03T23:42:27Z
+- minhareceita (ATIVA at printed establishment 57507378000365): 1 companies, fetched 2026-09-03T23:37:00Z … 2026-09-03T23:37:00Z
+- minhareceita (ATIVA at printed establishment 59926162000289): 1 companies, fetched 2026-09-04T00:06:21Z … 2026-09-04T00:06:21Z
 
 ## Coverage by court (DataJud RJ cases since 2020 → cases with ≥1 usable creditor list)
 - TJRJ: 2963 cases · 3 with a usable list (0%)
